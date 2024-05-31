@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuddle Page</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            margin: 0;
+            position: relative;
+        }
+        h1 {
+            color: #ff6f61;
+            z-index: 2;
+            font-size: 2rem;
+            text-align: center;
+        }
+        button {
+            position: relative;
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+            z-index: 2;
+        }
+        button:hover {
+            background-color: #ff4a3d;
+        }
+        .heart-container {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+        .heart, .smiley {
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            bottom: 0;
+            transform: rotate(45deg);
+        }
+        .heart {
+            background-color: #ff6f61;
+            animation: float 4s ease-in-out infinite;
+        }
+        .heart:before,
+        .heart:after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background-color: #ff6f61;
+            border-radius: 50%;
+            position: absolute;
+        }
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+        .smiley {
+            background-color: yellow;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 20px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+            animation: float 4s ease-in-out infinite;
+        }
+        .smiley::after {
+            content: '😊';
+            display: inline-block;
+        }
+        .progress {
+            position: absolute;
+            top: 50%;
+            right: -50px; /* Adjusted positioning */
+            transform: translateY(-50%);
+            color: #ff6f61;
+            font-size: 1rem;
+            z-index: 2; /* Ensure the progress counter is above the hearts and smileys */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(45deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 id="errorText">error: insufficient cuddles</h1>
+    <h1 id="solutionText">solution: cuddle me :(</h1>
+    <button id="cuddleButton">Cuddle Joshie<span class="progress" id="progressCounter">0/10</span></button>
+    <div class="heart-container" id="heartContainer"></div>
+
+    <script>
+        let cuddleCount = 0;
+
+        document.getElementById('cuddleButton').addEventListener('click', function() {
+            cuddleCount++;
+            const heartContainer = document.getElementById('heartContainer');
+            const progressCounter = document.getElementById('progressCounter');
+            const isHeart = Math.random() > 0.5;
+            const element = document.createElement('div');
+            element.classList.add(isHeart ? 'heart' : 'smiley');
+            if (!isHeart) {
+                element.style.transform = 'rotate(0deg)';
+            }
+            element.style.left = Math.random() * 100 + 'vw';
+            element.style.animationDuration = Math.random() * 2 + 2 + 's';
+            heartContainer.appendChild(element);
+
+            setTimeout(() => {
+                element.remove();
+            }, 4000);
+
+            // Update progress counter
+            progressCounter.textContent = `${cuddleCount}/10`;
+
+            if (cuddleCount === 10) {
+                const errorText = document.getElementById('errorText');
+                errorText.textContent = "yayyyyyy I feel all better now :) take a ss of this page and send it to meee";
+                const solutionText = document.getElementById('solutionText');
+                solutionText.style.display = 'none'; // Hide the second "cuddle me :(" text
+                const cuddleButton = document.getElementById('cuddleButton');
+                cuddleButton.style.display = 'none'; // Hide the button
+                // Heart confetti effect
+                for (let i = 0; i < 30; i++) {
+                    const confetti = document.createElement('div');
+                    confetti.classList.add('heart');
+                    confetti.style.left = Math.random() * 100 + 'vw';
+                    confetti.style.animationDuration = Math.random() * 2 + 2 + 's';
+                    heartContainer.appendChild(confetti);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
