@@ -1,7 +1,8 @@
+/* Apply a Minecraft-like font and ensure full-screen background */
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Minecraft', sans-serif;
+    font-family: 'Press Start 2P', sans-serif; /* Pixelated font */
     background-image: url('A_seamless_Minecraft-style_dirt_block_texture.png');
     background-size: cover;
     background-repeat: repeat;
@@ -9,18 +10,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    text-align: center;
 }
 
+/* Container styling for centering content */
 .container {
     text-align: center;
     color: #fff;
 }
 
+/* Title styling to ensure visibility */
 h1 {
     font-size: 4rem;
     margin-bottom: 20px;
+    color: #ffffff; /* White text */
+    text-shadow: 2px 2px 0px #000000; /* Black shadow for contrast */
 }
 
+/* Social buttons styling */
 .social-buttons {
     display: flex;
     justify-content: center;
@@ -28,15 +35,17 @@ h1 {
 }
 
 .btn {
-    background-color: #614d34;
+    background-color: #614d34; /* Minecraft-style button color */
     padding: 15px 30px;
     text-decoration: none;
     color: white;
     font-size: 1.5rem;
     border-radius: 10px;
     box-shadow: 3px 3px 0 #3d2e22;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-    background-color: #7b6149;
+    background-color: #7b6149; /* Darker hover effect */
 }
+
