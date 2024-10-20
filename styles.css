@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Minecraft', sans-serif;
+    background-image: url('A_seamless_Minecraft-style_dirt_block_texture.png');
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 4rem;
+    margin-bottom: 20px;
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn {
+    background-color: #614d34;
+    padding: 15px 30px;
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 3px 3px 0 #3d2e22;
+}
+
+.btn:hover {
+    background-color: #7b6149;
+}
