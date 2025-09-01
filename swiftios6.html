@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swift on iOS 6</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #121212;
+    color: #e0e0e0;
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+  }
+  h1 {
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 1em;
+  }
+  p {
+    margin-bottom: 1em;
+    color: #e0e0e0;
+  }
+  pre {
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    padding: 12px;
+    overflow-x: auto;
+    border-radius: 6px;
+    font-size: 0.9em;
+  }
+  code {
+    font-family: Menlo, Consolas, monospace;
+    color: #dcdcdc;
+  }
+  .snippet-title {
+    font-weight: bold;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    color: #a0a0a0;
+  }
+  /* Swift syntax highlighting */
+  .keyword { color: #ff5e57; }
+  .type { color: #ffb86c; }
+  .string { color: #f1fa8c; }
+  .comment { color: #6272a4; font-style: italic; }
+  .number { color: #bd93f9; }
+</style>
+</head>
+<body>
+
+<h1>Swift on iOS 6</h1>
+
+<p>Yes, you read that correctly: Swift on iOS 6.</p>
+
+<p>As a developer primarily working with modern iOS (15–17+), I have limited experience with the earlier eras of UIKit, Objective-C, and pre-Swift development. For a long time, I wanted to explore legacy iOS development, but there was one major barrier: Objective-C.</p>
+
+<p>Now, this isn’t just about the quirks of Objective-C itself. The bigger challenge is Objective-C combined with the iOS 6 era of UIKit: no Auto Layout anchors, no UIStackView, no SceneDelegate. What you do get is NSLayoutConstraint and the Visual Format Language, which feels cumbersome compared to modern tools. Tackling both Objective-C and these older APIs at the same time didn’t appeal to me, so I started looking for a way to bring Swift into the picture.</p>
+
+<p>Initially, every resource I found insisted it was impossible. I nearly gave up, until I heard from someone in the r/jb community that an early beta of Swift 1.0 had, in fact, supported iOS 6. Specifically, Xcode 6 Beta 1 still allowed iOS 6 as a build target. Unfortunately, the beta was only archived on BetaArchive, which I wasn’t able to access. Luckily, a generous individual was able to share Xcode 6 Betas 1–3 with me.</p>
+
+<p>To my surprise, all three of those betas did indeed support iOS 6. Nervously, I built a project, and it worked. Early Swift was quirky, with syntax that leaned heavily on Objective-C conventions and APIs that were often direct ports, but it still provided modern niceties like type inference, optionals, and func declarations. This was already a huge step forward in making legacy development more approachable.</p>
+
+<div class="snippet-title">Swift 1.0 Example</div>
+<pre><code><span class="comment">// Swift 1.0 (iOS 6)</span>
+<span class="keyword">let</span> label: <span class="type">UILabel</span> = <span class="type">UILabel</span>(frame: <span class="type">CGRectMake</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">100</span>, <span class="number">30</span>))
+label.text = <span class="string">"Hello Swift 1.0"</span>
+self.view.addSubview(label)
+</code></pre>
+
+<p>At that point, I started wondering: if Swift worked on iOS 6 in Beta 3, why wouldn’t later versions also work, even if the deployment option was officially removed? Swift in its early days was closely tied to the Objective-C runtime. In theory, if I only called APIs that existed in iOS 6, it should still run.</p>
+
+<p>So I tested further. Swift 1.2 compiled successfully, despite common claims online that it only worked with iOS 7 and newer. Encouraged, I moved on to Swift 2.0, and again, it worked perfectly. No warnings, no crashes, nothing unusual. The logic made sense: Swift at this stage was still essentially a higher-level interface to Objective-C, and iOS 6 provided all the runtime pieces it needed.</p>
+
+<div class="snippet-title">Swift 2.2 Example</div>
+<pre><code><span class="comment">// Swift 2.2 (iOS 6)</span>
+<span class="keyword">let</span> label = <span class="type">UILabel</span>(frame: <span class="type">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: <span class="number">100</span>, height: <span class="number">30</span>))
+label.text = <span class="string">"Hello Swift 2.2"</span>
+self.view.addSubview(label)
+</code></pre>
+
+<p>Swift 3 was the real test. It marked a turning point: the “Great Renaming” and a more mature Swift runtime. After updating my syntax, editing the Info.plist, and compiling, I was met with my first real roadblock. The app crashed immediately.</p>
+
+<div class="snippet-title">Swift 3.0 Example</div>
+<pre><code><span class="comment">// Swift 3.0 (attempted on iOS 6)</span>
+<span class="keyword">let</span> label = <span class="type">UILabel</span>(frame: <span class="type">CGRect</span>(x: <span class="number">0</span>, y: <span class="number">0</span>, width: <span class="number">100</span>, height: <span class="number">30</span>))
+label.text = <span class="string">"Hello Swift 3.0"</span>
+self.view.addSubview(label)
+</code></pre>
+
+<p>So this was it, it seemed. Swift 3 was inaccessible. Realistically, I had already come so far, moving from Objective-C and the iOS 6 APIs on an ancient version of Xcode to Xcode 7.3.1 with the far more modern Swift 2.2. That alone felt like a major leap. But I was determined. Through hell or high water, I would get Swift 3 to work. The first step was to analyse the crash. It appeared to be calling <code>dispatch_data_destructor_munmap</code>. I had no idea what that was, but I knew it was the barrier standing between me and Swift 3. I wasn’t about to assume it was a single missing API, though, so I kept digging. On iOS 7 Developer Beta 1, I encountered yet another crash, this time complaining about <code>NSURLUbiquitousItemDownloadingErrorKey</code>. It became clear that Swift 3 was relying on symbols only introduced in iOS 7.</p>
+
+<p>Since Swift is open source, I decided to track down the commit that officially dropped iOS 6 support. After a long search, I settled on the commit right before the first Developer Preview of Swift 3, which also happened to be the one that introduced most of the renaming changes we associate with Swift 3. That wasn’t going to stop me. There were still quite a few differences to account for, like <code>.redColor()</code> becoming <code>.red</code>, or <code>main()</code> becoming <code>main</code>. So I began the long process of compiling from source.</p>
+
+<p>This was not a pleasant experience. Swift 3.0 Preview 1 is one of the worst builds I have ever had to deal with. You need macOS 10.11 or 10.12; newer versions go nowhere. You need to build CMake 3.15 from source, because the toolchain refuses to accept anything else. Of course, building CMake itself wasn’t straightforward. Curl broke SSL, Homebrew failed, and I ended up piecing together a ridiculous chain of commands just to get a working build environment:</p>
+
+<pre><code><span class="keyword">git</span> init swift && cd swift
+<span class="keyword">git</span> remote add origin https://github.com/swiftlang/swift.git
+<span class="keyword">git</span> fetch --depth 1 origin 6a0fb2b1888b158fd6cf73893564d6f5dc46349d
+<span class="keyword">git</span> checkout FETCH_HEAD
+./utils/update-checkout --clone --branch swift-3.0-preview-1-branch
+curl -LO https://cmake.org/files/v3.15/cmake-3.15.7.tar.gz
+tar -xzvf cmake-3.15.7.tar.gz
+cd cmake-3.15.7
+mkdir build && cd build
+../bootstrap --prefix=/usr/local
+make -j$(sysctl -n hw.ncpu)
+sudo make install
+cmake --version
+echo 'export CURL_CA_BUNDLE=~/Downloads/cacert.pem' >> ~/.zshrc
+source ~/.zshrc
+./utils/build-script --ios --install-prefix=/tmp/swift-ios-toolchain --extra-cmake-options="-DLLVM_BUILD_RUNTIME=OFF -DLLVM_BUILD_COMPILER_RT=OFF"
+</code></pre>
+
+<p>Even then, the toolchain was confused about deployment targets, insisting on compiling for macOS 10.9 even though the SDK was clearly 10.11 or later. When the compiler refused to accept certain APIs, I simply lowered the requirement in the source files from 10.11 to 10.9, since I only cared about iOS builds. After countless failed attempts, at least eight recompiles on a Haswell Hackintosh and another seven on macOS 15.5, I finally had a working toolchain.</p>
+
+<p>The next challenge was integration with Xcode. Xcode 8.0 Beta 1 barely recognised the toolchain, sometimes showing it, sometimes not. After much trial and error, I discovered that the same commit introducing the renaming changes also allowed the toolchain to run in that initial beta. Skeptically, I tried Xcode 7.3.1, and to my surprise it let me select the toolchain. At last, I could write Swift 3 style code on a build that still targeted iOS 6. It wasn’t perfect, things like <code>Timer.scheduledTimer</code> weren’t there yet, but APIs like <code>UIScreen.main()</code> and <code>.red()</code> worked.</p>
+
+<p>Deploying to iOS 6, though, immediately crashed again. This time it wasn’t missing symbols; the Swift 3 core dylibs simply weren’t being copied correctly into the app bundle. After painstakingly copying them over one by one into the IPA, I finally succeeded. For real this time. The app launched, and Swift 3 code was running on iOS 6.</p>
+
+<p>In the end, though, the price was too high. The toolchain was unstable, the build process fragile, and deployment required hacks that made it impractical for real projects. I had proven that Swift 3 could be coerced into running on iOS 6, but it wasn’t a sustainable solution. For practical development, Swift 2.2 is the sweet spot: it works natively on iOS 6, is stable, and still provides the benefits of modern Swift compared to Objective-C.</p>
+
+<p>That doesn’t mean giving up on newer conveniences, though. Many of Swift 3’s changes, as well as useful additions from later versions, can be backported. To make that easier, I’ve started creating a library called <strong>SwiftCompatKit</strong>. It brings back not only Swift 3 renamings like <code>.redColor()</code> to <code>.red</code>, but also conveniences such as <code>Timer.scheduledTimer</code>, <code>randomElement()</code>, <code>random()</code>, and <code>random(in:)</code> from Swift 4 and 5. The library will be open source, with the goal of making legacy development more approachable for anyone who wants to support older devices while still enjoying a modern Swift experience.</p>
+
+<p>So yes, Swift 3 can indeed run on iOS 6, but Swift 2.2 remains the sensible choice. With the help of backported features, it strikes the right balance between modern syntax and legacy compatibility, and I plan to support all my apps on iOS 6 and above going forward.</p>
+
+</body>
+</html>
