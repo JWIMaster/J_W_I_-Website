@@ -47,29 +47,63 @@
     margin-top:1rem;
   }
 
-  pre {
-    background-color:#1e1e1e; 
-    color:#dcdcdc; 
-    padding:12px; 
-    overflow-x:auto; 
-    border-radius:10px; 
-    font-size:1rem; 
-    line-height:1.4; 
-    margin-top:1rem;
-    text-align:left;
-  }
-
   @media (max-width: 1200px) {
     .step img {
-      max-width: calc(100% - 100px); /* reduce inset on smaller screens */
+      max-width: calc(100% - 100px);
     }
   }
 
   @media (max-width: 800px) {
     .step img {
-      max-width: 100%; /* remove inset for very small screens */
+      max-width: 100%;
     }
   }
+
+  /* Code box styling */
+  .code-container {
+    position: relative;
+    background-color:#1e1e1e;
+    border-radius:12px;
+    padding:16px 24px 24px 24px;
+    max-width:900px;
+    margin: 1rem auto 2rem auto;
+    text-align:left;
+    overflow-x:auto;
+  }
+
+  .code-container pre {
+    margin:0;
+    font-family: Menlo, Consolas, monospace;
+    font-size:1rem;
+    line-height:1.4;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .copy-btn {
+    position:absolute;
+    top:12px;
+    right:12px;
+    padding:6px 12px;
+    background:rgba(255,255,255,0.1);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:700;
+    transition: background 0.2s;
+  }
+
+  .copy-btn:hover {
+    background:rgba(255,255,255,0.2);
+  }
+
+  /* Swift syntax highlighting */
+  .keyword { color: #ff5e57; font-weight:bold; }
+  .type { color: #ffb86c; }
+  .string { color: #f1fa8c; }
+  .comment { color: #6272a4; font-style:italic; }
+  .number { color: #bd93f9; }
 </style>
 </head>
 <body>
@@ -147,35 +181,58 @@ Make a new Project in Xcode that is storyboard based.
 
 <div class="step">
   <strong>Step 12:</strong>
-  <p>Cmd A to select all, then Cmd V to paste the following code:</p>
-  <pre>
-import UIKit
+  <p>Copy the code below by pressing the copy button, then open your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
+  
+  <div class="code-container">
+    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
+    <pre>
+<span class="comment">// AppDelegate.swift</span>
+<span class="keyword">import</span> <span class="type">UIKit</span>
 
-@main
-class AppDelegate: UIResponder, UIApplicationDelegate {
+<span class="keyword">@main</span>
+<span class="keyword">class</span> <span class="type">AppDelegate</span>: <span class="type">UIResponder</span>, <span class="type">UIApplicationDelegate</span> {
 
-    var window: UIWindow?  // Needed for apps not using SceneDelegate
+    <span class="keyword">var</span> window: <span class="type">UIWindow</span>?  <span class="comment">// Needed for apps not using SceneDelegate</span>
 
-    func application(_ application: UIApplication,
-                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+    <span class="keyword">func</span> application(_ application: <span class="type">UIApplication</span>,
+                     didFinishLaunchingWithOptions launchOptions: [<span class="type">UIApplication.LaunchOptionsKey</span>: <span class="type">Any</span>]?) -> <span class="type">Bool</span> {
         
-        // Create a UIWindow manually
-        window = UIWindow(frame: UIScreen.main.bounds)
-        window?.rootViewController = ViewController() // Set initial ViewController
+        <span class="comment">// Create a UIWindow manually</span>
+        window = <span class="type">UIWindow</span>(frame: <span class="type">UIScreen</span>.main.bounds)
+        window?.rootViewController = <span class="type">ViewController</span>() <span class="comment">// Set initial ViewController</span>
         window?.makeKeyAndVisible()
         
-        return true
+        <span class="keyword">return</span> <span class="keyword">true</span>
     }
 }
-  </pre>
+    </pre>
+  </div>
   <img src="GuideImages/ProjPicSetup12.png" alt="Step 12">
 </div>
 
 <div class="step">
   <strong>Step 13:</strong>
-  <p>To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
-  <img src="GuideImages/ProjPicSetup13.png" alt="Step 13">
+  <p style="margin-top:2rem;">To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
 </div>
+
+<script>
+function copyCode(button){
+  const codeContainer = button.nextElementSibling;
+  const range = document.createRange();
+  range.selectNodeContents(codeContainer);
+  const selection = window.getSelection();
+  selection.removeAllRanges();
+  selection.addRange(range);
+  try {
+    document.execCommand('copy');
+    selection.removeAllRanges();
+    button.textContent = 'Copied!';
+    setTimeout(()=>{button.textContent='Copy Code';},2000);
+  } catch(err){
+    console.log('Failed to copy', err);
+  }
+}
+</script>
 
 </body>
 </html>
