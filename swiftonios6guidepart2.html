@@ -13,77 +13,129 @@
     font-family:'Outfit',sans-serif;
     background-color:#121212;
     color:#e0e0e0;
-    line-height:1.5;
+    line-height:1.6;
   }
 
-  h1{font-size:2.2rem; text-align:center; margin:2rem 0 1rem; color:#fff;}
-  .step{margin:2rem 0; text-align:center;}
-  .step img{width:100%; max-width:400px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5); margin-top:0.8rem;}
-  pre{background-color:#1e1e1e; color:#dcdcdc; padding:10px; overflow-x:auto; border-radius:10px; font-size:0.9em; line-height:1.4; margin-top:0.5rem;}
+  h1 {
+    font-size:2.4rem; 
+    text-align:center; 
+    margin:2rem 0 1rem; 
+    color:#fff;
+  }
+
+  .step {
+    margin:2rem 0; 
+    text-align:center;
+  }
+
+  .step strong {
+    display:block;
+    font-size:1.3rem;
+    margin-bottom:0.5rem;
+  }
+
+  .step p {
+    font-size:1.1rem;
+    margin:0 0 1rem 0;
+  }
+
+  .step img {
+    width: auto;
+    max-width:100%;
+    border-radius:12px; 
+    box-shadow:0 4px 12px rgba(0,0,0,0.5); 
+    margin-top:1rem;
+  }
+
+  pre {
+    background-color:#1e1e1e; 
+    color:#dcdcdc; 
+    padding:12px; 
+    overflow-x:auto; 
+    border-radius:10px; 
+    font-size:1rem; 
+    line-height:1.4; 
+    margin-top:1rem;
+    text-align:left;
+  }
 </style>
 </head>
 <body>
 
 <h1>Project Setup and Build</h1>
-<p style="text-align:center; max-width:600px; margin:0 auto 2rem;">Make a new Project in Xcode that is storyboard based.</p>
+<p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
+Make a new Project in Xcode that is storyboard based.
+</p>
 
 <div class="step">
-  <strong>Step 1:</strong> Click the info tab in the Project Settings.
+  <strong>Step 1:</strong>
+  <p>Click the info tab in the Project Settings.</p>
   <img src="GuideImages/ProjPicSetup1.png" alt="Step 1">
 </div>
 
 <div class="step">
-  <strong>Step 2:</strong> Hover over and click the minus button on the values in the image.
+  <strong>Step 2:</strong>
+  <p>Hover over and click the minus button on the values in the image.</p>
   <img src="GuideImages/ProjPicSetup2.png" alt="Step 2">
 </div>
 
 <div class="step">
-  <strong>Step 3:</strong> Click the build settings tab.
+  <strong>Step 3:</strong>
+  <p>Click the build settings tab.</p>
   <img src="GuideImages/ProjPicSetup3.png" alt="Step 3">
 </div>
 
 <div class="step">
-  <strong>Step 4:</strong> Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.
+  <strong>Step 4:</strong>
+  <p>Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</p>
   <img src="GuideImages/ProjPicSetup4.png" alt="Step 4">
 </div>
 
 <div class="step">
-  <strong>Step 5:</strong> Click scroll down inside that dropdown and click “other”, and type in “7.0”.
+  <strong>Step 5:</strong>
+  <p>Click scroll down inside that dropdown and click “other”, and type in “7.0”.</p>
   <img src="GuideImages/ProjPicSetup5.png" alt="Step 5">
 </div>
 
 <div class="step">
-  <strong>Step 6:</strong> Right click and select delete on the two highlighted files.
+  <strong>Step 6:</strong>
+  <p>Right click and select delete on the two highlighted files.</p>
   <img src="GuideImages/ProjPicSetup6.png" alt="Step 6">
 </div>
 
 <div class="step">
-  <strong>Step 7:</strong> Open the LaunchScreen storyboard.
+  <strong>Step 7:</strong>
+  <p>Open the LaunchScreen storyboard.</p>
   <img src="GuideImages/ProjPicSetup7.png" alt="Step 7">
 </div>
 
 <div class="step">
-  <strong>Step 8:</strong> Click “View Controller Scene”.
+  <strong>Step 8:</strong>
+  <p>Click “View Controller Scene”.</p>
   <img src="GuideImages/ProjPicSetup8.png" alt="Step 8">
 </div>
 
 <div class="step">
-  <strong>Step 9:</strong> On the right, click the page option.
+  <strong>Step 9:</strong>
+  <p>On the right, click the page option.</p>
   <img src="GuideImages/ProjPicSetup9.png" alt="Step 9">
 </div>
 
 <div class="step">
-  <strong>Step 10:</strong> Uncheck the “Use Safe Area Layout Guides” option.
+  <strong>Step 10:</strong>
+  <p>Uncheck the “Use Safe Area Layout Guides” option.</p>
   <img src="GuideImages/ProjPicSetup10.png" alt="Step 10">
 </div>
 
 <div class="step">
-  <strong>Step 11:</strong> Go to the AppDelegate file.
+  <strong>Step 11:</strong>
+  <p>Go to the AppDelegate file.</p>
   <img src="GuideImages/ProjPicSetup11.png" alt="Step 11">
 </div>
 
 <div class="step">
-  <strong>Step 12:</strong> Cmd A to select all, then Cmd V to paste the following code:
+  <strong>Step 12:</strong>
+  <p>Cmd A to select all, then Cmd V to paste the following code:</p>
   <pre>
 import UIKit
 
