@@ -109,7 +109,26 @@ Paste: /Library/Developer/Toolchains
 
 <p class="note">Ensure you copy files into both 5.1.5 and the newer toolchain for macOS versions newer than Mojave. If not done correctly, reinstall the toolchains.</p>
 
-<h2>Step 5: Done!</h2>
+<!-- Step 4.5: Fix Command -->
+<h3>🧩 Step 4.5 — Fix Swift Toolchain Paths</h3>
+<pre><code id="fix-command">sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver && sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</code></pre>
+<button onclick="copyToClipboard('fix-command')">Copy</button>
+
+<!-- Step 5: Template Install Command -->
+<h3>Step 5 — Install Xcode Templates</h3>
+<pre><code id="template-command">mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application && git clone https://github.com/JWIMaster/iOS-6-Swift-Xcode-Templates.git /tmp/iOS6SwiftTemplates && cp -R /tmp/iOS6SwiftTemplates/Templates/Project\ Templates/Application/* ~/Library/Developer/Xcode/Templates/Project\ Templates/Application/ && rm -rf /tmp/iOS6SwiftTemplates</code></pre>
+<button onclick="copyToClipboard('template-command')">Copy</button>
+
+<script>
+function copyToClipboard(id) {
+  const el = document.getElementById(id);
+  navigator.clipboard.writeText(el.innerText);
+  alert('Command copied to clipboard!');
+}
+</script>
+
+
+<h2>Step 6: Done!</h2>
 <p>Installation is complete. You can now move on to setting up your Swift project targeting iOS 6.</p>
   
 <h2 style="text-align:center; margin-top:3rem;">
