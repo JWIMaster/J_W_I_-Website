@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Project Setup Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --glass-radius:12px;
+    --glass-blur:14px;
+    --glass-sat:160%;
+    --glass-alpha:0.14;
+    --glass-border-alpha:0.28;
+  }
+
+  html, body {
+    margin:0; padding:0; height:100%;
+    font-family:'Outfit',sans-serif;
+    background:linear-gradient(270deg, #0d0d0d, #1a1a3d, #3d1a1a, #1a3d2e);
+    background-size:800% 800%;
+    animation:bgShift 20s ease infinite;
+    color:#e0e0e0;
+    line-height:1.6;
+  }
+
+  @keyframes bgShift { 0% {background-position:0% 50%} 50% {background-position:100% 50%} 100% {background-position:0% 50%} }
+
+  body::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='a'><feTurbulence baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23a)' opacity='0.07'/></svg>");
+    background-repeat:repeat;
+    mix-blend-mode:overlay;
+    pointer-events:none;
+    z-index:0;
+  }
+
+  h1{font-size:2.8rem; text-align:center; margin:2rem 0 1rem; z-index:3; position:relative; color:#fff;}
+  .step{display:flex; flex-wrap:wrap; align-items:center; margin:2rem 0; z-index:3; position:relative;}
+  .step:nth-child(even) .step-img{order:1;}
+  .step-text, .step-img{flex:1; min-width:300px; padding:0 1rem;}
+  .step-img img{width:100%; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.4);}
+
+  pre{background-color:#1e1e1e; color:#dcdcdc; padding:12px; overflow-x:auto; border-radius:12px; font-size:0.9em; line-height:1.4; margin-top:1rem;}
+</style>
+</head>
+<body>
+
+<h1>Project Setup and Build</h1>
+<p style="text-align:center; max-width:700px; margin:0 auto 2rem;">Make a new Project in Xcode that is storyboard based.</p>
+
+<!-- Step 1 -->
+<div class="step">
+  <div class="step-text"><strong>Step 1:</strong> Click the info tab in the Project Settings.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup1.png" alt="Step 1"></div>
+</div>
+
+<!-- Step 2 -->
+<div class="step">
+  <div class="step-text"><strong>Step 2:</strong> Hover over and click the minus button on the values in the image.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup2.png" alt="Step 2"></div>
+</div>
+
+<!-- Step 3 -->
+<div class="step">
+  <div class="step-text"><strong>Step 3:</strong> Click the build settings tab.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup3.png" alt="Step 3"></div>
+</div>
+
+<!-- Step 4 -->
+<div class="step">
+  <div class="step-text"><strong>Step 4:</strong> Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup4.png" alt="Step 4"></div>
+</div>
+
+<!-- Step 5 -->
+<div class="step">
+  <div class="step-text"><strong>Step 5:</strong> Click scroll down inside that dropdown and click “other”, and type in “7.0”.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup5.png" alt="Step 5"></div>
+</div>
+
+<!-- Step 6 -->
+<div class="step">
+  <div class="step-text"><strong>Step 6:</strong> Right click and select delete on the two highlighted files.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup6.png" alt="Step 6"></div>
+</div>
+
+<!-- Step 7 -->
+<div class="step">
+  <div class="step-text"><strong>Step 7:</strong> Open the LaunchScreen storyboard.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup7.png" alt="Step 7"></div>
+</div>
+
+<!-- Step 8 -->
+<div class="step">
+  <div class="step-text"><strong>Step 8:</strong> Click “View Controller Scene”.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup8.png" alt="Step 8"></div>
+</div>
+
+<!-- Step 9 -->
+<div class="step">
+  <div class="step-text"><strong>Step 9:</strong> On the right, click the page option.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup9.png" alt="Step 9"></div>
+</div>
+
+<!-- Step 10 -->
+<div class="step">
+  <div class="step-text"><strong>Step 10:</strong> Uncheck the “Use Safe Area Layout Guides” option.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup10.png" alt="Step 10"></div>
+</div>
+
+<!-- Step 11 -->
+<div class="step">
+  <div class="step-text"><strong>Step 11:</strong> Go to the AppDelegate file.</div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup11.png" alt="Step 11"></div>
+</div>
+
+<!-- Step 12 -->
+<div class="step">
+  <div class="step-text">
+    <strong>Step 12:</strong> Cmd A to select all, then Cmd V to paste the following code:
+    <pre>
+import UIKit
+
+@main
+class AppDelegate: UIResponder, UIApplicationDelegate {
+
+    var window: UIWindow?  // Needed for apps not using SceneDelegate
+
+    func application(_ application: UIApplication,
+                     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // Create a UIWindow manually
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = ViewController() // Set initial ViewController
+        window?.makeKeyAndVisible()
+        
+        return true
+    }
+}
+    </pre>
+  </div>
+  <div class="step-img"><img src="GuideImages/ProjPicSetup12.png" alt="Step 12"></div>
+</div>
+
+</body>
+</html>
