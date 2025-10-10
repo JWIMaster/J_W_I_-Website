@@ -10,48 +10,36 @@
 <style>
   :root{
     --glass-radius:12px;
-    --glass-blur:14px;
-    --glass-sat:160%;
     --glass-alpha:0.14;
     --glass-border-alpha:0.28;
   }
 
   html, body {
-    margin:0; padding:0; height:100%;
+    margin:0; padding:0;
     font-family:'Outfit',sans-serif;
-    background:linear-gradient(270deg, #0d0d0d, #1a1a3d, #3d1a1a, #1a3d2e);
-    background-size:800% 800%;
-    animation:bgShift 20s ease infinite;
+    background-color:#121212;
     color:#e0e0e0;
-    line-height:1.6;
+    line-height:1.5;
   }
 
-  @keyframes bgShift { 0% {background-position:0% 50%} 50% {background-position:100% 50%} 100% {background-position:0% 50%} }
-
-  body::after{
-    content:"";
-    position:absolute;
-    inset:0;
-    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='a'><feTurbulence baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23a)' opacity='0.07'/></svg>");
-    background-repeat:repeat;
-    mix-blend-mode:overlay;
-    pointer-events:none;
-    z-index:0;
-  }
-
-  h1{font-size:2.8rem; text-align:center; margin:2rem 0 1rem; z-index:3; position:relative; color:#fff;}
-  .step{display:flex; flex-wrap:wrap; align-items:center; margin:2rem 0; z-index:3; position:relative;}
+  h1{font-size:2.2rem; text-align:center; margin:2rem 0 1rem; color:#fff;}
+  .step{display:flex; flex-wrap:wrap; align-items:center; margin:1.5rem 0;}
   .step:nth-child(even) .step-img{order:1;}
-  .step-text, .step-img{flex:1; min-width:300px; padding:0 1rem;}
-  .step-img img{width:100%; border-radius:12px; box-shadow:0 8px 24px rgba(0,0,0,0.4);}
+  .step-text, .step-img{flex:1; min-width:200px; padding:0 0.5rem;}
+  .step-text{margin-bottom:0.5rem;}
+  .step-img img{width:100%; max-width:300px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5);}
 
-  pre{background-color:#1e1e1e; color:#dcdcdc; padding:12px; overflow-x:auto; border-radius:12px; font-size:0.9em; line-height:1.4; margin-top:1rem;}
+  pre{background-color:#1e1e1e; color:#dcdcdc; padding:10px; overflow-x:auto; border-radius:10px; font-size:0.9em; line-height:1.4; margin-top:0.5rem;}
+  @media(max-width:600px){
+    .step{flex-direction:column; text-align:center;}
+    .step-img{margin-bottom:0.5rem;}
+  }
 </style>
 </head>
 <body>
 
 <h1>Project Setup and Build</h1>
-<p style="text-align:center; max-width:700px; margin:0 auto 2rem;">Make a new Project in Xcode that is storyboard based.</p>
+<p style="text-align:center; max-width:600px; margin:0 auto 1.5rem;">Make a new Project in Xcode that is storyboard based.</p>
 
 <!-- Step 1 -->
 <div class="step">
