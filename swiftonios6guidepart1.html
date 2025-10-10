@@ -124,22 +124,31 @@
 <h3>Step 4.5 — Fix Swift Toolchain Paths</h3>
 
 <p>Swift 5.6.3:</p>
-<pre class="code-container">
+<div class="code-container">
+  <button class="copy-btn" onclick="copyCode('rpath563')">Copy</button>
+  <pre id="rpath563">
 sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver
-</pre>
+  </pre>
+</div>
 
 <p>Swift 5.10.1:</p>
-<pre class="code-container">
+<div class="code-container">
+  <button class="copy-btn" onclick="copyCode('rpath510')">Copy</button>
+  <pre id="rpath510">
 sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver
-</pre>
+  </pre>
+</div>
 
 <h3>Step 5 — Install Xcode Templates</h3>
-<pre class="code-container">
+<div class="code-container">
+  <button class="copy-btn" onclick="copyCode('templates')">Copy</button>
+  <pre id="templates">
 mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application
 git clone https://github.com/JWIMaster/iOS-6-Swift-Xcode-Templates.git /tmp/iOS6SwiftTemplates
 cp -R /tmp/iOS6SwiftTemplates/Templates/Project\ Templates/Application/* ~/Library/Developer/Xcode/Templates/Project\ Templates/Application/
 rm -rf /tmp/iOS6SwiftTemplates
-</pre>
+  </pre>
+</div>
 
 <h3>Step 6 — Select Template</h3>
 <p>Open Xcode → File → New Project → Select <strong>Legacy Swift Application</strong> template and you're good to go.</p>
