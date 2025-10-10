@@ -41,7 +41,7 @@
 
   .step img {
     width: auto;
-    max-width: calc(100% - 400px); /* ~200px inset left/right */
+    max-width: calc(100% - 800px); /* 400px inset each side */
     border-radius:12px; 
     box-shadow:0 4px 12px rgba(0,0,0,0.5); 
     margin-top:1rem;
@@ -59,9 +59,15 @@
     text-align:left;
   }
 
+  @media (max-width: 1200px) {
+    .step img {
+      max-width: calc(100% - 100px); /* reduce inset on smaller screens */
+    }
+  }
+
   @media (max-width: 800px) {
     .step img {
-      max-width: 100%; /* remove insets for small screens */
+      max-width: 100%; /* remove inset for very small screens */
     }
   }
 </style>
@@ -163,6 +169,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 }
   </pre>
   <img src="GuideImages/ProjPicSetup12.png" alt="Step 12">
+</div>
+
+<div class="step">
+  <strong>Step 13:</strong>
+  <p>To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
+  <img src="GuideImages/ProjPicSetup13.png" alt="Step 13">
 </div>
 
 </body>
