@@ -14,7 +14,7 @@
     margin: auto;
     line-height: 1.6;
   }
-  h1, h2 {
+  h1, h2, h3 {
     color: #ffffff;
   }
   h2 {
@@ -35,51 +35,63 @@
     margin-bottom: 1em;
     color: #dcdcdc;
     font-size: 0.9em;
+    position: relative;
   }
   code {
     font-family: Menlo, Consolas, monospace;
     color: #dcdcdc;
   }
-  .note {
-    color: #ffcc66;
+  .copy-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 8px;
+    font-size: 0.8em;
+    cursor: pointer;
+    transition: background 0.2s;
   }
+  .copy-btn:hover { background: #555; }
+  .copy-btn:active { background: #777; }
 </style>
 </head>
 <body>
 
 <h1>Swift Toolchain Installation Guide for iOS 6</h1>
 
-<h2>Step 1: Choose the Correct Swift Toolchain</h2>
+<h2>Step 1: Download the Correct Swift Toolchains</h2>
 
-<p><strong>Mojave:</strong> Use Swift 5.1.5</p>
-<pre><code>// Official Swift 5.1.5
-<a href="https://download.swift.org/swift-5.1.5-release/xcode/swift-5.1.5-RELEASE/swift-5.1.5-RELEASE-osx.pkg" target="_blank">Download Swift 5.1.5</a>
+<p>Choose your macOS version and download the required Swift toolchains. <strong>Always download both 5.1.5 and the version for your macOS if using Big Sur or Monterey.</strong> GitHub links are for reference only; download the builds from the Drive links below.</p>
 
-// Toolchain files & build script
-<a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/tag/0.0.1" target="_blank">Download from GitHub</a>
-</code></pre>
+<ul>
+  <li>
+    <strong>Mojave:</strong> Only Swift 5.1.5 needed<br>
+    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Download Swift 5.1.5 Build</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/tag/0.0.1" target="_blank">GitHub Reference</a>
+  </li>
 
-<p><strong>Big Sur or older:</strong> Use Swift 5.6 AND 5.1.5</p>
-<pre><code>// Swift 5.6
-<a href="https://download.swift.org/swift-5.6.3-release/xcode/swift-5.6.3-RELEASE/swift-5.6.3-RELEASE-osx.pkg" target="_blank">Download Swift 5.6.3</a>
+  <li>
+    <strong>Big Sur:</strong> Swift 5.6.3 + Swift 5.1.5<br>
+    <a href="https://drive.google.com/uc?export=download&id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank">Download Swift 5.6.3 Build</a>
+    <br>
+    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Download Swift 5.1.5 Build</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/tag/0.0.1" target="_blank">GitHub Reference</a>
+  </li>
 
-// Swift 5.1.5
-<a href="https://download.swift.org/swift-5.1.5-release/xcode/swift-5.1.5-RELEASE/swift-5.1.5-RELEASE-osx.pkg" target="_blank">Download Swift 5.1.5</a>
-
-// Toolchain files & build script
-<a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/tag/0.0.1" target="_blank">Download from GitHub</a>
-</code></pre>
-
-<p><strong>Monterey:</strong> Use Swift 5.10.1 AND 5.1.5</p>
-<pre><code>// Swift 5.10.1
-<a href="https://download.swift.org/swift-5.10.1-release/xcode/swift-5.10.1-RELEASE/swift-5.10.1-RELEASE-osx.pkg" target="_blank">Download Swift 5.10.1</a>
-
-// Swift 5.1.5
-<a href="https://download.swift.org/swift-5.1.5-release/xcode/swift-5.1.5-RELEASE/swift-5.1.5-RELEASE-osx.pkg" target="_blank">Download Swift 5.1.5</a>
-
-// Toolchain files & build script
-<a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/tag/0.0.1" target="_blank">Download from GitHub</a>
-</code></pre>
+  <li>
+    <strong>Monterey:</strong> Swift 5.10.1 + Swift 5.1.5<br>
+    <a href="https://drive.google.com/uc?export=download&id=1RuLxPPvQvEoZQn22UlAptaRM_2UqrHl-" target="_blank">Download Swift 5.10.1 Build</a>
+    <br>
+    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Download Swift 5.1.5 Build</a>
+    &nbsp;|&nbsp;
+    <a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/tag/0.0.1" target="_blank">GitHub Reference</a>
+  </li>
+</ul>
 
 <h2>Step 2: Install Xcode</h2>
 <pre><code>// Recommended Xcode version by macOS
@@ -89,51 +101,31 @@ Big Sur -> Xcode 13.2
 Monterey -> Xcode 13.4.1
 </code></pre>
 
-<h2>Step 3: Unzip Toolchain Files</h2>
-<pre><code>// Open Finder
-Control-Shift-G
-Paste: /Library/Developer/Toolchains
-</code></pre>
+<h2>Step 3: Fix Swift Toolchain Paths</h2>
 
-<p class="note">Important: Each toolchain folder (e.g., Swift-5.1.5-RELEASE) is the ROOT. Paths inside the zip are relative to this root.</p>
+<h3>Big Sur — Swift 5.6.3 only</h3>
+<pre><code id="fix-5.6.3">sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</code></pre>
+<button class="copy-btn" onclick="copyToClipboard('fix-5.6.3')">Copy</button>
 
-<h2>Step 4: Copy Files</h2>
-<pre><code>// Example instruction from zip:
-"Put into Swift 5.1.5 usr/lib/swift/iphoneos"
+<h3>Monterey — Swift 5.10.1 only</h3>
+<pre><code id="fix-5.10.1">sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver</code></pre>
+<button class="copy-btn" onclick="copyToClipboard('fix-5.10.1')">Copy</button>
 
-// Path in Finder:
-/Library/Developer/Toolchains/swift-5.1.5-RELEASE.xctoolchain/usr/lib/swift/iphoneos
-
-// Always select "Overwrite" when copying files
-</code></pre>
-
-<p class="note">Ensure you copy files into both 5.1.5 and the newer toolchain for macOS versions newer than Mojave. If not done correctly, reinstall the toolchains.</p>
-
-<!-- Step 4.5: Fix Command -->
-<h3>🧩 Step 4.5 — Fix Swift Toolchain Paths</h3>
-<pre><code id="fix-command">sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver && sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</code></pre>
-<button onclick="copyToClipboard('fix-command')">Copy</button>
-
-<!-- Step 5: Template Install Command -->
-<h3>Step 5 — Install Xcode Templates</h3>
+<h2>Step 4: Install Xcode Templates</h2>
 <pre><code id="template-command">mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application && git clone https://github.com/JWIMaster/iOS-6-Swift-Xcode-Templates.git /tmp/iOS6SwiftTemplates && cp -R /tmp/iOS6SwiftTemplates/Templates/Project\ Templates/Application/* ~/Library/Developer/Xcode/Templates/Project\ Templates/Application/ && rm -rf /tmp/iOS6SwiftTemplates</code></pre>
-<button onclick="copyToClipboard('template-command')">Copy</button>
+<button class="copy-btn" onclick="copyToClipboard('template-command')">Copy</button>
+
+<h2>Step 5: Done!</h2>
+<p>Everything is set up. You can now create Swift projects targeting iOS 6 using Xcode.</p>
 
 <script>
 function copyToClipboard(id) {
   const el = document.getElementById(id);
-  navigator.clipboard.writeText(el.innerText);
-  alert('Command copied to clipboard!');
+  navigator.clipboard.writeText(el.innerText).then(() => {
+    alert('Command copied to clipboard!');
+  });
 }
 </script>
-
-
-<h2>Step 6: Done!</h2>
-<p>Installation is complete. You can now move on to setting up your Swift project targeting iOS 6.</p>
-  
-<h2 style="text-align:center; margin-top:3rem;">
-  <a href="swiftonios6guidepart2.html">Continue to Part 2 of the Guide →</a>
-</h2>
 
 </body>
 </html>
