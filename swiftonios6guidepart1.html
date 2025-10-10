@@ -24,6 +24,11 @@
   .copy-btn { position:absolute; top:12px; right:12px; padding:6px 12px; background:rgba(255,255,255,0.1); color:#fff; border:none; border-radius:8px; cursor:pointer; font-weight:700; transition: background 0.2s; }
   .copy-btn:hover { background:rgba(255,255,255,0.2); }
   .note { color:#ffcc66; margin-top:0.5rem; font-style:italic; }
+  table { width: 100%; border-collapse: collapse; margin: 1rem 0; }
+  th, td { border: 1px solid #333; padding: 8px; text-align: center; }
+  th { background-color: #1f1f1f; }
+  .flex-container { display:flex; justify-content:center; flex-wrap:wrap; gap:1rem; margin-top:1rem; }
+  .flex-item { flex:1 1 250px; }
 </style>
 </head>
 <body>
@@ -32,42 +37,63 @@
 
 <div class="step">
   <strong>Step 1 — Download Builds</strong>
-  <p><strong>Mojave:</strong> Swift 5.1.5</p>
-  <p>
-    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Swift 5.1.5 Build</a> | 
-    <a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank">Build Script on GitHub</a>
-  </p>
+  <p>Click the buttons to download the toolchain builds for your macOS version.</p>
 
-  <p><strong>Big Sur:</strong> Swift 5.6.3 and Swift 5.1.5</p>
-  <p>
-    <a href="https://drive.google.com/uc?export=download&id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank">Swift 5.6.3 Build</a> | 
-    <a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank">Build Script on GitHub</a>
-  </p>
-  <p>
-    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Swift 5.1.5 Build</a>
-  </p>
-  <p class="note">Big Sur users must install both 5.6.3 and 5.1.5 to support iOS 6 projects.</p>
-
-  <p><strong>Monterey:</strong> Swift 5.10.1 and Swift 5.1.5</p>
-  <p>
-    <a href="https://drive.google.com/uc?export=download&id=1RuLxPPvQvEoZQn22UlAptaRM_2UqrHl-" target="_blank">Swift 5.10.1 Build</a> | 
-    <a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank">Build Script on GitHub</a>
-  </p>
-  <p>
-    <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Swift 5.1.5 Build</a>
-  </p>
-  <p class="note">Monterey users must install both 5.10.1 and 5.1.5 to support iOS 6 projects.</p>
+  <table>
+    <tr>
+      <th>macOS</th>
+      <th>Xcode Version</th>
+      <th>Swift Toolchain</th>
+    </tr>
+    <tr>
+      <td>Mojave</td>
+      <td>Xcode 11.3.1</td>
+      <td>
+        <div class="flex-container">
+          <div class="flex-item"><a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Swift 5.1.5 Build</a></div>
+          <div class="flex-item"><a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank">Build Script</a></div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>Big Sur</td>
+      <td>Xcode 13.2</td>
+      <td>
+        <div class="flex-container">
+          <div class="flex-item"><a href="https://drive.google.com/uc?export=download&id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank">Swift 5.6.3 Build</a></div>
+          <div class="flex-item"><a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank">Build Script</a></div>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Also download Swift 5.1.5 Build</a>
+        </div>
+        <p class="note">Big Sur requires both 5.6.3 and 5.1.5 for iOS 6 projects.</p>
+      </td>
+    </tr>
+    <tr>
+      <td>Monterey</td>
+      <td>Xcode 13.4.1</td>
+      <td>
+        <div class="flex-container">
+          <div class="flex-item"><a href="https://drive.google.com/uc?export=download&id=1RuLxPPvQvEoZQn22UlAptaRM_2UqrHl-" target="_blank">Swift 5.10.1 Build</a></div>
+          <div class="flex-item"><a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank">Build Script</a></div>
+        </div>
+        <div style="margin-top:0.5rem;">
+          <a href="https://drive.google.com/uc?export=download&id=1AQIAeFSKXmdWJJQB3zSd8vb1FT9jd2p4" target="_blank">Also download Swift 5.1.5 Build</a>
+        </div>
+        <p class="note">Monterey requires both 5.10.1 and 5.1.5 for iOS 6 projects.</p>
+      </td>
+    </tr>
+  </table>
 </div>
 
 <div class="step">
   <strong>Step 2 — Install Xcode</strong>
-  <p>Install the recommended Xcode version for your macOS:</p>
-  <p>Mojave → Xcode 11.3.1 | Catalina → Xcode 12.4 | Big Sur → Xcode 13.2 | Monterey → Xcode 13.4.1</p>
+  <p>Install the recommended Xcode version for your macOS (see table above).</p>
 </div>
 
 <div class="step">
-  <strong>Step 3 — Fix Swift Toolchain Paths (Install rpath)</strong>
-  <p>Copy the command below into Terminal. Only one command per macOS version.</p>
+  <strong>Step 3 — Fix Swift Toolchain Paths</strong>
+  <p>Run the rpath fix command for your version:</p>
 
   <div class="code-container">
     <button class="copy-btn" onclick="copyCode(this)">Copy Command</button>
@@ -90,7 +116,49 @@
 
 <div class="step">
   <strong>Step 5 — Select the Legacy Swift Application Template</strong>
-  <p>Open Xcode, create a new project, and in the template chooser, select <strong>Legacy Swift Application</strong>. You're now ready to start developing for iOS 6!</p>
+  <p>Open Xcode, create a new project, and in the template chooser select <strong>Legacy Swift Application</strong>. You're ready to develop for iOS 6!</p>
+</div>
+
+<div class="step">
+  <strong>How to Build Your Project</strong>
+  <p>Follow these steps to build your iOS 6 project into an IPA using the build script you downloaded:</p>
+
+  <div class="step">
+    <strong>Step 1:</strong>
+    <p>Open Terminal and <code>cd</code> into your project directory.</p>
+    <div class="code-container">
+      <button class="copy-btn" onclick="copyCode(this)">Copy Command</button>
+      <pre id="cd-project">cd /path/to/your/project</pre>
+    </div>
+  </div>
+
+  <div class="step">
+    <strong>Step 2:</strong>
+    <p>Drag the build script file you downloaded onto the Terminal.</p>
+  </div>
+
+  <div class="step">
+    <strong>Step 3:</strong>
+    <p>Type your project’s <strong>scheme name</strong> after the script path.</p>
+    <div class="code-container">
+      <button class="copy-btn" onclick="copyCode(this)">Copy Example</button>
+      <pre id="scheme">./xcodearchivebuildswift5.10.1toolchain.command MyAppScheme</pre>
+    </div>
+  </div>
+
+  <div class="step">
+    <strong>Step 4:</strong>
+    <p>Specify the build folder. If unsure, just type <code>build</code>.</p>
+    <div class="code-container">
+      <button class="copy-btn" onclick="copyCode(this)">Copy Example</button>
+      <pre id="build-folder">./xcodearchivebuildswift5.10.1toolchain.command MyAppScheme build</pre>
+    </div>
+  </div>
+
+  <div class="step">
+    <strong>Step 5:</strong>
+    <p>Enjoy your IPA! It will be in the folder you specified.</p>
+  </div>
 </div>
 
 <script>
