@@ -8,12 +8,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
 <style>
-  :root{
-    --glass-radius:12px;
-    --glass-alpha:0.14;
-    --glass-border-alpha:0.28;
-  }
-
   html, body {
     margin:0; padding:0;
     font-family:'Outfit',sans-serif;
@@ -23,95 +17,74 @@
   }
 
   h1{font-size:2.2rem; text-align:center; margin:2rem 0 1rem; color:#fff;}
-  .step{display:flex; flex-wrap:wrap; align-items:center; margin:1.5rem 0;}
-  .step:nth-child(even) .step-img{order:1;}
-  .step-text, .step-img{flex:1; min-width:200px; padding:0 0.5rem;}
-  .step-text{margin-bottom:0.5rem;}
-  .step-img img{width:100%; max-width:300px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5);}
-
+  .step{margin:2rem 0; text-align:center;}
+  .step img{width:100%; max-width:400px; border-radius:12px; box-shadow:0 4px 12px rgba(0,0,0,0.5); margin-top:0.8rem;}
   pre{background-color:#1e1e1e; color:#dcdcdc; padding:10px; overflow-x:auto; border-radius:10px; font-size:0.9em; line-height:1.4; margin-top:0.5rem;}
-  @media(max-width:600px){
-    .step{flex-direction:column; text-align:center;}
-    .step-img{margin-bottom:0.5rem;}
-  }
 </style>
 </head>
 <body>
 
 <h1>Project Setup and Build</h1>
-<p style="text-align:center; max-width:600px; margin:0 auto 1.5rem;">Make a new Project in Xcode that is storyboard based.</p>
+<p style="text-align:center; max-width:600px; margin:0 auto 2rem;">Make a new Project in Xcode that is storyboard based.</p>
 
-<!-- Step 1 -->
 <div class="step">
-  <div class="step-text"><strong>Step 1:</strong> Click the info tab in the Project Settings.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup1.png" alt="Step 1"></div>
+  <strong>Step 1:</strong> Click the info tab in the Project Settings.
+  <img src="GuideImages/ProjPicSetup1.png" alt="Step 1">
 </div>
 
-<!-- Step 2 -->
 <div class="step">
-  <div class="step-text"><strong>Step 2:</strong> Hover over and click the minus button on the values in the image.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup2.png" alt="Step 2"></div>
+  <strong>Step 2:</strong> Hover over and click the minus button on the values in the image.
+  <img src="GuideImages/ProjPicSetup2.png" alt="Step 2">
 </div>
 
-<!-- Step 3 -->
 <div class="step">
-  <div class="step-text"><strong>Step 3:</strong> Click the build settings tab.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup3.png" alt="Step 3"></div>
+  <strong>Step 3:</strong> Click the build settings tab.
+  <img src="GuideImages/ProjPicSetup3.png" alt="Step 3">
 </div>
 
-<!-- Step 4 -->
 <div class="step">
-  <div class="step-text"><strong>Step 4:</strong> Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup4.png" alt="Step 4"></div>
+  <strong>Step 4:</strong> Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.
+  <img src="GuideImages/ProjPicSetup4.png" alt="Step 4">
 </div>
 
-<!-- Step 5 -->
 <div class="step">
-  <div class="step-text"><strong>Step 5:</strong> Click scroll down inside that dropdown and click “other”, and type in “7.0”.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup5.png" alt="Step 5"></div>
+  <strong>Step 5:</strong> Click scroll down inside that dropdown and click “other”, and type in “7.0”.
+  <img src="GuideImages/ProjPicSetup5.png" alt="Step 5">
 </div>
 
-<!-- Step 6 -->
 <div class="step">
-  <div class="step-text"><strong>Step 6:</strong> Right click and select delete on the two highlighted files.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup6.png" alt="Step 6"></div>
+  <strong>Step 6:</strong> Right click and select delete on the two highlighted files.
+  <img src="GuideImages/ProjPicSetup6.png" alt="Step 6">
 </div>
 
-<!-- Step 7 -->
 <div class="step">
-  <div class="step-text"><strong>Step 7:</strong> Open the LaunchScreen storyboard.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup7.png" alt="Step 7"></div>
+  <strong>Step 7:</strong> Open the LaunchScreen storyboard.
+  <img src="GuideImages/ProjPicSetup7.png" alt="Step 7">
 </div>
 
-<!-- Step 8 -->
 <div class="step">
-  <div class="step-text"><strong>Step 8:</strong> Click “View Controller Scene”.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup8.png" alt="Step 8"></div>
+  <strong>Step 8:</strong> Click “View Controller Scene”.
+  <img src="GuideImages/ProjPicSetup8.png" alt="Step 8">
 </div>
 
-<!-- Step 9 -->
 <div class="step">
-  <div class="step-text"><strong>Step 9:</strong> On the right, click the page option.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup9.png" alt="Step 9"></div>
+  <strong>Step 9:</strong> On the right, click the page option.
+  <img src="GuideImages/ProjPicSetup9.png" alt="Step 9">
 </div>
 
-<!-- Step 10 -->
 <div class="step">
-  <div class="step-text"><strong>Step 10:</strong> Uncheck the “Use Safe Area Layout Guides” option.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup10.png" alt="Step 10"></div>
+  <strong>Step 10:</strong> Uncheck the “Use Safe Area Layout Guides” option.
+  <img src="GuideImages/ProjPicSetup10.png" alt="Step 10">
 </div>
 
-<!-- Step 11 -->
 <div class="step">
-  <div class="step-text"><strong>Step 11:</strong> Go to the AppDelegate file.</div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup11.png" alt="Step 11"></div>
+  <strong>Step 11:</strong> Go to the AppDelegate file.
+  <img src="GuideImages/ProjPicSetup11.png" alt="Step 11">
 </div>
 
-<!-- Step 12 -->
 <div class="step">
-  <div class="step-text">
-    <strong>Step 12:</strong> Cmd A to select all, then Cmd V to paste the following code:
-    <pre>
+  <strong>Step 12:</strong> Cmd A to select all, then Cmd V to paste the following code:
+  <pre>
 import UIKit
 
 @main
@@ -130,9 +103,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-    </pre>
-  </div>
-  <div class="step-img"><img src="GuideImages/ProjPicSetup12.png" alt="Step 12"></div>
+  </pre>
+  <img src="GuideImages/ProjPicSetup12.png" alt="Step 12">
 </div>
 
 </body>
