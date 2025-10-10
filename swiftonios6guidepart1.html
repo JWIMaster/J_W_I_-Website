@@ -22,14 +22,14 @@
   }
 
   table {
-    width: 100%;
+    width: 90%;
+    margin: 2rem auto;
     border-collapse: collapse;
-    margin: 2rem 0;
   }
 
   th, td {
     border: 1px solid #444;
-    padding: 12px;
+    padding: 12px 16px;
     text-align: center;
     vertical-align: top;
   }
@@ -97,6 +97,16 @@
   .copy-btn:hover {
     background:rgba(255,255,255,0.2);
   }
+
+  .example-code {
+    background-color:#2a2a2a;
+    border-radius:12px;
+    padding:16px 24px;
+    margin: 1rem auto;
+    max-width:900px;
+    overflow-x:auto;
+  }
+
 </style>
 </head>
 <body>
@@ -168,13 +178,24 @@ mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application && g
 <p class="center-text">Open Xcode, create a new project, and choose the “Legacy Swift Application” template. You’re good to go.</p>
 
 <h1>How to Build</h1>
-<ol class="center-text">
-  <li>cd into your project directory</li>
-  <li>Drag the build file you downloaded onto the terminal</li>
-  <li>Type your project scheme name after the build file</li>
-  <li>Specify the build folder (put "build" if unsure)</li>
-  <li>Enjoy your IPA!</li>
-</ol>
+
+<div class="example-code">
+<pre>
+// Step 1: cd into your project directory
+cd /path/to/your/project
+
+// Step 2: Drag the build file onto the terminal
+./buildScript.command
+
+// Step 3: Type your project scheme name after
+MyProjectScheme
+
+// Step 4: Specify build folder (put "build" if unsure)
+build
+
+// Step 5: Enjoy your IPA!
+</pre>
+</div>
 
 <script>
 function copyCode(id){
