@@ -8,12 +8,13 @@ control accent.
 
 - `index.html` — hero wordmark + index of everything
 - `swiftios6.html` — the "Swift on iOS 6" technical note
-- `swiftonios6guidepart1.html` — Toolchain Guide
+- `swiftonios6guidepart1.html` — Toolchain Guide (interactive wizard, `guide1.js`)
 - `swiftonios6guidepart2.html` — Project Setup guide
 - `support.html` — contact
 
 All links are relative (GitHub Pages, CNAME `j-w-i.org`). No build step; `styles.css`
-and `site.js` are shared by every page.
+and `site.js` are shared by every page; `guide1.js` is the toolchain guide's wizard
+only.
 
 ## Colour
 
@@ -61,6 +62,17 @@ Rules of thumb:
   text.
 - **Sheet** — the article container; warm dark surface, 48px padding, sheet-ink
   text, hairline `--sheet-line` edges.
+- **Wizard** (toolchain guide) — one `.panel` shell (`.wiz-shell`) holding every
+  step; `guide1.js` shows exactly one `.wizard-step` at a time and switches the
+  section head (tick `a`/`b`/`c` + kicker + title + "phase · n of m" progress) with
+  the current step group. Steps stay fully rendered in the markup — no-JS visitors
+  get the whole guide stacked, and per-OS variants (`[data-os]`) carry the OS name
+  in their headings so each one reads standalone. OS choice is a radio group in
+  `.os-card` wells; the native radio is restyled as a 14 px dot on the right of the
+  card — dark when off, glowing green (the brand status green) when selected, with
+  a faint green border on the card itself. Back/Next pill buttons in
+  `.wiz-controls`, with the final "Next: Project Setup →" link replacing Next on
+  the last step.
 
 ## Motion
 
@@ -70,20 +82,21 @@ Everything animates only under `prefers-reduced-motion: no-preference`
 - **Scroll reveals** — `.fade-io` fades + rises 14px the first time it enters the
   viewport (550ms) and *stays*; it never fades back out on scroll-up. The observer
   unobserves after first reveal.
-- **Typewriter leads** — `[data-typewrite="n"]` elements type their first *n*
-  sentences at a fast cadence (~9–18 ms/char) with a blinking blue cursor while the
-  element itself fades in in parallel; then the remaining sentences and the blocks
-  named in `data-typewrite-then` fade in, staggered 120 ms. Classes are stripped
-  afterwards so the elements hand back to the scroll-reveal system. The blocks
-  named in `data-typewrite-then` are hidden *instantly* (no transition on the way
-  out) so the first paint never flashes visible → hidden → visible.
-- **Every load** — the typing plays on every page load (no session memory). The
-  home wordmark (`.hero-name`) types its six letters, then the DOM is restored to
-  its authored markup.
+- **Intro fades** — on load, the lead (the `[data-typewrite]` element) and the
+  blocks named in `data-typewrite-then` fade in together (900 ms, no typing, no
+  pauses, no stagger). Classes are stripped ~1.1 s later so the elements hand back
+  to the scroll-reveal system. The blocks are hidden *instantly* (no transition on
+  the way out) so the first paint never flashes visible → hidden → visible.
+- **Every load** — the fade plays on every page load (no session memory). The
+  home wordmark (`.hero-name`) rides the standard `.reveal` rise.
 - **Code scrollbars** — `.code-screen` (and `.table-scroll`) use a thin custom
   scrollbar (`scrollbar-width: thin` + WebKit rules, `--surface-2` thumb) in place
   of the default OS bar.
 - **Entrance** — `.reveal` rise animation for hero content.
+- **Wizard steps** — each step revealed with `.wiz-enter` → `.wiz-shown`
+  (340 ms opacity + 8 px rise, same language as `.fade-io`), driven by the wizard's
+  state machine; skipped entirely under reduced motion. Steps deliberately carry no
+  `.fade-io` — the section's first reveal already covers the initial paint.
 
 ## Verification
 
@@ -92,4 +105,5 @@ Everything animates only under `prefers-reduced-motion: no-preference`
 
 - `node shot.js` — 5 pages × 11 viewports, overflow/blank checks → expect `ALL_CLEAN`
 - `node functional.js` — nav, copy buttons, mailto, anchors
+- `node wizard.js` — all three OS paths end-to-end, copy round-trip, no-JS stack, reduced motion
 - `node contrast.js` — WCAG pairs for every token combination
