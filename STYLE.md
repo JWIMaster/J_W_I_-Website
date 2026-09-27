@@ -74,11 +74,15 @@ Everything animates only under `prefers-reduced-motion: no-preference`
   sentences at a fast cadence (~9–18 ms/char) with a blinking blue cursor while the
   element itself fades in in parallel; then the remaining sentences and the blocks
   named in `data-typewrite-then` fade in, staggered 120 ms. Classes are stripped
-  afterwards so the elements hand back to the scroll-reveal system.
-- **Once per session** — each typewritten element carries a `data-tw-key`;
-  `sessionStorage` remembers it, so revisiting a page within the session shows the
-  finished text with no re-typing. The home wordmark (`.hero-name`) types its six
-  letters once, then the DOM is restored to its authored markup.
+  afterwards so the elements hand back to the scroll-reveal system. The blocks
+  named in `data-typewrite-then` are hidden *instantly* (no transition on the way
+  out) so the first paint never flashes visible → hidden → visible.
+- **Every load** — the typing plays on every page load (no session memory). The
+  home wordmark (`.hero-name`) types its six letters, then the DOM is restored to
+  its authored markup.
+- **Code scrollbars** — `.code-screen` (and `.table-scroll`) use a thin custom
+  scrollbar (`scrollbar-width: thin` + WebKit rules, `--surface-2` thumb) in place
+  of the default OS bar.
 - **Entrance** — `.reveal` rise animation for hero content.
 
 ## Verification

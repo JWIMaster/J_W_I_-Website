@@ -61,15 +61,21 @@ const { chromium } = require('playwright');
   const stillIn = await p.evaluate(() => [...document.querySelectorAll('.fade-io')].every(el => el.classList.contains('is-in')));
   results.push('reveal one-way (in after scroll-down: ' + allIn + ', stays after scroll-up: ' + stillIn + '): ' + (allIn && stillIn ? ' OK' : ' FAIL'));
 
-  // 7. typewriter runs once per session: reload => full text, no tw classes
+  // 7. typewriter plays on every load: reload => typing visible mid-flight, then settles to full text
   await p.reload({ waitUntil: 'domcontentloaded' });
-  await p.waitForTimeout(400);
-  const tw = await p.evaluate(() => ({
+  await p.waitForTimeout(250);
+  const twMid = await p.evaluate(() => ({
+    text: document.querySelector('[data-typewrite]').textContent.trim(),
+    cursor: document.querySelectorAll('.tw-cursor').length,
+  }));
+  await p.waitForTimeout(3000);
+  const twEnd = await p.evaluate(() => ({
     text: document.querySelector('[data-typewrite]').textContent.trim(),
     twClasses: document.querySelectorAll('.tw-rest, .tw-in, .tw-cursor').length,
   }));
   const expected = 'Yes, you read that correctly: Swift on iOS 6.';
-  results.push('tw once-per-session: ' + (tw.text === expected && tw.twClasses === 0 ? ' OK' : ' FAIL ' + JSON.stringify(tw)));
+  const reTypes = twMid.cursor === 1 && twMid.text.length < expected.length;
+  results.push('tw every-load: mid="' + twMid.text + '" cursor=' + twMid.cursor + ' end="' + twEnd.text + '" classes=' + twEnd.twClasses + ': ' + (reTypes && twEnd.text === expected && twEnd.twClasses === 0 ? ' OK' : ' FAIL'));
 
   // 8. code panels flush with the step text (guide part 1)
   await p.goto('http://127.0.0.1:8123/swiftonios6guidepart1.html', { waitUntil: 'domcontentloaded' });
@@ -82,21 +88,27 @@ const { chromium } = require('playwright');
   });
   results.push('code alignment: ' + (align === null ? 'n/a' : Math.round(align * 10) / 10 + 'px ' + (align <= 1 ? 'OK' : 'FAIL')));
 
-  // 9. hero wordmark types once per session
+  // 9. hero wordmark types on every load (chars wrap during, DOM restored after)
   await p.goto('http://127.0.0.1:8123/index.html', { waitUntil: 'domcontentloaded' });
-  const heroMid = await p.evaluate(() => document.querySelectorAll('.hero-ch.on').length);
-  await p.waitForTimeout(1500);
+  await p.waitForTimeout(500);
+  const heroMid = await p.evaluate(() => ({
+    chars: document.querySelectorAll('.hero-ch').length,
+    on: document.querySelectorAll('.hero-ch.on').length,
+  }));
+  await p.waitForTimeout(1200);
   const heroDone = await p.evaluate(() => ({
     chars: document.querySelectorAll('.hero-ch').length,
     text: document.querySelector('.hero-name').textContent,
   }));
   await p.reload({ waitUntil: 'domcontentloaded' });
-  await p.waitForTimeout(300);
+  await p.waitForTimeout(500);
   const heroReload = await p.evaluate(() => ({
     chars: document.querySelectorAll('.hero-ch').length,
+    on: document.querySelectorAll('.hero-ch.on').length,
     text: document.querySelector('.hero-name').textContent,
   }));
-  results.push('hero typing: mid=' + heroMid + 'chars, done="' + heroDone.text + '" (chars=' + heroDone.chars + '), reload="' + heroReload.text + '" chars=' + heroReload.chars + ' ' + (heroDone.text === 'J_W_I_' && heroReload.text === 'J_W_I_' && heroReload.chars === 0 ? 'OK' : 'FAIL'));
+  const heroOk = heroMid.chars === 6 && heroDone.text === 'J_W_I_' && heroDone.chars === 0 && heroReload.chars === 6 && heroReload.text === 'J_W_I_';
+  results.push('hero typing every-load: mid=' + heroMid.on + '/6, done="' + heroDone.text + '" (chars=' + heroDone.chars + '), reload=' + heroReload.on + '/6 "' + heroReload.text + '" ' + (heroOk ? 'OK' : 'FAIL'));
 
   console.log(results.join('\n'));
   await b.close();

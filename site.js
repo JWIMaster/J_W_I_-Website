@@ -5,15 +5,26 @@
 
   /* Keep the --mast-h metric in sync with the (variable-height) sticky masthead. */
   var mast = document.querySelector('.masthead');
+  var nav = document.querySelector('.nav');
   function syncMast() {
     if (!mast) return;
     document.documentElement.style.setProperty('--mast-h', mast.offsetHeight + 'px');
   }
+  /* On the stacked mobile masthead, keep the current page's link in view so the
+     active underline never parks behind the clipped edge. */
+  function syncNav() {
+    if (!nav || window.innerWidth >= 720) return;
+    var active = nav.querySelector('a[aria-current="page"]');
+    if (!active) return;
+    var left = active.getBoundingClientRect().left - nav.getBoundingClientRect().left;
+    if (nav.scrollLeft !== left - 12) nav.scrollLeft = left - 12;
+  }
   if (mast) {
     syncMast();
-    window.addEventListener('resize', syncMast);
-    window.addEventListener('orientationchange', syncMast);
-    if (document.fonts && document.fonts.ready) document.fonts.ready.then(syncMast);
+    syncNav();
+    window.addEventListener('resize', function () { syncMast(); syncNav(); });
+    window.addEventListener('orientationchange', function () { syncMast(); syncNav(); });
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { syncMast(); syncNav(); });
   }
 
   function legacyCopy(text) {
@@ -82,19 +93,7 @@
   }
   wireScrollFades();
 
-  /* Typing runs at most once per browser session, per element key, so a
-     revisit within the session shows the finished text without re-typing. */
-  var session = (function () {
-    try { return window.sessionStorage; } catch (e) { return null; }
-  })();
-  function typedOnce(key) {
-    if (!session) return false;
-    try { return !!session.getItem('tw:' + key); } catch (e) { return false; }
-  }
-  function markTyped(key) {
-    if (!session) return;
-    try { session.setItem('tw:' + key, '1'); } catch (e) { /* private mode */ }
-  }
+  /* Typing plays on every load. */
   function motionOK() {
     return !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
@@ -105,9 +104,7 @@
   function typewriteLead() {
     var lead = document.querySelector('[data-typewrite]');
     if (!lead) return;
-    var key = lead.getAttribute('data-tw-key') || lead.id || 'lead';
-    if (!motionOK() || typedOnce(key)) return;
-    markTyped(key);
+    if (!motionOK()) return;
 
     var text = lead.textContent.replace(/\s+/g, ' ').trim();
     var sentences = text.match(/[^.!?]+[.!?]*/g) || [text];
@@ -168,8 +165,7 @@
      page; the DOM is restored to its authored markup when it settles. */
   function typeHeroName() {
     var name = document.querySelector('.hero-name');
-    if (!name || !motionOK() || typedOnce('hero')) return;
-    markTyped('hero');
+    if (!name || !motionOK()) return;
 
     var original = name.innerHTML;
     var chars = [];

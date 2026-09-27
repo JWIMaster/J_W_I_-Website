@@ -403,8 +403,9 @@ code, pre, kbd {
     padding-block-end: 4px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 14px), transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 14px, #000 calc(100% - 14px), transparent);
+    /* wider trailing fade: clipped links visibly dissolve, hinting the row scrolls */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 32px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 32px), transparent);
   }
 
   .nav::-webkit-scrollbar {
@@ -649,6 +650,35 @@ code, pre, kbd {
   padding: 18px 20px;
 }
 
+/* custom scrollbar for the code screens — the default OS bar looks out of place */
+.code-screen,
+.table-scroll {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-2) transparent;
+}
+
+.code-screen::-webkit-scrollbar,
+.table-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.code-screen::-webkit-scrollbar-track,
+.table-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.code-screen::-webkit-scrollbar-thumb,
+.table-scroll::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 99px;
+}
+
+.code-screen::-webkit-scrollbar-thumb:hover,
+.table-scroll::-webkit-scrollbar-thumb:hover {
+  background: #3d424b;
+}
+
 .code-screen pre {
   margin: 0;
   font-size: 13px;
@@ -783,7 +813,7 @@ code, pre, kbd {
 
   .data-table td {
     display: grid;
-    grid-template-columns: 88px 1fr;
+    grid-template-columns: 104px minmax(0, 1fr);
     gap: var(--s-3);
     padding: 8px 0;
     border-block-end: 1px solid var(--line);
@@ -796,8 +826,8 @@ code, pre, kbd {
   .data-table td::before {
     content: attr(data-label);
     font-family: var(--font-mono);
-    font-size: 11px;
-    letter-spacing: 0.08em;
+    font-size: 10.5px;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink-2);
     padding-top: 2px;
@@ -891,7 +921,9 @@ code, pre, kbd {
 .shot img {
   display: block;
   width: 100%;
+  max-width: 560px; /* full-bleed screenshots read too large in the guide steps */
   height: auto;
+  margin-inline: auto;
   border-radius: var(--r-s);
   outline: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -1082,71 +1114,6 @@ code, pre, kbd {
   color: var(--accent-hi);
 }
 
-/* ----------------------------- style page ----------------------------- */
-.spec-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: var(--s-4);
-}
-
-.spec {
-  padding: var(--s-4);
-}
-
-.spec .spec-label {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--ink-2);
-  margin-block-end: var(--s-3);
-}
-
-.swatch-row {
-  display: flex;
-  gap: var(--s-2);
-  flex-wrap: wrap;
-}
-
-.swatch {
-  display: grid;
-  gap: 6px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-2);
-}
-
-.swatch .chip {
-  width: 56px;
-  height: 44px;
-  border-radius: var(--r-s);
-  box-shadow: var(--inset-1), inset 0 0 0 1px var(--line);
-}
-
-.type-specimen {
-  display: grid;
-  gap: 10px;
-}
-
-.type-specimen .row {
-  display: grid;
-  grid-template-columns: 90px 1fr;
-  gap: var(--s-3);
-  align-items: baseline;
-  border-block-end: 1px solid var(--line);
-  padding-block-end: 10px;
-}
-
-.type-specimen .row:last-child {
-  border-block-end: none;
-}
-
-.type-specimen .meta {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  color: var(--ink-3);
-}
-
 /* ----------------------------- footer ----------------------------- */
 .site-foot {
   margin-block-start: var(--s-9);
@@ -1228,10 +1195,10 @@ code, pre, kbd {
 @media (prefers-reduced-motion: no-preference) {
   .fade-io {
     opacity: 0;
-    transform: translateY(14px);
+    transform: translateY(8px);
     transition:
-      opacity 550ms var(--ease),
-      transform 550ms var(--ease);
+      opacity 340ms var(--ease),
+      transform 340ms var(--ease);
   }
 
   .fade-io.is-in {
@@ -1242,13 +1209,15 @@ code, pre, kbd {
 
 /* typewriter intro — the typed lead + the sentences that fade in after */
 @media (prefers-reduced-motion: no-preference) {
+  /* the hide is instant (no transition here) so the first paint never
+     flashes visible → hidden; the fade plays only on the way in */
   .tw-rest {
     opacity: 0;
-    transition: opacity 900ms var(--ease);
   }
 
   .tw-rest.tw-in {
     opacity: 1;
+    transition: opacity 900ms var(--ease);
   }
 
   .tw-cursor::after {
