@@ -1,51 +1,1180 @@
-/* Apply a Minecraft-like font and ensure full-screen background */
+/* ============================================================
+   J_W_I_ — "Console" design system
+   A physical-interface language: machined metal chassis,
+   recessed screens, paper documents, tactile controls.
+   Physicality over texture: every effect models a real surface.
+   ============================================================ */
+
+/* ----------------------------- tokens ----------------------------- */
+:root {
+  /* materials */
+  --chassis-hi: #2a2d33;
+  --chassis: #23262b;
+  --chassis-lo: #1c1f24;
+
+  --metal-hi: #434954;
+  --metal: #353b44;
+  --metal-lo: #2b3038;
+  --metal-deep: #22262c;
+
+  --well-hi: #1f2228;
+  --well: #1a1d22;
+  --well-lo: #15181d;
+
+  --screen: #0b0d10;
+  --screen-hi: #101318;
+
+  --paper: #f4f1e8;
+  --paper-hi: #f8f5ee;
+  --paper-edge: #d9d2c1;
+  --paper-ink: #2c2822;
+  --paper-ink-soft: #5f5849;
+  --paper-ink-faint: #8c8474;
+
+  /* lines */
+  --line-dk: #0e1013;
+  --line-lt: rgba(255, 255, 255, 0.09);
+  --groove: rgba(0, 0, 0, 0.55);
+
+  /* text on metal */
+  --txt: #e6e9ee;
+  --txt-soft: #a8b0ba;
+  --txt-faint: #7d8590;
+  --engrave: #191c21;
+
+  /* accents */
+  --blue-hi: #6ba5ee;
+  --blue: #3b7fd9;
+  --blue-lo: #2c63ad;
+  --blue-ink: #0b1d36;
+  --amber-hi: #f0b45c;
+  --amber: #d9962f;
+  --amber-lo: #a86f1a;
+  --green: #4cc46f;
+  --green-glow: rgba(76, 196, 111, 0.55);
+  --red: #e05a52;
+
+  /* shadows */
+  --shadow-raise:
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.5),
+    0 14px 28px -12px rgba(0, 0, 0, 0.6);
+  --shadow-raise-sm:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.45),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow-inset:
+    inset 0 2px 6px rgba(0, 0, 0, 0.62),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 0 rgba(255, 255, 255, 0.06);
+  --shadow-screen:
+    inset 0 2px 8px rgba(0, 0, 0, 0.75),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 1px 0 rgba(255, 255, 255, 0.07);
+  --shadow-paper:
+    0 2px 4px rgba(0, 0, 0, 0.35),
+    0 22px 44px -16px rgba(0, 0, 0, 0.65);
+
+  /* radii */
+  --r-s: 5px;
+  --r-m: 8px;
+  --r-l: 12px;
+
+  /* type */
+  --font-display: 'Libre Franklin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-body: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  --font-mono: Menlo, Consolas, 'Liberation Mono', 'Courier New', monospace;
+
+  --mast-h: 64px;
+}
+
+/* ----------------------------- base ----------------------------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Press Start 2P', sans-serif; /* Pixelated font */
-    background-image: url('A_seamless_Minecraft-style_dirt_block_texture.png');
-    background-size: cover;
-    background-repeat: repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    text-align: center;
+  margin: 0;
+  padding: calc(var(--mast-h) + 28px) 20px 40px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--txt);
+  background:
+    radial-gradient(130% 100% at 50% -20%, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0) 55%),
+    repeating-linear-gradient(90deg,
+      rgba(255, 255, 255, 0.012) 0px,
+      rgba(255, 255, 255, 0.012) 1px,
+      rgba(0, 0, 0, 0.018) 1px,
+      rgba(0, 0, 0, 0.018) 3px),
+    linear-gradient(180deg, var(--chassis-hi), var(--chassis) 45%, var(--chassis-lo) 100%);
+  background-color: var(--chassis);
+  background-attachment: fixed;
+  min-height: 100vh;
 }
 
-/* Container styling for centering content */
-.container {
-    text-align: center;
-    color: #fff;
+/* soft vignette so the chassis reads as one solid slab */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(120% 130% at 50% 30%, rgba(0, 0, 0, 0) 55%, rgba(0, 0, 0, 0.28) 100%);
 }
 
-/* Title styling to ensure visibility */
-h1 {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    color: #ffffff; /* White text */
-    text-shadow: 2px 2px 0px #000000; /* Black shadow for contrast */
+#mast-spacer {
+  display: block;
 }
 
-/* Social buttons styling */
-.social-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 1060px;
+  margin: 0 auto;
 }
 
+a {
+  color: var(--blue-hi);
+}
+
+::selection {
+  background: rgba(59, 127, 217, 0.4);
+}
+
+:focus-visible {
+  outline: 2px solid var(--amber);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* ----------------------------- masthead ----------------------------- */
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: linear-gradient(180deg, var(--metal-hi), var(--metal) 55%, var(--metal-deep));
+  border-bottom: 1px solid var(--line-dk);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.55),
+    0 6px 18px -6px rgba(0, 0, 0, 0.7),
+    0 1px 0 rgba(0, 0, 0, 0.5);
+}
+
+.masthead::after {
+  /* recessed groove under the bar */
+  content: '';
+  display: block;
+  height: 3px;
+  margin-top: -1px;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0));
+}
+
+.mast-inner {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  padding: 6px 14px 6px 10px;
+  border-radius: var(--r-m);
+  background: linear-gradient(180deg, var(--metal-hi), var(--metal) 50%, var(--metal-lo));
+  border: 1px solid var(--line-dk);
+  box-shadow: var(--shadow-raise-sm);
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 7px;
+  background: linear-gradient(180deg, #4a515c, #343a43 50%, #2b3139);
+  border: 1px solid var(--line-dk);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.18),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.5);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  color: #3c424c;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.22);
+}
+
+.brand-name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  color: var(--txt);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.brand .led {
+  margin-left: 2px;
+}
+
+/* status LEDs */
+.led {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.5), 0 0 0 2px rgba(0, 0, 0, 0.25);
+}
+
+.led-green {
+  background: radial-gradient(circle at 35% 30%, #c9f7d6, var(--green) 55%, #23793f);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    0 0 7px var(--green-glow),
+    0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+.led-amber {
+  background: radial-gradient(circle at 35% 30%, #ffe2ae, var(--amber) 55%, #8a5a13);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.6),
+    0 0 6px rgba(217, 150, 47, 0.5),
+    0 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+/* ----------------------------- nav ----------------------------- */
+.nav {
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.nav a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 15px;
+  border-radius: var(--r-m);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 13.5px;
+  letter-spacing: 0.02em;
+  color: var(--txt);
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.45);
+  background: linear-gradient(180deg, #4b525d, #3a404a 49%, #32383f 51%, #2d333b);
+  border: 1px solid var(--line-dk);
+  box-shadow: var(--shadow-raise-sm);
+  transition: background 120ms ease, transform 80ms ease, box-shadow 80ms ease;
+}
+
+.nav a:hover {
+  background: linear-gradient(180deg, #565e6a, #434a55 49%, #3a414a 51%, #343b44);
+}
+
+.nav a:active {
+  transform: translateY(1px);
+  box-shadow:
+    inset 0 2px 4px rgba(0, 0, 0, 0.5),
+    0 0 1px rgba(0, 0, 0, 0.5);
+}
+
+/* the page you are on: mechanically pressed in */
+.nav a[aria-current='page'] {
+  background: linear-gradient(180deg, #262b32, #1e2329);
+  color: #c4cbd4;
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+  border-color: var(--line-dk);
+  box-shadow: var(--shadow-inset);
+}
+
+/* ----------------------------- buttons ----------------------------- */
 .btn {
-    background-color: #614d34; /* Minecraft-style button color */
-    padding: 15px 30px;
-    text-decoration: none;
-    color: white;
-    font-size: 1.5rem;
-    border-radius: 10px;
-    box-shadow: 3px 3px 0 #3d2e22;
-    transition: background-color 0.3s;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 11px 22px;
+  border-radius: var(--r-m);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14.5px;
+  letter-spacing: 0.03em;
+  text-decoration: none;
+  cursor: pointer;
+  color: #f4f6f9;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  /* machined metal cap */
+  background: linear-gradient(180deg, #515863, #3e4550 49%, #363d46 51%, #31373f);
+  border: 1px solid var(--line-dk);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.26),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+    0 2px 3px rgba(0, 0, 0, 0.55),
+    0 8px 14px -6px rgba(0, 0, 0, 0.5);
+  transition: background 120ms ease, transform 80ms ease, box-shadow 80ms ease;
 }
 
 .btn:hover {
-    background-color: #7b6149; /* Darker hover effect */
+  background: linear-gradient(180deg, #5a626e, #48505c 49%, #3e4650 51%, #39414b);
 }
 
+.btn:active,
+.btn.pressed {
+  transform: translateY(2px);
+  background: linear-gradient(180deg, #33393f, #2c3238);
+  box-shadow:
+    inset 0 2px 5px rgba(0, 0, 0, 0.55),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 1px rgba(0, 0, 0, 0.4);
+  text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.6);
+}
+
+/* primary: period-correct glossy blue with the hard sheen line */
+.btn-primary {
+  color: #fff;
+  background: linear-gradient(180deg, var(--blue-hi), var(--blue) 49%, var(--blue-lo) 51%, #28589e);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.35),
+    0 2px 3px rgba(0, 0, 0, 0.55),
+    0 8px 16px -6px rgba(28, 68, 128, 0.55);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(180deg, #7cb1f2, #478ce2 49%, #356cbd 51%, #2d5ba8);
+}
+
+.btn-primary:active,
+.btn-primary.pressed {
+  background: linear-gradient(180deg, #2a5aa4, #234b89);
+  box-shadow:
+    inset 0 2px 6px rgba(0, 0, 0, 0.55),
+    0 1px 1px rgba(0, 0, 0, 0.4);
+  color: #dce9f8;
+}
+
+.btn-amber {
+  color: #241503;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.35);
+  background: linear-gradient(180deg, var(--amber-hi), var(--amber) 49%, var(--amber-lo) 51%, #96621a);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    inset 0 -2px 0 rgba(0, 0, 0, 0.3),
+    0 2px 3px rgba(0, 0, 0, 0.55),
+    0 8px 16px -6px rgba(120, 74, 12, 0.5);
+}
+
+.btn-amber:hover {
+  background: linear-gradient(180deg, #f6c073, #e0a03d 49%, #b57c22 51%, #a56f1c);
+}
+
+.btn-amber:active,
+.btn-amber.pressed {
+  background: linear-gradient(180deg, #a56f1c, #8f5e14);
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.5), 0 1px 1px rgba(0, 0, 0, 0.4);
+  color: #2e1c05;
+}
+
+/* small button (for screen bars, tables) */
+.btn-sm {
+  min-height: 30px;
+  padding: 4px 12px;
+  font-size: 12.5px;
+  border-radius: var(--r-s);
+}
+
+/* copied state for copy buttons */
+.btn.ok {
+  color: #c9f7d6;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+  background: linear-gradient(180deg, #3f8f5c, #2f7549 50%, #286540);
+}
+
+/* ----------------------------- plates, wells, screws ----------------------------- */
+.plate {
+  background: linear-gradient(180deg, var(--metal-hi), var(--metal) 55%, var(--metal-lo));
+  border: 1px solid var(--line-dk);
+  border-radius: var(--r-l);
+  box-shadow: var(--shadow-raise);
+}
+
+.well {
+  background: linear-gradient(180deg, var(--well-hi), var(--well) 55%, var(--well-lo));
+  border-radius: var(--r-m);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: var(--shadow-inset);
+}
+
+.screen-surface {
+  background:
+    radial-gradient(120% 60% at 50% -10%, rgba(120, 150, 190, 0.1), rgba(120, 150, 190, 0) 60%),
+    var(--screen);
+  border-radius: var(--r-s);
+  box-shadow: var(--shadow-screen);
+}
+
+/* corner screw — a signature hardware detail */
+.screw {
+  position: absolute;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #5b636e, #333941 62%, #1f2329);
+  border: 1px solid rgba(0, 0, 0, 0.7);
+  box-shadow:
+    inset 0 1px 1px rgba(255, 255, 255, 0.35),
+    0 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.screw::after {
+  content: '';
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  top: calc(50% - 1px);
+  height: 2px;
+  border-radius: 1px;
+  background: #14171b;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.15);
+  transform: rotate(-38deg);
+}
+
+.screw.tl { top: 9px; left: 9px; }
+.screw.tr { top: 9px; right: 9px; }
+.screw.bl { bottom: 9px; left: 9px; }
+.screw.br { bottom: 9px; right: 9px; }
+
+/* engraved label plates (section titles on metal) */
+.plate-label {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #59616c;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.plate-label .led {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* ----------------------------- nameplate (hero) ----------------------------- */
+.nameplate {
+  position: relative;
+  text-align: center;
+  padding: clamp(40px, 7vw, 64px) clamp(24px, 6vw, 64px);
+  background: linear-gradient(180deg, #474e59, #383f49 55%, #2e343d);
+  border: 1px solid var(--line-dk);
+  border-radius: var(--r-l);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.16),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.55),
+    0 2px 3px rgba(0, 0, 0, 0.5),
+    0 24px 48px -18px rgba(0, 0, 0, 0.7);
+}
+
+/* machined groove inset around the plate face */
+.nameplate::before {
+  content: '';
+  position: absolute;
+  inset: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.45);
+  border-radius: calc(var(--r-l) - 6px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+}
+
+.nameplate h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(2.4rem, 8vw, 4.3rem);
+  letter-spacing: 0.06em;
+  line-height: 1.1;
+  /* letterpress: sunk into the plate */
+  color: #1d2126;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.18);
+}
+
+.nameplate .tagline {
+  margin: 14px 0 0;
+  font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6d7582;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.16);
+}
+
+.nameplate .status-strip {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.08em;
+  color: #6b7480;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.12);
+}
+
+/* ----------------------------- module grid (home) ----------------------------- */
+.module-grid {
+  margin-top: 26px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  align-items: start;
+}
+
+.module {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 18px;
+}
+
+.module-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 2px 4px;
+}
+
+.module-body {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 12px;
+  padding: 16px;
+}
+
+.module-body .btn {
+  flex: 1 1 auto;
+  min-width: 150px;
+}
+
+/* ----------------------------- paper sheets (reading) ----------------------------- */
+.sheet {
+  background: linear-gradient(180deg, var(--paper-hi), var(--paper) 6%, #efeadf);
+  border: 1px solid var(--paper-edge);
+  border-radius: 3px;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.35),
+    var(--shadow-paper);
+  color: var(--paper-ink);
+}
+
+.sheet-inner {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(28px, 5vw, 56px) clamp(20px, 6vw, 64px) clamp(32px, 5vw, 56px);
+}
+
+/* page title plate that sits above a paper sheet */
+.titleplate {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  padding: 16px 22px;
+  margin-bottom: 22px;
+}
+
+.titleplate h1 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(1.5rem, 4.5vw, 2.1rem);
+  letter-spacing: 0.02em;
+  line-height: 1.15;
+  color: #20242a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.titleplate .plate-label {
+  color: #565e69;
+}
+
+/* prose on paper */
+.prose p {
+  margin: 0 0 1.15em;
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.prose p:last-child {
+  margin-bottom: 0;
+}
+
+.prose a {
+  color: #2c63ad;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: rgba(44, 99, 173, 0.4);
+}
+
+.prose a:hover {
+  text-decoration-color: currentColor;
+}
+
+.prose strong {
+  font-weight: 700;
+}
+
+.prose code {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  overflow-wrap: anywhere;
+  color: #463f33;
+  background: #e9e3d5;
+  border: 1px solid #d6cfbe;
+  border-radius: 4px;
+  padding: 1px 6px 2px;
+  box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.7);
+}
+
+.prose .drop-in {
+  margin-top: 1.4em;
+}
+
+/* ----------------------------- code screens ----------------------------- */
+.code {
+  margin: 1.6em 0;
+  border-radius: var(--r-m);
+  overflow: hidden;
+  background: linear-gradient(180deg, var(--metal-hi), var(--metal-deep));
+  border: 1px solid var(--line-dk);
+  box-shadow: var(--shadow-raise-sm), 0 10px 22px -10px rgba(0, 0, 0, 0.6);
+}
+
+.code-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 10px 7px 12px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background: linear-gradient(180deg, #2e343d, #262b33);
+}
+
+.code-dots {
+  display: inline-flex;
+  gap: 6px;
+  padding-right: 4px;
+}
+
+.code-dots i {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.55);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45);
+}
+
+.code-dots i:nth-child(1) { background: radial-gradient(circle at 35% 30%, #f2988f, #d94b40 60%, #96302a); }
+.code-dots i:nth-child(2) { background: radial-gradient(circle at 35% 30%, #f7cf8a, #dd9a2b 60%, #9c6516); }
+.code-dots i:nth-child(3) { background: radial-gradient(circle at 35% 30%, #9fe3ae, #3fa95f 60%, #23683a); }
+
+.code-title {
+  flex: 1;
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #6a7280;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.code-screen {
+  padding: 18px 20px;
+  border-radius: 0;
+  box-shadow:
+    inset 0 3px 10px rgba(0, 0, 0, 0.8),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.03),
+    radial-gradient(130% 55% at 50% 0%, rgba(110, 140, 180, 0.07), rgba(110, 140, 180, 0) 70%);
+  background-color: var(--screen);
+  overflow-x: auto;
+}
+
+.code-screen pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: #ccd3dc;
+  white-space: pre;
+}
+
+/* Swift syntax on the dark screen */
+.code-screen .keyword,
+.tok-kw { color: #ff6b60; }
+.tok-type { color: #ffb86c; }
+.tok-str { color: #f1e88a; }
+.tok-com { color: #7d89b8; font-style: italic; }
+.tok-num { color: #bd93f9; }
+
+/* ----------------------------- data table (guides) ----------------------------- */
+.table-frame {
+  padding: 14px;
+  border-radius: var(--r-m);
+  margin: 20px 0 8px;
+  overflow: hidden;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+}
+
+.data-table th {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #78818e;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+  text-align: left;
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.09);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.035), rgba(255, 255, 255, 0));
+}
+
+.data-table td {
+  padding: 13px 14px;
+  vertical-align: top;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+  color: #c9cfd8;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.data-table tr:last-child td {
+  border-bottom: none;
+}
+
+.data-table td:first-child {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #e2e6ec;
+  white-space: nowrap;
+}
+
+.data-table a {
+  color: #7cb1f2;
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(124, 177, 242, 0.5);
+}
+
+.data-table a:hover {
+  color: #a5c9f6;
+  border-bottom-style: solid;
+}
+
+/* ----------------------------- steps (guides) ----------------------------- */
+.steps {
+  position: relative;
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+/* the rail the badges ride on */
+.steps::before {
+  content: '';
+  position: absolute;
+  left: 19px;
+  top: 30px;
+  bottom: 30px;
+  width: 2px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.6) 6%, rgba(0, 0, 0, 0.6) 94%, transparent);
+  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.05);
+}
+
+.step {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 18px;
+  align-items: start;
+}
+
+.step-badge {
+  position: relative;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 15px;
+  color: #23272d;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.28);
+  background: linear-gradient(180deg, #8b939e, #6d7581 49%, #5f6773 51%, #565e6a);
+  border: 1px solid var(--line-dk);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.4),
+    0 2px 3px rgba(0, 0, 0, 0.55);
+}
+
+.step-body {
+  min-width: 0;
+}
+
+.step-body h3 {
+  margin: 8px 0 8px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+  color: var(--txt);
+}
+
+.step-body p {
+  margin: 0 0 10px;
+  color: var(--txt-soft);
+  font-size: 0.98rem;
+}
+
+.step-body p code,
+.step-body li code {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+  color: #c9cfd8;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  border-radius: 4px;
+  padding: 1px 6px 2px;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.step-body ul {
+  margin: 0 0 10px;
+  padding-left: 22px;
+  color: var(--txt-soft);
+  font-size: 0.98rem;
+}
+
+/* section heading on the chassis for guide pages */
+.chassis-h2 {
+  margin: 44px 0 6px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.chassis-h2 h2 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  color: var(--txt);
+  text-shadow: 0 2px 3px rgba(0, 0, 0, 0.55);
+}
+
+.chassis-h2::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+
+.chassis-h2:first-of-type {
+  margin-top: 22px;
+}
+
+/* ----------------------------- screenshots ----------------------------- */
+.shot {
+  display: block;
+  margin: 18px auto 6px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 9px;
+  border-radius: var(--r-m);
+  background: linear-gradient(180deg, var(--metal-hi), var(--metal-deep));
+  border: 1px solid var(--line-dk);
+  box-shadow: var(--shadow-raise-sm);
+}
+
+.shot .shot-screen {
+  border-radius: var(--r-s);
+  overflow: hidden;
+  background: var(--screen);
+  box-shadow: var(--shadow-screen);
+  display: grid;
+  place-items: center;
+  max-width: 100%;
+}
+
+.shot img {
+  display: block;
+  max-width: 100%;
+  max-height: 62vh;
+  width: auto;
+  height: auto;
+}
+
+/* ----------------------------- misc ----------------------------- */
+.section-gap {
+  margin-top: 26px;
+}
+
+.page-intro {
+  margin: 0 0 26px;
+  color: var(--txt-soft);
+  font-size: 1.02rem;
+  max-width: 62ch;
+}
+
+.page-intro a {
+  color: var(--blue-hi);
+}
+
+.center {
+  text-align: center;
+}
+
+.module-narrow {
+  max-width: 640px;
+}
+
+.row-col {
+  flex-direction: column;
+  align-items: stretch;
+  gap: 16px;
+}
+
+.row-center {
+  justify-content: center;
+}
+
+.text-soft {
+  color: var(--txt-soft);
+}
+
+/* ----------------------------- footer ----------------------------- */
+.site-foot {
+  position: relative;
+  z-index: 1;
+  max-width: 1060px;
+  margin: 56px auto 0;
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  flex-wrap: wrap;
+  font-size: 13px;
+  color: var(--txt-faint);
+}
+
+.site-foot .foot-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: #6a7280;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.site-foot a {
+  color: var(--txt-soft);
+  text-decoration: none;
+  border-bottom: 1px dotted rgba(255, 255, 255, 0.3);
+}
+
+.site-foot a:hover {
+  color: var(--txt);
+  border-bottom-color: currentColor;
+}
+
+/* ----------------------------- responsive ----------------------------- */
+@media (max-width: 860px) {
+  .module-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .nav a {
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 9px 10px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 720px) {
+  body {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  /* screenshots: keep readable detail, scroll sideways inside the frame */
+  .shot .shot-screen {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    place-items: start center;
+  }
+
+  .shot img {
+    max-height: none;
+    max-width: none;
+    width: auto;
+  }
+
+  /* table becomes stacked data cards */
+  .data-table thead {
+    display: none;
+  }
+
+  .data-table,
+  .data-table tbody,
+  .data-table tr,
+  .data-table td {
+    display: block;
+    width: 100%;
+  }
+
+  .data-table tr {
+    margin-bottom: 12px;
+    padding: 6px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03), rgba(255, 255, 255, 0.01));
+    border-radius: var(--r-s);
+    box-shadow: var(--shadow-inset);
+  }
+
+  .data-table td {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 4px 12px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: none;
+  }
+
+  .data-table td:last-child {
+    border-bottom: none;
+  }
+
+  .data-table td::before {
+    content: attr(data-label);
+    grid-column: 1;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #78818e;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .data-table td:first-child {
+    white-space: normal;
+  }
+
+  .code-screen {
+    padding: 14px 14px;
+  }
+
+  .code-screen pre {
+    font-size: 12.5px;
+  }
+
+  .sheet-inner {
+    padding: 24px 18px 30px;
+  }
+
+  .steps::before {
+    left: 19px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand-name {
+    display: none;
+  }
+
+  .brand {
+    padding: 5px 8px;
+    margin-right: auto;
+  }
+
+  .nameplate .status-strip {
+    letter-spacing: 0.04em;
+  }
+
+  .module-body {
+    padding: 13px;
+  }
+
+  .module-body .btn {
+    min-width: 100%;
+  }
+}
+
+/* ----------------------------- reduced motion ----------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .btn,
+  .nav a {
+    transition: none;
+  }
+
+  .btn:active,
+  .nav a:active {
+    transform: none;
+  }
+}

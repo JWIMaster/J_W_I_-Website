@@ -1,238 +1,192 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Project Setup Guide</title>
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700&display=swap" rel="stylesheet" />
-<style>
-  html, body {
-    margin:0; padding:0;
-    font-family:'Outfit',sans-serif;
-    background-color:#121212;
-    color:#e0e0e0;
-    line-height:1.6;
-  }
-
-  h1 {
-    font-size:2.4rem; 
-    text-align:center; 
-    margin:2rem 0 1rem; 
-    color:#fff;
-  }
-
-  .step {
-    margin:2rem 0; 
-    text-align:center;
-  }
-
-  .step strong {
-    display:block;
-    font-size:1.3rem;
-    margin-bottom:0.5rem;
-  }
-
-  .step p {
-    font-size:1.1rem;
-    margin:0 0 1rem 0;
-  }
-
-  .step img {
-    width: auto;
-    max-width: calc(100% - 800px); /* 400px inset each side */
-    border-radius:12px; 
-    box-shadow:0 4px 12px rgba(0,0,0,0.5); 
-    margin-top:1rem;
-  }
-
-  @media (max-width: 1200px) {
-    .step img {
-      max-width: calc(100% - 100px);
-    }
-  }
-
-  @media (max-width: 800px) {
-    .step img {
-      max-width: 100%;
-    }
-  }
-
-  /* Code box styling */
-  .code-container {
-    position: relative;
-    background-color:#1e1e1e;
-    border-radius:12px;
-    padding:16px 24px 24px 24px;
-    max-width:900px;
-    margin: 1rem auto 2rem auto;
-    text-align:left;
-    overflow-x:auto;
-  }
-
-  .code-container pre {
-    margin:0;
-    font-family: Menlo, Consolas, monospace;
-    font-size:1rem;
-    line-height:1.4;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-  }
-
-  .copy-btn {
-    position:absolute;
-    top:12px;
-    right:12px;
-    padding:6px 12px;
-    background:rgba(255,255,255,0.1);
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:700;
-    transition: background 0.2s;
-  }
-
-  .copy-btn:hover {
-    background:rgba(255,255,255,0.2);
-  }
-
-  /* Swift syntax highlighting */
-  .keyword { color: #ff5e57; font-weight:bold; }
-  .type { color: #ffb86c; }
-  .string { color: #f1fa8c; }
-  .comment { color: #6272a4; font-style:italic; }
-  .number { color: #bd93f9; }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Setup Guide</title>
+  <meta name="description" content="How to set up an Xcode project for building apps for iOS 6 and above.">
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
 
-<h1>Project Setup and Build</h1>
-<p style="text-align:center; max-width:700px; margin:0 auto 2rem;">
-Make a new Project in Xcode that is storyboard based.
-</p>
-
-<div class="step">
-  <strong>Step 1:</strong>
-  <p>Click the info tab in the Project Settings.</p>
-  <img src="GuideImages/ProjPicSetup1.png" alt="Step 1">
-</div>
-
-<div class="step">
-  <strong>Step 2:</strong>
-  <p>Hover over and click the minus button on the values in the image.</p>
-  <img src="GuideImages/ProjPicSetup2.png" alt="Step 2">
-</div>
-
-<div class="step">
-  <strong>Step 3:</strong>
-  <p>Click the build settings tab.</p>
-  <img src="GuideImages/ProjPicSetup3.png" alt="Step 3">
-</div>
-
-<div class="step">
-  <strong>Step 4:</strong>
-  <p>Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</p>
-  <img src="GuideImages/ProjPicSetup4.png" alt="Step 4">
-</div>
-
-<div class="step">
-  <strong>Step 5:</strong>
-  <p>Scroll down inside that dropdown and click “other”, and type in “7.0”.</p>
-  <img src="GuideImages/ProjPicSetup5.png" alt="Step 5">
-</div>
-
-<div class="step">
-  <strong>Step 6:</strong>
-  <p>Right click and select delete on the two highlighted files.</p>
-  <img src="GuideImages/ProjPicSetup6.png" alt="Step 6">
-</div>
-
-<div class="step">
-  <strong>Step 7:</strong>
-  <p>Open the LaunchScreen storyboard.</p>
-  <img src="GuideImages/ProjPicSetup7.png" alt="Step 7">
-</div>
-
-<div class="step">
-  <strong>Step 8:</strong>
-  <p>Click “View Controller Scene”.</p>
-  <img src="GuideImages/ProjPicSetup8.png" alt="Step 8">
-</div>
-
-<div class="step">
-  <strong>Step 9:</strong>
-  <p>On the right, click the page option.</p>
-  <img src="GuideImages/ProjPicSetup9.png" alt="Step 9">
-</div>
-
-<div class="step">
-  <strong>Step 10:</strong>
-  <p>Uncheck the “Use Safe Area Layout Guides” option.</p>
-  <img src="GuideImages/ProjPicSetup10.png" alt="Step 10">
-</div>
-
-<div class="step">
-  <strong>Step 11:</strong>
-  <p>Go to the AppDelegate file.</p>
-  <img src="GuideImages/ProjPicSetup11.png" alt="Step 11">
-</div>
-
-<div class="step">
-  <strong>Step 12:</strong>
-  <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
-  
-  <div class="code-container">
-    <button class="copy-btn" onclick="copyCode(this)">Copy Code</button>
-    <pre>
-<span class="comment">// AppDelegate.swift</span>
-<span class="keyword">import</span> <span class="type">UIKit</span>
-
-<span class="keyword">@main</span>
-<span class="keyword">class</span> <span class="type">AppDelegate</span>: <span class="type">UIResponder</span>, <span class="type">UIApplicationDelegate</span> {
-
-    <span class="keyword">var</span> window: <span class="type">UIWindow</span>?  <span class="comment">// Needed for apps not using SceneDelegate</span>
-
-    <span class="keyword">func</span> application(_ application: <span class="type">UIApplication</span>,
-                     didFinishLaunchingWithOptions launchOptions: [<span class="type">UIApplication.LaunchOptionsKey</span>: <span class="type">Any</span>]?) -> <span class="type">Bool</span> {
-        
-        <span class="comment">// Create a UIWindow manually</span>
-        window = <span class="type">UIWindow</span>(frame: <span class="type">UIScreen</span>.main.bounds)
-        window?.rootViewController = <span class="type">ViewController</span>() <span class="comment">// Set initial ViewController</span>
-        window?.makeKeyAndVisible()
-        
-        <span class="keyword">return</span> <span class="keyword">true</span>
-    }
-}
-    </pre>
+<header class="masthead">
+  <div class="mast-inner">
+    <a class="brand" href="/index.html" aria-label="J_W_I_ — home">
+      <span class="brand-mark" aria-hidden="true">JW</span>
+      <span class="brand-name">J_W_I_</span>
+      <span class="led led-green" aria-hidden="true"></span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="/index.html">Home</a>
+      <a href="/swiftios6.html">Swift on iOS 6</a>
+      <a href="/swiftonios6guidepart1.html">Toolchain Guide</a>
+      <a href="/swiftonios6guidepart2.html" aria-current="page">Project Setup</a>
+      <a href="/support.html">Support</a>
+    </nav>
   </div>
-  <img src="GuideImages/ProjPicSetup12.png" alt="Step 12">
-</div>
+</header>
 
-<div class="step">
-  <strong>Step 13:</strong>
-  <p style="margin-top:2rem;">To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
-</div>
+<main class="guide-main">
 
-<script>
-function copyCode(button){
-  const codeContainer = button.nextElementSibling;
-  const range = document.createRange();
-  range.selectNodeContents(codeContainer);
-  const selection = window.getSelection();
-  selection.removeAllRanges();
-  selection.addRange(range);
-  try {
-    document.execCommand('copy');
-    selection.removeAllRanges();
-    button.textContent = 'Copied!';
-    setTimeout(()=>{button.textContent='Copy Code';},2000);
-  } catch(err){
-    console.log('Failed to copy', err);
-  }
-}
-</script>
+  <div class="titleplate plate">
+    <div>
+      <span class="plate-label">Guide · Part 2</span>
+      <h1>Project Setup and Build</h1>
+    </div>
+    <span class="led led-green" aria-hidden="true"></span>
+  </div>
 
+  <p class="page-intro">Make a new Project in Xcode that is storyboard based.</p>
+
+  <div class="steps">
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">1</span>
+      <div class="step-body">
+        <p>Click the info tab in the Project Settings.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup1.png" alt="Step 1"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">2</span>
+      <div class="step-body">
+        <p>Hover over and click the minus button on the values in the image.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup2.png" alt="Step 2"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">3</span>
+      <div class="step-body">
+        <p>Click the build settings tab.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup3.png" alt="Step 3"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">4</span>
+      <div class="step-body">
+        <p>Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup4.png" alt="Step 4"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">5</span>
+      <div class="step-body">
+        <p>Scroll down inside that dropdown and click “other”, and type in “7.0”.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup5.png" alt="Step 5"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">6</span>
+      <div class="step-body">
+        <p>Right click and select delete on the two highlighted files.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup6.png" alt="Step 6"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">7</span>
+      <div class="step-body">
+        <p>Open the LaunchScreen storyboard.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup7.png" alt="Step 7"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">8</span>
+      <div class="step-body">
+        <p>Click “View Controller Scene”.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup8.png" alt="Step 8"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">9</span>
+      <div class="step-body">
+        <p>On the right, click the page option.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup9.png" alt="Step 9"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">10</span>
+      <div class="step-body">
+        <p>Uncheck the “Use Safe Area Layout Guides” option.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup10.png" alt="Step 10"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">11</span>
+      <div class="step-body">
+        <p>Go to the AppDelegate file.</p>
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup11.png" alt="Step 11"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">12</span>
+      <div class="step-body">
+        <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
+
+        <figure class="code">
+          <figcaption class="code-bar">
+            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="code-title">AppDelegate.swift</span>
+            <button class="btn btn-sm" type="button" data-copy-target="#appdelegate">Copy Code</button>
+          </figcaption>
+          <div class="code-screen" id="appdelegate"><pre><span class="tok-com">// AppDelegate.swift</span>
+<span class="tok-kw">import</span> <span class="tok-type">UIKit</span>
+
+<span class="tok-kw">@main</span>
+<span class="tok-kw">class</span> <span class="tok-type">AppDelegate</span>: <span class="tok-type">UIResponder</span>, <span class="tok-type">UIApplicationDelegate</span> {
+
+    <span class="tok-kw">var</span> window: <span class="tok-type">UIWindow</span>?  <span class="tok-com">// Needed for apps not using SceneDelegate</span>
+
+    <span class="tok-kw">func</span> application(_ application: <span class="tok-type">UIApplication</span>,
+                     didFinishLaunchingWithOptions launchOptions: [<span class="tok-type">UIApplication.LaunchOptionsKey</span>: <span class="tok-type">Any</span>]?) -&gt; <span class="tok-type">Bool</span> {
+
+        <span class="tok-com">// Create a UIWindow manually</span>
+        window = <span class="tok-type">UIWindow</span>(frame: <span class="tok-type">UIScreen</span>.main.bounds)
+        window?.rootViewController = <span class="tok-type">ViewController</span>() <span class="tok-com">// Set initial ViewController</span>
+        window?.makeKeyAndVisible()
+
+        <span class="tok-kw">return</span> <span class="tok-kw">true</span>
+    }
+}</pre></div>
+        </figure>
+
+        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup12.png" alt="Step 12"></div></div>
+      </div>
+    </div>
+
+    <div class="step">
+      <span class="step-badge" aria-hidden="true">13</span>
+      <div class="step-body">
+        <p>To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<footer class="site-foot well">
+  <span class="foot-brand">
+    <span class="led led-green" aria-hidden="true"></span>
+    J_W_I_
+  </span>
+  <span>© J_W_I_</span>
+</footer>
+
+<script src="/site.js"></script>
 </body>
 </html>

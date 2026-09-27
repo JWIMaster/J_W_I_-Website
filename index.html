@@ -4,142 +4,120 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>J_W_I_</title>
-
+  <meta name="description" content="J_W_I_ — projects, experiments, and photography." />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet" />
-
-  <style>
-    :root{
-      --bg1:#0b0b10;
-      --bg2:#12122a;
-      --card:#161625;
-      --text:#ffffff;
-      --muted:rgba(255,255,255,0.7);
-      --border:rgba(255,255,255,0.08);
-      --radius:16px;
-    }
-
-    *{
-      box-sizing:border-box;
-    }
-
-    body{
-      margin:0;
-      font-family:'Outfit',sans-serif;
-      color:var(--text);
-      min-height:100vh;
-      display:flex;
-      align-items:center;
-      justify-content:center;
-      text-align:center;
-      background: radial-gradient(circle at top, var(--bg2), var(--bg1) 60%);
-    }
-
-    .container{
-      width:min(760px,92vw);
-      padding:44px 28px;
-    }
-
-    h1{
-      margin:0 0 6px;
-      font-size:3rem;
-      font-weight:700;
-      letter-spacing:1px;
-    }
-
-    .subtitle{
-      color:var(--muted);
-      margin-bottom:28px;
-    }
-
-    section{
-      margin-top:26px;
-    }
-
-    h2{
-      font-size:1.1rem;
-      font-weight:600;
-      margin:18px 0 14px;
-      color:var(--muted);
-      text-transform:uppercase;
-      letter-spacing:1px;
-    }
-
-    .row{
-      display:flex;
-      flex-wrap:wrap;
-      justify-content:center;
-      gap:12px;
-    }
-
-    a.button{
-      display:inline-block;
-      padding:12px 20px;
-      border-radius:12px;
-      text-decoration:none;
-      color:var(--text);
-      font-weight:600;
-      font-size:0.95rem;
-      background:var(--card);
-      border:1px solid var(--border);
-      transition:transform 160ms ease, background 160ms ease, border 160ms ease;
-    }
-
-    a.button:hover{
-      transform:translateY(-3px);
-      background:#1c1c33;
-      border-color:rgba(255,255,255,0.16);
-    }
-
-    footer{
-      margin-top:36px;
-      color:var(--muted);
-      font-size:0.85rem;
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/styles.css" />
 </head>
-
 <body>
-  <div class="container">
-    <h1>J_W_I_</h1>
-    <div class="subtitle">Projects, experiments, and photography</div>
 
-    <section>
-      <h2>Main</h2>
-      <div class="row">
-        <a class="button" href="/support.html">Support</a>
-      </div>
+  <header class="masthead">
+    <div class="mast-inner">
+      <a class="brand" href="/index.html" aria-label="J_W_I_ — home">
+        <span class="brand-mark" aria-hidden="true">JW</span>
+        <span class="brand-name">J_W_I_</span>
+        <span class="led led-green" aria-hidden="true"></span>
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/index.html" aria-current="page">Home</a>
+        <a href="/swiftios6.html">Swift on iOS 6</a>
+        <a href="/swiftonios6guidepart1.html">Toolchain Guide</a>
+        <a href="/swiftonios6guidepart2.html">Project Setup</a>
+        <a href="/support.html">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="nameplate" aria-label="About">
+      <span class="screw tl" aria-hidden="true"></span>
+      <span class="screw tr" aria-hidden="true"></span>
+      <span class="screw bl" aria-hidden="true"></span>
+      <span class="screw br" aria-hidden="true"></span>
+      <h1>J_W_I_</h1>
+      <p class="tagline">Projects, experiments, and photography</p>
+      <p class="status-strip">
+        <span class="led led-green" aria-hidden="true"></span>
+        ALL SYSTEMS NOMINAL
+      </p>
     </section>
 
-    <section>
-      <h2>Swift on iOS 6</h2>
-      <div class="row">
-        <a class="button" href="/swiftios6.html">Writeup</a>
-        <a class="button" href="/swiftonios6guidepart1.html">Setup Guide</a>
-      </div>
-    </section>
+    <div class="module-grid">
 
-    <section>
-      <h2>Colour Snap</h2>
-      <div class="row">
-        <a class="button" href="https://discord.gg/uKdgNmTAnP">Discord</a>
-        <a class="button" href="https://testflight.apple.com/join/xKY2rMdC">TestFlight</a>
-        <a class="button" href="https://apps.apple.com/us/app/colour-snap/id6747701369">App Store</a>
-        <a class="button" href="https://ko-fi.com/jwi">Donate</a>
-      </div>
-    </section>
+      <section class="module plate" aria-labelledby="mod-main">
+        <span class="screw tl" aria-hidden="true"></span>
+        <span class="screw tr" aria-hidden="true"></span>
+        <span class="screw bl" aria-hidden="true"></span>
+        <span class="screw br" aria-hidden="true"></span>
+        <div class="module-head">
+          <span class="plate-label" id="mod-main">Main</span>
+          <span class="led led-green" aria-hidden="true"></span>
+        </div>
+        <div class="module-body well">
+          <a class="btn btn-primary" href="/support.html">Support</a>
+        </div>
+      </section>
 
-    <section>
-      <h2>Photography</h2>
-      <div class="row">
-        <a class="button" href="https://jwi.pixieset.com/" target="_blank">View Portfolio</a>
-      </div>
-    </section>
+      <section class="module plate" aria-labelledby="mod-swift">
+        <span class="screw tl" aria-hidden="true"></span>
+        <span class="screw tr" aria-hidden="true"></span>
+        <span class="screw bl" aria-hidden="true"></span>
+        <span class="screw br" aria-hidden="true"></span>
+        <div class="module-head">
+          <span class="plate-label" id="mod-swift">Swift on iOS&nbsp;6</span>
+          <span class="led led-green" aria-hidden="true"></span>
+        </div>
+        <div class="module-body well">
+          <a class="btn btn-primary" href="/swiftios6.html">Writeup</a>
+          <a class="btn" href="/swiftonios6guidepart1.html">Toolchain Guide</a>
+          <a class="btn" href="/swiftonios6guidepart2.html">Project Setup</a>
+        </div>
+      </section>
 
-    <footer>
-      © J_W_I_
-    </footer>
-  </div>
+      <section class="module plate" aria-labelledby="mod-coloursnap">
+        <span class="screw tl" aria-hidden="true"></span>
+        <span class="screw tr" aria-hidden="true"></span>
+        <span class="screw bl" aria-hidden="true"></span>
+        <span class="screw br" aria-hidden="true"></span>
+        <div class="module-head">
+          <span class="plate-label" id="mod-coloursnap">Colour Snap</span>
+          <span class="led led-green" aria-hidden="true"></span>
+        </div>
+        <div class="module-body well">
+          <a class="btn" href="https://discord.gg/uKdgNmTAnP">Discord</a>
+          <a class="btn" href="https://testflight.apple.com/join/xKY2rMdC">TestFlight</a>
+          <a class="btn btn-primary" href="https://apps.apple.com/us/app/colour-snap/id6747701369">App&nbsp;Store</a>
+          <a class="btn btn-amber" href="https://ko-fi.com/jwi">Donate</a>
+        </div>
+      </section>
+
+      <section class="module plate" aria-labelledby="mod-photo">
+        <span class="screw tl" aria-hidden="true"></span>
+        <span class="screw tr" aria-hidden="true"></span>
+        <span class="screw bl" aria-hidden="true"></span>
+        <span class="screw br" aria-hidden="true"></span>
+        <div class="module-head">
+          <span class="plate-label" id="mod-photo">Photography</span>
+          <span class="led led-amber" aria-hidden="true"></span>
+        </div>
+        <div class="module-body well">
+          <a class="btn btn-primary" href="https://jwi.pixieset.com/" target="_blank" rel="noopener">View Portfolio</a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-foot well">
+    <span class="foot-brand">
+      <span class="led led-green" aria-hidden="true"></span>
+      J_W_I_
+    </span>
+    <span>© J_W_I_</span>
+  </footer>
+
+  <script src="/site.js"></script>
 </body>
 </html>
