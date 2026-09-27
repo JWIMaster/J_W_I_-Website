@@ -1,123 +1,203 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>J_W_I_</title>
-  <meta name="description" content="J_W_I_ — projects, experiments, and photography." />
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>J_W_I_ — Projects, experiments, and photography</title>
+  <meta name="description" content="J_W_I_ — projects, experiments, and photography. Swift on iOS 6, Colour Snap, and more.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
-<body>
-
+<body class="page-dark">
   <header class="masthead">
     <div class="mast-inner">
-      <a class="brand" href="/index.html" aria-label="J_W_I_ — home">
-        <span class="brand-mark" aria-hidden="true">JW</span>
-        <span class="brand-name">J_W_I_</span>
-        <span class="led led-green" aria-hidden="true"></span>
-      </a>
-      <nav class="nav" aria-label="Main">
-        <a href="/index.html" aria-current="page">Home</a>
-        <a href="/swiftios6.html">Swift on iOS 6</a>
-        <a href="/swiftonios6guidepart1.html">Toolchain Guide</a>
-        <a href="/swiftonios6guidepart2.html">Project Setup</a>
-        <a href="/support.html">Support</a>
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>J_W_I_</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="swiftios6.html">Swift on iOS 6</a>
+        <a href="swiftonios6guidepart1.html">Toolchain Guide</a>
+        <a href="swiftonios6guidepart2.html">Project Setup</a>
+        <a href="support.html">Support</a>
       </nav>
     </div>
   </header>
 
-  <main>
-    <section class="nameplate" aria-label="About">
-      <span class="screw tl" aria-hidden="true"></span>
-      <span class="screw tr" aria-hidden="true"></span>
-      <span class="screw bl" aria-hidden="true"></span>
-      <span class="screw br" aria-hidden="true"></span>
-      <h1>J_W_I_</h1>
-      <p class="tagline">Projects, experiments, and photography</p>
-      <p class="status-strip">
-        <span class="led led-green" aria-hidden="true"></span>
-        ALL SYSTEMS NOMINAL
-      </p>
+  <main class="container">
+
+    <section class="hero" aria-label="Introduction">
+      <div>
+        <h1 class="hero-name reveal">J<span class="u">_</span>W<span class="u">_</span>I<span class="u">_</span></h1>
+        <p class="hero-tagline reveal" data-delay="1">Projects, experiments, and photography.</p>
+      </div>
+
+      <nav class="toc panel" aria-label="On this page">
+        <p class="kicker toc-title"><span class="tick" aria-hidden="true">/</span>Index</p>
+        <div class="toc-list">
+          <a href="#swift">
+            <span class="n">01</span>
+            <span class="t">Swift on iOS 6</span>
+            <span class="d">A technical note, plus the two-part build guide.</span>
+          </a>
+          <a href="#snap">
+            <span class="n">02</span>
+            <span class="t">Colour Snap</span>
+            <span class="d">The app — App Store, TestFlight, and the Discord.</span>
+          </a>
+          <a href="#photo">
+            <span class="n">03</span>
+            <span class="t">Photography</span>
+            <span class="d">The portfolio, hosted on Pixieset.</span>
+          </a>
+          <a href="#support">
+            <span class="n">04</span>
+            <span class="t">Support</span>
+            <span class="d">Questions, ideas, and general contact.</span>
+          </a>
+        </div>
+      </nav>
     </section>
 
-    <div class="module-grid">
+    <section class="section" id="swift">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">01</span>Swift on iOS 6</span>
+        <h2 class="section-title">Swift, back when it didn't exist here</h2>
+      </div>
+      <div class="index">
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">01.1</span>
+          <div>
+            <h3 class="index-title">The writeup</h3>
+            <p class="index-desc">How Swift came to run on iOS 6 — the long story.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-primary" href="swiftios6.html">Read the writeup</a>
+          </div>
+        </div>
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">01.2</span>
+          <div>
+            <h3 class="index-title">Toolchain guide · Part 1</h3>
+            <p class="index-desc">Install the right Xcode and Swift toolchains on macOS.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="swiftonios6guidepart1.html">Open the guide</a>
+          </div>
+        </div>
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">01.3</span>
+          <div>
+            <h3 class="index-title">Project setup · Part 2</h3>
+            <p class="index-desc">Set up a storyboard project and build your IPA.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="swiftonios6guidepart2.html">Open the guide</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="module plate" aria-labelledby="mod-main">
-        <span class="screw tl" aria-hidden="true"></span>
-        <span class="screw tr" aria-hidden="true"></span>
-        <span class="screw bl" aria-hidden="true"></span>
-        <span class="screw br" aria-hidden="true"></span>
-        <div class="module-head">
-          <span class="plate-label" id="mod-main">Main</span>
-          <span class="led led-green" aria-hidden="true"></span>
+    <section class="section" id="snap">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">02</span>Colour Snap</span>
+        <h2 class="section-title">The app</h2>
+      </div>
+      <div class="index">
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">02.1</span>
+          <div>
+            <h3 class="index-title">App Store</h3>
+            <p class="index-desc">The current release.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-primary" href="https://apps.apple.com/us/app/colour-snap/id6747701369" target="_blank" rel="noopener">Get it on the App Store</a>
+          </div>
         </div>
-        <div class="module-body well">
-          <a class="btn btn-primary" href="/support.html">Support</a>
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">02.2</span>
+          <div>
+            <h3 class="index-title">TestFlight</h3>
+            <p class="index-desc">Early builds, before release.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="https://testflight.apple.com/join/xKY2rMdC" target="_blank" rel="noopener">Join TestFlight</a>
+          </div>
         </div>
-      </section>
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">02.3</span>
+          <div>
+            <h3 class="index-title">Discord</h3>
+            <p class="index-desc">The community.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="https://discord.gg/uKdgNmTAnP" target="_blank" rel="noopener">Join the Discord</a>
+          </div>
+        </div>
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">02.4</span>
+          <div>
+            <h3 class="index-title">Donate</h3>
+            <p class="index-desc">Keep the experiments funded.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="https://ko-fi.com/jwi" target="_blank" rel="noopener">Buy me a coffee</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-      <section class="module plate" aria-labelledby="mod-swift">
-        <span class="screw tl" aria-hidden="true"></span>
-        <span class="screw tr" aria-hidden="true"></span>
-        <span class="screw bl" aria-hidden="true"></span>
-        <span class="screw br" aria-hidden="true"></span>
-        <div class="module-head">
-          <span class="plate-label" id="mod-swift">Swift on iOS&nbsp;6</span>
-          <span class="led led-green" aria-hidden="true"></span>
+    <section class="section" id="photo">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">03</span>Photography</span>
+        <h2 class="section-title">The camera work</h2>
+      </div>
+      <div class="index">
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">03.1</span>
+          <div>
+            <h3 class="index-title">Portfolio</h3>
+            <p class="index-desc">Hosted on jwi.pixieset.com.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-ghost" href="https://jwi.pixieset.com/" target="_blank" rel="noopener">View the portfolio</a>
+          </div>
         </div>
-        <div class="module-body well">
-          <a class="btn btn-primary" href="/swiftios6.html">Writeup</a>
-          <a class="btn" href="/swiftonios6guidepart1.html">Toolchain Guide</a>
-          <a class="btn" href="/swiftonios6guidepart2.html">Project Setup</a>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="module plate" aria-labelledby="mod-coloursnap">
-        <span class="screw tl" aria-hidden="true"></span>
-        <span class="screw tr" aria-hidden="true"></span>
-        <span class="screw bl" aria-hidden="true"></span>
-        <span class="screw br" aria-hidden="true"></span>
-        <div class="module-head">
-          <span class="plate-label" id="mod-coloursnap">Colour Snap</span>
-          <span class="led led-green" aria-hidden="true"></span>
+    <section class="section" id="support">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">04</span>Support</span>
+        <h2 class="section-title">Get in touch</h2>
+      </div>
+      <div class="index">
+        <div class="index-row fade-io">
+          <span class="index-num" aria-hidden="true">04.1</span>
+          <div>
+            <h3 class="index-title">Email</h3>
+            <p class="index-desc">Questions, ideas, and the odd curiosity.</p>
+          </div>
+          <div class="index-links">
+            <a class="btn btn-primary" href="mailto:jwideveloper@icloud.com">Send an email</a>
+            <a class="btn btn-ghost" href="support.html">Contact page</a>
+          </div>
         </div>
-        <div class="module-body well">
-          <a class="btn" href="https://discord.gg/uKdgNmTAnP">Discord</a>
-          <a class="btn" href="https://testflight.apple.com/join/xKY2rMdC">TestFlight</a>
-          <a class="btn btn-primary" href="https://apps.apple.com/us/app/colour-snap/id6747701369">App&nbsp;Store</a>
-          <a class="btn btn-amber" href="https://ko-fi.com/jwi">Donate</a>
-        </div>
-      </section>
+      </div>
+    </section>
 
-      <section class="module plate" aria-labelledby="mod-photo">
-        <span class="screw tl" aria-hidden="true"></span>
-        <span class="screw tr" aria-hidden="true"></span>
-        <span class="screw bl" aria-hidden="true"></span>
-        <span class="screw br" aria-hidden="true"></span>
-        <div class="module-head">
-          <span class="plate-label" id="mod-photo">Photography</span>
-          <span class="led led-amber" aria-hidden="true"></span>
-        </div>
-        <div class="module-body well">
-          <a class="btn btn-primary" href="https://jwi.pixieset.com/" target="_blank" rel="noopener">View Portfolio</a>
-        </div>
-      </section>
-
-    </div>
   </main>
 
-  <footer class="site-foot well">
-    <span class="foot-brand">
-      <span class="led led-green" aria-hidden="true"></span>
-      J_W_I_
-    </span>
-    <span>© J_W_I_</span>
+  <footer class="site-foot">
+    <div class="container foot-inner">
+      <span class="foot-brand"><span class="dot" aria-hidden="true"></span>J_W_I_</span>
+      <span class="foot-links">
+        <a href="support.html">Support</a>
+      </span>
+      <span class="foot-copy">© J_W_I_ · j-w-i.org</span>
+    </div>
   </footer>
-
-  <script src="/site.js"></script>
 </body>
 </html>

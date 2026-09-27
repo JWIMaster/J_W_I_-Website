@@ -1,19 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <defs>
-    <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#4a515c"/>
-      <stop offset="0.5" stop-color="#363d46"/>
-      <stop offset="1" stop-color="#2a2f37"/>
-    </linearGradient>
-    <linearGradient id="blue" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#6ba5ee"/>
-      <stop offset="0.5" stop-color="#3b7fd9"/>
-      <stop offset="1" stop-color="#28589e"/>
-    </linearGradient>
-  </defs>
-  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#metal)" stroke="#0e1013" stroke-width="2"/>
-  <rect x="4.5" y="4.5" width="55" height="26" rx="12" fill="#ffffff" opacity="0.07"/>
-  <text x="32" y="43" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="1" fill="#1d2126">J</text>
-  <text x="32" y="42" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="34" font-weight="800" letter-spacing="1" fill="none" stroke="#ffffff" stroke-opacity="0.18" stroke-width="0.8"/>
-  <circle cx="50" cy="14" r="4" fill="#4cc46f" stroke="#0e1013"/>
+  <rect x="1" y="1" width="62" height="62" rx="15" fill="#1e2024" stroke="#000000" stroke-opacity="0.5" stroke-width="2"/>
+  <path d="M 4 16 Q 4 4 16 4 L 48 4 Q 60 4 60 16" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="2"/>
+  <text x="30" y="44" text-anchor="middle" font-family="Helvetica Neue, Helvetica, Arial, sans-serif" font-size="38" font-weight="800" fill="#edeeef">J</text>
+  <circle cx="52" cy="12" r="4" fill="#4fc47c"/>
+  <circle cx="52" cy="12" r="6.5" fill="none" stroke="#4fc47c" stroke-opacity="0.3" stroke-width="2"/>
 </svg>

@@ -5,223 +5,232 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Swift Toolchain Installation Guide for iOS 6</title>
   <meta name="description" content="How to install the Swift toolchain and Xcode templates for building iOS 6 apps.">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
-<body>
+<body class="page-dark">
 
-<header class="masthead">
-  <div class="mast-inner">
-    <a class="brand" href="/index.html" aria-label="J_W_I_ — home">
-      <span class="brand-mark" aria-hidden="true">JW</span>
-      <span class="brand-name">J_W_I_</span>
-      <span class="led led-green" aria-hidden="true"></span>
-    </a>
-    <nav class="nav" aria-label="Main">
-      <a href="/index.html">Home</a>
-      <a href="/swiftios6.html">Swift on iOS 6</a>
-      <a href="/swiftonios6guidepart1.html" aria-current="page">Toolchain Guide</a>
-      <a href="/swiftonios6guidepart2.html">Project Setup</a>
-      <a href="/support.html">Support</a>
-    </nav>
-  </div>
-</header>
+  <header class="masthead">
+    <div class="mast-inner">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>J_W_I_</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="swiftios6.html">Swift on iOS 6</a>
+        <a href="swiftonios6guidepart1.html" aria-current="page">Toolchain Guide</a>
+        <a href="swiftonios6guidepart2.html">Project Setup</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="guide-main">
+  <main class="container">
 
-  <div class="titleplate plate">
-    <div>
-      <span class="plate-label">Guide · Part 1</span>
+    <div class="page-head">
+      <span class="kicker"><span class="tick" aria-hidden="true">/</span>Guide · Part 1</span>
       <h1>Swift Toolchain Installation Guide for iOS 6</h1>
+      <p class="lede" data-tw-key="guide1" data-typewrite="1" data-typewrite-then="main > section">How to install the Swift toolchain and Xcode templates for building iOS 6 apps.</p>
     </div>
-    <span class="led led-green" aria-hidden="true"></span>
-  </div>
 
-  <div class="chassis-h2"><h2>Swift Toolchain Downloads</h2></div>
-
-  <div class="table-frame well">
-    <table class="data-table">
-      <thead>
-        <tr>
-          <th scope="col">macOS Version</th>
-          <th scope="col">Xcode Version</th>
-          <th scope="col">Downloads</th>
-          <th scope="col">Notes</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td data-label="macOS Version">Mojave</td>
-          <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_11.3.1/Xcode_11.3.1.xip">Xcode 11.3.1</a></td>
-          <td data-label="Downloads">
-            <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
-            <a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank" rel="noopener">Build Script</a>
-          </td>
-          <td data-label="Notes">Only Swift 5.1.5 required.</td>
-        </tr>
-        <tr>
-          <td data-label="macOS Version">Big Sur</td>
-          <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.2.1/Xcode_13.2.1.xip">Xcode 13.2.1</a></td>
-          <td data-label="Downloads">
-            <a href="https://drive.google.com/uc?export=download&amp;id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank" rel="noopener">Swift 5.6.3 Toolchain</a><br>
-            <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
-            <a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank" rel="noopener">Build Script</a>
-          </td>
-          <td data-label="Notes">Both Swift 5.6.3 and 5.1.5 required.</td>
-        </tr>
-        <tr>
-          <td data-label="macOS Version">Monterey</td>
-          <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip">Xcode 13.4.1</a></td>
-          <td data-label="Downloads">
-            <a href="https://drive.google.com/uc?export=download&amp;id=1RuLxPPvQvEoZQn22UlAptaRM_2UqrHl-" target="_blank" rel="noopener">Swift 5.10.1 Toolchain</a><br>
-            <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
-            <a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank" rel="noopener">Build Script</a>
-          </td>
-          <td data-label="Notes">Both Swift 5.10.1 and 5.1.5 required.</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div class="steps">
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">2</span>
-      <div class="step-body">
-        <h3>Install Xcode</h3>
-        <p>Install the Xcode version recommended for your macOS above.</p>
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">a</span>Downloads</span>
+        <h2 class="section-title">Swift Toolchain Downloads</h2>
       </div>
-    </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">4.5</span>
-      <div class="step-body">
-        <h3>Fix Swift Toolchain Paths</h3>
-
-        <p>Swift 5.6.3:</p>
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">Terminal · Swift 5.6.3</span>
-            <button class="btn btn-sm" type="button" data-copy-target="#rpath563">Copy</button>
-          </figcaption>
-          <div class="code-screen" id="rpath563"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
-        </figure>
-
-        <p>Swift 5.10.1:</p>
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">Terminal · Swift 5.10.1</span>
-            <button class="btn btn-sm" type="button" data-copy-target="#rpath510">Copy</button>
-          </figcaption>
-          <div class="code-screen" id="rpath510"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
-        </figure>
+      <div class="panel table-wrap">
+        <div class="table-scroll">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th scope="col">macOS Version</th>
+                <th scope="col">Xcode Version</th>
+                <th scope="col">Downloads</th>
+                <th scope="col">Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="macOS Version">Mojave</td>
+                <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_11.3.1/Xcode_11.3.1.xip">Xcode 11.3.1</a></td>
+                <td data-label="Downloads">
+                  <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
+                  <a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank" rel="noopener">Build Script</a>
+                </td>
+                <td data-label="Notes">Only Swift 5.1.5 required.</td>
+              </tr>
+              <tr>
+                <td data-label="macOS Version">Big Sur</td>
+                <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.2.1/Xcode_13.2.1.xip">Xcode 13.2.1</a></td>
+                <td data-label="Downloads">
+                  <a href="https://drive.google.com/uc?export=download&amp;id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank" rel="noopener">Swift 5.6.3 Toolchain</a><br>
+                  <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
+                  <a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank" rel="noopener">Build Script</a>
+                </td>
+                <td data-label="Notes">Both Swift 5.6.3 and 5.1.5 required.</td>
+              </tr>
+              <tr>
+                <td data-label="macOS Version">Monterey</td>
+                <td data-label="Xcode Version"><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip">Xcode 13.4.1</a></td>
+                <td data-label="Downloads">
+                  <a href="https://drive.google.com/uc?export=download&amp;id=1RuLxPPvQvEoZQn22UlAptaRM_2UqrHl-" target="_blank" rel="noopener">Swift 5.10.1 Toolchain</a><br>
+                  <a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><br>
+                  <a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank" rel="noopener">Build Script</a>
+                </td>
+                <td data-label="Notes">Both Swift 5.10.1 and 5.1.5 required.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
-    </div>
+    </section>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">5</span>
-      <div class="step-body">
-        <h3>Install Xcode Templates</h3>
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">b</span>Installation</span>
+        <h2 class="section-title">Installing the Toolchain</h2>
+      </div>
 
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">Terminal · Templates</span>
-            <button class="btn btn-sm" type="button" data-copy-target="#templates">Copy</button>
-          </figcaption>
-          <div class="code-screen" id="templates"><pre>mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application
+      <div class="steps">
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">2</span>
+          <div class="step-body">
+            <h3>Install Xcode</h3>
+            <p>Install the Xcode version recommended for your macOS above.</p>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">4.5</span>
+          <div class="step-body">
+            <h3>Fix Swift Toolchain Paths</h3>
+
+            <p>Swift 5.6.3:</p>
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">Terminal · Swift 5.6.3</span>
+                <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#rpath563">Copy</button>
+              </figcaption>
+              <div class="code-screen" id="rpath563"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
+            </figure>
+
+            <p>Swift 5.10.1:</p>
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">Terminal · Swift 5.10.1</span>
+                <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#rpath510">Copy</button>
+              </figcaption>
+              <div class="code-screen" id="rpath510"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
+            </figure>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">5</span>
+          <div class="step-body">
+            <h3>Install Xcode Templates</h3>
+
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">Terminal · Templates</span>
+                <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#templates">Copy</button>
+              </figcaption>
+              <div class="code-screen" id="templates"><pre>mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application
 git clone https://github.com/JWIMaster/iOS-6-Swift-Xcode-Templates.git /tmp/iOS6SwiftTemplates
 cp -R /tmp/iOS6SwiftTemplates/Templates/Project\ Templates/Application/* ~/Library/Developer/Xcode/Templates/Project\ Templates/Application/
 rm -rf /tmp/iOS6SwiftTemplates</pre></div>
-        </figure>
+            </figure>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">6</span>
+          <div class="step-body">
+            <h3>Select Template</h3>
+            <p>Open Xcode → File → New Project → Select <strong>Legacy Swift Application</strong> template and you're good to go.</p>
+          </div>
+        </div>
+
       </div>
-    </div>
+    </section>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">6</span>
-      <div class="step-body">
-        <h3>Select Template</h3>
-        <p>Open Xcode → File → New Project → Select <strong>Legacy Swift Application</strong> template and you're good to go.</p>
+    <section class="section">
+      <div class="section-head">
+        <span class="kicker"><span class="tick" aria-hidden="true">c</span>Build</span>
+        <h2 class="section-title">How to Build</h2>
       </div>
-    </div>
 
-  </div>
+      <div class="steps">
 
-  <div class="chassis-h2"><h2>How to Build</h2></div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">1</span>
+          <div class="step-body">
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">Terminal</span>
+              </figcaption>
+              <div class="code-screen"><pre>cd /path/to/your/project</pre></div>
+            </figure>
+          </div>
+        </div>
 
-  <div class="steps">
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">2</span>
+          <div class="step-body">
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">Terminal</span>
+              </figcaption>
+              <div class="code-screen"><pre>chmod +x ./buildScript.command</pre></div>
+            </figure>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">1</span>
-      <div class="step-body">
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">Terminal</span>
-          </figcaption>
-          <div class="code-screen"><pre>cd /path/to/your/project</pre></div>
-        </figure>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">3</span>
+          <div class="step-body">
+            <p>Drag the build script onto the Terminal</p>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">4</span>
+          <div class="step-body">
+            <p>Type your project scheme name after</p>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">5</span>
+          <div class="step-body">
+            <p>Specify build folder (use "build" if unsure)</p>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">6</span>
+          <div class="step-body">
+            <p>Enjoy your IPA!</p>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="container foot-inner">
+      <span class="foot-brand"><span class="dot" aria-hidden="true"></span>J_W_I_</span>
+      <span class="foot-links">
+        <a href="swiftonios6guidepart2.html">Next: Project Setup</a>
+      </span>
+      <span class="foot-copy">© J_W_I_ · j-w-i.org</span>
     </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">2</span>
-      <div class="step-body">
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">Terminal</span>
-          </figcaption>
-          <div class="code-screen"><pre>chmod +x ./buildScript.command</pre></div>
-        </figure>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">3</span>
-      <div class="step-body">
-        <p>Drag the build script onto the Terminal</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">4</span>
-      <div class="step-body">
-        <p>Type your project scheme name after</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">5</span>
-      <div class="step-body">
-        <p>Specify build folder (use "build" if unsure)</p>
-      </div>
-    </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">6</span>
-      <div class="step-body">
-        <p>Enjoy your IPA!</p>
-      </div>
-    </div>
-
-  </div>
-
-</main>
-
-<footer class="site-foot well">
-  <span class="foot-brand">
-    <span class="led led-green" aria-hidden="true"></span>
-    J_W_I_
-  </span>
-  <span>© J_W_I_</span>
-</footer>
-
-<script src="/site.js"></script>
+  </footer>
 </body>
 </html>

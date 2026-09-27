@@ -5,145 +5,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Project Setup Guide</title>
   <meta name="description" content="How to set up an Xcode project for building apps for iOS 6 and above.">
-  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/styles.css" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="site.js" defer></script>
 </head>
-<body>
+<body class="page-dark">
 
-<header class="masthead">
-  <div class="mast-inner">
-    <a class="brand" href="/index.html" aria-label="J_W_I_ — home">
-      <span class="brand-mark" aria-hidden="true">JW</span>
-      <span class="brand-name">J_W_I_</span>
-      <span class="led led-green" aria-hidden="true"></span>
-    </a>
-    <nav class="nav" aria-label="Main">
-      <a href="/index.html">Home</a>
-      <a href="/swiftios6.html">Swift on iOS 6</a>
-      <a href="/swiftonios6guidepart1.html">Toolchain Guide</a>
-      <a href="/swiftonios6guidepart2.html" aria-current="page">Project Setup</a>
-      <a href="/support.html">Support</a>
-    </nav>
-  </div>
-</header>
+  <header class="masthead">
+    <div class="mast-inner">
+      <a class="brand" href="index.html"><span class="dot" aria-hidden="true"></span>J_W_I_</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="index.html">Home</a>
+        <a href="swiftios6.html">Swift on iOS 6</a>
+        <a href="swiftonios6guidepart1.html">Toolchain Guide</a>
+        <a href="swiftonios6guidepart2.html" aria-current="page">Project Setup</a>
+        <a href="support.html">Support</a>
+      </nav>
+    </div>
+  </header>
 
-<main class="guide-main">
+  <main class="container">
 
-  <div class="titleplate plate">
-    <div>
-      <span class="plate-label">Guide · Part 2</span>
+    <div class="page-head">
+      <span class="kicker"><span class="tick" aria-hidden="true">/</span>Guide · Part 2</span>
       <h1>Project Setup and Build</h1>
-    </div>
-    <span class="led led-green" aria-hidden="true"></span>
-  </div>
-
-  <p class="page-intro">Make a new Project in Xcode that is storyboard based.</p>
-
-  <div class="steps">
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">1</span>
-      <div class="step-body">
-        <p>Click the info tab in the Project Settings.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup1.png" alt="Step 1"></div></div>
-      </div>
+      <p class="lede" data-tw-key="guide2" data-typewrite="1" data-typewrite-then="main > section">Make a new Project in Xcode that is storyboard based.</p>
     </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">2</span>
-      <div class="step-body">
-        <p>Hover over and click the minus button on the values in the image.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup2.png" alt="Step 2"></div></div>
-      </div>
-    </div>
+    <section class="section">
+      <div class="steps">
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">3</span>
-      <div class="step-body">
-        <p>Click the build settings tab.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup3.png" alt="Step 3"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">1</span>
+          <div class="step-body">
+            <p>Click the info tab in the Project Settings.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup1.webp" width="3060" height="906" loading="lazy" alt="Step 1"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">4</span>
-      <div class="step-body">
-        <p>Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup4.png" alt="Step 4"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">2</span>
+          <div class="step-body">
+            <p>Hover over and click the minus button on the values in the image.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup2.webp" width="1616" height="686" loading="lazy" alt="Step 2"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">5</span>
-      <div class="step-body">
-        <p>Scroll down inside that dropdown and click “other”, and type in “7.0”.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup5.png" alt="Step 5"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">3</span>
+          <div class="step-body">
+            <p>Click the build settings tab.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup3.webp" width="260" height="96" loading="lazy" alt="Step 3"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">6</span>
-      <div class="step-body">
-        <p>Right click and select delete on the two highlighted files.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup6.png" alt="Step 6"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">4</span>
+          <div class="step-body">
+            <p>Scroll down to the iOS Deployment Target setting in Deployment header and click the dropdown menu.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup4.webp" width="2670" height="1604" loading="lazy" alt="Step 4"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">7</span>
-      <div class="step-body">
-        <p>Open the LaunchScreen storyboard.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup7.png" alt="Step 7"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">5</span>
+          <div class="step-body">
+            <p>Scroll down inside that dropdown and click “other”, and type in “7.0”.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup5.webp" width="2582" height="390" loading="lazy" alt="Step 5"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">8</span>
-      <div class="step-body">
-        <p>Click “View Controller Scene”.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup8.png" alt="Step 8"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">6</span>
+          <div class="step-body">
+            <p>Right click and select delete on the two highlighted files.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup6.webp" width="518" height="436" loading="lazy" alt="Step 6"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">9</span>
-      <div class="step-body">
-        <p>On the right, click the page option.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup9.png" alt="Step 9"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">7</span>
+          <div class="step-body">
+            <p>Open the LaunchScreen storyboard.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup7.webp" width="532" height="418" loading="lazy" alt="Step 7"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">10</span>
-      <div class="step-body">
-        <p>Uncheck the “Use Safe Area Layout Guides” option.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup10.png" alt="Step 10"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">8</span>
+          <div class="step-body">
+            <p>Click “View Controller Scene”.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup8.webp" width="1386" height="1114" loading="lazy" alt="Step 8"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">11</span>
-      <div class="step-body">
-        <p>Go to the AppDelegate file.</p>
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup11.png" alt="Step 11"></div></div>
-      </div>
-    </div>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">9</span>
+          <div class="step-body">
+            <p>On the right, click the page option.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup9.webp" width="516" height="1336" loading="lazy" alt="Step 9"></div>
+          </div>
+        </div>
 
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">12</span>
-      <div class="step-body">
-        <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">10</span>
+          <div class="step-body">
+            <p>Uncheck the “Use Safe Area Layout Guides” option.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup10.webp" width="510" height="260" loading="lazy" alt="Step 10"></div>
+          </div>
+        </div>
 
-        <figure class="code">
-          <figcaption class="code-bar">
-            <span class="code-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span class="code-title">AppDelegate.swift</span>
-            <button class="btn btn-sm" type="button" data-copy-target="#appdelegate">Copy Code</button>
-          </figcaption>
-          <div class="code-screen" id="appdelegate"><pre><span class="tok-com">// AppDelegate.swift</span>
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">11</span>
+          <div class="step-body">
+            <p>Go to the AppDelegate file.</p>
+            <div class="shot"><img src="GuideImages/ProjPicSetup11.webp" width="508" height="340" loading="lazy" alt="Step 11"></div>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">12</span>
+          <div class="step-body">
+            <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
+
+            <figure class="code">
+              <figcaption class="code-bar">
+                <span class="code-title">AppDelegate.swift</span>
+                <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#appdelegate">Copy Code</button>
+              </figcaption>
+              <div class="code-screen" id="appdelegate"><pre><span class="tok-com">// AppDelegate.swift</span>
 <span class="tok-kw">import</span> <span class="tok-type">UIKit</span>
 
 <span class="tok-kw">@main</span>
@@ -162,31 +155,32 @@
         <span class="tok-kw">return</span> <span class="tok-kw">true</span>
     }
 }</pre></div>
-        </figure>
+            </figure>
 
-        <div class="shot"><div class="shot-screen"><img src="GuideImages/ProjPicSetup12.png" alt="Step 12"></div></div>
+            <div class="shot"><img src="GuideImages/ProjPicSetup12.webp" width="3054" height="1034" loading="lazy" alt="Step 12"></div>
+          </div>
+        </div>
+
+        <div class="step fade-io">
+          <span class="step-badge" aria-hidden="true">13</span>
+          <div class="step-body">
+            <p>To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
+          </div>
+        </div>
+
       </div>
+    </section>
+
+  </main>
+
+  <footer class="site-foot">
+    <div class="container foot-inner">
+      <span class="foot-brand"><span class="dot" aria-hidden="true"></span>J_W_I_</span>
+      <span class="foot-links">
+        <a href="swiftonios6guidepart1.html">Previous: Toolchain Guide</a>
+      </span>
+      <span class="foot-copy">© J_W_I_ · j-w-i.org</span>
     </div>
-
-    <div class="step">
-      <span class="step-badge" aria-hidden="true">13</span>
-      <div class="step-body">
-        <p>To build, navigate to your project directory in the terminal, drag my script onto the terminal and then type your app's Scheme name plus the directory you want it to put your ipa in (just put "build" if unsure).</p>
-      </div>
-    </div>
-
-  </div>
-
-</main>
-
-<footer class="site-foot well">
-  <span class="foot-brand">
-    <span class="led led-green" aria-hidden="true"></span>
-    J_W_I_
-  </span>
-  <span>© J_W_I_</span>
-</footer>
-
-<script src="/site.js"></script>
+  </footer>
 </body>
 </html>
