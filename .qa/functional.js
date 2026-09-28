@@ -23,14 +23,22 @@ const { chromium } = require('playwright');
   const cls = await btn.getAttribute('class');
   results.push('copy #ex1: ' + (cls.includes('ok') ? ' OK' : ' FAIL ' + cls));
 
-  // copy button on the guide (part 2, AppDelegate)
-  await p.goto('http://127.0.0.1:8123/swiftonios6guidepart2.html', { waitUntil: 'domcontentloaded' });
-  await p.waitForTimeout(400);
+  // copy button on the guide (wizard, manual path "Paste the New Code")
+  await p.goto('http://127.0.0.1:8123/swiftonios6guidepart1.html', { waitUntil: 'domcontentloaded' });
+  await p.waitForTimeout(2500);
+  await p.click('.os-card:has(input[value="monterey"])');
+  await p.click('#wiz-next');
+  for (let i = 0; i < 3; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
+  await p.click('.path-card:has(input[value="manual"])');
+  await p.click('#wiz-next');
+  for (let i = 0; i < 11; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
   const btn2 = p.locator('[data-copy-target="#appdelegate"]');
-  if (await btn2.count()) {
+  if (await btn2.count() && await btn2.isVisible()) {
     await btn2.click();
     await p.waitForTimeout(200);
     results.push('copy #appdelegate: ' + ((await btn2.getAttribute('class')).includes('ok') ? ' OK' : ' FAIL'));
+  } else {
+    results.push('copy #appdelegate: FAIL (button not reachable)');
   }
 
   // 3. mailto + portfolio links on support
@@ -83,7 +91,8 @@ const { chromium } = require('playwright');
   await p.waitForTimeout(2500);
   /* walk the wizard to the first step that contains a code panel (rpath, step 3) */
   await p.click('.os-card:has(input[value="monterey"])');
-  for (let i = 0; i < 3; i++) await p.click('#wiz-next');
+  await p.click('#wiz-next');
+  for (let i = 0; i < 2; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
   const align = await p.evaluate(() => {
     /* wizard: only count panels that are actually visible */
     const visible = e => e.offsetParent !== null;

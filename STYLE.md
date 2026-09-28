@@ -8,8 +8,9 @@ control accent.
 
 - `index.html` — hero wordmark + index of everything
 - `swiftios6.html` — the "Swift on iOS 6" technical note
-- `swiftonios6guidepart1.html` — Toolchain Guide (interactive wizard, `guide1.js`)
-- `swiftonios6guidepart2.html` — Project Setup guide
+- `swiftonios6guidepart1.html` — the iOS 6 Setup Guide (full-screen interactive
+  wizard, `guide1.js`): toolchain install, then a branch into the templates path
+  or the manual project setup, then the finale
 - `support.html` — contact
 
 All links are relative (GitHub Pages, CNAME `j-w-i.org`). No build step; `styles.css`
@@ -62,17 +63,23 @@ Rules of thumb:
   text.
 - **Sheet** — the article container; warm dark surface, 48px padding, sheet-ink
   text, hairline `--sheet-line` edges.
-- **Wizard** (toolchain guide) — one `.panel` shell (`.wiz-shell`) holding every
-  step; `guide1.js` shows exactly one `.wizard-step` at a time and switches the
-  section head (tick `a`/`b`/`c` + kicker + title + "phase · n of m" progress) with
-  the current step group. Steps stay fully rendered in the markup — no-JS visitors
-  get the whole guide stacked, and per-OS variants (`[data-os]`) carry the OS name
-  in their headings so each one reads standalone. OS choice is a radio group in
-  `.os-card` wells; the native radio is restyled as a 14 px dot on the right of the
-  card — dark when off, glowing green (the brand status green) when selected, with
-  a faint green border on the card itself. Back/Next pill buttons in
-  `.wiz-controls`, with the final "Next: Project Setup →" link replacing Next on
-  the last step.
+- **Wizard** (setup guide) — a full-screen stage, not a panel: `main.wiz-main`
+  fills the viewport below the masthead and the single visible `.wizard-step`
+  floats centred on the page background (`align-content: safe center`, so the
+  no-JS stack falls back to top alignment instead of clipping). Steps with a
+  screenshot earn a third grid column beside the text; ≤ 860px the shot drops
+  under the text. `guide1.js` shows exactly one logical step at a time and
+  switches the section head (tick `a`–`e` + phase name + title + "phase · n of
+  m" progress) with the step group. Every actionable step carries a
+  `.confirm-box` — an 18 px macOS-style checkbox (inset well, blue gradient
+  fill + `--blue-ink` tick when checked) — that gates the Next button until
+  ticked. The step-4 branch is a two-card radio group (`.path-card`, green dot
+  exactly like the OS picker) choosing the templates path or the manual path;
+  `data-path` steps are hidden from the other branch. Per-OS variants
+  (`[data-os]`) carry the OS name in their headings so each reads standalone;
+  no-JS visitors get the whole guide stacked. Back/Next pill buttons in
+  `.wiz-controls`; on the final step Next hides and a "Start over" ghost
+  button resets the confirms and path choice (keeping the OS).
 
 ## Motion
 
@@ -105,5 +112,6 @@ Everything animates only under `prefers-reduced-motion: no-preference`
 
 - `node shot.js` — 5 pages × 11 viewports, overflow/blank checks → expect `ALL_CLEAN`
 - `node functional.js` — nav, copy buttons, mailto, anchors
-- `node wizard.js` — all three OS paths end-to-end, copy round-trip, no-JS stack, reduced motion
+- `node wizard.js` — all three OSes end-to-end (templates path ×3, manual path ×1),
+  confirm-box gating, restart, copy round-trip, no-JS stack, reduced motion
 - `node contrast.js` — WCAG pairs for every token combination

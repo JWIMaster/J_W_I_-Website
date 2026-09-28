@@ -1,6 +1,6 @@
-/* J_W_I_ QA: interactive wizard on the toolchain guide (part 1).
-   Verifies all three OS paths, progress/phase text, copy buttons,
-   final CTA, no-JS fallback, and reduced motion. */
+/* J_W_I_ QA: the full-screen iOS 6 setup wizard.
+   Verifies all three OS setups, the confirmation gating, both setup paths
+   (templates + manual), the finale/restart, no-JS fallback, and reduced motion. */
 const { chromium } = require('playwright');
 
 const URL = 'http://127.0.0.1:8123/swiftonios6guidepart1.html';
@@ -14,11 +14,30 @@ async function visibleSteps(page) {
   return page.$$eval('.wizard-step:not(.is-hidden)', els =>
     els.map(e => (e.querySelector('h3') || e.querySelector('p') || { textContent: '?' }).textContent.trim()));
 }
-async function walkOS(browser, os, versionCheck, rpathCheck, progressMid) {
-  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+async function progress(page) { return page.$eval('#wiz-progress', e => e.textContent); }
+async function tickConfirm(page, expectGate) {
+  /* gate check → tick → gate opens */
+  const gated = await page.$eval('#wiz-next', b => b.disabled);
+  if (expectGate !== undefined) check('next gated before confirm', gated);
+  await page.click('.wizard-step:not(.is-hidden) .confirm-box');
+  const opened = await page.$eval('#wiz-next', b => !b.disabled);
+  if (expectGate !== undefined) check('next opens after confirm', opened);
+  await page.click('#wiz-next');
+}
+
+async function newPage(browser, opts = {}) {
+  const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 }, ...opts });
   const page = await ctx.newPage();
+  const errs = [];
+  page.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
   await page.goto(URL, { waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(2600); /* let the lead typewriter settle */
+  return { ctx, page, errs };
+}
+
+/* ── the shared setup phase, per OS ───────────────────────────── */
+async function walkSetup(browser, os, versionCheck, rpathCheck) {
+  const { ctx, page, errs } = await newPage(browser);
 
   check(os + ': step 0 visible', (await visibleSteps(page)).join('|') === 'Choose your macOS');
   check(os + ': next disabled before choice', await page.$eval('#wiz-next', b => b.disabled));
@@ -28,29 +47,26 @@ async function walkOS(browser, os, versionCheck, rpathCheck, progressMid) {
   check(os + ': next enabled after choice', await page.$eval('#wiz-next', b => !b.disabled));
   await page.click('#wiz-next');
 
-  const dl = await visibleSteps(page);
-  check(os + ': downloads step for ' + os, dl.join('|').startsWith('Downloads —'), dl.join('|'));
   const h3 = os === 'mojave' ? 'Downloads — Mojave' : os === 'bigsur' ? 'Downloads — Big Sur' : 'Downloads — Monterey';
   check(os + ': downloads heading', (await page.$eval('.wizard-step:not(.is-hidden) h3', e => e.textContent.trim())) === h3);
-  check(os + ': xcode 11.3.1 URL', os === 'mojave'
-    ? await page.$eval('.wizard-step:not(.is-hidden) a', a => a.href.includes('Xcode_11.3.1.xip'))
-    : true);
-  check(os + ': progress text', (await page.$eval('#wiz-progress', e => e.textContent)) === 'Downloads · 2 of 2');
+  const xcodeFile = 'Xcode_' + versionCheck; /* evaluated in Node, not the page */
+  check(os + ': xcode URL', await page.$eval('.wizard-step:not(.is-hidden) a', (a, f) => a.href.includes(f), xcodeFile));
+  check(os + ': progress = Setup · 2 of 4', (await progress(page)) === 'Setup · 2 of 4', await progress(page));
+  await tickConfirm(page, true);
 
-  await page.click('#wiz-next');
   const xcodeOpts = await page.$$eval('.wizard-step:not(.is-hidden) .os-opt', els =>
     els.map(e => [e.textContent.replace(/\s+/g, ' ').trim(), getComputedStyle(e).display]));
   const visibleOpts = xcodeOpts.filter(o => o[1] !== 'none');
   check(os + ': install xcode + version', visibleOpts.length === 1 && visibleOpts[0][0].includes('Xcode ' + versionCheck),
     JSON.stringify(xcodeOpts));
-  await page.click('#wiz-next');
+  check(os + ': progress = Setup · 3 of 4', (await progress(page)) === 'Setup · 3 of 4', await progress(page));
+  await tickConfirm(page, true);
 
   const rpath = await page.$$eval('.wizard-step:not(.is-hidden) .code-screen pre', els =>
     els.filter(e => e.offsetParent !== null).map(e => e.textContent));
   check(os + ': exactly one rpath block visible', rpath.length === 1, 'visible=' + rpath.length);
-  const rpathCmd = rpath[0] || '';
+  const rpathCmd = (rpath[0] || '').trim();
   check(os + ': rpath command', rpathCmd.includes(rpathCheck), rpathCmd.slice(0, 80));
-  check(os + ': rpath copy button', await page.$eval('.wizard-step:not(.is-hidden) [data-copy-target]', b => !!b));
 
   /* copy button round-trip */
   await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: 'http://127.0.0.1:8123' });
@@ -58,35 +74,94 @@ async function walkOS(browser, os, versionCheck, rpathCheck, progressMid) {
     els.find(e => e.offsetParent !== null).click());
   await page.waitForTimeout(300);
   const clip = await page.evaluate(() => navigator.clipboard.readText());
-  check(os + ': copy → clipboard', clip === rpathCmd.trim(), 'clip=' + clip.slice(0, 60));
+  check(os + ': copy → clipboard', clip === rpathCmd, 'clip=' + clip.slice(0, 60));
 
+  check(os + ': progress = Setup · 4 of 4', (await progress(page)) === 'Setup · 4 of 4', await progress(page));
+  await tickConfirm(page, true);
+
+  /* path branch */
+  check(os + ': path branch step', (await visibleSteps(page)).join('|') === 'How do you want to set up your project?');
+  check(os + ': progress = Choose your path', (await progress(page)) === 'Choose your path', await progress(page));
+  check(os + ': two path cards', (await page.$$('.path-card')).length === 2);
+  check(os + ': next disabled before path choice', await page.$eval('#wiz-next', b => b.disabled));
+  check(os + ': section title = Choose Your Path', (await page.$eval('#wiz-title', e => e.textContent)) === 'Choose Your Path');
+
+  return { ctx, page, errs };
+}
+
+/* ── full walk: templates path (all three OSes) ───────────────── */
+async function walkTemplates(browser, os, versionCheck, rpathCheck) {
+  const { ctx, page, errs } = await walkSetup(browser, os, versionCheck, rpathCheck);
+
+  await page.click('.path-card:has(input[value="templates"])');
+  check(os + ': path card selected', await page.$eval('.path-card:has(input[value="templates"])', c => c.classList.contains('is-selected')));
+  check(os + ': next enabled after path choice', await page.$eval('#wiz-next', b => !b.disabled));
   await page.click('#wiz-next');
-  check(os + ': templates step', (await visibleSteps(page)).join('|').includes('Install Xcode Templates'));
+
+  check(os + ': first template step', (await visibleSteps(page)).join('|') === 'Install Xcode Templates');
+  check(os + ': progress = Templates · 1 of 7', (await progress(page)) === 'Templates · 1 of 7', await progress(page));
   const tmpl = await page.$eval('#templates', e => e.textContent);
   check('templates command intact', tmpl.includes('git clone https://github.com/JWIMaster/iOS-6-Swift-Xcode-Templates.git'));
-  await page.click('#wiz-next');
-  const selText = await page.$eval('.wizard-step:not(.is-hidden) .step-body', e => e.textContent.replace(/\s+/g, ' ').trim());
-  check(os + ': select template step', selText.includes('Legacy Swift Application'), selText);
-  check(os + ': installation phase text', (await page.$eval('#wiz-progress', e => e.textContent)) === 'Installation · 4 of 4');
-  check(os + ': section head = Build?', (await page.$eval('#wiz-title', e => e.textContent)) === 'Installing the Toolchain');
 
-  for (let i = 0; i < 6; i++) await page.click('#wiz-next');
+  /* 7 template steps → 7 confirm+next ticks land on the finale */
+  for (let i = 0; i < 7; i++) await tickConfirm(page, i === 0 ? undefined : true);
 
-  check(os + ': final step reached', (await visibleSteps(page)).join('|').includes('Enjoy your IPA!'));
-  check(os + ': final CTA visible', await page.$eval('#wiz-final', a => !a.hidden && a.href.includes('swiftonios6guidepart2.html')));
+  const fin = (await visibleSteps(page)).join('|');
+  check(os + ': templates finale reached', fin === 'Enjoy your IPA!', fin);
+  check(os + ': progress = Setup complete', (await progress(page)) === 'Setup complete', await progress(page));
+  check(os + ': section title = finale', (await page.$eval('#wiz-title', e => e.textContent)) === "You're All Set");
   check(os + ': next hidden at end', await page.$eval('#wiz-next', b => b.hidden));
+  check(os + ': restart visible at end', await page.$eval('#wiz-restart', b => !b.hidden));
   check(os + ': back enabled at end', await page.$eval('#wiz-back', b => !b.disabled));
-  check(os + ': build phase text', (await page.$eval('#wiz-progress', e => e.textContent)) === 'Build · 6 of 6');
 
-  /* back navigation restores the per-OS variant */
-  for (let i = 0; i < 8; i++) await page.click('#wiz-back');
-  const backRpath = await page.$$eval('.wizard-step:not(.is-hidden) .code-screen pre', els =>
-    els.filter(e => e.offsetParent !== null).map(e => e.textContent).join('|'));
-  check(os + ': back → rpath variant restored', backRpath.includes(rpathCheck), backRpath.slice(0, 80));
+  /* back from the finale returns to the last step of the chosen path */
+  await page.click('#wiz-back');
+  check(os + ': back → last template step', (await visibleSteps(page)).join('|') === 'Choose the Build Folder');
+  await page.click('#wiz-next'); /* its confirm is still ticked → back to the finale */
+  check(os + ': back to finale', (await visibleSteps(page)).join('|') === 'Enjoy your IPA!');
 
-  /* console errors */
-  const errs = [];
-  page.on('console', m => { if (m.type() === 'error') errs.push(m.text()); });
+  /* restart returns to step 0 with gates reset, OS kept */
+  await page.click('#wiz-restart');
+  check(os + ': restart → step 0', (await visibleSteps(page)).join('|') === 'Choose your macOS');
+  const unchecked = await page.$$eval('.confirm-box', els => els.every(e => !e.checked));
+  const pathCleared = await page.$$eval('input[name="wizard-path"]', els => els.every(e => !e.checked));
+  const osKept = await page.$eval(`input[name="wizard-os"][value="${os}"]`, e => e.checked);
+  check(os + ': restart clears confirms + path', unchecked && pathCleared);
+  check(os + ': restart keeps the OS choice', osKept);
+
+  await ctx.close();
+  return errs;
+}
+
+/* ── full walk: manual path (one OS — the manual steps are OS-agnostic) ── */
+async function walkManual(browser, os, versionCheck, rpathCheck) {
+  const { ctx, page, errs } = await walkSetup(browser, os, versionCheck, rpathCheck);
+
+  await page.click('.path-card:has(input[value="manual"])');
+  check('manual: path card selected', await page.$eval('.path-card:has(input[value="manual"])', c => c.classList.contains('is-selected')));
+  await page.click('#wiz-next');
+
+  const first = (await visibleSteps(page)).join('|');
+  check('manual: first manual step', first === 'Open the Project Settings', first);
+  check('manual: shot beside the text', await page.$eval('.wizard-step:not(.is-hidden) .shot', e =>
+    e.offsetParent !== null && getComputedStyle(e).gridColumnStart === '3'));
+  check('manual: progress = Manual · 1 of 13', (await progress(page)) === 'Manual · 1 of 13', await progress(page));
+
+  /* step 12 of the manual run is the code paste — verify the block rides along */
+  for (let i = 0; i < 11; i++) await tickConfirm(page, i === 0 ? undefined : true);
+  const paste = (await visibleSteps(page)).join('|');
+  check('manual: paste step', paste === 'Paste the New Code', paste);
+  check('manual: appdelegate block present', await page.$eval('#appdelegate', e => e.textContent.includes('AppDelegate')));
+
+  await tickConfirm(page, true); /* → build */
+  const build = (await visibleSteps(page)).join('|');
+  check('manual: build step', build === 'Build Your App', build);
+  check('manual: progress = Manual · 13 of 13', (await progress(page)) === 'Manual · 13 of 13', await progress(page));
+  await tickConfirm(page, true);
+
+  const fin = (await visibleSteps(page)).join('|');
+  check('manual: finale reached', fin === 'Enjoy your IPA!', fin);
+
   await ctx.close();
   return errs;
 }
@@ -94,28 +169,29 @@ async function walkOS(browser, os, versionCheck, rpathCheck, progressMid) {
 (async () => {
   const browser = await chromium.launch();
 
-  const errs1 = await walkOS(browser, 'mojave', '11.3.1', 'swift-5.1.5-RELEASE', 'Downloads · 2 of 2');
-  const errs2 = await walkOS(browser, 'bigsur', '13.2.1', 'swift-5.6.3-RELEASE', 'Downloads · 2 of 2');
-  const errs3 = await walkOS(browser, 'monterey', '13.4.1', 'swift-5.10.1-RELEASE', 'Downloads · 2 of 2');
-  check('no console errors (3 paths)', errs1.concat(errs2, errs3).length === 0, errs1.concat(errs2, errs3).join('; ').slice(0, 200));
+  /* all three OSes, full templates path */
+  const e1 = await walkTemplates(browser, 'mojave', '11.3.1', 'swift-5.1.5-RELEASE');
+  const e2 = await walkTemplates(browser, 'bigsur', '13.2.1', 'swift-5.6.3-RELEASE');
+  const e3 = await walkTemplates(browser, 'monterey', '13.4.1', 'swift-5.10.1-RELEASE');
 
-  /* no-JS: the whole guide must render stacked */
+  /* full manual path on one OS */
+  const e4 = await walkManual(browser, 'bigsur', '13.2.1', 'swift-5.6.3-RELEASE');
+
+  check('no console errors (4 walks)', e1.concat(e2, e3, e4).length === 0,
+    e1.concat(e2, e3, e4).join('; ').slice(0, 200));
+
+  /* no-JS: the whole guide must render stacked — 28 blocks */
   {
-    const ctx = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 900 } });
-    const page = await ctx.newPage();
-    await page.goto(URL, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(800);
+    const { ctx, page } = await newPage(browser, { javaScriptEnabled: false });
+    await page.waitForTimeout(600);
     const n = await page.$$eval('.wizard-step', els => els.filter(e => !e.classList.contains('is-hidden')).length);
-    check('no-JS: all 14 step blocks render', n === 14, 'count=' + n);
+    check('no-JS: all 28 step blocks render', n === 28, 'count=' + n);
     await ctx.close();
   }
 
   /* reduced motion: steps swap instantly, no stuck opacity */
   {
-    const ctx = await browser.newContext({ reducedMotion: 'reduce', viewport: { width: 1280, height: 900 } });
-    const page = await ctx.newPage();
-    await page.goto(URL, { waitUntil: 'domcontentloaded' });
-    await page.waitForTimeout(2600);
+    const { ctx, page } = await newPage(browser, { reducedMotion: 'reduce' });
     await page.click('.os-card:has(input[value="monterey"])');
     await page.click('#wiz-next');
     const op = await page.$eval('.wizard-step:not(.is-hidden)', e => getComputedStyle(e).opacity);

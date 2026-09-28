@@ -1267,14 +1267,224 @@ code, pre, kbd {
   border: 0;
 }
 
-.wiz-shell {
-  padding: clamp(20px, 4vw, 36px);
-  outline: none;
+/* Full-screen stage: the wizard owns the whole page below the header.
+ * No panel, no card — the step grid floats on the page background, so the
+ * wizard reads as one continuous space with the rest of the site. */
+.wiz-main {
+  min-height: calc(100vh - var(--mast-h));
+  display: flex;
+  flex-direction: column;
+}
+.wiz-main #wizard {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-block: var(--s-5) 0;
+}
+.wiz-viewport {
+  flex: 1;
+  display: grid;
+  /* centers the single visible step; falls back to top alignment when the
+     no-JS stack overflows, so no step is ever clipped */
+  align-content: start;
+  align-content: safe center;
+  justify-items: stretch;
+  gap: var(--s-8);
+}
+.wiz-viewport .step {
+  margin-block-end: 0;   /* the grid gap owns the no-JS spacing */
 }
 
 .wizard-step.is-hidden,
 .os-opt.is-hidden {
   display: none;
+}
+
+/* One step at a time: with a screenshot it earns a third column, so the
+ * image sits beside the text like a figure in the writeup */
+.wizard-step {
+  grid-template-columns: 40px minmax(0, 1fr);
+  column-gap: var(--s-3);
+}
+.wizard-step:has(> .shot) {
+  grid-template-columns: 40px minmax(0, 1fr) clamp(280px, 36%, 460px);
+  column-gap: var(--s-6);
+}
+.wizard-step > .shot {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: start;
+  margin-block-start: 0;
+}
+/* one step visible: the stacked-timeline rule would dangle off the bottom */
+.wizard-step::before {
+  display: none;
+}
+.wizard-step .step-body h3 {
+  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.wizard-step .step-body p {
+  max-width: 56ch;
+}
+.wizard-step .shot img {
+  max-width: 100%;
+  max-height: min(58vh, 500px);   /* letterboxed inside the frame */
+  object-fit: contain;
+  margin-inline: 0;
+}
+@media (max-width: 860px) {
+  .wizard-step:has(> .shot) {
+    grid-template-columns: 40px minmax(0, 1fr);
+  }
+  .wizard-step > .shot {
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .wizard-step .shot img {
+    max-height: min(62vh, 420px);
+  }
+}
+
+/* Confirmation — a quiet macOS-style checkbox that gates the Next button.
+ * The tick is --blue-ink on the blue fill, the same pairing as the buttons. */
+.wiz-confirm {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-top: var(--s-5);
+  padding-top: var(--s-4);
+  border-top: 1px solid var(--line);
+}
+.wiz-confirm .confirm {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-3);
+  cursor: pointer;
+}
+.wiz-confirm .confirm-box {
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  padding: 0;
+  border-radius: 5px;
+  border: 1px solid var(--line-strong);
+  background: var(--inset-0);
+  box-shadow: var(--inset-1);
+  display: grid;
+  place-items: center;
+  transition:
+    background 120ms var(--ease),
+    border-color 120ms var(--ease),
+    box-shadow 120ms var(--ease);
+}
+.wiz-confirm .confirm-box::after {
+  content: "";
+  width: 9px;
+  height: 5px;
+  border-left: 2px solid var(--blue-ink);
+  border-bottom: 2px solid var(--blue-ink);
+  transform: rotate(-45deg) translate(0.5px, -1px);
+  opacity: 0;
+  transition: opacity 120ms var(--ease);
+}
+.wiz-confirm .confirm-box:checked {
+  background: linear-gradient(180deg, var(--blue-hi), var(--blue));
+  border-color: rgba(19, 35, 56, 0.35);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.wiz-confirm .confirm-box:checked::after {
+  opacity: 1;
+}
+.wiz-confirm .confirm-box:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+.wiz-confirm .confirm span {
+  font-size: var(--t-md);
+  color: var(--ink-1);
+}
+
+/* Path choice — the same card language as the OS picker */
+.path-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-4);
+  margin-block: var(--s-5) 0;
+  padding: 0;
+  border: 0;
+  min-inline-size: 0;
+}
+.path-card {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 2px 12px;
+  padding: 14px 16px;
+  background: var(--inset-0);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  box-shadow: var(--inset-1);
+  cursor: pointer;
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
+}
+.path-name {
+  font-size: var(--t-lg);
+  font-weight: 600;
+  color: var(--ink-0);
+}
+.path-desc {
+  grid-column: 1;
+  font-size: var(--t-sm);
+  color: var(--ink-2);
+}
+.path-dot {
+  appearance: none;
+  -webkit-appearance: none;
+  grid-column: 2;
+  grid-row: 1 / span 2;
+  align-self: center;
+  width: 14px;
+  height: 14px;
+  margin: 0;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--bg-0);
+  border: 1px solid var(--line-strong);
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
+}
+.path-card:hover {
+  background: var(--surface-0);
+  border-color: var(--line-strong);
+}
+.path-card.is-selected {
+  background: var(--surface-0);
+  border-color: rgba(79, 196, 124, 0.55);
+  box-shadow: var(--inset-1), 0 0 14px rgba(79, 196, 124, 0.12);
+}
+.path-card .path-dot:checked {
+  background: var(--green);
+  border-color: var(--green);
+  box-shadow: 0 0 6px rgba(79, 196, 124, 0.9), 0 0 16px rgba(79, 196, 124, 0.45);
+}
+.path-card .path-dot:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 2px;
+}
+@media (max-width: 560px) {
+  .path-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* OS choice cards — selection is a control, so blue, not amber */

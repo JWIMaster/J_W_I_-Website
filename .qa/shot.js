@@ -5,7 +5,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 
 const BASE = 'http://127.0.0.1:8123';
-const PAGES = ['index.html', 'swiftios6.html', 'swiftonios6guidepart1.html', 'swiftonios6guidepart2.html', 'support.html'];
+const PAGES = ['index.html', 'swiftios6.html', 'swiftonios6guidepart1.html', 'support.html'];
 const VIEWS = [
   { name: 'm320', w: 320, h: 568 },
   { name: 'm375', w: 375, h: 812, full: true },
