@@ -53,6 +53,7 @@
 
   --green: #4fc47c;
   --green-dim: rgba(79, 196, 124, 0.16);
+  --green-ink: #0d2314;
   --red: #e05a52;
 
   /* code tokens */
@@ -1300,21 +1301,15 @@ code, pre, kbd {
   display: none;
 }
 
-/* One step at a time: with a screenshot it earns a third column, so the
- * image sits beside the text like a figure in the writeup */
+/* One step at a time: the screenshot is a figure — it sits below the text,
+ * and clicking it opens the full-screen preview */
 .wizard-step {
   grid-template-columns: 40px minmax(0, 1fr);
   column-gap: var(--s-3);
 }
-.wizard-step:has(> .shot) {
-  grid-template-columns: 40px minmax(0, 1fr) clamp(280px, 36%, 460px);
-  column-gap: var(--s-6);
-}
 .wizard-step > .shot {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: start;
-  margin-block-start: 0;
+  grid-column: 1 / -1;
+  margin-block-start: 0;   /* the step grid gap owns the spacing */
 }
 /* one step visible: the stacked-timeline rule would dangle off the bottom */
 .wizard-step::before {
@@ -1332,16 +1327,11 @@ code, pre, kbd {
   max-width: 100%;
   max-height: min(58vh, 500px);   /* letterboxed inside the frame */
   object-fit: contain;
-  margin-inline: 0;
+  margin-inline: auto;
+  display: block;
+  cursor: zoom-in;
 }
 @media (max-width: 860px) {
-  .wizard-step:has(> .shot) {
-    grid-template-columns: 40px minmax(0, 1fr);
-  }
-  .wizard-step > .shot {
-    grid-column: 2;
-    grid-row: 2;
-  }
   .wizard-step .shot img {
     max-height: min(62vh, 420px);
   }
@@ -1563,37 +1553,84 @@ code, pre, kbd {
   color: var(--ink-2);
 }
 
-/* per-OS download list */
+/* per-OS download list — each file is a row card: a download tile, the
+ * file name, and the source as a quiet chip. Blue, because these are actions */
 .dl-list {
   list-style: none;
-  margin: 0 0 var(--s-3);
+  margin: var(--s-4) 0 var(--s-3);
   padding: 0;
   display: grid;
-  gap: var(--s-3);
+  gap: var(--s-2);
+  max-width: 600px;
   font-size: var(--t-md);
 }
+/* the whole row is the link — a card this easy to click, not just the text */
 .dl-list li {
+  display: block;
+}
+.dl-list .dl-row {
   display: flex;
   flex-wrap: wrap;
-  align-items: baseline;
-  gap: 4px 10px;
+  align-items: center;
+  gap: var(--s-2) var(--s-3);
+  padding: 10px 14px;
+  background: var(--inset-0);
+  border: 1px solid var(--line);
+  border-radius: var(--r-m);
+  box-shadow: var(--inset-1);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    box-shadow var(--t-fast) var(--ease);
 }
-.dl-list a {
-  color: var(--accent-hi);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-color: rgba(229, 161, 61, 0.4);
+.dl-list .dl-row:hover {
+  background: var(--surface-0);
+  border-color: var(--line-strong);
+  box-shadow:
+    var(--inset-1),
+    0 6px 16px -8px rgba(0, 0, 0, 0.5);
 }
-.dl-list a:hover {
-  color: var(--accent);
-  text-decoration-color: var(--accent);
+.dl-ic {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  font-size: 15px;
+  color: var(--blue-hi);
+  background: var(--blue-dim);
+  border: 1px solid var(--blue-line);
+  border-radius: var(--r-s);
+  transition:
+    background var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease);
+}
+.dl-list .dl-row:hover .dl-ic {
+  background: rgba(143, 181, 221, 0.22);
+  color: #dbe8f7;
+}
+.dl-name {
+  font-weight: 600;
+  color: var(--ink-0);
+  transition: color var(--t-fast) var(--ease);
+}
+.dl-list .dl-row:hover .dl-name {
+  color: var(--blue-hi);
 }
 .dl-src {
+  margin-left: auto;
+  margin-right: 2px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 10.5px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-2);
+  background: var(--bg-0);
+  border: 1px solid var(--line);
+  border-radius: var(--r-s);
+  padding: 3px 8px;
 }
 .step-note {
   font-size: var(--t-sm);
@@ -1619,11 +1656,13 @@ code, pre, kbd {
   white-space: nowrap;
 }
 
-/* one-way step reveal, same 340ms language as .fade-io */
+/* step transitions: the outgoing step fades up and out (short, soft),
+ * the incoming one rises into place — the same 340ms language as .fade-io,
+ * with the exit deliberately quieter than the enter */
 @media (prefers-reduced-motion: no-preference) {
   .wizard-step.wiz-enter {
     opacity: 0;
-    transform: translateY(8px);
+    transform: translateY(14px);
     transition:
       opacity 340ms var(--ease),
       transform 340ms var(--ease);
@@ -1631,6 +1670,13 @@ code, pre, kbd {
   .wizard-step.wiz-enter.wiz-shown {
     opacity: 1;
     transform: none;
+  }
+  .wizard-step.wiz-exit {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition:
+      opacity 170ms var(--ease),
+      transform 170ms var(--ease);
   }
 }
 
@@ -1648,6 +1694,195 @@ code, pre, kbd {
     text-align: center;
     margin-block-start: var(--s-2);
   }
+  #wiz-next {
+    max-width: 100%;
+  }
+}
+
+/* Two-state Next — the first click ticks the step's confirmation: the button
+ * lights up green and its check fills in; the second click advances. In JS
+ * mode the standalone confirm row is hidden, so the button carries the tick.
+ * Green is the site's "done" colour, the same green as the selection dots. */
+#wiz-next {
+  max-width: 100%;
+}
+#wiz-next .btn-ic {
+  flex: none;
+  width: 18px;
+  height: 18px;
+  display: grid;
+  place-items: center;
+  font-size: 11px;
+  line-height: 1;
+  color: transparent;
+  background: var(--inset-0);
+  border: 1px solid var(--line-strong);
+  border-radius: 50%;
+  transition:
+    background var(--t-fast) var(--ease),
+    border-color var(--t-fast) var(--ease),
+    color var(--t-fast) var(--ease);
+}
+#wiz-next .btn-ic::after {
+  content: "✓";
+}
+#wiz-next.is-armed {
+  color: var(--green-ink);
+  background: linear-gradient(180deg, #62d18d, var(--green));
+  border-color: rgba(13, 35, 20, 0.4);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.4),
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 10px 22px -10px rgba(79, 196, 124, 0.55);
+}
+#wiz-next.is-armed:hover {
+  background: linear-gradient(180deg, #74dc9d, #5bcd86);
+  border-color: rgba(13, 35, 20, 0.45);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.45),
+    0 2px 4px rgba(0, 0, 0, 0.4),
+    0 14px 26px -10px rgba(79, 196, 124, 0.6);
+}
+#wiz-next.is-armed .btn-ic {
+  color: var(--green-ink);
+  background: rgba(13, 35, 20, 0.16);
+  border-color: rgba(13, 35, 20, 0.4);
+}
+#wiz-next.is-armed:active {
+  transform: scale(0.96);
+  box-shadow:
+    inset 0 2px 6px rgba(13, 35, 20, 0.3),
+    0 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+/* App mode — with JS on the wizard owns the whole viewport below the header:
+ * the page itself never scrolls, and only the step stage scrolls, and only
+ * when a step outgrows the screen. The stage is full-bleed; the head and
+ * controls sit inside the usual page margins.
+ *
+ * The frame is keyed off body.wiz-app (added by guide1.js) *and*
+ * html.wiz-app (added by an inline script in <head>, before first paint) —
+ * the second claim is what stops the whole no-JS step stack from flashing
+ * for a moment on reload before the wizard collapses it to step 0.
+ * guide1.js hands the claim back once it owns the board. */
+body.wiz-app,
+html.wiz-app body {
+  overflow: hidden;
+  height: 100vh;
+  height: 100dvh;
+  padding-block-end: 0;
+}
+body.wiz-app .page-head,
+html.wiz-app .page-head {
+  display: none;   /* in the app the wizard's own head carries the title —
+                     * the in-flow page head would bleed through the stage */
+}
+body.wiz-app #wizard,
+html.wiz-app #wizard {
+  position: fixed;
+  top: var(--mast-h);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  margin-block: 0;
+  /* breathing room above the head and below the controls — the content
+   * floats inside the frame, never touching the screen edges */
+  padding: var(--s-5) var(--pad) var(--s-6);
+}
+body.wiz-app .section-head,
+body.wiz-app .wiz-viewport,
+body.wiz-app .wiz-controls,
+html.wiz-app .section-head,
+html.wiz-app .wiz-viewport,
+html.wiz-app .wiz-controls {
+  width: 100%;
+  max-width: 860px;
+  margin-inline: auto;
+}
+body.wiz-app .section-head,
+html.wiz-app .section-head {
+  margin-block-end: 0;
+  justify-content: center;
+  text-align: center;
+}
+body.wiz-app .wiz-viewport,
+html.wiz-app .wiz-viewport {
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-2) transparent;
+  gap: var(--s-6);   /* head → step: a tighter beat than the no-JS stack */
+}
+body.wiz-app .wiz-viewport::-webkit-scrollbar {
+  width: 8px;
+}
+body.wiz-app .wiz-viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+body.wiz-app .wiz-viewport::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  border-radius: 4px;
+}
+body.wiz-app .wiz-controls,
+html.wiz-app .wiz-controls {
+  margin-block-start: 0;
+  padding-block: var(--s-4) 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+body.wiz-app .wiz-progress,
+html.wiz-app .wiz-progress {
+  order: 3;
+  width: 100%;
+  text-align: center;
+  margin-block-start: var(--s-3);
+}
+body.wiz-app .wiz-confirm,
+html.wiz-app .wiz-confirm {
+  display: none;   /* the tick now lives inside the Next button */
+}
+/* the pre-paint claim hides every step until guide1.js marks the current
+ * one — so the first paint is the app, never the full no-JS stack */
+html.wiz-app .wizard-step {
+  display: none;
+}
+html.wiz-app .wizard-step:not(.is-hidden) {
+  display: grid;
+}
+
+/* Screenshot preview — the shot is the click target, the whole overlay is
+ * the close target: one click in, one click (or Esc) out */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: var(--s-6);
+  background: rgba(10, 11, 13, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity 200ms var(--ease);
+}
+.lightbox.is-open {
+  opacity: 1;
+}
+.lightbox[hidden] {
+  display: none;
+}
+.lightbox img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: var(--r-m);
+  box-shadow: 0 24px 80px -20px rgba(0, 0, 0, 0.8);
+  transform: scale(0.97);
+  transition: transform 200ms var(--ease);
+}
+.lightbox.is-open img {
+  transform: none;
 }
 
 /* ----------------------------- reduced motion ----------------------------- */
@@ -1661,6 +1896,12 @@ code, pre, kbd {
   .link-arrow .arr {
     transition: none;
     animation: none;
+  }
+
+  .lightbox,
+  .lightbox img {
+    transition: none;
+    transform: none;
   }
 
   .btn:active {

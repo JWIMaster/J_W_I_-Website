@@ -10,6 +10,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    /* Claim the wizard app frame before the first paint — with JS on, the
+       whole no-JS step stack would otherwise flash for a moment on reload
+       before guide1.js collapses it to step 0. guide1.js hands the claim
+       back once it owns the board; with JS off this never runs. */
+    document.documentElement.classList.add('wiz-app');
+  </script>
   <script src="site.js" defer></script>
   <script src="guide1.js" defer></script>
 </head>
@@ -77,9 +84,9 @@
             <h3>Downloads — Mojave</h3>
             <p>Grab the Xcode version for Mojave, then the toolchain and build script:</p>
             <ul class="dl-list">
-              <li><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_11.3.1/Xcode_11.3.1.xip">Xcode 11.3.1</a><span class="dl-src">Apple developer downloads</span></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><span class="dl-src">Google Drive</span></li>
-              <li><a href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank" rel="noopener">Build Script</a><span class="dl-src">GitHub</span></li>
+              <li><a class="dl-row" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_11.3.1/Xcode_11.3.1.xip" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Xcode 11.3.1</span><span class="dl-src">Apple developer downloads</span></a></li>
+              <li><a class="dl-row" href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Swift 5.1.5 Toolchain</span><span class="dl-src">Google Drive</span></a></li>
+              <li><a class="dl-row" href="https://github.com/JWIMaster/Swift-5.1.5-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.1.5toolchain.command" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Build Script</span><span class="dl-src">GitHub</span></a></li>
             </ul>
             <p class="step-note">Only Swift 5.1.5 required.</p>
             <div class="wiz-confirm">
@@ -97,10 +104,10 @@
             <h3>Downloads — Big Sur</h3>
             <p>Grab the Xcode version for Big Sur, then the toolchains and build script:</p>
             <ul class="dl-list">
-              <li><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.2.1/Xcode_13.2.1.xip">Xcode 13.2.1</a><span class="dl-src">Apple developer downloads</span></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank" rel="noopener">Swift 5.6.3 Toolchain</a><span class="dl-src">Google Drive</span></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><span class="dl-src">Google Drive</span></li>
-              <li><a href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank" rel="noopener">Build Script</a><span class="dl-src">GitHub</span></li>
+              <li><a class="dl-row" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.2.1/Xcode_13.2.1.xip" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Xcode 13.2.1</span><span class="dl-src">Apple developer downloads</span></a></li>
+              <li><a class="dl-row" href="https://drive.google.com/uc?export=download&amp;id=1FRh12FZ8ocuGPU13RvRWHf5l7Qv53gRO" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Swift 5.6.3 Toolchain</span><span class="dl-src">Google Drive</span></a></li>
+              <li><a class="dl-row" href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Swift 5.1.5 Toolchain</span><span class="dl-src">Google Drive</span></a></li>
+              <li><a class="dl-row" href="https://github.com/JWIMaster/Swift-5.6.3-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.6.3toolchain.command" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Build Script</span><span class="dl-src">GitHub</span></a></li>
             </ul>
             <p class="step-note">Both Swift 5.6.3 and 5.1.5 required.</p>
             <div class="wiz-confirm">
@@ -118,10 +125,10 @@
             <h3>Downloads — Monterey</h3>
             <p>Grab the Xcode version for Monterey, then the toolchains and build script:</p>
             <ul class="dl-list">
-              <li><a href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip">Xcode 13.4.1</a><span class="dl-src">Apple developer downloads</span></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=1RuLxPPvQeOZQn22UlAptaRM_2UqrHl-" target="_blank" rel="noopener">Swift 5.10.1 Toolchain</a><span class="dl-src">Google Drive</span></li>
-              <li><a href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener">Swift 5.1.5 Toolchain</a><span class="dl-src">Google Drive</span></li>
-              <li><a href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank" rel="noopener">Build Script</a><span class="dl-src">GitHub</span></li>
+              <li><a class="dl-row" href="https://developer.apple.com/services-account/download?path=/Developer_Tools/Xcode_13.4.1/Xcode_13.4.1.xip" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Xcode 13.4.1</span><span class="dl-src">Apple developer downloads</span></a></li>
+              <li><a class="dl-row" href="https://drive.google.com/uc?export=download&amp;id=1RuLxPPvQeOZQn22UlAptaRM_2UqrHl-" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Swift 5.10.1 Toolchain</span><span class="dl-src">Google Drive</span></a></li>
+              <li><a class="dl-row" href="https://drive.google.com/uc?export=download&amp;id=1BulbeT8uqK9GXg_GMlq-HkyetNs-FfOj" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Swift 5.1.5 Toolchain</span><span class="dl-src">Google Drive</span></a></li>
+              <li><a class="dl-row" href="https://github.com/JWIMaster/Swift-5.10.1-for-iOS-6/releases/download/0.0.1/xcodearchivebuildswift5.10.1toolchain.command" target="_blank" rel="noopener"><span class="dl-ic" aria-hidden="true">↓</span><span class="dl-name">Build Script</span><span class="dl-src">GitHub</span></a></li>
             </ul>
             <p class="step-note">Both Swift 5.10.1 and 5.1.5 required.</p>
             <div class="wiz-confirm">
@@ -587,7 +594,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
       <div class="wiz-controls">
         <button class="btn btn-ghost" id="wiz-back" type="button" disabled>Back</button>
         <span class="wiz-progress" id="wiz-progress" aria-hidden="true">Setup · 1 of 4</span>
-        <button class="btn" id="wiz-next" type="button" disabled>Next step</button>
+        <button class="btn" id="wiz-next" type="button" disabled><span class="btn-ic" aria-hidden="true"></span><span id="wiz-next-label">Next step</span></button>
         <button class="btn btn-ghost" id="wiz-restart" type="button" hidden>Start over</button>
       </div>
 

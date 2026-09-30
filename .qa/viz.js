@@ -1,5 +1,5 @@
-/* Targeted wizard screenshots for manual review: branch, checked confirm,
-   manual step with screenshot, finale — at 1280 / 375 / 320. */
+/* Targeted wizard screenshots for manual review: downloads, branch, green
+   armed confirm, manual step with screenshot, finale — at 1280 / 375 / 320. */
 const { chromium } = require('playwright');
 const URL = 'http://127.0.0.1:8123/swiftonios6guidepart1.html';
 
@@ -14,16 +14,16 @@ async function shoot(browser, name, width, fn) {
   await ctx.close();
   console.log('shot ' + name);
 }
-/* dispatch via JS — a real mouse click races the 340 ms reveal on some steps */
+/* The two-state Next: one click ticks the confirmation (button goes green). */
 const tick = async (p) => {
-  await p.waitForSelector('.wizard-step:not(.is-hidden) .confirm-box', { state: 'attached' });
-  await p.evaluate(() => {
-    const box = document.querySelector('.wizard-step:not(.is-hidden) .confirm-box');
-    if (box && !box.checked) box.click();
-  });
-  await p.waitForTimeout(120);
+  await p.click('#wiz-next');
+  await p.waitForTimeout(200);
 };
-const next = async (p) => p.click('#wiz-next');
+/* Second click advances; 220 ms covers the 180 ms exit fade. */
+const next = async (p) => {
+  await p.click('#wiz-next');
+  await p.waitForTimeout(220);
+};
 async function toPath(p) {
   await p.click('input[name="wizard-os"][value="monterey"]');
   await next(p);
@@ -33,6 +33,16 @@ const pickPath = (p, v) => p.click(`input[name="wizard-path"][value="${v}"]`);
 
 (async () => {
   const b = await chromium.launch();
+
+  /* downloads step — the new row cards, desktop + mobile */
+  await shoot(b, 'wiz_downloads_1280.png', 1280, async (p) => {
+    await p.click('input[name="wizard-os"][value="monterey"]');
+    await next(p);
+  });
+  await shoot(b, 'wiz_downloads_375.png', 375, async (p) => {
+    await p.click('input[name="wizard-os"][value="monterey"]');
+    await next(p);
+  });
 
   /* path branch step */
   await shoot(b, 'wiz_branch_1280.png', 1280, async (p) => {
@@ -46,7 +56,7 @@ const pickPath = (p, v) => p.click(`input[name="wizard-path"][value="${v}"]`);
     await toPath(p);
   });
 
-  /* templates step with a ticked confirm */
+  /* templates step with the green armed Next (tick, not yet advanced) */
   await shoot(b, 'wiz_tmpl_confirm_1280.png', 1280, async (p) => {
     await toPath(p);
     await pickPath(p, 'templates');
@@ -54,18 +64,31 @@ const pickPath = (p, v) => p.click(`input[name="wizard-path"][value="${v}"]`);
     await tick(p);
   });
 
-  /* manual step with screenshot (desktop 3-col) */
+  /* manual step with the screenshot below the text (desktop) */
   await shoot(b, 'wiz_manual_1280.png', 1280, async (p) => {
     await toPath(p);
     await pickPath(p, 'manual');
     await next(p);
   });
 
-  /* manual step with screenshot (mobile stacked) */
+  /* manual step with the screenshot below the text (mobile) */
   await shoot(b, 'wiz_manual_375.png', 375, async (p) => {
     await toPath(p);
     await pickPath(p, 'manual');
     await next(p);
+  });
+  await shoot(b, 'wiz_manual_320.png', 320, async (p) => {
+    await toPath(p);
+    await pickPath(p, 'manual');
+    await next(p);
+  });
+
+  /* the screenshot's full-screen preview, opened by clicking the shot */
+  await shoot(b, 'wiz_lightbox_1280.png', 1280, async (p) => {
+    await toPath(p);
+    await pickPath(p, 'manual');
+    await next(p);
+    await p.click('.wizard-step:not(.is-hidden) .shot img');
   });
 
   /* finale */

@@ -26,12 +26,16 @@ const { chromium } = require('playwright');
   // copy button on the guide (wizard, manual path "Paste the New Code")
   await p.goto('http://127.0.0.1:8123/swiftonios6guidepart1.html', { waitUntil: 'domcontentloaded' });
   await p.waitForTimeout(2500);
+  /* the two-state Next: first click arms (ticks the hidden confirm), second advances */
+  const adv = async () => { await p.click('#wiz-next'); await p.click('#wiz-next'); await p.waitForTimeout(250); };
   await p.click('.os-card:has(input[value="monterey"])');
   await p.click('#wiz-next');
-  for (let i = 0; i < 3; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
+  await p.waitForTimeout(250);
+  for (let i = 0; i < 3; i++) await adv();
   await p.click('.path-card:has(input[value="manual"])');
   await p.click('#wiz-next');
-  for (let i = 0; i < 11; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
+  await p.waitForTimeout(250);
+  for (let i = 0; i < 11; i++) await adv();
   const btn2 = p.locator('[data-copy-target="#appdelegate"]');
   if (await btn2.count() && await btn2.isVisible()) {
     await btn2.click();
@@ -90,9 +94,11 @@ const { chromium } = require('playwright');
   await p.goto('http://127.0.0.1:8123/swiftonios6guidepart1.html', { waitUntil: 'domcontentloaded' });
   await p.waitForTimeout(2500);
   /* walk the wizard to the first step that contains a code panel (rpath, step 3) */
+  const adv2 = async () => { await p.click('#wiz-next'); await p.click('#wiz-next'); await p.waitForTimeout(250); };
   await p.click('.os-card:has(input[value="monterey"])');
   await p.click('#wiz-next');
-  for (let i = 0; i < 2; i++) { await p.click('.wizard-step:not(.is-hidden) .confirm-box'); await p.click('#wiz-next'); }
+  await p.waitForTimeout(250);
+  for (let i = 0; i < 2; i++) await adv2();
   const align = await p.evaluate(() => {
     /* wizard: only count panels that are actually visible */
     const visible = e => e.offsetParent !== null;

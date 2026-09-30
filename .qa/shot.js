@@ -79,10 +79,14 @@ fs.mkdirSync('shots', { recursive: true });
             out.push(el.tagName + '.' + String(el.className).slice(0, 32) + ' l=' + Math.round(r.left) + ' r=' + Math.round(r.right));
           }
         });
-        const imgs = [...document.images].map((i) => ({
-          src: (i.getAttribute('src') || '').slice(0, 60),
-          ok: i.complete && i.naturalWidth > 0,
-        }));
+        /* visible images only — the wizard's lightbox is a hidden img
+         * placeholder until opened and would otherwise read as "broken" */
+        const imgs = [...document.images]
+          .filter((i) => i.offsetParent !== null || i.getClientRects().length > 0)
+          .map((i) => ({
+            src: (i.getAttribute('src') || '').slice(0, 60),
+            ok: i.complete && i.naturalWidth > 0,
+          }));
         return {
           overflowX,
           pageH: de.scrollHeight,

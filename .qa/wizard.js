@@ -1,6 +1,8 @@
 /* J_W_I_ QA: the full-screen iOS 6 setup wizard.
-   Verifies all three OS setups, the confirmation gating, both setup paths
-   (templates + manual), the finale/restart, no-JS fallback, and reduced motion. */
+   Verifies all three OS setups, the two-state Next button (first click arms
+   the confirmation, second advances), the full-screen app frame, both setup
+   paths (templates + manual), the finale/restart, no-JS fallback, and
+   reduced motion. */
 const { chromium } = require('playwright');
 
 const URL = 'http://127.0.0.1:8123/swiftonios6guidepart1.html';
@@ -10,19 +12,37 @@ function check(name, ok, extra) {
   else { fail++; console.log('FAIL  ' + name + (extra ? '  — ' + extra : '')); }
 }
 
+/* The step swap animates: 180ms exit fade, then the enter transition. Every
+   navigation must settle for longer than the exit delay before we read the
+   board. (Reduced-motion swaps are instant — the wait is just insurance.) */
+const SWAP = 220;
+async function next(page) { await page.click('#wiz-next'); await page.waitForTimeout(SWAP); }
+async function backNav(page) { await page.click('#wiz-back'); await page.waitForTimeout(SWAP); }
+
 async function visibleSteps(page) {
   return page.$$eval('.wizard-step:not(.is-hidden)', els =>
     els.map(e => (e.querySelector('h3') || e.querySelector('p') || { textContent: '?' }).textContent.trim()));
 }
 async function progress(page) { return page.$eval('#wiz-progress', e => e.textContent); }
+
+/* Two-state Next on a confirmation step: the button starts enabled and
+ * un-armed; the first click ticks the confirmation (armed → green, label
+ * "Next step"), the second click advances to the next step. */
 async function tickConfirm(page, expectGate) {
-  /* gate check → tick → gate opens */
-  const gated = await page.$eval('#wiz-next', b => b.disabled);
-  if (expectGate !== undefined) check('next gated before confirm', gated);
-  await page.click('.wizard-step:not(.is-hidden) .confirm-box');
-  const opened = await page.$eval('#wiz-next', b => !b.disabled);
-  if (expectGate !== undefined) check('next opens after confirm', opened);
+  if (expectGate !== undefined) {
+    const gated = await page.$eval('#wiz-next', b => b.disabled);
+    check('confirm step: next enabled from the start', !gated);
+    const armed0 = await page.$eval('#wiz-next', b => b.classList.contains('is-armed'));
+    check('confirm step: not armed before first click', !armed0);
+  }
   await page.click('#wiz-next');
+  if (expectGate !== undefined) {
+    const armed = await page.$eval('#wiz-next', b => b.classList.contains('is-armed'));
+    check('confirm: green + armed after first click', armed);
+    const label = await page.$eval('#wiz-next-label', e => e.textContent);
+    check('confirm: label = Next step once armed', label === 'Next step', label);
+  }
+  await next(page);
 }
 
 async function newPage(browser, opts = {}) {
@@ -39,18 +59,43 @@ async function newPage(browser, opts = {}) {
 async function walkSetup(browser, os, versionCheck, rpathCheck) {
   const { ctx, page, errs } = await newPage(browser);
 
+  check(os + ': app frame active (body.wiz-app)', await page.$eval('body', b => b.classList.contains('wiz-app')));
+  check(os + ': page does not scroll (overflow hidden)', await page.$eval('body', b => getComputedStyle(b).overflow === 'hidden'));
+  const visConfirms = await page.$$eval('.wiz-confirm', els => els.filter(e => getComputedStyle(e).display !== 'none').length);
+  check(os + ': standalone confirm rows hidden in app mode', visConfirms === 0, 'visible=' + visConfirms);
+
   check(os + ': step 0 visible', (await visibleSteps(page)).join('|') === 'Choose your macOS');
   check(os + ': next disabled before choice', await page.$eval('#wiz-next', b => b.disabled));
 
   await page.click(`.os-card:has(input[value="${os}"])`);
   check(os + ': card selected', await page.$eval(`.os-card:has(input[value="${os}"])`, c => c.classList.contains('is-selected')));
   check(os + ': next enabled after choice', await page.$eval('#wiz-next', b => !b.disabled));
-  await page.click('#wiz-next');
+  await next(page);
 
   const h3 = os === 'mojave' ? 'Downloads — Mojave' : os === 'bigsur' ? 'Downloads — Big Sur' : 'Downloads — Monterey';
   check(os + ': downloads heading', (await page.$eval('.wizard-step:not(.is-hidden) h3', e => e.textContent.trim())) === h3);
   const xcodeFile = 'Xcode_' + versionCheck; /* evaluated in Node, not the page */
   check(os + ': xcode URL', await page.$eval('.wizard-step:not(.is-hidden) a', (a, f) => a.href.includes(f), xcodeFile));
+  const tiles = await page.$$eval('.wizard-step:not(.is-hidden) .dl-ic', els => els.filter(e => e.offsetParent !== null).length);
+  check(os + ': download rows carry tiles', tiles > 0, 'tiles=' + tiles);
+  /* the whole row is the link — the anchor fills the card, so a click anywhere goes */
+  const rowCover = await page.$$eval('.wizard-step:not(.is-hidden) .dl-list li', lis =>
+    lis.map(li => { const a = li.querySelector('a.dl-row'); return a ? a.getBoundingClientRect().width / li.getBoundingClientRect().width : -1; }));
+  check(os + ': whole download row is a link', rowCover.every(r => r >= 0.95), rowCover.map(r => r.toFixed(2)).join(','));
+  const dlOffset = await page.$eval('.wizard-step:not(.is-hidden)', step => {
+    const dl = step.querySelector('.dl-list');
+    const body = step.querySelector('.step-body');
+    return dl ? Math.round(dl.getBoundingClientRect().left - body.getBoundingClientRect().left) : -1;
+  });
+  check(os + ': download list left-aligned with the text', dlOffset >= 0 && dlOffset <= 8, 'offset=' + dlOffset + 'px');
+  /* centered frame with breathing room: the head sits mid-viewport, padding above + below */
+  const frame = await page.evaluate(() => {
+    const h = document.querySelector('#wizard .section-head').getBoundingClientRect();
+    const cs = getComputedStyle(document.querySelector('#wizard'));
+    return { headCx: h.left + h.width / 2, winCx: window.innerWidth / 2, padTop: parseFloat(cs.paddingTop), padBottom: parseFloat(cs.paddingBottom) };
+  });
+  check(os + ': content centered in the viewport', Math.abs(frame.headCx - frame.winCx) <= 12, 'offset=' + Math.round(frame.headCx - frame.winCx) + 'px');
+  check(os + ': frame padding top/bottom', frame.padTop >= 24 && frame.padBottom >= 24, 'top=' + frame.padTop + ' bottom=' + frame.padBottom);
   check(os + ': progress = Setup · 2 of 4', (await progress(page)) === 'Setup · 2 of 4', await progress(page));
   await tickConfirm(page, true);
 
@@ -96,7 +141,7 @@ async function walkTemplates(browser, os, versionCheck, rpathCheck) {
   await page.click('.path-card:has(input[value="templates"])');
   check(os + ': path card selected', await page.$eval('.path-card:has(input[value="templates"])', c => c.classList.contains('is-selected')));
   check(os + ': next enabled after path choice', await page.$eval('#wiz-next', b => !b.disabled));
-  await page.click('#wiz-next');
+  await next(page);
 
   check(os + ': first template step', (await visibleSteps(page)).join('|') === 'Install Xcode Templates');
   check(os + ': progress = Templates · 1 of 7', (await progress(page)) === 'Templates · 1 of 7', await progress(page));
@@ -115,13 +160,15 @@ async function walkTemplates(browser, os, versionCheck, rpathCheck) {
   check(os + ': back enabled at end', await page.$eval('#wiz-back', b => !b.disabled));
 
   /* back from the finale returns to the last step of the chosen path */
-  await page.click('#wiz-back');
+  await backNav(page);
   check(os + ': back → last template step', (await visibleSteps(page)).join('|') === 'Choose the Build Folder');
-  await page.click('#wiz-next'); /* its confirm is still ticked → back to the finale */
+  check(os + ': its next is already armed', await page.$eval('#wiz-next', b => b.classList.contains('is-armed')));
+  await next(page); /* its confirm is still ticked → back to the finale */
   check(os + ': back to finale', (await visibleSteps(page)).join('|') === 'Enjoy your IPA!');
 
   /* restart returns to step 0 with gates reset, OS kept */
   await page.click('#wiz-restart');
+  await page.waitForTimeout(SWAP);
   check(os + ': restart → step 0', (await visibleSteps(page)).join('|') === 'Choose your macOS');
   const unchecked = await page.$$eval('.confirm-box', els => els.every(e => !e.checked));
   const pathCleared = await page.$$eval('input[name="wizard-path"]', els => els.every(e => !e.checked));
@@ -139,12 +186,28 @@ async function walkManual(browser, os, versionCheck, rpathCheck) {
 
   await page.click('.path-card:has(input[value="manual"])');
   check('manual: path card selected', await page.$eval('.path-card:has(input[value="manual"])', c => c.classList.contains('is-selected')));
-  await page.click('#wiz-next');
+  await next(page);
 
   const first = (await visibleSteps(page)).join('|');
   check('manual: first manual step', first === 'Open the Project Settings', first);
-  check('manual: shot beside the text', await page.$eval('.wizard-step:not(.is-hidden) .shot', e =>
-    e.offsetParent !== null && getComputedStyle(e).gridColumnStart === '3'));
+  check('manual: shot below the text', await page.$eval('.wizard-step:not(.is-hidden)', step => {
+    const body = step.querySelector('.step-body').getBoundingClientRect();
+    const shot = step.querySelector('.shot').getBoundingClientRect();
+    return shot.top >= body.bottom - 2 && shot.left <= body.left + 60;
+  }));
+  /* the entrance must actually animate — sampled mid-fade right after the
+   * swap settles, then confirmed to reach full opacity */
+  const midOp = await page.$eval('.wizard-step:not(.is-hidden)', e => getComputedStyle(e).opacity);
+  check('manual: step enters with a fade (transition runs)', parseFloat(midOp) < 0.9, 'opacity=' + midOp);
+  await page.waitForTimeout(400);
+  check('manual: entrance settles fully opaque', await page.$eval('.wizard-step:not(.is-hidden)', e => getComputedStyle(e).opacity) === '1');
+  /* the screenshot opens a full-screen preview; Esc closes it */
+  await page.click('.wizard-step:not(.is-hidden) .shot img');
+  await page.waitForTimeout(250);
+  check('manual: lightbox opens on shot click', await page.$eval('.lightbox', e => !e.hidden && e.classList.contains('is-open')));
+  await page.keyboard.press('Escape');
+  await page.waitForTimeout(250);
+  check('manual: lightbox closes on Esc', await page.$eval('.lightbox', e => e.hidden));
   check('manual: progress = Manual · 1 of 13', (await progress(page)) === 'Manual · 1 of 13', await progress(page));
 
   /* step 12 of the manual run is the code paste — verify the block rides along */
@@ -180,12 +243,29 @@ async function walkManual(browser, os, versionCheck, rpathCheck) {
   check('no console errors (4 walks)', e1.concat(e2, e3, e4).length === 0,
     e1.concat(e2, e3, e4).join('; ').slice(0, 200));
 
-  /* no-JS: the whole guide must render stacked — 28 blocks */
+  /* reload: the pre-paint claim must leave exactly one visible step, and the
+   * claim must be released once guide1.js owns the board — no stack flash */
+  {
+    const ctx = await browser.newContext({ viewport: { width: 1280, height: 900 } });
+    const page = await ctx.newPage();
+    await page.goto(URL, { waitUntil: 'domcontentloaded' });
+    const vis = await page.$$eval('.wizard-step', els =>
+      els.filter(e => getComputedStyle(e).display !== 'none').length);
+    check('reload: exactly one step visible at load', vis === 1, 'visible=' + vis);
+    check('reload: pre-paint claim released', await page.$eval('html', h => !h.classList.contains('wiz-app')));
+    check('reload: app frame lives on body', await page.$eval('body', b => b.classList.contains('wiz-app')));
+    await ctx.close();
+  }
+
+  /* no-JS: the whole guide must render stacked — 28 blocks, and the
+     standalone confirm rows (the no-JS fallback for the two-state button) */
   {
     const { ctx, page } = await newPage(browser, { javaScriptEnabled: false });
     await page.waitForTimeout(600);
     const n = await page.$$eval('.wizard-step', els => els.filter(e => !e.classList.contains('is-hidden')).length);
     check('no-JS: all 28 step blocks render', n === 28, 'count=' + n);
+    const conf = await page.$$eval('.wiz-confirm', els => els.filter(e => getComputedStyle(e).display !== 'none').length);
+    check('no-JS: standalone confirm rows visible', conf > 0, 'visible=' + conf);
     await ctx.close();
   }
 
@@ -193,7 +273,7 @@ async function walkManual(browser, os, versionCheck, rpathCheck) {
   {
     const { ctx, page } = await newPage(browser, { reducedMotion: 'reduce' });
     await page.click('.os-card:has(input[value="monterey"])');
-    await page.click('#wiz-next');
+    await next(page);
     const op = await page.$eval('.wizard-step:not(.is-hidden)', e => getComputedStyle(e).opacity);
     check('reduced motion: step fully opaque', op === '1', 'opacity=' + op);
     await ctx.close();

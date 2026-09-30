@@ -93,10 +93,12 @@
   }
   wireScrollFades();
 
-  /* Motion gate for the intro fade. */
+  /* Motion gate for the intro fade (also used by the wizard — exposed on
+     window so other scripts can share the same preference check). */
   function motionOK() {
     return !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
+  window.motionOK = motionOK;
 
   /* Intro fade: on every load the lead and the blocks named in
      data-typewrite-then fade in together — no typing, no pauses. */

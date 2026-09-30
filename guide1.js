@@ -4,14 +4,21 @@
  * (4), the chosen path — templates (5–11) or manual (12–24) — and the finale
  * (25). The three downloads variants are a single logical step; only the one
  * matching the chosen OS is shown. Steps with data-path belong to one branch
- * only. Every actionable step carries a confirmation checkbox that gates the
- * Next button until ticked.
+ * only.
  *
- * No-JS visitors see the whole guide stacked (see .wiz-viewport CSS).
+ * With JS on the wizard runs as a full-screen app (body.wiz-app): the page
+ * itself never scrolls — only the step stage scrolls when a step outgrows
+ * the viewport. Every actionable step carries its confirmation inside the
+ * Next button: one click ticks it (the button lights up green), a second
+ * click advances. No-JS visitors see the whole guide stacked with the
+ * standalone checkboxes instead.
  */
 (function () {
   const shell = document.querySelector('.wiz-viewport');
   if (!shell) return;
+
+  /* JS mode: the wizard takes over the whole viewport (see body.wiz-app CSS). */
+  document.body.classList.add('wiz-app');
 
   const steps = Array.from(shell.querySelectorAll('.wizard-step'));
 
@@ -42,11 +49,16 @@
   const title      = document.getElementById('wiz-title');
   const back       = document.getElementById('wiz-back');
   const next       = document.getElementById('wiz-next');
+  const nextLabel  = document.getElementById('wiz-next-label');
   const restart    = document.getElementById('wiz-restart');
   const progress   = document.getElementById('wiz-progress');
   const announcer  = document.getElementById('wiz-announcer');
 
   const state = { pos: 0, os: null, path: null };
+
+  /* Logical positions whose confirmation has been ticked. Survives Back, so
+   * a revisited step shows the button already green — the work is the work. */
+  const confirmed = new Set();
 
   /* ── visibility ─────────────────────────────────────────────── */
 
@@ -70,16 +82,15 @@
 
   /* ── gating ─────────────────────────────────────────────────── */
 
-  /* A step is blocked until its own requirement is satisfied:
-   *   step 0  — an OS chosen
-   *   step 4  — a path chosen
-   *   others  — its confirmation checkbox ticked */
-  function blocked(pos) {
-    if (pos === 0) return !state.os;
-    if (pos === 4) return !state.path;
+  /* The current step's confirmation, if it has one. Returns the hidden box
+   * (kept in the DOM as the source of truth and the no-JS fallback) plus the
+   * label text that lives inside the Next button until it's ticked. */
+  function armAt(pos) {
     const el = steps[domFor(pos, state.os)];
     const box = el && el.querySelector('.confirm-box');
-    return !!(box && !box.checked);
+    if (!box) return null;
+    const text = (el.querySelector('.wiz-confirm span') || {}).textContent || 'Done';
+    return { box, text };
   }
 
   /* The branch: the other path's steps are skipped entirely, so the last
@@ -102,7 +113,27 @@
     back.disabled = pos === 0;
     next.hidden = pos === LAST;
     restart.hidden = pos !== LAST;
-    next.disabled = pos !== LAST && blocked(pos);
+
+    if (pos === LAST) {
+      next.disabled = false;
+      next.classList.remove('is-armed');
+      if (nextLabel) nextLabel.textContent = 'Next step';
+    } else {
+      const arm = armAt(pos);
+      if (arm) {
+        /* confirmation lives in the button itself: first click ticks it,
+         * second advances — so it's enabled from the start */
+        const done = confirmed.has(pos);
+        next.disabled = false;
+        next.classList.toggle('is-armed', !!done);
+        if (nextLabel) nextLabel.textContent = done ? 'Next step' : arm.text;
+      } else {
+        /* selection steps (OS, path): plain Next, disabled until chosen */
+        next.disabled = pos === 0 ? !state.os : !state.path;
+        next.classList.remove('is-armed');
+        if (nextLabel) nextLabel.textContent = 'Next step';
+      }
+    }
 
     const p = phaseFor(pos);
     if (kickerTick) kickerTick.textContent = PHASES[p].tick;
@@ -121,46 +152,89 @@
 
   /* ── navigation ─────────────────────────────────────────────── */
 
-  function revealStep(el) {
-    const motionOK = window.motionOK && window.motionOK();
-    if (!motionOK || !el) return;
-    el.classList.remove('wiz-enter', 'wiz-shown');
-    void el.offsetWidth;               /* reflow so the transition restarts */
-    el.classList.add('wiz-enter', 'wiz-shown');
+  /* Respects the site-wide reduced-motion preference (site.js exposes
+     window.motionOK; the fallback keeps the gate even if site.js is gone). */
+  function canMotion() {
+    if (typeof window.motionOK === 'function') return window.motionOK();
+    return !(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
   }
 
+  /* Step swaps are choreographed, not cut: the outgoing step fades up and
+   * out (short, soft), then the incoming one rises into place. A generation
+   * counter cancels stale swaps when the user clicks faster than the exit,
+   * so the newest navigation always wins. */
+  let gen = 0;
+  let swapTimer = 0;
+  let visibleEl = null;
+
   function show(pos, announce) {
+    const g = ++gen;
+    if (swapTimer) { clearTimeout(swapTimer); swapTimer = 0; }
     state.pos = Math.max(0, Math.min(pos, LAST));
     const i = domFor(state.pos, state.os);
-    applyOS();
-    applyPath();
-    steps.forEach((el, k) => {
-      /* variant steps stay hidden until their OS / the chosen path is shown */
-      const osBlocked  = el.dataset.os   && el.dataset.os   !== state.os;
-      const pathBlocked = el.dataset.path && el.dataset.path !== state.path;
-      /* !! coerces to a real boolean — force === undefined would *toggle*,
-       * and an absent class toggled on stays on */
-      el.classList.toggle('is-hidden', !!(k !== i || osBlocked || pathBlocked));
-    });
-    revealStep(steps[i]);
-    refreshControls();
-    if (announce) {
-      const h3 = steps[i].querySelector('h3');
-      announcer.textContent = 'Step ' + (state.pos + 1) + ' of ' + TOTAL + ': ' +
-        (h3 ? h3.textContent : '');
-    }
+    const target = steps[i];
+    const prev = visibleEl && visibleEl !== target ? visibleEl : null;
+    const motion = canMotion();
+
+    if (motion && prev) prev.classList.add('wiz-exit');
+
+    const apply = () => {
+      if (g !== gen) return;   /* superseded by a newer navigation */
+      if (swapTimer) { clearTimeout(swapTimer); swapTimer = 0; }
+      if (prev) prev.classList.remove('wiz-exit');
+      applyOS();
+      applyPath();
+      steps.forEach((el, k) => {
+        /* variant steps stay hidden until their OS / the chosen path is shown */
+        const osBlocked  = el.dataset.os   && el.dataset.os   !== state.os;
+        const pathBlocked = el.dataset.path && el.dataset.path !== state.path;
+        /* !! coerces to a real boolean — force === undefined would *toggle*,
+         * and an absent class toggled on stays on */
+        el.classList.toggle('is-hidden', !!(k !== i || osBlocked || pathBlocked));
+      });
+      if (motion) {
+        /* reflow *after* the start state is committed — a frame callback
+         * here would be coalesced into the same style pass and the
+         * transition would never fire, so the step would pop in flat */
+        target.classList.remove('wiz-exit', 'wiz-enter', 'wiz-shown');
+        target.classList.add('wiz-enter');
+        void target.offsetWidth;
+        target.classList.add('wiz-shown');
+      }
+      visibleEl = target;
+      refreshControls();
+      if (announce) {
+        const h3 = target.querySelector('h3');
+        announcer.textContent = 'Step ' + (state.pos + 1) + ' of ' + TOTAL + ': ' +
+          (h3 ? h3.textContent : '');
+      }
+    };
+
+    if (motion && prev) swapTimer = setTimeout(apply, 180);
+    else apply();
   }
 
   /* ── wiring ─────────────────────────────────────────────────── */
 
   next.addEventListener('click', () => {
-    if (blocked(state.pos)) return;
+    if (state.pos === LAST) return;
+    const arm = armAt(state.pos);
+    if (arm && !confirmed.has(state.pos)) {
+      /* first click: tick the confirmation — the button lights up green */
+      confirmed.add(state.pos);
+      arm.box.checked = true;     /* keep the DOM box in sync (restart, no-JS) */
+      next.classList.add('is-armed');
+      if (nextLabel) nextLabel.textContent = 'Next step';
+      announcer.textContent = 'Marked as done.';
+      return;
+    }
     show(advance(state.pos), true);
   });
 
   back.addEventListener('click', () => show(retreat(state.pos), true));
 
   restart.addEventListener('click', () => {
+    confirmed.clear();
     shell.querySelectorAll('.confirm-box').forEach((box) => (box.checked = false));
     shell.querySelectorAll('input[name="wizard-path"]').forEach((r) => (r.checked = false));
     state.path = null;
@@ -175,7 +249,10 @@
     } else if (t.name === 'wizard-path') {
       state.path = t.value;
     } else if (t.classList.contains('confirm-box')) {
-      /* the current step's gate just changed */
+      /* the box is hidden in JS mode, but keep the set and the button in
+       * sync with it either way */
+      if (t.checked) confirmed.add(state.pos);
+      else confirmed.delete(state.pos);
     } else {
       return;
     }
@@ -184,7 +261,48 @@
     refreshControls();
   });
 
+  /* ── screenshot preview ─────────────────────────────────────── */
+
+  /* A shot is a figure below its text; clicking it opens a full-screen
+   * preview, and clicking anywhere on the overlay (or Esc) closes it. */
+  const lb = document.createElement('div');
+  lb.className = 'lightbox';
+  lb.hidden = true;
+  lb.tabIndex = -1;
+  lb.setAttribute('role', 'dialog');
+  lb.setAttribute('aria-modal', 'true');
+  lb.setAttribute('aria-label', 'Screenshot preview — click anywhere to close');
+  const lbImg = document.createElement('img');
+  lbImg.alt = '';
+  lb.appendChild(lbImg);
+  document.body.appendChild(lb);
+
+  let lbFocus = null;
+  function closeLb() {
+    lb.classList.remove('is-open');
+    setTimeout(() => { lb.hidden = true; }, canMotion() ? 200 : 0);
+    if (lbFocus) lbFocus.focus();
+  }
+  lb.addEventListener('click', closeLb);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lb.hidden) closeLb();
+  });
+  shell.addEventListener('click', (e) => {
+    const img = e.target.closest('.shot img');
+    if (!img) return;
+    lbFocus = document.activeElement;
+    lbImg.src = img.currentSrc || img.src;
+    lbImg.alt = img.alt;
+    lb.hidden = false;
+    void lb.offsetWidth;   /* commit the hidden state before the fade-in */
+    lb.classList.add('is-open');
+    lb.focus();
+  });
+
   /* ── first paint ────────────────────────────────────────────── */
 
   show(0, false);
+  /* the board is ours now — release the pre-paint claim the inline head
+   * script took (see html.wiz-app in styles.css) */
+  document.documentElement.classList.remove('wiz-app');
 })();

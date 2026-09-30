@@ -27,5 +27,7 @@ const pairs = [
   ['tok-com #7c8798 on screen #17181b', '7c8798', '17181b'],
   ['tok-kw #e58b5a on screen #17181b', 'e58b5a', '17181b'],
   ['tok-num #d9b36a on screen #17181b', 'd9b36a', '17181b'],
+  ['green-ink #0d2314 on green #4fc47c (armed Next)', '0d2314', '4fc47c'],
+  ['blue-hi #a9c9ea on dl tile #2a2f37 (blue-dim on inset-0)', 'a9c9ea', '2a2f37'],
 ];
 for (const [n, a, b] of pairs) console.log(n.padEnd(42), cr(a, b) + ':1');
