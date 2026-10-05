@@ -398,15 +398,18 @@ code, pre, kbd {
   .nav {
     margin-inline: calc(-1 * var(--pad));
     margin-block-start: 8px;
+    justify-content: safe center;
     overflow-x: auto;
-    gap: var(--s-4);
-    padding-inline: var(--pad);
+    /* tightened so the row fits phones from ~375px up; below that it
+     * scrolls with the edge fades as the cue */
+    gap: var(--s-2);
+    padding-inline: 12px;
     padding-block-end: 4px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
-    /* wider trailing fade: clipped links visibly dissolve, hinting the row scrolls */
-    -webkit-mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 32px), transparent);
-    mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 32px), transparent);
+    /* clipped links visibly dissolve at the edges, hinting the row scrolls */
+    -webkit-mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 24px), transparent);
+    mask-image: linear-gradient(90deg, transparent, #000 16px, #000 calc(100% - 24px), transparent);
   }
 
   .nav::-webkit-scrollbar {
@@ -414,7 +417,8 @@ code, pre, kbd {
   }
 
   .nav a {
-    padding: 10px 4px;
+    padding: 8px 2px;
+    font-size: 13px;
   }
 }
 
@@ -474,6 +478,14 @@ code, pre, kbd {
     border-color var(--t-fast) var(--ease),
     color var(--t-fast) var(--ease);
   text-align: center;
+}
+.btn:active {
+  transform: scale(0.96);
+}
+.os-card:active,
+.path-card:active,
+.dl-list .dl-row:active {
+  transform: scale(0.98);
 }
 
 .btn:hover {
@@ -1421,6 +1433,7 @@ code, pre, kbd {
   box-shadow: var(--inset-1);
   cursor: pointer;
   transition:
+    transform var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease);
@@ -1448,7 +1461,9 @@ code, pre, kbd {
   border-radius: 50%;
   background: var(--bg-0);
   border: 1px solid var(--line-strong);
+  transform: scale(1);
   transition:
+    transform var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease);
@@ -1466,6 +1481,7 @@ code, pre, kbd {
   background: var(--green);
   border-color: var(--green);
   box-shadow: 0 0 6px rgba(79, 196, 124, 0.9), 0 0 16px rgba(79, 196, 124, 0.45);
+  transform: scale(1.2);
 }
 .path-card .path-dot:focus-visible {
   outline: 2px solid var(--green);
@@ -1474,6 +1490,10 @@ code, pre, kbd {
 @media (max-width: 560px) {
   .path-grid {
     grid-template-columns: 1fr;
+  }
+  .os-card,
+  .path-card {
+    padding: 12px 14px;
   }
 }
 
@@ -1498,6 +1518,7 @@ code, pre, kbd {
   box-shadow: var(--inset-1);
   cursor: pointer;
   transition:
+    transform var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease);
@@ -1535,7 +1556,9 @@ code, pre, kbd {
   background: var(--bg-0);
   border: 1px solid var(--line-strong);
   box-shadow: none;
+  transform: scale(1);
   transition:
+    transform var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease);
@@ -1544,6 +1567,7 @@ code, pre, kbd {
   background: var(--green);
   border-color: var(--green);
   box-shadow: 0 0 6px rgba(79, 196, 124, 0.9), 0 0 16px rgba(79, 196, 124, 0.45);
+  transform: scale(1.2);
 }
 .os-ver {
   font-family: var(--font-mono);
@@ -1581,6 +1605,7 @@ code, pre, kbd {
   text-decoration: none;
   cursor: pointer;
   transition:
+    transform var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     box-shadow var(--t-fast) var(--ease);
@@ -1692,7 +1717,7 @@ code, pre, kbd {
     order: 3;
     width: 100%;
     text-align: center;
-    margin-block-start: var(--s-2);
+    margin-block-start: var(--s-1);
   }
   #wiz-next {
     max-width: 100%;
@@ -1725,6 +1750,19 @@ code, pre, kbd {
 }
 #wiz-next .btn-ic::after {
   content: "✓";
+  display: inline-block;
+  transform: scale(0.25);
+  opacity: 0;
+  filter: blur(4px);
+  transition:
+    transform 240ms var(--ease),
+    opacity 240ms var(--ease),
+    filter 240ms var(--ease);
+}
+#wiz-next.is-armed .btn-ic::after {
+  transform: scale(1);
+  opacity: 1;
+  filter: blur(0);
 }
 #wiz-next.is-armed {
   color: var(--green-ink);
@@ -1808,6 +1846,7 @@ html.wiz-app .section-head {
 }
 body.wiz-app .wiz-viewport,
 html.wiz-app .wiz-viewport {
+  position: relative;
   overflow-y: auto;
   overscroll-behavior: contain;
   scrollbar-width: thin;
@@ -1816,6 +1855,40 @@ html.wiz-app .wiz-viewport {
 }
 body.wiz-app .wiz-viewport::-webkit-scrollbar {
   width: 8px;
+}
+/* a bottom fade marks step content that scrolls, and a top fade once the
+ * reader has scrolled in — the cut is a scroll cue, not a collision */
+body.wiz-app .wiz-viewport::before,
+body.wiz-app .wiz-viewport::after,
+html.wiz-app .wiz-viewport::before,
+html.wiz-app .wiz-viewport::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 26px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--t-fast) var(--ease);
+  z-index: 2;
+}
+body.wiz-app .wiz-viewport::before,
+html.wiz-app .wiz-viewport::before {
+  top: 0;
+  background: linear-gradient(180deg, var(--bg-0), transparent);
+}
+body.wiz-app .wiz-viewport::after,
+html.wiz-app .wiz-viewport::after {
+  bottom: 0;
+  background: linear-gradient(0deg, var(--bg-0), transparent);
+}
+body.wiz-app .wiz-viewport.is-overflow:not(.is-atend)::after,
+html.wiz-app .wiz-viewport.is-overflow:not(.is-atend)::after {
+  opacity: 1;
+}
+body.wiz-app .wiz-viewport.is-scrolled::before,
+html.wiz-app .wiz-viewport.is-scrolled::before {
+  opacity: 1;
 }
 body.wiz-app .wiz-viewport::-webkit-scrollbar-track {
   background: transparent;
@@ -1836,7 +1909,7 @@ html.wiz-app .wiz-progress {
   order: 3;
   width: 100%;
   text-align: center;
-  margin-block-start: var(--s-3);
+  margin-block-start: var(--s-1);
 }
 body.wiz-app .wiz-confirm,
 html.wiz-app .wiz-confirm {
@@ -1893,9 +1966,29 @@ html.wiz-app .wizard-step:not(.is-hidden) {
 
   .btn,
   .nav a,
-  .link-arrow .arr {
+  .link-arrow .arr,
+  .os-card,
+  .path-card,
+  .dl-list .dl-row,
+  .os-dot,
+  .path-dot,
+  #wiz-next .btn-ic::after {
     transition: none;
     animation: none;
+  }
+  .btn:active,
+  .os-card:active,
+  .path-card:active,
+  .dl-list .dl-row:active,
+  .os-dot:checked,
+  .path-dot:checked {
+    transform: none;
+  }
+  body.wiz-app .wiz-viewport::before,
+  body.wiz-app .wiz-viewport::after,
+  html.wiz-app .wiz-viewport::before,
+  html.wiz-app .wiz-viewport::after {
+    display: none;
   }
 
   .lightbox,

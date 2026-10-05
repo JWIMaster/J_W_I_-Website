@@ -14,6 +14,8 @@
      active underline never parks behind the clipped edge. */
   function syncNav() {
     if (!nav || window.innerWidth >= 720) return;
+    /* the row is centered when it fits — only scroll when it overflows */
+    if (nav.scrollWidth <= nav.clientWidth + 1) { nav.scrollLeft = 0; return; }
     var active = nav.querySelector('a[aria-current="page"]');
     if (!active) return;
     var left = active.getBoundingClientRect().left - nav.getBoundingClientRect().left;

@@ -208,6 +208,7 @@
         announcer.textContent = 'Step ' + (state.pos + 1) + ' of ' + TOTAL + ': ' +
           (h3 ? h3.textContent : '');
       }
+      syncHints();
     };
 
     if (motion && prev) swapTimer = setTimeout(apply, 180);
@@ -299,9 +300,27 @@
     lb.focus();
   });
 
+  /* ── scroll affordance ──────────────────────────────────────── */
+
+  /* When a step outgrows the stage, its edges dissolve into the background
+   * (the fades in styles.css) — the cut reads as "there is more below",
+   * never as content colliding with the controls. */
+  function syncHints() {
+    const ov = shell.scrollHeight > shell.clientHeight + 8;
+    shell.classList.toggle('is-overflow', ov);
+    shell.classList.toggle(
+      'is-atend',
+      !ov || shell.scrollTop + shell.clientHeight >= shell.scrollHeight - 8);
+    shell.classList.toggle('is-scrolled', shell.scrollTop > 8);
+  }
+  shell.addEventListener('scroll', syncHints, { passive: true });
+  window.addEventListener('resize', syncHints);
+  window.addEventListener('load', syncHints);
+
   /* ── first paint ────────────────────────────────────────────── */
 
   show(0, false);
+  syncHints();
   /* the board is ours now — release the pre-paint claim the inline head
    * script took (see html.wiz-app in styles.css) */
   document.documentElement.classList.remove('wiz-app');
