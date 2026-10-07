@@ -1,0 +1,10490 @@
+[
+ {
+  "page": "index.html",
+  "W": 320,
+  "z": 100,
+  "vw": 320,
+  "iw": 320,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 280,
+   "l": 20,
+   "r": 300
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -104
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 264,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 280
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 320,
+  "z": 150,
+  "vw": 213,
+  "iw": 213,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 173,
+   "l": 20,
+   "r": 193
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -73
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 157,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 173
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 320,
+  "z": 175,
+  "vw": 183,
+  "iw": 183,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 143,
+   "l": 20,
+   "r": 163
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -43
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 127,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 143
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 320,
+  "z": 200,
+  "vw": 160,
+  "iw": 160,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 120,
+   "l": 20,
+   "r": 140
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 98.3,
+   "l": 28,
+   "r": 126.3,
+   "spill": -33.7
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Open the guide",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join the Discord",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "View the portfolio",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 104,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 120
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 360,
+  "z": 100,
+  "vw": 360,
+  "iw": 360,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 320,
+   "l": 20,
+   "r": 340
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -144
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 304,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 320
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 360,
+  "z": 150,
+  "vw": 240,
+  "iw": 240,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 200,
+   "l": 20,
+   "r": 220
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -100
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 184,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 200
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 360,
+  "z": 175,
+  "vw": 206,
+  "iw": 206,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 166,
+   "l": 20,
+   "r": 186
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -66
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 150,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 166
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 360,
+  "z": 200,
+  "vw": 180,
+  "iw": 180,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 140,
+   "l": 20,
+   "r": 160
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -40
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 124,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 140
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 375,
+  "z": 100,
+  "vw": 375,
+  "iw": 375,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 335,
+   "l": 20,
+   "r": 355
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 120,
+   "r": 232,
+   "spill": -143
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 287,
+  "rowOw": 0,
+  "nav": {
+   "sw": 335,
+   "cw": 335
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 375,
+  "z": 150,
+  "vw": 250,
+  "iw": 250,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 210,
+   "l": 20,
+   "r": 230
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -34
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 194,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 375,
+  "z": 175,
+  "vw": 214,
+  "iw": 214,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 174,
+   "l": 20,
+   "r": 194
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -74
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 158,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 174
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 375,
+  "z": 200,
+  "vw": 188,
+  "iw": 188,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 148,
+   "l": 20,
+   "r": 168
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -48
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 132,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 148
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 390,
+  "z": 100,
+  "vw": 390,
+  "iw": 390,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 350,
+   "l": 20,
+   "r": 370
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 120,
+   "r": 232,
+   "spill": -158
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 302,
+  "rowOw": 0,
+  "nav": {
+   "sw": 350,
+   "cw": 350
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 390,
+  "z": 150,
+  "vw": 260,
+  "iw": 260,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 220,
+   "l": 20,
+   "r": 240
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -44
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 204,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 220
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 390,
+  "z": 175,
+  "vw": 223,
+  "iw": 223,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 183,
+   "l": 20,
+   "r": 203
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -83
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 167,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 183
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 390,
+  "z": 200,
+  "vw": 195,
+  "iw": 195,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 155,
+   "l": 20,
+   "r": 175
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -55
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 139,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 155
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 414,
+  "z": 100,
+  "vw": 414,
+  "iw": 414,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 372.6,
+   "l": 20.7,
+   "r": 393.3
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 120.6,
+   "r": 232.7,
+   "spill": -181.3
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 324.6,
+  "rowOw": 0,
+  "nav": {
+   "sw": 373,
+   "cw": 373
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 414,
+  "z": 150,
+  "vw": 276,
+  "iw": 276,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 236,
+   "l": 20,
+   "r": 256
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -60
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 220,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 236
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 414,
+  "z": 175,
+  "vw": 237,
+  "iw": 237,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 197,
+   "l": 20,
+   "r": 217
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -97
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 181,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 197
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 414,
+  "z": 200,
+  "vw": 207,
+  "iw": 207,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 167,
+   "l": 20,
+   "r": 187
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -67
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 53,
+    "lines": 2
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 151,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 167
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 430,
+  "z": 100,
+  "vw": 430,
+  "iw": 430,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 387,
+   "l": 21.5,
+   "r": 408.5
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 121.5,
+   "r": 233.5,
+   "spill": -196.5
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 339,
+  "rowOw": 0,
+  "nav": {
+   "sw": 387,
+   "cw": 387
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 430,
+  "z": 150,
+  "vw": 287,
+  "iw": 287,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 247,
+   "l": 20,
+   "r": 267
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -71
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 231,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 247
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 430,
+  "z": 175,
+  "vw": 246,
+  "iw": 246,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 206,
+   "l": 20,
+   "r": 226
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -106
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 190,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 206
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 430,
+  "z": 200,
+  "vw": 215,
+  "iw": 215,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 175,
+   "l": 20,
+   "r": 195
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -75
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 159,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 175
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 450,
+  "z": 100,
+  "vw": 450,
+  "iw": 450,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 405,
+   "l": 22.5,
+   "r": 427.5
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 122.5,
+   "r": 234.5,
+   "spill": -215.5
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 357,
+  "rowOw": 0,
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 450,
+  "z": 150,
+  "vw": 300,
+  "iw": 300,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 260,
+   "l": 20,
+   "r": 280
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -84
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 244,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 450,
+  "z": 175,
+  "vw": 257,
+  "iw": 257,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 217,
+   "l": 20,
+   "r": 237
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -41
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 201,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 217
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 450,
+  "z": 200,
+  "vw": 225,
+  "iw": 225,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 185,
+   "l": 20,
+   "r": 205
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 28,
+   "r": 140,
+   "spill": -85
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 169,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 185
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 500,
+  "z": 100,
+  "vw": 500,
+  "iw": 500,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 450,
+   "l": 25,
+   "r": 475
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 125,
+   "r": 237,
+   "spill": -263
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 402,
+  "rowOw": 0,
+  "nav": {
+   "sw": 450,
+   "cw": 450
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 500,
+  "z": 150,
+  "vw": 333,
+  "iw": 333,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 293,
+   "l": 20,
+   "r": 313
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -117
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 277,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 293
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 500,
+  "z": 175,
+  "vw": 286,
+  "iw": 286,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 246,
+   "l": 20,
+   "r": 266
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -70
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 230,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 246
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 500,
+  "z": 200,
+  "vw": 250,
+  "iw": 250,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 210,
+   "l": 20,
+   "r": 230
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -34
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 194,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 600,
+  "z": 100,
+  "vw": 600,
+  "iw": 600,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 540,
+   "l": 30,
+   "r": 570
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 198,
+   "r": 310,
+   "spill": -290
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 424,
+  "rowOw": 0,
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 600,
+  "z": 150,
+  "vw": 400,
+  "iw": 400,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 360,
+   "l": 20,
+   "r": 380
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 120,
+   "r": 232,
+   "spill": -168
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 312,
+  "rowOw": 0,
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 600,
+  "z": 175,
+  "vw": 343,
+  "iw": 343,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 303,
+   "l": 20,
+   "r": 323
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -127
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 287,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 303
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 600,
+  "z": 200,
+  "vw": 300,
+  "iw": 300,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 260,
+   "l": 20,
+   "r": 280
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -84
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 244,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 700,
+  "z": 100,
+  "vw": 700,
+  "iw": 700,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 630,
+   "l": 35,
+   "r": 665
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 207,
+   "r": 319,
+   "spill": -381
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 510,
+  "rowOw": 0,
+  "nav": {
+   "sw": 630,
+   "cw": 630
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 700,
+  "z": 150,
+  "vw": 467,
+  "iw": 467,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 420.3,
+   "l": 23.3,
+   "r": 443.7
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 123.3,
+   "r": 235.3,
+   "spill": -231.7
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 372.3,
+  "rowOw": 0,
+  "nav": {
+   "sw": 420,
+   "cw": 420
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 700,
+  "z": 200,
+  "vw": 350,
+  "iw": 350,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 310,
+   "l": 20,
+   "r": 330
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 104,
+   "r": 216,
+   "spill": -134
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 38,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 38,
+    "lines": 1
+   }
+  ],
+  "rowCol": 294,
+  "rowOw": 0,
+  "nav": {
+   "sw": 334,
+   "cw": 310
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 800,
+  "z": 100,
+  "vw": 800,
+  "iw": 800,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 720,
+   "l": 40,
+   "r": 760
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 216,
+   "r": 328,
+   "spill": -472
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 596,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 800,
+  "z": 150,
+  "vw": 533,
+  "iw": 533,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 479.7,
+   "l": 26.6,
+   "r": 506.4
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 126.6,
+   "r": 238.6,
+   "spill": -294.4
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 431.7,
+  "rowOw": 0,
+  "nav": {
+   "sw": 480,
+   "cw": 480
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 800,
+  "z": 200,
+  "vw": 400,
+  "iw": 400,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 360,
+   "l": 20,
+   "r": 380
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 120,
+   "r": 232,
+   "spill": -168
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 312,
+  "rowOw": 0,
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 900,
+  "z": 100,
+  "vw": 900,
+  "iw": 900,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 378,
+   "l": 44,
+   "r": 422
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 236,
+   "r": 348,
+   "spill": -552
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 482.5,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 900,
+  "z": 150,
+  "vw": 600,
+  "iw": 600,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 540,
+   "l": 30,
+   "r": 570
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 198,
+   "r": 310,
+   "spill": -290
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 424,
+  "rowOw": 0,
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 900,
+  "z": 200,
+  "vw": 450,
+  "iw": 450,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 405,
+   "l": 22.5,
+   "r": 427.5
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 122.5,
+   "r": 234.5,
+   "spill": -215.5
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 357,
+  "rowOw": 0,
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1024,
+  "z": 100,
+  "vw": 1024,
+  "iw": 1024,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 494.6,
+   "l": 44,
+   "r": 538.6
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 240.9,
+   "r": 352.9,
+   "spill": -671.1
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 596.6,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1024,
+  "z": 150,
+  "vw": 683,
+  "iw": 683,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 614.7,
+   "l": 34.1,
+   "r": 648.9
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 205.4,
+   "r": 317.4,
+   "spill": -365.6
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 495.4,
+  "rowOw": 0,
+  "nav": {
+   "sw": 615,
+   "cw": 615
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1024,
+  "z": 200,
+  "vw": 512,
+  "iw": 512,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 460.8,
+   "l": 25.6,
+   "r": 486.4
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 125.5,
+   "r": 237.6,
+   "spill": -274.4
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 412.8,
+  "rowOw": 0,
+  "nav": {
+   "sw": 461,
+   "cw": 461
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1280,
+  "z": 100,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 668,
+   "l": 80,
+   "r": 748
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 284,
+   "r": 396,
+   "spill": -884
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 766.5,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1280,
+  "z": 150,
+  "vw": 853,
+  "iw": 853,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 767.7,
+   "l": 42.6,
+   "r": 810.4
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 220.7,
+   "r": 332.7,
+   "spill": -520.3
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 641.6,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1280,
+  "z": 200,
+  "vw": 640,
+  "iw": 640,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "hero": {
+   "w": 576,
+   "l": 32,
+   "r": 608
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 201.5,
+   "r": 313.6,
+   "spill": -326.4
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 458.4,
+  "rowOw": 0,
+  "nav": {
+   "sw": 576,
+   "cw": 576
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1440,
+  "z": 100,
+  "vw": 1440,
+  "iw": 1440,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 668,
+   "l": 160,
+   "r": 828
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 364,
+   "r": 476,
+   "spill": -964
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 766.5,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1440,
+  "z": 150,
+  "vw": 960,
+  "iw": 960,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 434.4,
+   "l": 44,
+   "r": 478.4
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 238.3,
+   "r": 350.4,
+   "spill": -609.6
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 537.7,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1440,
+  "z": 200,
+  "vw": 720,
+  "iw": 720,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 648,
+   "l": 36,
+   "r": 684
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 208.8,
+   "r": 320.8,
+   "spill": -399.2
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 527.2,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1920,
+  "z": 100,
+  "vw": 1920,
+  "iw": 1920,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 668,
+   "l": 400,
+   "r": 1068
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 604,
+   "r": 716,
+   "spill": -1204
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 766.5,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1920,
+  "z": 150,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 668,
+   "l": 80,
+   "r": 748
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 284,
+   "r": 396,
+   "spill": -884
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 766.5,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "index.html",
+  "W": 1920,
+  "z": 200,
+  "vw": 960,
+  "iw": 960,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "hero": {
+   "w": 434.4,
+   "l": 44,
+   "r": 478.4
+  },
+  "tokNS": null,
+  "tokPix": {
+   "w": 112,
+   "l": 238.3,
+   "r": 350.4,
+   "spill": -609.6
+  },
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Open the guide",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Get it on the App Store",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join TestFlight",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Join the Discord",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Buy me a coffee",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "View the portfolio",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Send an email",
+    "h": 44,
+    "lines": 1
+   },
+   {
+    "t": "Contact page",
+    "h": 44,
+    "lines": 1
+   }
+  ],
+  "rowCol": 537.7,
+  "rowOw": 0,
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 320,
+  "z": 100,
+  "vw": 320,
+  "iw": 320,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 88.5,
+   "r": 237.3,
+   "spill": -82.7
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 280
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 320,
+  "z": 150,
+  "vw": 213,
+  "iw": 213,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 114.7,
+   "l": 48,
+   "r": 162.7,
+   "spill": -50.3
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 173
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 320,
+  "z": 175,
+  "vw": 183,
+  "iw": 183,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 84.1,
+   "l": 48,
+   "r": 132.1,
+   "spill": -50.9
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 143
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 320,
+  "z": 200,
+  "vw": 160,
+  "iw": 160,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 57.4,
+   "l": 48,
+   "r": 105.4,
+   "spill": -54.6
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 120
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 360,
+  "z": 100,
+  "vw": 360,
+  "iw": 360,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -163.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 320
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 360,
+  "z": 150,
+  "vw": 240,
+  "iw": 240,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 143.2,
+   "l": 48,
+   "r": 191.2,
+   "spill": -48.8
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 200
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 360,
+  "z": 175,
+  "vw": 206,
+  "iw": 206,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 109,
+   "l": 48,
+   "r": 157,
+   "spill": -49
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 166
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 360,
+  "z": 200,
+  "vw": 180,
+  "iw": 180,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 76.9,
+   "l": 48,
+   "r": 124.9,
+   "spill": -55.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 140
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 375,
+  "z": 100,
+  "vw": 375,
+  "iw": 375,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -178.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 335,
+   "cw": 335
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 375,
+  "z": 150,
+  "vw": 250,
+  "iw": 250,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -53.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 375,
+  "z": 175,
+  "vw": 214,
+  "iw": 214,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 114.7,
+   "l": 48,
+   "r": 162.7,
+   "spill": -51.3
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 174
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 375,
+  "z": 200,
+  "vw": 188,
+  "iw": 188,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 84.1,
+   "l": 48,
+   "r": 132.1,
+   "spill": -55.9
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 148
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 390,
+  "z": 100,
+  "vw": 390,
+  "iw": 390,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 140.9,
+   "r": 289.8,
+   "spill": -100.2
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 350,
+   "cw": 350
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 390,
+  "z": 150,
+  "vw": 260,
+  "iw": 260,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -63.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 220
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 390,
+  "z": 175,
+  "vw": 223,
+  "iw": 223,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 121.4,
+   "l": 48,
+   "r": 169.4,
+   "spill": -53.6
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 183
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 390,
+  "z": 200,
+  "vw": 195,
+  "iw": 195,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 93,
+   "l": 48,
+   "r": 141,
+   "spill": -54
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 155
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 414,
+  "z": 100,
+  "vw": 414,
+  "iw": 414,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 111.3,
+   "r": 260.2,
+   "spill": -153.8
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 373,
+   "cw": 373
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 414,
+  "z": 150,
+  "vw": 276,
+  "iw": 276,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -79.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 236
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 414,
+  "z": 175,
+  "vw": 237,
+  "iw": 237,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 133.5,
+   "l": 48,
+   "r": 181.5,
+   "spill": -55.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 197
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 414,
+  "z": 200,
+  "vw": 207,
+  "iw": 207,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 109,
+   "l": 48,
+   "r": 157,
+   "spill": -50
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 167
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 430,
+  "z": 100,
+  "vw": 430,
+  "iw": 430,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 90,
+   "r": 238.8,
+   "spill": -191.2
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 387,
+   "cw": 387
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 430,
+  "z": 150,
+  "vw": 287,
+  "iw": 287,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -90.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 247
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 430,
+  "z": 175,
+  "vw": 246,
+  "iw": 246,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -49.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 206
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 430,
+  "z": 200,
+  "vw": 215,
+  "iw": 215,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 114.7,
+   "l": 48,
+   "r": 162.7,
+   "spill": -52.3
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 175
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 450,
+  "z": 100,
+  "vw": 450,
+  "iw": 450,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 50.5,
+   "r": 199.4,
+   "spill": -250.6
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 450,
+  "z": 150,
+  "vw": 300,
+  "iw": 300,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 88.5,
+   "r": 237.3,
+   "spill": -62.7
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 450,
+  "z": 175,
+  "vw": 257,
+  "iw": 257,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -60.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 217
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 450,
+  "z": 200,
+  "vw": 225,
+  "iw": 225,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 128.8,
+   "l": 48,
+   "r": 176.8,
+   "spill": -48.2
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 185
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 500,
+  "z": 100,
+  "vw": 500,
+  "iw": 500,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 55,
+   "r": 203.9,
+   "spill": -296.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 450,
+   "cw": 450
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 500,
+  "z": 150,
+  "vw": 333,
+  "iw": 333,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 62.9,
+   "r": 211.8,
+   "spill": -121.2
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 293
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 500,
+  "z": 175,
+  "vw": 286,
+  "iw": 286,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -89.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 246
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 500,
+  "z": 200,
+  "vw": 250,
+  "iw": 250,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -53.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 600,
+  "z": 100,
+  "vw": 600,
+  "iw": 600,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 312.6,
+   "r": 461.5,
+   "spill": -138.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 600,
+  "z": 150,
+  "vw": 400,
+  "iw": 400,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 110.6,
+   "r": 259.5,
+   "spill": -140.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 600,
+  "z": 175,
+  "vw": 343,
+  "iw": 343,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -146.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 303
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 600,
+  "z": 200,
+  "vw": 300,
+  "iw": 300,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 88.5,
+   "r": 237.3,
+   "spill": -62.7
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 700,
+  "z": 100,
+  "vw": 700,
+  "iw": 700,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 77,
+   "r": 225.9,
+   "spill": -474.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 630,
+   "cw": 630
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 700,
+  "z": 150,
+  "vw": 467,
+  "iw": 467,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 51.4,
+   "r": 200.2,
+   "spill": -266.8
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 420,
+   "cw": 420
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 700,
+  "z": 200,
+  "vw": 350,
+  "iw": 350,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 48,
+   "r": 196.9,
+   "spill": -153.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 310
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 800,
+  "z": 100,
+  "vw": 800,
+  "iw": 800,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 457.4,
+   "r": 606.3,
+   "spill": -193.8
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 800,
+  "z": 150,
+  "vw": 533,
+  "iw": 533,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 58.6,
+   "r": 207.5,
+   "spill": -325.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 480,
+   "cw": 480
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 800,
+  "z": 200,
+  "vw": 400,
+  "iw": 400,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 110.6,
+   "r": 259.5,
+   "spill": -140.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 900,
+  "z": 100,
+  "vw": 900,
+  "iw": 900,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 344.6,
+   "r": 493.5,
+   "spill": -406.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 900,
+  "z": 150,
+  "vw": 600,
+  "iw": 600,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 312.6,
+   "r": 461.5,
+   "spill": -138.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 900,
+  "z": 200,
+  "vw": 450,
+  "iw": 450,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 50.5,
+   "r": 199.4,
+   "spill": -250.6
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1024,
+  "z": 100,
+  "vw": 1024,
+  "iw": 1024,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 352.1,
+   "r": 500.9,
+   "spill": -523.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1024,
+  "z": 150,
+  "vw": 683,
+  "iw": 683,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 75.1,
+   "r": 224,
+   "spill": -459
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 615,
+   "cw": 615
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1024,
+  "z": 200,
+  "vw": 512,
+  "iw": 512,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 56.3,
+   "r": 205.2,
+   "spill": -306.8
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 461,
+   "cw": 461
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1280,
+  "z": 100,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 390.6,
+   "r": 539.5,
+   "spill": -740.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1280,
+  "z": 150,
+  "vw": 853,
+  "iw": 853,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 340.4,
+   "r": 489.3,
+   "spill": -363.7
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1280,
+  "z": 200,
+  "vw": 640,
+  "iw": 640,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 133,
+   "r": 281.9,
+   "spill": -358.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 576,
+   "cw": 576
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1440,
+  "z": 100,
+  "vw": 1440,
+  "iw": 1440,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 470.6,
+   "r": 619.5,
+   "spill": -820.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1440,
+  "z": 150,
+  "vw": 960,
+  "iw": 960,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 348.2,
+   "r": 497.1,
+   "spill": -462.9
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1440,
+  "z": 200,
+  "vw": 720,
+  "iw": 720,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 471,
+   "r": 619.9,
+   "spill": -100.1
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1920,
+  "z": 100,
+  "vw": 1920,
+  "iw": 1920,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 710.6,
+   "r": 859.5,
+   "spill": -1060.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1920,
+  "z": 150,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 390.6,
+   "r": 539.5,
+   "spill": -740.5
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftios6.html",
+  "W": 1920,
+  "z": 200,
+  "vw": 960,
+  "iw": 960,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": {
+   "w": 148.9,
+   "l": 348.2,
+   "r": 497.1,
+   "spill": -462.9
+  },
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   },
+   {
+    "t": "Copy",
+    "h": 36,
+    "lines": 1
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 320,
+  "z": 100,
+  "vw": 320,
+  "iw": 320,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 280
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 320,
+  "z": 150,
+  "vw": 213,
+  "iw": 213,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 173
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 320,
+  "z": 175,
+  "vw": 183,
+  "iw": 183,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 143
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 320,
+  "z": 200,
+  "vw": 160,
+  "iw": 160,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 120
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 360,
+  "z": 100,
+  "vw": 360,
+  "iw": 360,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 320
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 360,
+  "z": 150,
+  "vw": 240,
+  "iw": 240,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 200
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 360,
+  "z": 175,
+  "vw": 206,
+  "iw": 206,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 166
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 360,
+  "z": 200,
+  "vw": 180,
+  "iw": 180,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 140
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 375,
+  "z": 100,
+  "vw": 375,
+  "iw": 375,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 335,
+   "cw": 335
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 375,
+  "z": 150,
+  "vw": 250,
+  "iw": 250,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 375,
+  "z": 175,
+  "vw": 214,
+  "iw": 214,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 174
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 375,
+  "z": 200,
+  "vw": 188,
+  "iw": 188,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 148
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 390,
+  "z": 100,
+  "vw": 390,
+  "iw": 390,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 350,
+   "cw": 350
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 390,
+  "z": 150,
+  "vw": 260,
+  "iw": 260,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 220
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 390,
+  "z": 175,
+  "vw": 223,
+  "iw": 223,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 183
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 390,
+  "z": 200,
+  "vw": 195,
+  "iw": 195,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 155
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 414,
+  "z": 100,
+  "vw": 414,
+  "iw": 414,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 373,
+   "cw": 373
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 414,
+  "z": 150,
+  "vw": 276,
+  "iw": 276,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 236
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 414,
+  "z": 175,
+  "vw": 237,
+  "iw": 237,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 197
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 414,
+  "z": 200,
+  "vw": 207,
+  "iw": 207,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 167
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 430,
+  "z": 100,
+  "vw": 430,
+  "iw": 430,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 387,
+   "cw": 387
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 430,
+  "z": 150,
+  "vw": 287,
+  "iw": 287,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 247
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 430,
+  "z": 175,
+  "vw": 246,
+  "iw": 246,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 206
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 430,
+  "z": 200,
+  "vw": 215,
+  "iw": 215,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 175
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 450,
+  "z": 100,
+  "vw": 450,
+  "iw": 450,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 450,
+  "z": 150,
+  "vw": 300,
+  "iw": 300,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 450,
+  "z": 175,
+  "vw": 257,
+  "iw": 257,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 217
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 450,
+  "z": 200,
+  "vw": 225,
+  "iw": 225,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 185
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 500,
+  "z": 100,
+  "vw": 500,
+  "iw": 500,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 450,
+   "cw": 450
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 500,
+  "z": 150,
+  "vw": 333,
+  "iw": 333,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 293
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 500,
+  "z": 175,
+  "vw": 286,
+  "iw": 286,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 246
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 500,
+  "z": 200,
+  "vw": 250,
+  "iw": 250,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 600,
+  "z": 100,
+  "vw": 600,
+  "iw": 600,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 600,
+  "z": 150,
+  "vw": 400,
+  "iw": 400,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 600,
+  "z": 175,
+  "vw": 343,
+  "iw": 343,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 303
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 600,
+  "z": 200,
+  "vw": 300,
+  "iw": 300,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 700,
+  "z": 100,
+  "vw": 700,
+  "iw": 700,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 630,
+   "cw": 630
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 700,
+  "z": 150,
+  "vw": 467,
+  "iw": 467,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 420,
+   "cw": 420
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 700,
+  "z": 200,
+  "vw": 350,
+  "iw": 350,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 334,
+   "cw": 310
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 800,
+  "z": 100,
+  "vw": 800,
+  "iw": 800,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 800,
+  "z": 150,
+  "vw": 533,
+  "iw": 533,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 480,
+   "cw": 480
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 800,
+  "z": 200,
+  "vw": 400,
+  "iw": 400,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 900,
+  "z": 100,
+  "vw": 900,
+  "iw": 900,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 900,
+  "z": 150,
+  "vw": 600,
+  "iw": 600,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 900,
+  "z": 200,
+  "vw": 450,
+  "iw": 450,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1024,
+  "z": 100,
+  "vw": 1024,
+  "iw": 1024,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1024,
+  "z": 150,
+  "vw": 683,
+  "iw": 683,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 615,
+   "cw": 615
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1024,
+  "z": 200,
+  "vw": 512,
+  "iw": 512,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 461,
+   "cw": 461
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1280,
+  "z": 100,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1280,
+  "z": 150,
+  "vw": 853,
+  "iw": 853,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1280,
+  "z": 200,
+  "vw": 640,
+  "iw": 640,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "wizTop": 94,
+  "wizGap": 0.2,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 576,
+   "cw": 576
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1440,
+  "z": 100,
+  "vw": 1440,
+  "iw": 1440,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1440,
+  "z": 150,
+  "vw": 960,
+  "iw": 960,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1440,
+  "z": 200,
+  "vw": 720,
+  "iw": 720,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1920,
+  "z": 100,
+  "vw": 1920,
+  "iw": 1920,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1920,
+  "z": 150,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "swiftonios6guidepart1.html",
+  "W": 1920,
+  "z": 200,
+  "vw": 960,
+  "iw": 960,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "wizTop": 71,
+  "wizGap": 0,
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy",
+    "h": 0,
+    "lines": 0
+   },
+   {
+    "t": "Copy Code",
+    "h": 0,
+    "lines": 0
+   }
+  ],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 320,
+  "z": 100,
+  "vw": 320,
+  "iw": 320,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 280
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 320,
+  "z": 150,
+  "vw": 213,
+  "iw": 213,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 173
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 320,
+  "z": 175,
+  "vw": 183,
+  "iw": 183,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 143
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 320,
+  "z": 200,
+  "vw": 160,
+  "iw": 160,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 120
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 360,
+  "z": 100,
+  "vw": 360,
+  "iw": 360,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 320
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 360,
+  "z": 150,
+  "vw": 240,
+  "iw": 240,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 200
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 360,
+  "z": 175,
+  "vw": 206,
+  "iw": 206,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 166
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 360,
+  "z": 200,
+  "vw": 180,
+  "iw": 180,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 140
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 375,
+  "z": 100,
+  "vw": 375,
+  "iw": 375,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 335,
+   "cw": 335
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 375,
+  "z": 150,
+  "vw": 250,
+  "iw": 250,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 375,
+  "z": 175,
+  "vw": 214,
+  "iw": 214,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 174
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 375,
+  "z": 200,
+  "vw": 188,
+  "iw": 188,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 148
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 390,
+  "z": 100,
+  "vw": 390,
+  "iw": 390,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 350,
+   "cw": 350
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 390,
+  "z": 150,
+  "vw": 260,
+  "iw": 260,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 220
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 390,
+  "z": 175,
+  "vw": 223,
+  "iw": 223,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 183
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 390,
+  "z": 200,
+  "vw": 195,
+  "iw": 195,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 155
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 414,
+  "z": 100,
+  "vw": 414,
+  "iw": 414,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 373,
+   "cw": 373
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 414,
+  "z": 150,
+  "vw": 276,
+  "iw": 276,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 236
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 414,
+  "z": 175,
+  "vw": 237,
+  "iw": 237,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 197
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 414,
+  "z": 200,
+  "vw": 207,
+  "iw": 207,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 167
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 430,
+  "z": 100,
+  "vw": 430,
+  "iw": 430,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 387,
+   "cw": 387
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 430,
+  "z": 150,
+  "vw": 287,
+  "iw": 287,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 247
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 430,
+  "z": 175,
+  "vw": 246,
+  "iw": 246,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 206
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 430,
+  "z": 200,
+  "vw": 215,
+  "iw": 215,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 175
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 450,
+  "z": 100,
+  "vw": 450,
+  "iw": 450,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 450,
+  "z": 150,
+  "vw": 300,
+  "iw": 300,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 450,
+  "z": 175,
+  "vw": 257,
+  "iw": 257,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 217
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 450,
+  "z": 200,
+  "vw": 225,
+  "iw": 225,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 185
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 500,
+  "z": 100,
+  "vw": 500,
+  "iw": 500,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 450,
+   "cw": 450
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 500,
+  "z": 150,
+  "vw": 333,
+  "iw": 333,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 293
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 500,
+  "z": 175,
+  "vw": 286,
+  "iw": 286,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 246
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 500,
+  "z": 200,
+  "vw": 250,
+  "iw": 250,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 210
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 600,
+  "z": 100,
+  "vw": 600,
+  "iw": 600,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 600,
+  "z": 150,
+  "vw": 400,
+  "iw": 400,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 600,
+  "z": 175,
+  "vw": 343,
+  "iw": 343,
+  "ih": 400,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 303
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 600,
+  "z": 200,
+  "vw": 300,
+  "iw": 300,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 260
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 700,
+  "z": 100,
+  "vw": 700,
+  "iw": 700,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 630,
+   "cw": 630
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 700,
+  "z": 150,
+  "vw": 467,
+  "iw": 467,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 420,
+   "cw": 420
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 700,
+  "z": 200,
+  "vw": 350,
+  "iw": 350,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 334,
+   "cw": 310
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 800,
+  "z": 100,
+  "vw": 800,
+  "iw": 800,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 800,
+  "z": 150,
+  "vw": 533,
+  "iw": 533,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 480,
+   "cw": 480
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 800,
+  "z": 200,
+  "vw": 400,
+  "iw": 400,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 360,
+   "cw": 360
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 900,
+  "z": 100,
+  "vw": 900,
+  "iw": 900,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 900,
+  "z": 150,
+  "vw": 600,
+  "iw": 600,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 540,
+   "cw": 540
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 900,
+  "z": 200,
+  "vw": 450,
+  "iw": 450,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 405,
+   "cw": 405
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1024,
+  "z": 100,
+  "vw": 1024,
+  "iw": 1024,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1024,
+  "z": 150,
+  "vw": 683,
+  "iw": 683,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 615,
+   "cw": 615
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1024,
+  "z": 200,
+  "vw": 512,
+  "iw": 512,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 461,
+   "cw": 461
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1280,
+  "z": 100,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1280,
+  "z": 150,
+  "vw": 853,
+  "iw": 853,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1280,
+  "z": 200,
+  "vw": 640,
+  "iw": 640,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 93.8,
+  "mastHVar": "94px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 576,
+   "cw": 576
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1440,
+  "z": 100,
+  "vw": 1440,
+  "iw": 1440,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1440,
+  "z": 150,
+  "vw": 960,
+  "iw": 960,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1440,
+  "z": 200,
+  "vw": 720,
+  "iw": 720,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1920,
+  "z": 100,
+  "vw": 1920,
+  "iw": 1920,
+  "ih": 700,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1920,
+  "z": 150,
+  "vw": 1280,
+  "iw": 1280,
+  "ih": 467,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ },
+ {
+  "page": "support.html",
+  "W": 1920,
+  "z": 200,
+  "vw": 960,
+  "iw": 960,
+  "ih": 350,
+  "ow": 0,
+  "mastBottom": 71,
+  "mastHVar": "71px",
+  "tokNS": null,
+  "tokPix": null,
+  "btns": [],
+  "nav": {
+   "sw": 368,
+   "cw": 368
+  }
+ }
+]

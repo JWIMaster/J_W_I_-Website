@@ -123,7 +123,11 @@
   --w-prose: 68ch;
   --w-prose-narrow: 60ch;
   --pad: clamp(20px, 5vw, 44px);
-  --mast-h: 60px;
+  --mast-h: 70px; /* stable at-rest masthead bottom: 60px masthead + 10px sticky top margin.
+                      syncMast in site.js keeps it in sync as offsetHeight + computed top margin —
+                      deliberately scroll-independent (a sticky masthead's rect().bottom is not:
+                      it absorbs the 10px margin once stuck). The wizard's fixed shell and the
+                      .wiz-main stage must clear the *at-rest* masthead in every scroll state. Do not hand-tune. */
 
   /* motion */
   --ease: cubic-bezier(0.2, 0, 0, 1);
@@ -600,6 +604,12 @@ code, pre, kbd {
   color: var(--sheet-ink);
   max-width: var(--w-prose);
   font-optical-sizing: auto;
+  /* plain-text tokens (a class name like "NSLayoutConstraint" written without
+     <code>) must be able to wrap at high zoom: the token is 136px wide and the
+     prose column collapses to ~133px at 320@175%, which pushed the page 37px
+     past the viewport. At real ≥320px widths every token fits, so it never
+     triggers visually. */
+  overflow-wrap: break-word;
 }
 
 .prose > * + * {
@@ -653,6 +663,11 @@ code, pre, kbd {
 
 .code-bar .btn {
   margin-inline-start: auto;
+  /* the title ellipsizes (it carries overflow hidden + text-overflow), so the
+     button must never wrap its label to a second line — at 320@150% "Copy Code"
+     (138px) exceeded the 136px button and the bar doubled its height */
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .code-screen {
@@ -951,7 +966,7 @@ code, pre, kbd {
 }
 
 .hero-name {
-  font-size: clamp(3.2rem, 9.5vw, 5.6rem);
+  font-size: min(clamp(3.2rem, 9.5vw, 5.6rem), 21vw);
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 0.98;
@@ -1028,6 +1043,12 @@ code, pre, kbd {
   font-size: 14.5px;
   letter-spacing: 0;
   color: var(--ink-1);
+  /* single-word labels (e.g. "Photography") must break inside the
+     minmax(0,1fr) cell at extreme emulated widths instead of
+     spilling the 28px + gap grid past the container (25px page
+     overflow at vw160); inert at real widths >= 320 where the cell
+     is ~168px wide and the label fits on one line */
+  overflow-wrap: break-word;
 }
 
 .toc .d {
@@ -1083,6 +1104,10 @@ code, pre, kbd {
   color: var(--ink-1);
   margin-block-start: 4px;
   max-width: 52ch;
+  /* unbreakable tokens (a domain URL like "jwi.pixieset.com.", 115px) must be
+     able to wrap once the row's second column collapses below them — at 390@200%
+     that column is ~47px wide and the token was spilling 24px past the viewport */
+  overflow-wrap: break-word;
 }
 
 .index-links {
@@ -1103,6 +1128,21 @@ code, pre, kbd {
     grid-column: 2;
     justify-self: start;
     margin-block-start: var(--s-2);
+  }
+}
+
+/* below 560 the 44px number column + the description column can no longer sit
+   side by side: the description column collapses below its longest token and
+   the row overflows at high zoom. Stack the row single-column so the number,
+   the title/description, and the links each get the full width. */
+@media (max-width: 560px) {
+  .index-row {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto auto auto;
+  }
+
+  .index-links {
+    grid-column: 1;
   }
 }
 
@@ -1201,6 +1241,36 @@ code, pre, kbd {
   .index-links .btn {
     flex: 1 1 auto;
     justify-content: center;
+  }
+}
+
+/* at 360 the two project buttons ("Get it on the App Store", 172×67 with a
+   two-line label) no longer share the row: the 138px label exceeds the 136px
+   button and wraps. Stack the buttons full-width, one per line. */
+@media (max-width: 360px) {
+  .index-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .index-links .btn {
+    width: 100%;
+  }
+
+  /* the stacked full-width button is the row's content box; trim the
+     row (24 -> 8px) and button (18 -> 10px) inline padding and step
+     the label from 14px to 12px so "Get it on the App Store" (155px
+     at 14px, 134px at 12px) fits one line from vw210 up
+     (= 320@150 zoom). Below vw210 the label geometrically cannot fit
+     the 84-127px box and wraps to 2 lines - inherent, not a defect. */
+  .index-row {
+    padding-inline: 8px;
+  }
+
+  .index-links .btn {
+    padding-inline: 10px;
+    font-size: 12px;
+    line-height: 1.3;
   }
 }
 

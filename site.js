@@ -8,7 +8,22 @@
   var nav = document.querySelector('.nav');
   function syncMast() {
     if (!mast) return;
-    document.documentElement.style.setProperty('--mast-h', mast.offsetHeight + 'px');
+    /* The masthead is sticky (top: 0) with a 10px top margin, so its rendered
+       bottom edge is scroll-dependent: at rest (scrollY 0) it sits 10px below
+       its own height, but once the page scrolls the element sticks and the
+       margin is absorbed, pulling the bottom edge up by the same 10px.
+       getBoundingClientRect() therefore returns two different values for the
+       same masthead. --mast-h must be the *stable* at-rest bottom —
+       offsetHeight + the computed top margin — never rect.bottom: the wizard's
+       fixed shell (top: var(--mast-h)) and the .wiz-main stage height need one
+       constant that clears the at-rest masthead in every scroll state.
+       Measuring rect.bottom made the shell jump 10px whenever the last resize
+       event fired while the page was scrolled, re-introducing a 10px overlap
+       under the at-rest masthead. (offsetHeight alone was the original bug:
+       it omitted the 10px margin, so the shell started under the masthead.) */
+    var cs = getComputedStyle(mast);
+    var topMargin = parseFloat(cs.marginTop) || 0;
+    document.documentElement.style.setProperty('--mast-h', mast.offsetHeight + topMargin + 'px');
   }
   /* On the stacked mobile masthead, keep the current page's link in view so the
      active underline never parks behind the clipped edge. */
