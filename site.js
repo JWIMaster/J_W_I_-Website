@@ -42,6 +42,21 @@
     window.addEventListener('resize', function () { syncMast(); syncNav(); });
     window.addEventListener('orientationchange', function () { syncMast(); syncNav(); });
     if (document.fonts && document.fonts.ready) document.fonts.ready.then(function () { syncMast(); syncNav(); });
+
+    /* The masthead gains a shadow once it is pinned, so it reads as a layer
+       above the page rather than a band that happens to sit there. */
+    var mastTicking = false;
+    function mastUpdate() {
+      mastTicking = false;
+      mast.classList.toggle('is-stuck', window.scrollY > 4);
+    }
+    function mastOnScroll() {
+      if (mastTicking) return;
+      mastTicking = true;
+      requestAnimationFrame(mastUpdate);
+    }
+    window.addEventListener('scroll', mastOnScroll, { passive: true });
+    mastUpdate();
   }
 
   function legacyCopy(text) {
@@ -154,6 +169,75 @@
     setTimeout(sweep, 1200);
   }
   wireScrollFades();
+
+  /* Table of contents: mark the section the reader is actually in, so the hero
+     index reports position instead of only offering destinations. */
+  function wireTocSpy() {
+    var links = Array.prototype.slice.call(document.querySelectorAll('.toc-list a[href^="#"]'));
+    if (!links.length) return;
+    var map = links.map(function (a) {
+      return { a: a, el: document.querySelector(a.getAttribute('href')) };
+    }).filter(function (m) { return m.el; });
+    if (!map.length) return;
+
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var line = window.innerHeight * 0.35;
+      var current = null;
+      for (var i = 0; i < map.length; i++) {
+        if (map[i].el.getBoundingClientRect().top <= line) current = map[i];
+      }
+      for (var j = 0; j < map.length; j++) {
+        var on = map[j] === current;
+        map[j].a.classList.toggle('is-current', on);
+        if (on) map[j].a.setAttribute('aria-current', 'true');
+        else map[j].a.removeAttribute('aria-current');
+      }
+    }
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    update();
+  }
+  wireTocSpy();
+
+  /* Reading progress: a single hairline at the top edge of the screen. It only
+     shows itself once the page is long enough to be worth measuring. */
+  function wireReadProgress() {
+    var bar = document.createElement('div');
+    bar.className = 'read-progress';
+    bar.setAttribute('aria-hidden', 'true');
+    document.body.appendChild(bar);
+
+    var ticking = false;
+    function update() {
+      ticking = false;
+      var de = document.documentElement;
+      var max = de.scrollHeight - window.innerHeight;
+      if (max < window.innerHeight * 0.6) {
+        bar.classList.remove('is-live');
+        return;
+      }
+      bar.classList.add('is-live');
+      var p = Math.min(1, Math.max(0, window.scrollY / max));
+      bar.style.transform = 'scaleX(' + p.toFixed(4) + ')';
+    }
+    function onScroll() {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(update);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('pageshow', onScroll);
+    update();
+  }
+  wireReadProgress();
 
   /* Motion gate for the intro fade (also used by the wizard — exposed on
      window so other scripts can share the same preference check). */

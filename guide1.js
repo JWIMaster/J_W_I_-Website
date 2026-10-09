@@ -58,8 +58,23 @@
   const next       = document.getElementById('wiz-next');
   const nextLabel  = document.getElementById('wiz-next-label');
   const restart    = document.getElementById('wiz-restart');
-  const progress   = document.getElementById('wiz-progress');
+  const progressLabel = document.getElementById('wiz-progress-label');
+  const ticks      = document.getElementById('wiz-ticks');
   const announcer  = document.getElementById('wiz-announcer');
+
+  /* The phase's step ticks: a run of marks showing how far through the phase
+     the reader is. Same information as the label, read at a glance. */
+  function renderTicks(index, total, complete) {
+    if (!ticks || !total) return;
+    if (ticks.childElementCount !== total) {
+      ticks.textContent = '';
+      for (let i = 0; i < total; i++) ticks.appendChild(document.createElement('span'));
+    }
+    Array.prototype.forEach.call(ticks.children, function (t, i) {
+      t.classList.toggle('is-done', complete || i < index - 1);
+      t.classList.toggle('is-current', !complete && i === index - 1);
+    });
+  }
 
   const state = { pos: 0, os: null, path: null };
 
@@ -148,12 +163,16 @@
     title.textContent = PHASES[p].title;
 
     if (pos === 4) {
-      progress.textContent = 'Choose your path';
+      progressLabel.textContent = 'Choose your path';
+      renderTicks(1, PHASES[p].span, false);
     } else if (pos === LAST) {
-      progress.textContent = 'Setup complete';
+      progressLabel.textContent = 'Setup complete';
+      renderTicks(PHASES[p].span, PHASES[p].span, true);
     } else {
       const start = p === 0 ? 0 : p === 2 ? 5 : 12;
-      progress.textContent = PHASES[p].name + ' · ' + (pos - start + 1) + ' of ' + PHASES[p].span;
+      const index = pos - start + 1;
+      progressLabel.textContent = PHASES[p].name + ' · ' + index + ' of ' + PHASES[p].span;
+      renderTicks(index, PHASES[p].span, false);
     }
   }
 

@@ -41,28 +41,73 @@ Rules of thumb:
 
 ## Type & rhythm
 
-- Display/body: system sans; mono: system mono for kickers, badges, code.
-- Section kickers: mono, letter-spaced, amber tick (`/`, `a`, `b`, …) prefix.
-- Space scale `--s-1 … --s-8`; radius scale `--r-s/m/l` (concentric: inner
-  elements one step smaller than their container).
+- Display/body: Libre Franklin; long-form: Newsreader; mono: Spline Sans Mono
+  (kickers, badges, numerals, code). Webfonts with system fallbacks.
+- The scale is deliberately restrained at the top (`--t-2xl` 27px section title,
+  `--t-4xl` 46px page title, `--t-display` ≤5.1rem wordmark): hierarchy comes
+  from weight, tracking and position as much as size. Tracking tokens
+  `--track-display / --track-title / --track-label`; the floor is −0.04em.
+- Section kickers: mono, letter-spaced, amber tick (`/`, `a`, `b`, …) prefix,
+  riding a hairline that dissolves to the right — the legend is the rule's
+  caption, not an eyebrow floating above the heading.
+- Every number is set `tabular-nums` (index numbers, step badges, progress,
+  tables, download chips) so counts read as measurement.
+- Browser surfaces are part of the design: themed text selection, caret colour,
+  the page scrollbar (graphite thumb, inset track), link underline offset and
+  thickness, and focus rings that follow each control's own radius.
+
+## Geometry
+
+- Radius scale — `--r-s` 4 (chips, inline code), `--r-m` 6 (cards, controls,
+  code figures, list frames), `--r-l` 10 (large panels), `--r-xl` 12 (the reading
+  sheet), `--r-control` 6 (the working control radius). **Nothing is a pill**;
+  only progress ticks, scrollbar thumbs and the status dots are round. Larger
+  radii are reserved for the two surfaces that genuinely behave like panes
+  (the sheet, the lightbox).
+- Control geometry — one height for every working control (`--h-control` 34px,
+  `--h-control-sm` 26px) and one radius, so buttons, cards and list rows line up
+  without being identical.
+- Depth — a 1px contact shadow for edge definition plus one soft ambient shadow
+  (`--elev-1/2/3`), an `--edge-hi` top highlight on raised surfaces and
+  `--inset-1`/`--inset-screen` on recessed ones. No coloured halos: the only
+  glow left is the status dot, which is an LED.
+- **Cards are the exception, not the container.** The home index is a divided
+  strip of four columns; the ledger rows are hairline-separated rows, not cards;
+  the support block is a plate between two rules. Reach for a panel only when a
+  surface genuinely floats above the page.
 
 ## Components
 
 - **Masthead** — sticky, `z-index: 50`, rests 10px below the top edge and pins to
-  `top: 0` on scroll. Brand mark = green dot + `J_W_I_`. Nav links get the amber
-  active underline. (Never give the masthead a `position: relative` group rule —
-  that silently un-sticks it; specificity bit us once.) In wizard app mode the
-  resting margin is dropped, so the masthead is flush to the viewport top and
-  `--mast-h` measures the bare height (61px desktop / 84px mobile); in-flow pages
-  keep the 10px rest (71 / 94px). `--mast-h` is always `offsetHeight + computed
-  top margin`, never `rect().bottom` — a sticky element's bottom edge is
-  scroll-dependent.
+  `top: 0` on scroll. A near-opaque graphite toolbar over a hairline base — **no
+  backdrop blur** (blur used as a mood is the most reliable "generated interface"
+  signal and it costs contrast); it gains a deeper shadow once pinned
+  (`is-stuck`). Brand mark = green dot + `J_W_I_`. Nav links get the amber
+  active underline and a growing hover underline. (Never give the masthead a
+  `position: relative` group rule — that silently un-sticks it; specificity bit
+  us once.) In wizard app mode the resting margin is dropped, so the masthead is
+  flush to the viewport top and `--mast-h` measures the bare height (61px desktop
+  / 84px mobile); in-flow pages keep the 10px rest (71 / 94px). `--mast-h` is
+  always `offsetHeight + computed top margin`, never `rect().bottom` — a sticky
+  element's bottom edge is scroll-dependent.
 - **Skip link** — every page opens with `<a class="skip-link" href="#main">`: the
-  first Tab stop, invisible until focused, then a blue pill above the masthead
+  first Tab stop, invisible until focused, then a blue control above the masthead
   (WCAG 2.4.1 bypass block). `main` carries `id="main"`.
-- **Buttons** — pills (`border-radius: 999px`), press = `scale(0.96)`.
-  Primary: blue gradient fill, `--blue-ink` text, soft glow. Ghost: blue outline,
-  blue text. Small variant for code-bar copy buttons.
+- **Buttons** — one geometry: 34px tall, `--r-control` (6px), 1px border, an
+  inner top highlight over a shallow surface gradient. Press is *grounded*:
+  the control sinks (`translateY(0.5px)`) and its fill darkens under an inset
+  shadow — no scale pop. Primary: blue fill, `--blue-ink` text. Ghost: blue
+  outline, blue text. Small variant (26px) for code-bar copy buttons.
+- **Index strip** (home) — the hero's table of contents: four divided columns
+  (number, name, one line of what it is) under a full-width legend, sitting on
+  the section rule. Two columns ≤860px, one hairline-separated column ≤560px.
+  `site.js` marks the section the reader is in with an amber mark on the strip's
+  own rule and `aria-current`.
+- **Reading progress** — a 2px amber hairline along the top edge, injected by
+  `site.js` on pages longer than ~1.6 screens; hidden in wizard app mode.
+- **Ledger rows** (home sections) — hairline-divided rows on the page
+  background: number, title + description, and the row's action. Hover raises
+  the row one step and turns the number amber. Never cards.
 - **Code figures** — `figure.code`: surface gradient bar (title + copy button) over
   a `--bg-0` screen. `margin-inline: 0` keeps the panel flush with the surrounding
   text (the UA figure's 40px inline margin would otherwise indent it).
@@ -97,26 +142,38 @@ Rules of thumb:
 ## Motion
 
 Everything animates only under `prefers-reduced-motion: no-preference`
-(CSS media gate + a `matchMedia` check in `site.js`).
+(CSS media gate + a `matchMedia` check in `site.js`). One curve carries the
+whole site — `--ease` is expo-out (`cubic-bezier(0.16, 1, 0.3, 1)`) so every
+state change leaves quickly and settles softly — with `--t-press` 90ms for
+anything answering a pointer, `--t-fast` 140ms for state, `--t-med` 240ms for
+layers, `--t-slow` 460ms for entrances.
 
-- **Scroll reveals** — `.fade-io` fades + rises 14px the first time it enters the
-  viewport (550ms) and *stays*; it never fades back out on scroll-up. The observer
-  unobserves after first reveal.
+- **Press** — controls sink (`translateY(0.5px)`) and darken under an inset
+  shadow. No scale pops; nothing bounces.
+- **Nav** — one underline serves hover and current: it grows from the centre on
+  hover and is simply already there on the current page.
+- **Scroll reveals** — `.fade-io` fades + rises 8px the first time it enters the
+  viewport and *stays*; it never fades back out on scroll-up. The observer
+  unobserves after first reveal, and a rAF-throttled sweep on scroll/resize
+  guarantees nothing stays hidden when content is jumped past.
+- **Masthead** — gains a deeper shadow once pinned (`is-stuck`), so it reads as
+  a layer above the page rather than a band that happens to sit there.
 - **Intro fades** — on load, the lead (the `[data-typewrite]` element) and the
   blocks named in `data-typewrite-then` fade in together (900 ms, no typing, no
   pauses, no stagger). Classes are stripped ~1.1 s later so the elements hand back
   to the scroll-reveal system. The blocks are hidden *instantly* (no transition on
   the way out) so the first paint never flashes visible → hidden → visible.
 - **Every load** — the fade plays on every page load (no session memory). The
-  home wordmark (`.hero-name`) rides the standard `.reveal` rise.
-- **Code scrollbars** — `.code-screen` (and `.table-scroll`) use a thin custom
-  scrollbar (`scrollbar-width: thin` + WebKit rules, `--surface-2` thumb) in place
-  of the default OS bar.
-- **Entrance** — `.reveal` rise animation for hero content.
+  home wordmark (`.hero-name`) rides the standard `.reveal` rise, and the index
+  strip assembles itself once (staggered 60–210ms) — the hero is the page's one
+  authored moment; everything below it fades in quietly.
+- **Code scrollbars** — `.code-screen` uses a thin custom scrollbar
+  (`scrollbar-width: thin` + WebKit rules, `--surface-2` thumb).
 - **Wizard steps** — each step revealed with `.wiz-enter` → `.wiz-shown`
   (340 ms opacity + 8 px rise, same language as `.fade-io`), driven by the wizard's
   state machine; skipped entirely under reduced motion. Steps deliberately carry no
-  `.fade-io` — the section's first reveal already covers the initial paint.
+  `.fade-io` — the section's first reveal already covers the initial paint. The
+  phase's step ticks and the progress hairline update on the same beat.
 
 ## Print
 

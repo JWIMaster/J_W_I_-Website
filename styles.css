@@ -68,15 +68,19 @@
   --tok-num: #d9b36a;
   --tok-com: #7c8798;
 
-  /* elevation — one light source, from above */
+  /* elevation — one light source, from above. Shadows stay tight and grounded:
+     a 1px contact shadow for edge definition, plus one soft ambient shadow for
+     the few surfaces that genuinely float. No coloured halos. */
   --elev-1:
     inset 0 1px 0 var(--edge-hi),
-    0 1px 2px rgba(0, 0, 0, 0.3),
-    0 10px 24px -14px rgba(0, 0, 0, 0.55);
+    0 1px 2px rgba(0, 0, 0, 0.38);
   --elev-2:
     inset 0 1px 0 var(--edge-hi-strong),
-    0 1px 2px rgba(0, 0, 0, 0.35),
-    0 18px 40px -18px rgba(0, 0, 0, 0.65);
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 12px 28px -18px rgba(0, 0, 0, 0.75);
+  --press:
+    inset 0 2px 5px rgba(0, 0, 0, 0.5),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.03);
   --inset-1:
     inset 0 2px 8px rgba(0, 0, 0, 0.45),
     inset 0 -1px 0 rgba(255, 255, 255, 0.04);
@@ -86,14 +90,26 @@
     0 1px 0 rgba(255, 255, 255, 0.05);
   --shadow-sheet:
     inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 1px 2px rgba(0, 0, 0, 0.35),
-    0 24px 64px -24px rgba(0, 0, 0, 0.7);
+    0 1px 2px rgba(0, 0, 0, 0.4),
+    0 28px 60px -28px rgba(0, 0, 0, 0.8);
+  --elev-3:
+    inset 0 1px 0 var(--edge-hi-strong),
+    0 1px 3px rgba(0, 0, 0, 0.5),
+    0 32px 64px -28px rgba(0, 0, 0, 0.82);
 
-  /* radii — concentric: panel 14 / inner 8 / control 8 / chip 6 */
-  --r-s: 6px;
-  --r-m: 8px;
-  --r-l: 14px;
-  --r-xl: 18px;
+  /* a hairline that dissolves to the right — ties a legend to its section
+     without drawing a hard rule across the whole page */
+  --rule-fade: linear-gradient(90deg, var(--line-strong) 0, var(--line) 24%, rgba(255, 255, 255, 0) 100%);
+
+  /* radii — a tight, deliberate scale. Controls and cards sit at 6, containers
+     at 8–10, and only the reading sheet and the lightbox earn 12. Nothing is a
+     pill and nothing rounds merely to feel friendly; the geometry is meant to
+     read as machined stock with softened edges, not as bubbles. */
+  --r-s: 4px;        /* ticks, chips, inline code */
+  --r-m: 6px;        /* cards, controls, list frames, code figures */
+  --r-l: 10px;       /* large panels */
+  --r-xl: 12px;      /* the reading sheet, the lightbox */
+  --r-control: 6px;  /* the working control radius */
 
   /* type */
   --font-display: "Libre Franklin", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -101,15 +117,28 @@
   --font-serif: "Newsreader", "Iowan Old Style", Georgia, serif;
   --font-mono: "Spline Sans Mono", Menlo, Consolas, "Liberation Mono", monospace;
 
-  /* scale (rem) */
+  /* scale (rem) — the display sizes are deliberately restrained: hierarchy here
+     comes from weight, tracking and position as much as from size, and a page
+     of oversized headings is the fastest way to look generated. */
   --t-xs: 0.78rem;   /* 12.5 labels */
   --t-sm: 0.85rem;   /* 13.5 */
   --t-md: 0.95rem;   /* 15.2 */
-  --t-lg: 1.06rem;   /* 17 */
-  --t-xl: 1.25rem;   /* 20 */
-  --t-2xl: 1.62rem;  /* 26 */
-  --t-3xl: 2.12rem;  /* 34 */
-  --t-4xl: 2.9rem;   /* 46 */
+  --t-lg: 1.08rem;   /* 17.3 */
+  --t-xl: 1.25rem;   /* 20 lede */
+  --t-2xl: 1.7rem;   /* 27.2 section title */
+  --t-3xl: 2.2rem;   /* 35.2 */
+  --t-4xl: 2.9rem;   /* 46.4 page title */
+  --t-display: clamp(3.2rem, 7.4vw, 5.1rem);  /* wordmark */
+
+  /* tracking — the floor is -0.04em */
+  --track-display: -0.038em;
+  --track-title: -0.02em;
+  --track-label: 0.13em;
+
+  /* control geometry — one height and one radius for every working control
+     (28px is the macOS "small" control size, used for the code-bar copy) */
+  --h-control: 34px;
+  --h-control-sm: 28px;
 
   /* spacing */
   --s-1: 4px;
@@ -133,10 +162,14 @@
                       it absorbs the 10px margin once stuck). The wizard's fixed shell and the
                       .wiz-main stage must clear the *at-rest* masthead in every scroll state. Do not hand-tune. */
 
-  /* motion */
-  --ease: cubic-bezier(0.2, 0, 0, 1);
+  /* motion — expo-out: quick to leave, long soft settle. One authored curve,
+     plus a fast duration for anything that answers a pointer. */
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --t-press: 90ms;
   --t-fast: 140ms;
-  --t-med: 220ms;
+  --t-med: 240ms;
+  --t-slow: 460ms;
 }
 
 /* ----------------------------- base ----------------------------- */
@@ -149,6 +182,32 @@
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* The page's own scrollbar is part of the surface too — same graphite thumb
+     as the code screens, inset so it reads as a groove rather than a slab.
+     (The UA default belongs to no design system.) */
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-2) transparent;
+}
+
+html::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+html::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: var(--surface-2);
+  background-clip: padding-box;
+  border: 3px solid transparent;
+  border-radius: 99px;
+}
+
+html::-webkit-scrollbar-thumb:hover {
+  background: #3d424b;
+  background-clip: padding-box;
 }
 
 body {
@@ -166,6 +225,7 @@ body {
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  caret-color: var(--accent);
 }
 
 /* fine brushed grain — barely there, fixed with the body */
@@ -196,7 +256,13 @@ footer.site-foot {
 a {
   color: var(--accent-hi);
   text-decoration: none;
-  transition: color var(--t-fast) var(--ease);
+  /* browser surfaces: when a link does carry an underline it is set against
+     the type instead of left at the UA's default offset/thickness */
+  text-underline-offset: 0.18em;
+  text-decoration-thickness: 0.06em;
+  transition:
+    color var(--t-fast) var(--ease),
+    text-decoration-color var(--t-fast) var(--ease);
 }
 
 a:hover {
@@ -206,7 +272,6 @@ a:hover {
 :focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
-  border-radius: 2px;
 }
 
 /* Keyboard bypass block: the masthead puts four links ahead of every page's
@@ -217,15 +282,18 @@ a:hover {
   top: 8px;
   left: 50%;
   z-index: 60;                     /* over .masthead (50) */
-  padding: 10px 16px;
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--h-control);
+  padding: 0 14px;
   font-family: var(--font-display);
   font-size: 13.5px;
   font-weight: 600;
   color: var(--blue-ink);
   background: linear-gradient(180deg, var(--blue-hi), var(--blue));
-  border: 1px solid rgba(19, 35, 56, 0.28);
-  border-radius: 999px;
-  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(19, 35, 56, 0.35);
+  border-radius: var(--r-control);
+  box-shadow: 0 8px 20px -10px rgba(0, 0, 0, 0.7);
   transform: translate(-50%, -180%);
   transition: transform var(--t-med) var(--ease);
 }
@@ -237,10 +305,27 @@ a:hover {
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 700;
-  line-height: 1.15;
-  letter-spacing: -0.015em;
+  line-height: 1.12;
+  letter-spacing: var(--track-title);
   margin: 0;
   text-wrap: balance;
+}
+
+/* Instrument numerals. Every number on the site — index rows, step badges,
+   progress, table figures, the wordmark's underscore ticks — sits in a fixed
+   cell, so counts read as measurement instead of as text. */
+.index-num,
+.toc .n,
+.step-badge,
+.wiz-progress,
+.os-ver,
+.dl-src,
+.foot-copy,
+.data-table td,
+.data-table th,
+.kicker .tick,
+#wiz-next .btn-ic {
+  font-variant-numeric: tabular-nums;
 }
 
 p {
@@ -277,30 +362,56 @@ code, pre, kbd {
 }
 
 .section-head {
-  display: flex;
-  align-items: baseline;
+  display: grid;
   gap: var(--s-3);
   margin-block-end: var(--s-5);
+  min-width: 0;
+}
+
+/* The legend rides a hairline that runs to the edge of the column, and the
+   heading carries the display weight underneath it. That turns the label from
+   an eyebrow floating above a title into the rule's own caption — the device
+   the rest of the chassis already uses. */
+.section-head .kicker,
+.page-head .kicker {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  min-width: 0;
+}
+
+.section-head .kicker::after,
+.page-head .kicker::after {
+  content: "";
+  flex: 1;
+  min-width: 0;
+  height: 1px;
+  background: var(--rule-fade);
 }
 
 .section-title {
-  font-size: var(--t-2xl);
-  letter-spacing: -0.02em;
+  font-size: clamp(1.5rem, 2.6vw, 1.9rem);
+  letter-spacing: var(--track-title);
+  line-height: 1.08;
+  /* at ~160px effective width a single word is wider than the column; break it
+     rather than pushing the page sideways (inert at real widths >= 320) */
+  overflow-wrap: break-word;
+  min-width: 0;
 }
 
 .kicker {
   font-family: var(--font-mono);
   font-size: var(--t-xs);
   font-weight: 500;
-  letter-spacing: 0.14em;
+  letter-spacing: var(--track-label);
   text-transform: uppercase;
   color: var(--ink-2);
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 @media (max-width: 640px) {
   .section-head {
-    flex-direction: column;
-    align-items: flex-start;
     gap: var(--s-2);
   }
 }
@@ -322,22 +433,22 @@ code, pre, kbd {
   display: grid;
   gap: var(--s-3);
   margin-block: var(--s-5) var(--s-6);
-  max-width: 720px;
+  max-width: 52rem;   /* shares the sheet's measure so the two align */
 }
 
 .page-head h1 {
-  font-size: clamp(2rem, 5.2vw, var(--t-4xl));
+  font-size: clamp(2.1rem, 5.4vw, var(--t-4xl));
   font-weight: 800;
-  letter-spacing: -0.03em;
-  line-height: 1.04;
+  letter-spacing: var(--track-display);
+  line-height: 1.02;
 }
 
 .page-head .lede {
   font-family: var(--font-serif);
-  font-size: clamp(1.1rem, 2vw, 1.3rem);
-  line-height: 1.55;
+  font-size: clamp(1.2rem, 2.2vw, 1.45rem);
+  line-height: 1.5;
   color: var(--ink-1);
-  max-width: 58ch;
+  max-width: 56ch;
 }
 
 /* ----------------------------- masthead ----------------------------- */
@@ -346,11 +457,23 @@ code, pre, kbd {
   top: 0;
   margin-block-start: 10px;
   z-index: 50;
-  background: rgba(30, 32, 36, 0.82);
-  -webkit-backdrop-filter: blur(14px) saturate(1.15);
-  backdrop-filter: blur(14px) saturate(1.15);
-  border-block-end: 1px solid var(--line);
-  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  /* A toolbar, not a sheet of glass: near-opaque graphite over a hairline base.
+     Blur used as a mood is the single most reliable "generated interface"
+     signal, and it costs contrast on every page it sits above. */
+  background: #1c1e22;
+  border-block-end: 1px solid var(--line-strong);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 0 rgba(0, 0, 0, 0.5);
+  transition: box-shadow var(--t-med) var(--ease);
+}
+
+/* once it is pinned it sits above the page and should say so */
+.masthead.is-stuck {
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    0 1px 0 rgba(0, 0, 0, 0.5),
+    0 14px 26px -20px rgba(0, 0, 0, 0.95);
 }
 
 .mast-inner {
@@ -403,6 +526,26 @@ code, pre, kbd {
   white-space: nowrap;
 }
 
+/* one underline serves both states: it grows from the centre on hover and is
+   simply already there on the current page */
+.nav a::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  bottom: 2px;
+  height: 2px;
+  border-radius: 1px;
+  background: var(--line-strong);
+  transform: scaleX(0);
+  transition:
+    transform var(--t-fast) var(--ease),
+    background var(--t-fast) var(--ease);
+}
+
+.nav a:hover::after {
+  transform: scaleX(0.5);
+}
+
 .nav a:hover {
   color: var(--ink-0);
 }
@@ -412,12 +555,7 @@ code, pre, kbd {
 }
 
 .nav a[aria-current="page"]::after {
-  content: "";
-  position: absolute;
-  inset-inline: 0;
-  bottom: 2px;
-  height: 2px;
-  border-radius: 2px;
+  transform: none;
   background: var(--accent);
 }
 
@@ -486,10 +624,16 @@ code, pre, kbd {
 }
 
 .sheet {
-  background: linear-gradient(180deg, var(--sheet-hi), var(--sheet) 120px);
+  /* sized to its measure rather than stretched to the container: a reading
+     page, not a panel with dead space down the right-hand side */
+  max-width: 52rem;
+  background: linear-gradient(180deg, var(--sheet-hi), var(--sheet) 140px);
   color: var(--sheet-ink);
   border-radius: var(--r-xl);
-  box-shadow: var(--shadow-sheet), inset 0 0 0 1px rgba(255, 255, 255, 0.06);
+  box-shadow:
+    var(--shadow-sheet),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.09);
 }
 
 .sheet-pad {
@@ -502,34 +646,31 @@ code, pre, kbd {
   align-items: center;
   justify-content: center;
   gap: var(--s-2);
+  min-height: var(--h-control);
+  padding: 0 14px;
   font-family: var(--font-display);
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
-  letter-spacing: 0.01em;
+  letter-spacing: 0.002em;
   color: var(--ink-0);
-  padding: 10px 18px;
-  border-radius: 999px;
+  border-radius: var(--r-control);
   background: linear-gradient(180deg, var(--surface-2), var(--surface-0));
-  border: 1px solid rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(0, 0, 0, 0.45);
   box-shadow:
     inset 0 1px 0 var(--edge-hi-strong),
-    0 1px 2px rgba(0, 0, 0, 0.35),
-    0 8px 18px -10px rgba(0, 0, 0, 0.6);
+    0 1px 2px rgba(0, 0, 0, 0.4);
   transition:
-    transform var(--t-fast) var(--ease),
+    transform var(--t-press) var(--ease),
     box-shadow var(--t-fast) var(--ease),
     background var(--t-fast) var(--ease),
     border-color var(--t-fast) var(--ease),
     color var(--t-fast) var(--ease);
   text-align: center;
 }
-.btn:active {
-  transform: scale(0.96);
-}
 .os-card:active,
 .path-card:active,
 .dl-list .dl-row:active {
-  transform: scale(0.98);
+  transform: translateY(0.5px);
 }
 
 .btn:hover {
@@ -537,46 +678,54 @@ code, pre, kbd {
   border-color: var(--line-strong);
   box-shadow:
     inset 0 1px 0 var(--edge-hi-strong),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 12px 22px -10px rgba(0, 0, 0, 0.65);
+    0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
+/* pressed = grounded: the control sinks into the chassis and its fill darkens,
+   rather than popping in scale like a toy */
 .btn:active {
-  transform: scale(0.96);
-  box-shadow:
-    inset 0 2px 6px rgba(0, 0, 0, 0.4),
-    0 1px 1px rgba(0, 0, 0, 0.3);
+  transform: translateY(0.5px);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-0));
+  box-shadow: var(--press);
 }
 
 .btn:disabled {
-  opacity: 0.65;
+  opacity: 0.45;
   cursor: default;
 }
 
-/* primary action — pastel blue, the site's secondary accent */
+.btn:disabled:active {
+  transform: none;
+  box-shadow:
+    inset 0 1px 0 var(--edge-hi-strong),
+    0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+/* primary action — pastel blue, the site's secondary accent. Filled, one step
+   brighter than the chassis, and lifted by 1px of contact shadow rather than a
+   coloured glow. */
 .btn-primary {
   color: var(--blue-ink);
   background: linear-gradient(180deg, var(--blue-hi), var(--blue));
-  border-color: rgba(19, 35, 56, 0.28);
+  border-color: rgba(19, 35, 56, 0.35);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 1px 2px rgba(0, 0, 0, 0.4),
-    0 10px 22px -10px rgba(143, 181, 221, 0.5);
+    inset 0 1px 0 rgba(255, 255, 255, 0.5),
+    0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
 .btn-primary:hover {
   background: linear-gradient(180deg, #b8d3ef, var(--blue-hi));
   border-color: rgba(19, 35, 56, 0.32);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.5),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 14px 26px -10px rgba(143, 181, 221, 0.55);
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 .btn-primary:active {
+  background: linear-gradient(180deg, var(--blue), var(--blue-lo));
   box-shadow:
-    inset 0 2px 6px rgba(19, 35, 56, 0.35),
-    0 1px 1px rgba(0, 0, 0, 0.35);
+    inset 0 2px 6px rgba(19, 35, 56, 0.4),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.15);
 }
 
 /* secondary action — blue-tinted glass over the chassis */
@@ -595,14 +744,16 @@ code, pre, kbd {
 }
 
 .btn-ghost:active {
-  transform: scale(0.96);
+  transform: translateY(0.5px);
   background: var(--blue-dim);
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
 .btn-sm {
-  font-size: 12.5px;
-  padding: 6px 12px;
-  border-radius: 999px;
+  min-height: var(--h-control-sm);
+  padding: 0 10px;
+  font-size: 12px;
+  border-radius: var(--r-s);
   gap: 6px;
 }
 
@@ -656,6 +807,14 @@ code, pre, kbd {
   margin-block-start: 1.35em;
 }
 
+/* the opening paragraph carries a little more weight — a standfirst, without
+   touching a word of the copy */
+.prose > p:first-of-type {
+  font-size: 1.13em;
+  letter-spacing: -0.004em;
+  color: var(--sheet-ink);
+}
+
 /* keep the last line of a paragraph from being a single orphaned word */
 .prose p {
   text-wrap: pretty;
@@ -687,7 +846,7 @@ code, pre, kbd {
   display: flex;
   align-items: center;
   gap: var(--s-3);
-  padding: 10px 14px;
+  padding: 7px 10px 7px 12px;
   background: linear-gradient(180deg, var(--surface-1), var(--surface-0));
   border-radius: var(--r-m) var(--r-m) 0 0;
   border-bottom: 1px solid rgba(0, 0, 0, 0.5);
@@ -696,9 +855,9 @@ code, pre, kbd {
 
 .code-title {
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11.5px;
   font-weight: 500;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   color: var(--ink-1);
   min-width: 0;
   overflow: hidden;
@@ -720,7 +879,7 @@ code, pre, kbd {
   border-radius: 0 0 var(--r-m) var(--r-m);
   box-shadow: var(--inset-screen);
   overflow-x: auto;
-  padding: 18px 20px;
+  padding: 16px 18px;
 }
 
 /* custom scrollbar for the code screens — the default OS bar looks out of place */
@@ -989,9 +1148,9 @@ code, pre, kbd {
 /* screenshots in a recessed frame */
 .shot {
   margin-block-start: var(--s-4);
-  padding: 8px;
+  padding: 6px;
   background: var(--inset-0);
-  border-radius: 10px;
+  border-radius: var(--r-m);
   box-shadow: var(--inset-1), 0 1px 0 rgba(255, 255, 255, 0.05);
 }
 
@@ -1008,79 +1167,142 @@ code, pre, kbd {
 /* ----------------------------- home: hero ----------------------------- */
 .hero {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
-  gap: clamp(32px, 6vw, 72px);
-  /* the index panel is taller than the wordmark block; centring the left
-     column against it stops the hero from reading as top-heavy dead space */
-  align-items: center;
-  margin-block: clamp(24px, 5vw, 56px) var(--s-8);
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  gap: clamp(20px, 2.6vw, 36px) clamp(32px, 6vw, 72px);
+  /* the wordmark and the standfirst share the top row on one baseline; the
+     index strip runs underneath at full width */
+  align-items: end;
+  margin-block: clamp(28px, 5vw, 64px) var(--s-7);
+  padding-block-end: clamp(24px, 4vw, 40px);
+  /* closes the opening screen with a seam that dissolves at both ends, rather
+     than a full-width border that would cut the page in half */
+  background-image: linear-gradient(90deg, transparent 0, var(--line-strong) 8%, var(--line) 55%, transparent 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  background-position: 0 100%;
+}
+
+/* the wrapper is transparent to the grid, so the wordmark, the standfirst and
+   the index strip can be placed on it directly */
+.hero > div {
+  display: contents;
 }
 
 .hero-name {
-  font-size: min(clamp(3.2rem, 9.5vw, 5.6rem), 21vw);
+  grid-column: 1;
+  grid-row: 1;
+  align-self: end;
+  font-size: min(var(--t-display), 21vw);
   font-weight: 800;
-  letter-spacing: -0.035em;
-  line-height: 0.98;
-  margin-block-end: var(--s-5);
-}
-
-/* light-from-above: the letters read as softly lit metal, not flat ink */
-.hero-name {
-  background: linear-gradient(180deg, #f7f8f9 0%, #c6cbd2 52%, #8f959e 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  letter-spacing: var(--track-display);
+  line-height: 0.92;
+  margin-block-end: 0;
+  /* Letterpress, not chrome: a solid weight of ink with a 1px shadow under it,
+     the way type sits on machined stock. Gradient-filled lettering was the
+     single most "generated" detail on the page, and it banded badly at large
+     sizes. The amber underscores carry the identity instead. */
+  color: var(--ink-0);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
 .hero-name .u {
   color: var(--accent);
-  -webkit-text-fill-color: var(--accent);
-  background: none;
 }
 
 .hero-tagline {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
   font-family: var(--font-serif);
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-size: clamp(1.15rem, 2.2vw, 1.45rem);
   font-style: italic;
+  line-height: 1.45;
   color: var(--ink-1);
-  margin-block-end: var(--s-5);
+  max-width: 32ch;
 }
 
-/* hero table of contents */
+/* The index — a divided full-width strip, not a floating card. Four columns of
+   the same ledger the rows below use: number, name, one line of what it is,
+   separated by hairlines. It doubles as the page's map, so it also marks the
+   section the reader is currently in. */
 .toc {
-  padding: var(--s-5);
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-block-start: clamp(28px, 4vw, 48px);
+  padding: 0;
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .toc-title {
   display: flex;
   align-items: center;
-  gap: var(--s-2);
+  gap: var(--s-3);
   margin-block-end: var(--s-4);
+}
+
+/* the legend runs into a hairline, the way an engraved label sits on a rule */
+.toc-title::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--rule-fade);
 }
 
 .toc-list {
   display: grid;
-  gap: 2px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-block-start: 1px solid var(--line-strong);
 }
 
 .toc a {
+  position: relative;
   display: grid;
-  grid-template-columns: 28px minmax(0, 1fr);
-  gap: var(--s-2) var(--s-3);
-  align-items: baseline;
-  padding: 10px 12px;
-  border-radius: var(--r-m);
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 2px var(--s-3);
+  align-content: start;
+  padding: var(--s-4) var(--s-5) var(--s-5);
+  border-inline-start: 1px solid var(--line);
   color: var(--ink-0);
   transition: background var(--t-fast) var(--ease);
 }
 
+.toc a:first-child {
+  border-inline-start: 0;
+  padding-inline-start: 0;
+}
+
 .toc a:hover {
-  background: rgba(255, 255, 255, 0.045);
+  background: rgba(255, 255, 255, 0.022);
+}
+
+/* the section the reader is actually in: an amber mark on the strip's own rule */
+.toc a.is-current::before {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  top: -1px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.toc a.is-current {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.toc a.is-current .n {
+  color: var(--accent);
+}
+
+.toc a.is-current .t {
+  color: var(--ink-0);
 }
 
 .toc .n {
   font-family: var(--font-mono);
   font-size: 11.5px;
+  line-height: 1.85;
   color: var(--ink-3);
   transition: color var(--t-fast) var(--ease);
 }
@@ -1090,23 +1312,39 @@ code, pre, kbd {
 }
 
 .toc .t {
-  font-weight: 500;
+  font-weight: 600;
   font-size: 14.5px;
-  letter-spacing: 0;
+  letter-spacing: -0.008em;
   color: var(--ink-1);
-  /* single-word labels (e.g. "Photography") must break inside the
-     minmax(0,1fr) cell at extreme emulated widths instead of
-     spilling the 28px + gap grid past the container (25px page
-     overflow at vw160); inert at real widths >= 320 where the cell
-     is ~168px wide and the label fits on one line */
+  /* single words must be able to break once a column gets very narrow */
   overflow-wrap: break-word;
 }
 
 .toc .d {
-  grid-column: 2;
+  grid-column: 1 / -1;
   font-size: 12.5px;
   color: var(--ink-2);
   line-height: 1.45;
+}
+
+/* The strip assembles itself, once — the hero's authored moment. Everything
+   else on the page fades in quietly as it is reached. */
+@media (prefers-reduced-motion: no-preference) {
+  .toc a {
+    animation: toc-row-in 420ms var(--ease) both;
+  }
+
+  .toc a:nth-child(1) { animation-delay: 60ms; }
+  .toc a:nth-child(2) { animation-delay: 110ms; }
+  .toc a:nth-child(3) { animation-delay: 160ms; }
+  .toc a:nth-child(4) { animation-delay: 210ms; }
+
+  @keyframes toc-row-in {
+    from {
+      opacity: 0;
+      transform: translateY(7px);
+    }
+  }
 }
 
 /* ----------------------------- home: index rows ----------------------------- */
@@ -1123,19 +1361,25 @@ code, pre, kbd {
   gap: var(--s-4) clamp(16px, 4vw, 48px);
   align-items: center;
   background: var(--bg-1);
-  padding: clamp(18px, 3vw, 28px) var(--s-5);
-  border-radius: 2px;
-  transition: background var(--t-med) var(--ease);
+  padding: clamp(16px, 2.4vw, 24px) var(--s-5);
+  border-radius: 0;
+  transition:
+    background var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
 }
 
+/* the hover raises the row and catches the same top light as every other
+   raised surface; the row's action lifts with it */
 .index-row:hover {
   background: var(--surface-0);
+  box-shadow: inset 0 1px 0 var(--edge-hi);
 }
 
 .index-num {
   font-family: var(--font-mono);
   font-size: 13px;
   font-weight: 500;
+  letter-spacing: 0.02em;
   color: var(--ink-3);
   transition: color var(--t-fast) var(--ease);
 }
@@ -1145,9 +1389,9 @@ code, pre, kbd {
 }
 
 .index-title {
-  font-size: clamp(1.15rem, 2.4vw, 1.45rem);
+  font-size: clamp(1.08rem, 1.8vw, 1.28rem);
   font-weight: 700;
-  letter-spacing: -0.015em;
+  letter-spacing: var(--track-title);
 }
 
 .index-desc {
@@ -1198,12 +1442,18 @@ code, pre, kbd {
 }
 
 /* ----------------------------- support ----------------------------- */
+/* No card: the contact block is a divided plate — the same device as every
+   other list on the site. Label, the thing itself, then its action. */
 .contact-panel {
-  padding: clamp(24px, 5vw, 48px);
   display: grid;
   gap: var(--s-5);
   justify-items: start;
   max-width: 640px;
+  padding-block: clamp(24px, 4vw, 40px);
+  border-block: 1px solid var(--line);
+  background: none;
+  box-shadow: none;
+  border-radius: 0;
 }
 
 .contact-block {
@@ -1299,16 +1549,57 @@ code, pre, kbd {
 /* ----------------------------- responsive ----------------------------- */
 @media (max-width: 860px) {
   .hero {
-    grid-template-columns: 1fr;
-    gap: var(--s-6);
+    grid-template-columns: minmax(0, 1fr);
+    gap: var(--s-5);
+    align-items: start;
   }
 
+  .hero-name,
+  .hero-tagline,
   .toc {
-    max-width: 560px;
+    grid-column: 1;
+  }
+
+  .hero-name { grid-row: 1; }
+  .hero-tagline { grid-row: 2; }
+  .toc { grid-row: 3; }
+
+  /* two columns of the index strip, dividers following the wrap */
+  .toc-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .toc a:nth-child(odd) {
+    border-inline-start: 0;
+    padding-inline-start: 0;
+  }
+
+  .toc a:nth-child(n + 3) {
+    border-block-start: 1px solid var(--line);
   }
 
   .section {
     margin-block: var(--s-7);
+  }
+}
+
+/* The strip stacks to one entry per row. This has to come after the two-column
+   rule above: both queries match a 390px phone, and source order decides. */
+@media (max-width: 560px) {
+  .toc-list {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .toc a,
+  .toc a:first-child {
+    border-inline-start: 0;
+    padding-inline: 0;
+    padding-block: var(--s-4);
+    border-block-start: 1px solid var(--line);
+  }
+
+  .toc a:first-child {
+    border-block-start: 0;
   }
 }
 
@@ -1362,18 +1653,12 @@ code, pre, kbd {
    two-column row instead: number above the label, full width for the text, and
    trim the panel padding. */
 @media (max-width: 240px) {
-  .toc {
-    padding: var(--s-4);
-  }
-
   .toc a {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 2px;
-    padding: 8px 6px;
+    padding-block: var(--s-3);
   }
 
   .toc .d {
-    grid-column: 1;
+    font-size: 12px;
   }
 }
 
@@ -1383,8 +1668,8 @@ code, pre, kbd {
     opacity: 0;
     transform: translateY(8px);
     transition:
-      opacity 340ms var(--ease),
-      transform 340ms var(--ease);
+      opacity var(--t-slow) var(--ease),
+      transform var(--t-slow) var(--ease);
   }
 
   .fade-io.is-in {
@@ -1502,9 +1787,9 @@ code, pre, kbd {
   display: none;
 }
 .wizard-step .step-body h3 {
-  font-size: clamp(1.3rem, 2.4vw, 1.7rem);
+  font-size: clamp(1.15rem, 1.9vw, 1.4rem);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: var(--track-title);
 }
 .wizard-step .step-body p {
   max-width: 56ch;
@@ -1865,13 +2150,74 @@ code, pre, kbd {
   border-block-start: 1px solid var(--line);
 }
 .wiz-progress {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-2) var(--s-3);
+  min-width: 0;
   margin-inline: auto;
   font-family: var(--font-mono);
   font-size: 11.5px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--ink-2);
-  white-space: nowrap;
+}
+
+/* Step ticks — the run of marks an instrument uses to say how far along you
+   are. The text stays as the label; this is the reading of it. */
+.wiz-ticks {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  flex: none;
+}
+
+.wiz-ticks span {
+  display: block;
+  width: 13px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--surface-2);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.4);
+  transition:
+    background var(--t-med) var(--ease),
+    box-shadow var(--t-med) var(--ease);
+}
+
+.wiz-ticks span.is-done {
+  background: var(--accent-lo);
+}
+
+.wiz-ticks span.is-current {
+  background: var(--blue);
+  box-shadow: 0 0 0 1px var(--blue-dim);
+}
+
+/* Reading progress: a hairline of amber along the very top edge of the screen.
+   Hidden while the wizard owns the viewport, which does not scroll. */
+.read-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  z-index: 55;                     /* over .masthead (50) */
+  transform: scaleX(0);
+  transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent-lo), var(--accent-hi));
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity var(--t-med) var(--ease);
+}
+
+.read-progress.is-live {
+  opacity: 1;
+}
+
+body.wiz-app .read-progress,
+html.wiz-app .read-progress {
+  display: none;
 }
 
 /* step transitions: the outgoing step fades up and out (short, soft),
@@ -1913,7 +2259,7 @@ code, pre, kbd {
   .wiz-progress {
     order: 3;
     width: 100%;
-    text-align: center;
+    justify-content: center;
     margin-block-start: var(--s-1);
   }
   #wiz-next {
@@ -1927,6 +2273,12 @@ code, pre, kbd {
  * Green is the site's "done" colour, the same green as the selection dots. */
 #wiz-next {
   max-width: 100%;
+}
+
+/* the primary action reads as the action; it is dimmed, not recoloured, while
+   the step still needs a choice */
+#wiz-next:disabled {
+  opacity: 0.5;
 }
 #wiz-next .btn-ic {
   flex: none;
@@ -2141,7 +2493,7 @@ body.wiz-app .wiz-progress,
 html.wiz-app .wiz-progress {
   order: 3;
   width: 100%;
-  text-align: center;
+  justify-content: center;
   margin-block-start: var(--s-1);
 }
 body.wiz-app .wiz-confirm,
@@ -2199,12 +2551,18 @@ html.wiz-app .wizard-step:not(.is-hidden) {
 
   .btn,
   .nav a,
+  .nav a::after,
   .link-arrow .arr,
   .os-card,
   .path-card,
   .dl-list .dl-row,
   .os-dot,
   .path-dot,
+  .masthead,
+  .read-progress,
+  .toc a,
+  .toc a::before,
+  .wiz-ticks span,
   #wiz-next .btn-ic::after {
     transition: none;
     animation: none;
