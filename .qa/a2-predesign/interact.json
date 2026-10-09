@@ -1,0 +1,52 @@
+[
+ {
+  "check": "brokenLinks",
+  "result": []
+ },
+ {
+  "check": "linkCount",
+  "result": 21
+ },
+ {
+  "check": "copyButton",
+  "result": {
+   "n": 4,
+   "copiedLen": 142,
+   "labelAfter": "Copied ✓"
+  }
+ },
+ {
+  "check": "tocAnchors",
+  "result": {
+   "n": 4,
+   "bad": []
+  }
+ },
+ {
+  "check": "navActive",
+  "result": "Support"
+ },
+ {
+  "check": "wizardOpen",
+  "result": {
+   "vis": true,
+   "step": 28
+  }
+ },
+ {
+  "check": "wizardAdvance",
+  "result": {
+   "advanced": 7,
+   "blockedStates": 1
+  }
+ },
+ {
+  "check": "wizardGeometry",
+  "result": {
+   "mastBottom": 61,
+   "wizTop": 61,
+   "gap": 0,
+   "mastVar": "61px"
+  }
+ }
+]

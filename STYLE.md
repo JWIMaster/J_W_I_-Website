@@ -1,7 +1,7 @@
 # J_W_I_ — Design System
 
-Softly-lit graphite. Every page is dark; the only light surface is the warm reading
-sheet that carries long-form text. Amber is the identity accent; pastel blue is the
+Softly-lit graphite. Every page is dark; the warm dark reading
+sheet carries long-form text. Amber is the identity accent; pastel blue is the
 control accent.
 
 ## Pages
@@ -27,7 +27,7 @@ only.
 | `--inset-0` | `#1a1b1f` | recessed wells |
 | `--sheet` / `--sheet-hi` | `#262329` / `#2b2830` | the warm dark reading sheet (article) |
 | `--sheet-ink` / `-soft` / `-faint` | `#e9e6de` / `#aaa49a` / `#948e84` | sheet text: body / secondary / meta |
-| `--ink-0..3` | `#edeeef` → `#828893` | page text: body → tertiary |
+| `--ink-0..3` | `#edeeef` → `#989faa` | page text: body → tertiary |
 | `--accent` / `-hi` / `-lo` | `#e5a13d` / `#f0b45c` / `#c9862a` | **identity only**: kickers, ticks, active-nav underscore, hero underscore, step badges |
 | `--blue` / `-hi` / `-lo` | `#8fb5dd` / `#a9c9ea` / `#6f99c6` | **controls only**: buttons, typing cursor |
 | `--blue-ink` | `#132338` | text on blue fills (7.4:1 on `--blue`) |
@@ -36,8 +36,8 @@ Rules of thumb:
 - Amber never appears on a control; blue never appears on identity marks.
 - The sheet is warm (slight violet-brown lift over the neutral graphite) so prose
   reads as a "page" without a light surface. Code figures sit darker still.
-- Every text/background pair clears WCAG AA (≥ 4.5:1); `ink-2` at 4.27:1 is
-  reserved for tertiary meta only.
+- Secondary labels use `--ink-2: #9ba1ab` and numerals use
+  `--ink-3: #989faa`, keeping small text readable on graphite surfaces.
 
 ## Type & rhythm
 
@@ -64,8 +64,8 @@ Rules of thumb:
   only progress ticks, scrollbar thumbs and the status dots are round. Larger
   radii are reserved for the two surfaces that genuinely behave like panes
   (the sheet, the lightbox).
-- Control geometry — one height for every working control (`--h-control` 34px,
-  `--h-control-sm` 26px) and one radius, so buttons, cards and list rows line up
+- Control geometry — one height for every working control (`--h-control` 38px,
+  `--h-control-sm` 28px) and one radius, so buttons, cards and list rows line up
   without being identical.
 - Depth — a 1px contact shadow for edge definition plus one soft ambient shadow
   (`--elev-1/2/3`), an `--edge-hi` top highlight on raised surfaces and
@@ -93,11 +93,11 @@ Rules of thumb:
 - **Skip link** — every page opens with `<a class="skip-link" href="#main">`: the
   first Tab stop, invisible until focused, then a blue control above the masthead
   (WCAG 2.4.1 bypass block). `main` carries `id="main"`.
-- **Buttons** — one geometry: 34px tall, `--r-control` (6px), 1px border, an
+- **Buttons** — one geometry: 38px tall (44px on touch devices), `--r-control` (6px), 1px border, an
   inner top highlight over a shallow surface gradient. Press is *grounded*:
   the control sinks (`translateY(0.5px)`) and its fill darkens under an inset
   shadow — no scale pop. Primary: blue fill, `--blue-ink` text. Ghost: blue
-  outline, blue text. Small variant (26px) for code-bar copy buttons.
+  outline, blue text. Small variant (28px) for code-bar copy buttons.
 - **Index strip** (home) — the hero's table of contents: four divided columns
   (number, name, one line of what it is) under a full-width legend, sitting on
   the section rule. Two columns ≤860px, one hairline-separated column ≤560px.
@@ -130,7 +130,7 @@ Rules of thumb:
   exactly like the OS picker) choosing the templates path or the manual path;
   `data-path` steps are hidden from the other branch. Per-OS variants
   (`[data-os]`) carry the OS name in their headings so each reads standalone;
-  no-JS visitors get the whole guide stacked. Back/Next pill buttons in
+  no-JS visitors get the whole guide stacked. Back/Next buttons in
   `.wiz-controls`; on the final step Next hides and a "Start over" ghost
   button resets the confirms and path choice (keeping the OS).
   In app mode the page itself must never scroll: `body.wiz-app` and the html
@@ -206,3 +206,13 @@ sticky/overlay chrome (masthead sticks statically, `.skip-link`, `.lightbox`,
 Captures for visual review must be viewport screenshots taken after an instant
 scroll pass; `fullPage: true` rasterises not-yet-revealed layers as blank fills
 and reads as content loss that is not there.
+
+## UI polish
+
+The home hero opens with a mono “Code · Colour · Camera” legend. Colour Snap
+earns a six-colour strip; it is decorative and hidden from assistive technology.
+Home actions use trailing arrows (diagonal for external destinations). Keyboard
+focus raises ledger rows like pointer hover, and control focus uses pastel blue.
+Primary link buttons keep dark text on hover; disabled buttons do not pick up
+hover styling. Confirmed wizard actions use the same grounded press and neutral
+shadow as the other controls. Arrow movement honours reduced motion.

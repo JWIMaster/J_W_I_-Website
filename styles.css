@@ -37,8 +37,8 @@
   /* ink */
   --ink-0: #edeeef;
   --ink-1: #a9afb8;
-  --ink-2: #7d838d;
-  --ink-3: #828893;
+  --ink-2: #9ba1ab;
+  --ink-3: #989faa;
 
   /* accents */
   --accent: #e5a13d;
@@ -137,7 +137,7 @@
 
   /* control geometry — one height and one radius for every working control
      (28px is the macOS "small" control size, used for the code-bar copy) */
-  --h-control: 34px;
+  --h-control: 38px;
   --h-control-sm: 28px;
 
   /* spacing */
@@ -283,7 +283,7 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
 
@@ -693,7 +693,9 @@ code, pre, kbd {
   transform: translateY(0.5px);
 }
 
-.btn:hover {
+.btn:enabled:hover,
+a.btn:hover {
+  color: var(--ink-0);
   background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
   border-color: var(--line-strong);
   box-shadow:
@@ -733,7 +735,9 @@ code, pre, kbd {
     0 1px 2px rgba(0, 0, 0, 0.45);
 }
 
-.btn-primary:hover {
+.btn-primary:enabled:hover,
+a.btn-primary:hover {
+  color: var(--blue-ink);
   background: linear-gradient(180deg, #b8d3ef, var(--blue-hi));
   border-color: rgba(19, 35, 56, 0.32);
   box-shadow:
@@ -756,7 +760,8 @@ code, pre, kbd {
   color: #c4d8ef;
 }
 
-.btn-ghost:hover {
+.btn-ghost:enabled:hover,
+a.btn-ghost:hover {
   background: var(--blue-dim);
   border-color: rgba(143, 181, 221, 0.55);
   color: #dbe8f7;
@@ -1212,7 +1217,7 @@ code, pre, kbd {
 
 .hero-name {
   grid-column: 1;
-  grid-row: 1;
+  grid-row: 2;
   align-self: end;
   font-size: min(var(--t-display), 21vw);
   font-weight: 800;
@@ -1233,7 +1238,7 @@ code, pre, kbd {
 
 .hero-tagline {
   grid-column: 2;
-  grid-row: 1;
+  grid-row: 2;
   align-self: end;
   font-family: var(--font-serif);
   font-size: clamp(1.15rem, 2.2vw, 1.45rem);
@@ -1249,7 +1254,7 @@ code, pre, kbd {
    section the reader is currently in. */
 .toc {
   grid-column: 1 / -1;
-  grid-row: 2;
+  grid-row: 3;
   margin-block-start: clamp(28px, 4vw, 48px);
   padding: 0;
   background: none;
@@ -1392,7 +1397,8 @@ code, pre, kbd {
 
 /* the hover raises the row and catches the same top light as every other
    raised surface; the row's action lifts with it */
-.index-row:hover {
+.index-row:hover,
+.index-row:focus-within {
   background: var(--surface-0);
   box-shadow: inset 0 1px 0 var(--edge-hi);
 }
@@ -1406,7 +1412,8 @@ code, pre, kbd {
   transition: color var(--t-fast) var(--ease);
 }
 
-.index-row:hover .index-num {
+.index-row:hover .index-num,
+.index-row:focus-within .index-num {
   color: var(--accent);
 }
 
@@ -1512,7 +1519,7 @@ code, pre, kbd {
 }
 
 .contact-email:hover {
-  color: var(--accent-hi);
+  color: var(--blue-hi);
 }
 
 /* ----------------------------- footer ----------------------------- */
@@ -1591,9 +1598,9 @@ code, pre, kbd {
     grid-column: 1;
   }
 
-  .hero-name { grid-row: 1; }
-  .hero-tagline { grid-row: 2; }
-  .toc { grid-row: 3; }
+  .hero-name { grid-row: 2; }
+  .hero-tagline { grid-row: 3; }
+  .toc { grid-row: 4; }
 
   /* two columns of the index strip, dividers following the wrap */
   .toc-list {
@@ -2357,15 +2364,14 @@ html.wiz-app .read-progress {
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.4),
     0 1px 2px rgba(0, 0, 0, 0.4),
-    0 10px 22px -10px rgba(79, 196, 124, 0.55);
+    0 2px 4px rgba(0, 0, 0, 0.4);
 }
 #wiz-next.is-armed:hover {
   background: linear-gradient(180deg, #74dc9d, #5bcd86);
   border-color: rgba(13, 35, 20, 0.45);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.45),
-    0 2px 4px rgba(0, 0, 0, 0.4),
-    0 14px 26px -10px rgba(79, 196, 124, 0.6);
+    0 2px 4px rgba(0, 0, 0, 0.4);
 }
 #wiz-next.is-armed .btn-ic {
   color: var(--green-ink);
@@ -2373,7 +2379,7 @@ html.wiz-app .read-progress {
   border-color: rgba(13, 35, 20, 0.4);
 }
 #wiz-next.is-armed:active {
-  transform: scale(0.96);
+  transform: translateY(0.5px);
   box-shadow:
     inset 0 2px 6px rgba(13, 35, 20, 0.3),
     0 1px 1px rgba(0, 0, 0, 0.3);
@@ -2580,6 +2586,52 @@ html.wiz-app .wizard-step:not(.is-hidden) {
   transform: none;
 }
 
+/* Editorial details: the opening legend and Colour Snap's colour strip. */
+.hero-caption {
+  grid-column: 1 / -1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+}
+.hero-caption .tick { margin-inline-end: 0; }
+.hero-caption::after {
+  content: "";
+  height: 1px;
+  flex: 1;
+  min-width: 24px;
+  background: var(--rule-fade);
+}
+.colour-study {
+  display: flex;
+  gap: 5px;
+  margin-block-start: var(--s-2);
+  width: min(100%, 192px);
+}
+.colour-study span {
+  flex: 1;
+  height: 6px;
+  border-radius: 1px;
+  background: #e28e79;
+}
+.colour-study span:nth-child(2) { background: #e5b65e; }
+.colour-study span:nth-child(3) { background: #a5bc83; }
+.colour-study span:nth-child(4) { background: #80bfb9; }
+.colour-study span:nth-child(5) { background: #8fb5dd; }
+.colour-study span:nth-child(6) { background: #b39bcc; }
+.action-arrow {
+  flex: none;
+  font-size: 16px;
+  line-height: 1;
+  transition: transform var(--t-fast) var(--ease);
+}
+.btn:hover .action-arrow { transform: translateX(2px); }
+.btn[target="_blank"]:hover .action-arrow { transform: translate(2px, -2px); }
+@media (pointer: coarse) {
+  .btn:not(.btn-sm) { min-height: 44px; }
+}
+
 /* ----------------------------- reduced motion ----------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -2587,6 +2639,10 @@ html.wiz-app .wizard-step:not(.is-hidden) {
   }
 
   .btn,
+  .action-arrow,
+  .index-row,
+  .index-num,
+  .toc .n,
   .nav a,
   .nav a::after,
   .link-arrow .arr,
@@ -2604,6 +2660,9 @@ html.wiz-app .wizard-step:not(.is-hidden) {
     transition: none;
     animation: none;
   }
+  #wiz-next.is-armed:active,
+  .btn:hover .action-arrow,
+  .btn[target="_blank"]:hover .action-arrow,
   .btn:active,
   .os-card:active,
   .path-card:active,

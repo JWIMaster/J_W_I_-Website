@@ -1,0 +1,9849 @@
+[
+ {
+  "url": "index.html",
+  "W": 1920,
+  "H": 1200,
+  "zoom": 100,
+  "vw": 1920,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1200,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 2,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2411,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 1728,
+  "H": 1080,
+  "zoom": 100,
+  "vw": 1728,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1080,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 2,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2411,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 1440,
+  "H": 900,
+  "zoom": 100,
+  "vw": 1440,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 900,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 3,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2411,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 1280,
+  "H": 800,
+  "zoom": 100,
+  "vw": 1280,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 5,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2408,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 1120,
+  "H": 700,
+  "zoom": 100,
+  "vw": 1120,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 700,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2382,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 1024,
+  "H": 640,
+  "zoom": 100,
+  "vw": 1024,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 640,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2333,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 960,
+  "H": 720,
+  "zoom": 100,
+  "vw": 960,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 720,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2282,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 900,
+  "H": 675,
+  "zoom": 100,
+  "vw": 900,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 675,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2255,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 860,
+  "H": 645,
+  "zoom": 100,
+  "vw": 860,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 645,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2553,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 800,
+  "H": 600,
+  "zoom": 100,
+  "vw": 800,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 600,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2513,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 768,
+  "H": 576,
+  "zoom": 100,
+  "vw": 768,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 576,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2493,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 720,
+  "H": 540,
+  "zoom": 100,
+  "vw": 720,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 540,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2479,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 700,
+  "H": 525,
+  "zoom": 100,
+  "vw": 700,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 525,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 630,
+   "cw": 630,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 8,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2489,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 640,
+  "H": 800,
+  "zoom": 100,
+  "vw": 640,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 576,
+   "cw": 576,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 5,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2454,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 600,
+  "H": 800,
+  "zoom": 100,
+  "vw": 600,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 540,
+   "cw": 540,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2474,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 560,
+  "H": 800,
+  "zoom": 100,
+  "vw": 560,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 504,
+   "cw": 504,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2861,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 500,
+  "H": 800,
+  "zoom": 100,
+  "vw": 500,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 450,
+   "cw": 450,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2885,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 450,
+  "H": 844,
+  "zoom": 100,
+  "vw": 450,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 405,
+   "cw": 405,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 6,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2885,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 430,
+  "H": 844,
+  "zoom": 100,
+  "vw": 430,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 387,
+   "cw": 387,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2935,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 414,
+  "H": 844,
+  "zoom": 100,
+  "vw": 414,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 373,
+   "cw": 373,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2935,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 400,
+  "H": 844,
+  "zoom": 100,
+  "vw": 400,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 360,
+   "cw": 360,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 7,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2935,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 390,
+  "H": 568,
+  "zoom": 100,
+  "vw": 390,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 350,
+   "cw": 350,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 8,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2935,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 375,
+  "H": 568,
+  "zoom": 100,
+  "vw": 375,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 139,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Open the guide",
+    "w": 127,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 176,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 123,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Join the Discord",
+    "w": 132,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 133,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "View the portfolio",
+    "w": 145,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Contact page",
+    "w": 116,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 335,
+   "cw": 335,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 8,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2935,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 360,
+  "H": 568,
+  "zoom": 100,
+  "vw": 360,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 119,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Open the guide",
+    "w": 109,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 152,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 105,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Join the Discord",
+    "w": 113,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 114,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "View the portfolio",
+    "w": 124,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Send an email",
+    "w": 101,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Contact page",
+    "w": 101,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 320,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 8,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 2986,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "index.html",
+  "W": 320,
+  "H": 568,
+  "zoom": 100,
+  "vw": 320,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Read the writeup",
+    "w": 119,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Open the guide",
+    "w": 109,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Get it on the App Store",
+    "w": 152,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Join TestFlight",
+    "w": 105,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Join the Discord",
+    "w": 113,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Buy me a coffee",
+    "w": 114,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "View the portfolio",
+    "w": 124,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Send an email",
+    "w": 101,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Contact page",
+    "w": 101,
+    "h": 35,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 280,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 8,
+  "reducedMotion": false,
+  "h1": [
+   "J_W_I_"
+  ],
+  "headingJumps": 0,
+  "pageH": 3029,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1920,
+  "H": 1200,
+  "zoom": 100,
+  "vw": 1920,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1200,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 13,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4812,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1728,
+  "H": 1080,
+  "zoom": 100,
+  "vw": 1728,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1080,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 13,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4812,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1440,
+  "H": 900,
+  "zoom": 100,
+  "vw": 1440,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 900,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 15,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4812,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1280,
+  "H": 800,
+  "zoom": 100,
+  "vw": 1280,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 15,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4812,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1120,
+  "H": 700,
+  "zoom": 100,
+  "vw": 1120,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 700,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 15,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4810,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 1024,
+  "H": 640,
+  "zoom": 100,
+  "vw": 1024,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 640,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4798,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 960,
+  "H": 720,
+  "zoom": 100,
+  "vw": 960,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 720,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4786,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 900,
+  "H": 675,
+  "zoom": 100,
+  "vw": 900,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 675,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4775,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 860,
+  "H": 645,
+  "zoom": 100,
+  "vw": 860,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 645,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4767,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 800,
+  "H": 600,
+  "zoom": 100,
+  "vw": 800,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 600,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 4877,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 768,
+  "H": 576,
+  "zoom": 100,
+  "vw": 768,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 576,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 5024,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 720,
+  "H": 540,
+  "zoom": 100,
+  "vw": 720,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 540,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 5229,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 700,
+  "H": 525,
+  "zoom": 100,
+  "vw": 700,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 525,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 630,
+   "cw": 630,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 5309,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 640,
+  "H": 800,
+  "zoom": 100,
+  "vw": 640,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 576,
+   "cw": 576,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 15,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 5484,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 600,
+  "H": 800,
+  "zoom": 100,
+  "vw": 600,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 540,
+   "cw": 540,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 5758,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 560,
+  "H": 800,
+  "zoom": 100,
+  "vw": 560,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 504,
+   "cw": 504,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 6001,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 500,
+  "H": 800,
+  "zoom": 100,
+  "vw": 500,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 450,
+   "cw": 450,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 6490,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 450,
+  "H": 844,
+  "zoom": 100,
+  "vw": 450,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 264x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 405,
+   "cw": 405,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 7076,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 430,
+  "H": 844,
+  "zoom": 100,
+  "vw": 430,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 246x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 387,
+   "cw": 387,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 16,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 7297,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 414,
+  "H": 844,
+  "zoom": 100,
+  "vw": 414,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 231x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 373,
+   "cw": 373,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 7639,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 400,
+  "H": 844,
+  "zoom": 100,
+  "vw": 400,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 219x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 360,
+   "cw": 360,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 7794,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 390,
+  "H": 568,
+  "zoom": 100,
+  "vw": 390,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 209x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 350,
+   "cw": 350,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 17,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 7949,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 375,
+  "H": 568,
+  "zoom": 100,
+  "vw": 375,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 194x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 335,
+   "cw": 335,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 18,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 8383,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 360,
+  "H": 568,
+  "zoom": 100,
+  "vw": 360,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 179x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 320,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 18,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 8663,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftios6.html",
+  "W": 320,
+  "H": 568,
+  "zoom": 100,
+  "vw": 320,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [
+   "span.code-title \"Building Swift 3 Preview 1\" l=60 r=340"
+  ],
+  "textOverflowN": 1,
+  "btns": [
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   },
+   {
+    "t": "Copy",
+    "w": 51,
+    "h": 28,
+    "lines": 1,
+    "fs": 12
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)",
+   "Copy(51x28)"
+  ],
+  "clipped": [
+   "span.code-title \"Building Swift 3 Previ\" 280x20 in 139x20"
+  ],
+  "clippedN": 1,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 280,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 18,
+  "reducedMotion": false,
+  "h1": [
+   "Swift on iOS 6"
+  ],
+  "headingJumps": 0,
+  "pageH": 10090,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1920,
+  "H": 1200,
+  "zoom": 100,
+  "vw": 1920,
+  "wiz": {
+   "t": 61,
+   "b": 1200,
+   "h": 1139,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 1200,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 1200,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1728,
+  "H": 1080,
+  "zoom": 100,
+  "vw": 1728,
+  "wiz": {
+   "t": 61,
+   "b": 1080,
+   "h": 1019,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 1080,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 1080,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1440,
+  "H": 900,
+  "zoom": 100,
+  "vw": 1440,
+  "wiz": {
+   "t": 61,
+   "b": 900,
+   "h": 839,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 900,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 900,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1280,
+  "H": 800,
+  "zoom": 100,
+  "vw": 1280,
+  "wiz": {
+   "t": 61,
+   "b": 800,
+   "h": 739,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1120,
+  "H": 700,
+  "zoom": 100,
+  "vw": 1120,
+  "wiz": {
+   "t": 61,
+   "b": 700,
+   "h": 639,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 700,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 700,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1024,
+  "H": 640,
+  "zoom": 100,
+  "vw": 1024,
+  "wiz": {
+   "t": 61,
+   "b": 640,
+   "h": 579,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 640,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 640,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 960,
+  "H": 720,
+  "zoom": 100,
+  "vw": 960,
+  "wiz": {
+   "t": 61,
+   "b": 720,
+   "h": 659,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 720,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 720,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 900,
+  "H": 675,
+  "zoom": 100,
+  "vw": 900,
+  "wiz": {
+   "t": 61,
+   "b": 675,
+   "h": 614,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 675,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 245,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 245,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 245,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(245px,2L)",
+   "Big Sur 11.x(245px,2L)",
+   "Monterey 12.x(245px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 675,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 860,
+  "H": 645,
+  "zoom": 100,
+  "vw": 860,
+  "wiz": {
+   "t": 61,
+   "b": 645,
+   "h": 584,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 645,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 233,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 233,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 233,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(233px,2L)",
+   "Big Sur 11.x(233px,2L)",
+   "Monterey 12.x(233px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 645,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 800,
+  "H": 600,
+  "zoom": 100,
+  "vw": 800,
+  "wiz": {
+   "t": 61,
+   "b": 600,
+   "h": 539,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 600,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 215,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 215,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 215,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(215px,2L)",
+   "Big Sur 11.x(215px,2L)",
+   "Monterey 12.x(215px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 600,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 768,
+  "H": 576,
+  "zoom": 100,
+  "vw": 768,
+  "wiz": {
+   "t": 61,
+   "b": 576,
+   "h": 515,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 576,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 205,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 205,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 205,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(205px,2L)",
+   "Big Sur 11.x(205px,2L)",
+   "Monterey 12.x(205px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 576,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 720,
+  "H": 540,
+  "zoom": 100,
+  "vw": 720,
+  "wiz": {
+   "t": 61,
+   "b": 540,
+   "h": 479,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 540,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 191,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 191,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 191,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(191px,2L)",
+   "Big Sur 11.x(191px,2L)",
+   "Monterey 12.x(191px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 540,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 700,
+  "H": 525,
+  "zoom": 100,
+  "vw": 700,
+  "wiz": {
+   "t": 84,
+   "b": 525,
+   "h": 441,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 525,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 185,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 185,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 185,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(185px,2L)",
+   "Big Sur 11.x(185px,2L)",
+   "Monterey 12.x(185px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 630,
+   "cw": 630,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 525,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 640,
+  "H": 800,
+  "zoom": 100,
+  "vw": 640,
+  "wiz": {
+   "t": 84,
+   "b": 800,
+   "h": 716,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 167,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 167,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 167,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(167px,2L)",
+   "Big Sur 11.x(167px,2L)",
+   "Monterey 12.x(167px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 576,
+   "cw": 576,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 600,
+  "H": 800,
+  "zoom": 100,
+  "vw": 600,
+  "wiz": {
+   "t": 84,
+   "b": 800,
+   "h": 716,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 155,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 155,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 155,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(155px,2L)",
+   "Big Sur 11.x(155px,2L)",
+   "Monterey 12.x(155px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 540,
+   "cw": 540,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 560,
+  "H": 800,
+  "zoom": 100,
+  "vw": 560,
+  "wiz": {
+   "t": 84,
+   "b": 800,
+   "h": 716,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 143,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 143,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 143,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(143px,2L)",
+   "Big Sur 11.x(143px,2L)",
+   "Monterey 12.x(143px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 504,
+   "cw": 504,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 500,
+  "H": 800,
+  "zoom": 100,
+  "vw": 500,
+  "wiz": {
+   "t": 84,
+   "b": 800,
+   "h": 716,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 125,
+    "h": 99,
+    "lines": 3,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 125,
+    "h": 99,
+    "lines": 3,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 125,
+    "h": 99,
+    "lines": 3,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(125px,3L)",
+   "Big Sur 11.x(125px,3L)",
+   "Monterey 12.x(125px,3L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 450,
+   "cw": 450,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 450,
+  "H": 844,
+  "zoom": 100,
+  "vw": 450,
+  "wiz": {
+   "t": 84,
+   "b": 844,
+   "h": 760,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 353,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 353,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 353,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(353px,2L)",
+   "Big Sur 11.x(353px,2L)",
+   "Monterey 12.x(353px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 405,
+   "cw": 405,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 430,
+  "H": 844,
+  "zoom": 100,
+  "vw": 430,
+  "wiz": {
+   "t": 84,
+   "b": 844,
+   "h": 760,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 335,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 335,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 335,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(335px,2L)",
+   "Big Sur 11.x(335px,2L)",
+   "Monterey 12.x(335px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 387,
+   "cw": 387,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 414,
+  "H": 844,
+  "zoom": 100,
+  "vw": 414,
+  "wiz": {
+   "t": 84,
+   "b": 844,
+   "h": 760,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 321,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 321,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 321,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(321px,2L)",
+   "Big Sur 11.x(321px,2L)",
+   "Monterey 12.x(321px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 373,
+   "cw": 373,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 400,
+  "H": 844,
+  "zoom": 100,
+  "vw": 400,
+  "wiz": {
+   "t": 84,
+   "b": 844,
+   "h": 760,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 308,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 308,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 308,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(308px,2L)",
+   "Big Sur 11.x(308px,2L)",
+   "Monterey 12.x(308px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 360,
+   "cw": 360,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 390,
+  "H": 568,
+  "zoom": 100,
+  "vw": 390,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(298px,2L)",
+   "Big Sur 11.x(298px,2L)",
+   "Monterey 12.x(298px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 350,
+   "cw": 350,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 375,
+  "H": 568,
+  "zoom": 100,
+  "vw": 375,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 283,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 283,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 283,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(283px,2L)",
+   "Big Sur 11.x(283px,2L)",
+   "Monterey 12.x(283px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 335,
+   "cw": 335,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 360,
+  "H": 568,
+  "zoom": 100,
+  "vw": 360,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 268,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 268,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 268,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(268px,2L)",
+   "Big Sur 11.x(268px,2L)",
+   "Monterey 12.x(268px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 320,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 320,
+  "H": 568,
+  "zoom": 100,
+  "vw": 320,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(228px,2L)",
+   "Big Sur 11.x(228px,2L)",
+   "Monterey 12.x(228px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 280,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1920,
+  "H": 1200,
+  "zoom": 100,
+  "vw": 1920,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1200,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 1200,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1728,
+  "H": 1080,
+  "zoom": 100,
+  "vw": 1728,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 1080,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 1080,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1440,
+  "H": 900,
+  "zoom": 100,
+  "vw": 1440,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 900,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 900,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1280,
+  "H": 800,
+  "zoom": 100,
+  "vw": 1280,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 836,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1120,
+  "H": 700,
+  "zoom": 100,
+  "vw": 1120,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 700,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 835,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 1024,
+  "H": 640,
+  "zoom": 100,
+  "vw": 1024,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 640,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 828,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 960,
+  "H": 720,
+  "zoom": 100,
+  "vw": 960,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 720,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 820,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 900,
+  "H": 675,
+  "zoom": 100,
+  "vw": 900,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 675,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 811,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 860,
+  "H": 645,
+  "zoom": 100,
+  "vw": 860,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 645,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 757,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 800,
+  "H": 600,
+  "zoom": 100,
+  "vw": 800,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 600,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 745,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 768,
+  "H": 576,
+  "zoom": 100,
+  "vw": 768,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 576,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 737,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 720,
+  "H": 540,
+  "zoom": 100,
+  "vw": 720,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 540,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "71px",
+  "mast": {
+   "t": 10,
+   "b": 71,
+   "h": 61
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 724,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 700,
+  "H": 525,
+  "zoom": 100,
+  "vw": 700,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 525,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 630,
+   "cw": 630,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 741,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 640,
+  "H": 800,
+  "zoom": 100,
+  "vw": 640,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 576,
+   "cw": 576,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 600,
+  "H": 800,
+  "zoom": 100,
+  "vw": 600,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 540,
+   "cw": 540,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 560,
+  "H": 800,
+  "zoom": 100,
+  "vw": 560,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 504,
+   "cw": 504,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 500,
+  "H": 800,
+  "zoom": 100,
+  "vw": 500,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 800,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 450,
+   "cw": 450,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 800,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 450,
+  "H": 844,
+  "zoom": 100,
+  "vw": 450,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 405,
+   "cw": 405,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 430,
+  "H": 844,
+  "zoom": 100,
+  "vw": 430,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 387,
+   "cw": 387,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 414,
+  "H": 844,
+  "zoom": 100,
+  "vw": 414,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 373,
+   "cw": 373,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 400,
+  "H": 844,
+  "zoom": 100,
+  "vw": 400,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 844,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 360,
+   "cw": 360,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 844,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 390,
+  "H": 568,
+  "zoom": 100,
+  "vw": 390,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 350,
+   "cw": 350,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 777,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 375,
+  "H": 568,
+  "zoom": 100,
+  "vw": 375,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 335,
+   "cw": 335,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 777,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 360,
+  "H": 568,
+  "zoom": 100,
+  "vw": 360,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 320,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 777,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "support.html",
+  "W": 320,
+  "H": 568,
+  "zoom": 100,
+  "vw": 320,
+  "wiz": false,
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Send an email",
+    "w": 119,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [],
+  "btnSmall": [],
+  "clipped": [],
+  "clippedN": 0,
+  "tinyText": [],
+  "tinyTextN": 0,
+  "mastHVar": "94px",
+  "mast": {
+   "t": 10,
+   "b": 94,
+   "h": 84
+  },
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 280,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [],
+  "imgsUnsized": [],
+  "imgs": 0,
+  "imgsNoAttr": 0,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "Get in touch"
+  ],
+  "headingJumps": 0,
+  "pageH": 777,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1440,
+  "H": 900,
+  "zoom": 100,
+  "vw": 1440,
+  "wiz": {
+   "t": 61,
+   "b": 900,
+   "h": 839,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 900,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 900,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 1024,
+  "H": 640,
+  "zoom": 100,
+  "vw": 1024,
+  "wiz": {
+   "t": 61,
+   "b": 640,
+   "h": 579,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 640,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 261,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(261px,2L)",
+   "Big Sur 11.x(261px,2L)",
+   "Monterey 12.x(261px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "61px",
+  "mast": {
+   "t": 0,
+   "b": 61,
+   "h": 61
+  },
+  "wizGap": 0,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 368,
+   "cw": 368,
+   "overflow": "visible",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [
+   "ProjPicSetup1.webp"
+  ],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 640,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 390,
+  "H": 568,
+  "zoom": 100,
+  "vw": 390,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 298,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(298px,2L)",
+   "Big Sur 11.x(298px,2L)",
+   "Monterey 12.x(298px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 350,
+   "cw": 350,
+   "overflow": "auto",
+   "scrollable": false
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ },
+ {
+  "url": "swiftonios6guidepart1.html",
+  "W": 320,
+  "H": 568,
+  "zoom": 100,
+  "vw": 320,
+  "wiz": {
+   "t": 84,
+   "b": 568,
+   "h": 484,
+   "vis": true
+  },
+  "reduced": false,
+  "nojs": false,
+  "vh": 568,
+  "scrollY": 0,
+  "docOverflowX": 0,
+  "bodyOverflowX": 0,
+  "offscreen": [],
+  "offscreenN": 0,
+  "textOverflow": [],
+  "textOverflowN": 0,
+  "btns": [
+   {
+    "t": "Mojave 10.14",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Big Sur 11.x",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Monterey 12.x",
+    "w": 228,
+    "h": 75,
+    "lines": 2,
+    "fs": 16
+   },
+   {
+    "t": "Back",
+    "w": 63,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   },
+   {
+    "t": "Next step",
+    "w": 118,
+    "h": 34,
+    "lines": 1,
+    "fs": 13.5
+   }
+  ],
+  "btnMulti": [
+   "Mojave 10.14(228px,2L)",
+   "Big Sur 11.x(228px,2L)",
+   "Monterey 12.x(228px,2L)"
+  ],
+  "btnSmall": [],
+  "clipped": [
+   "legend.visually-hidden \"Your macOS version\" 150x26 in 1x1"
+  ],
+  "clippedN": 1,
+  "tinyText": [
+   "span.dl-src 11px"
+  ],
+  "tinyTextN": 1,
+  "mastHVar": "84px",
+  "mast": {
+   "t": 0,
+   "b": 84,
+   "h": 84
+  },
+  "wizGap": 0.2,
+  "mastOverlap": null,
+  "nav": {
+   "sw": 334,
+   "cw": 280,
+   "overflow": "auto",
+   "scrollable": true
+  },
+  "imgsBroken": [
+   "ProjPicSetup1.webp",
+   "ProjPicSetup2.webp",
+   "ProjPicSetup3.webp",
+   "ProjPicSetup4.webp",
+   "ProjPicSetup5.webp",
+   "ProjPicSetup6.webp",
+   "ProjPicSetup7.webp",
+   "ProjPicSetup8.webp",
+   "ProjPicSetup9.webp",
+   "ProjPicSetup10.webp",
+   "ProjPicSetup11.webp",
+   "ProjPicSetup12.webp",
+   ""
+  ],
+  "imgsUnsized": [],
+  "imgs": 13,
+  "imgsNoAttr": 1,
+  "hiddenTextBlocks": 0,
+  "reducedMotion": false,
+  "h1": [
+   "The iOS 6 Setup Guide"
+  ],
+  "headingJumps": 0,
+  "pageH": 568,
+  "console": [],
+  "failed": []
+ }
+]
