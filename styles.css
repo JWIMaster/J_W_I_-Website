@@ -8,6 +8,10 @@
 
 /* ----------------------------- tokens ----------------------------- */
 :root {
+  /* the site is dark-only: declare it so the UA paints native scrollbars,
+     form controls, placeholder text and the canvas dark instead of light */
+  color-scheme: dark;
+
   /* materials — warm graphite chassis */
   --bg-0: #17181b;        /* deepest: code screens */
   --bg-1: #1e2024;        /* page background */
@@ -205,6 +209,31 @@ a:hover {
   border-radius: 2px;
 }
 
+/* Keyboard bypass block: the masthead puts four links ahead of every page's
+   content, so the first Tab offers a way past them (WCAG 2.4.1). Hidden until
+   focused, then it rides above the sticky masthead. */
+.skip-link {
+  position: fixed;
+  top: 8px;
+  left: 50%;
+  z-index: 60;                     /* over .masthead (50) */
+  padding: 10px 16px;
+  font-family: var(--font-display);
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--blue-ink);
+  background: linear-gradient(180deg, var(--blue-hi), var(--blue));
+  border: 1px solid rgba(19, 35, 56, 0.28);
+  border-radius: 999px;
+  box-shadow: 0 6px 18px -6px rgba(0, 0, 0, 0.6);
+  transform: translate(-50%, -180%);
+  transition: transform var(--t-med) var(--ease);
+}
+
+.skip-link:focus {
+  transform: translate(-50%, 0);
+}
+
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 700;
@@ -279,6 +308,13 @@ code, pre, kbd {
 .kicker .tick {
   color: var(--accent);
   margin-inline-end: 0.6em;
+}
+
+/* The kicker is uppercased mono, which turns the product names into "IOS" and
+   "MACOS". Wrap a wordmark in .lc to keep its real casing inside the line. */
+.kicker .lc {
+  text-transform: none;
+  letter-spacing: 0.04em;
 }
 
 /* page title block (non-home pages) */
@@ -421,7 +457,11 @@ code, pre, kbd {
   }
 
   .nav a {
-    padding: 8px 2px;
+    /* A 44px touch target without moving anything: the padding grows the hit
+       box to ~49px and the matching negative margin keeps the layout box (and
+       therefore the masthead height) exactly as it was. */
+    padding: 14px 2px;
+    margin-block: -6px;
     font-size: 13px;
   }
 }
@@ -614,6 +654,11 @@ code, pre, kbd {
 
 .prose > * + * {
   margin-block-start: 1.35em;
+}
+
+/* keep the last line of a paragraph from being a single orphaned word */
+.prose p {
+  text-wrap: pretty;
 }
 
 .prose strong {
@@ -854,7 +899,7 @@ code, pre, kbd {
   .data-table td::before {
     content: attr(data-label);
     font-family: var(--font-mono);
-    font-size: 10.5px;
+    font-size: 11px;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     color: var(--ink-2);
@@ -912,6 +957,10 @@ code, pre, kbd {
 .step-body {
   padding-block-end: var(--s-1);
   min-width: 0;
+  /* inherited by the step's headings/paragraphs: a single word wider than the
+     column (at ≤ ~200px effective width) breaks instead of pushing the step
+     stage into a horizontal scroll */
+  overflow-wrap: break-word;
 }
 
 .step-body h3 {
@@ -961,7 +1010,9 @@ code, pre, kbd {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
   gap: clamp(32px, 6vw, 72px);
-  align-items: start;
+  /* the index panel is taller than the wordmark block; centring the left
+     column against it stops the hero from reading as top-heavy dead space */
+  align-items: center;
   margin-block: clamp(24px, 5vw, 56px) var(--s-8);
 }
 
@@ -1155,6 +1206,22 @@ code, pre, kbd {
   max-width: 640px;
 }
 
+.contact-block {
+  display: grid;
+  gap: var(--s-2);
+}
+
+/* the "Email" label reads as a quiet mono caption above the address instead of
+   a 16px word crowding the 32px address on the same line */
+.contact-label {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+}
+
 .contact-email {
   font-size: clamp(1.4rem, 4vw, 2rem);
   font-weight: 700;
@@ -1191,6 +1258,10 @@ code, pre, kbd {
   color: var(--ink-1);
 }
 
+.foot-brand:hover {
+  color: var(--ink-0);
+}
+
 .foot-brand .dot {
   width: 6px;
   height: 6px;
@@ -1208,6 +1279,10 @@ code, pre, kbd {
 .foot-links a {
   font-size: 12.5px;
   color: var(--ink-2);
+  /* the footer link was a 20px-tall target; pad it out to ~40px and pull the
+     layout back so the footer keeps its proportions */
+  padding-block: 10px;
+  margin-block: -10px;
 }
 
 .foot-links a:hover {
@@ -1269,8 +1344,36 @@ code, pre, kbd {
 
   .index-links .btn {
     padding-inline: 10px;
+    /* Below ~210px effective width a long label ("Get it on the App Store")
+       cannot fit on one line at any legible size. Instead of letting it break
+       raggedly, give the wrapped state balanced line breaks and room to
+       breathe, so a two-line pill reads as a deliberate state. */
+    padding-block: 9px;
     font-size: 12px;
-    line-height: 1.3;
+    line-height: 1.25;
+    text-wrap: balance;
+  }
+}
+
+/* Below ~240px effective width (a 320px phone at 175–200% zoom) the hero index
+   panel's own padding plus the fixed 28px numeral column leave the label cell
+   ~36px wide, so `overflow-wrap: break-word` — the guard that keeps single
+   words from spilling — broke every label one letter per line. Give up the
+   two-column row instead: number above the label, full width for the text, and
+   trim the panel padding. */
+@media (max-width: 240px) {
+  .toc {
+    padding: var(--s-4);
+  }
+
+  .toc a {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    padding: 8px 6px;
+  }
+
+  .toc .d {
+    grid-column: 1;
   }
 }
 
@@ -1388,6 +1491,7 @@ code, pre, kbd {
 .wizard-step {
   grid-template-columns: 40px minmax(0, 1fr);
   column-gap: var(--s-3);
+  min-width: 0;
 }
 .wizard-step > .shot {
   grid-column: 1 / -1;
@@ -1493,10 +1597,11 @@ code, pre, kbd {
 }
 .path-card {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 2px 12px;
   padding: 14px 16px;
+  min-width: 0;
   background: var(--inset-0);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
@@ -1542,6 +1647,13 @@ code, pre, kbd {
   background: var(--surface-0);
   border-color: var(--line-strong);
 }
+
+/* keyboard parity with .os-card — the card is the control, so it takes the
+   ring, not just the inner dot */
+.path-card:focus-within {
+  border-color: var(--green);
+  box-shadow: var(--inset-1), 0 0 0 2px var(--green-dim);
+}
 .path-card.is-selected {
   background: var(--surface-0);
   border-color: rgba(79, 196, 124, 0.55);
@@ -1575,13 +1687,23 @@ code, pre, kbd {
   margin: 0 0 var(--s-3);
   padding: 0;
   border: 0;
+  /* A <fieldset> carries the UA's `min-inline-size: min-content`, so the picker
+     could not shrink below the width of "Monterey 12.x" + dot + padding. At
+     ≤ ~200px effective width that floor pushed the step stage into a silent
+     horizontal scroll and cut the cards off at the right edge (the page itself
+     never reported overflow because body.wiz-app clips it). Same reset as
+     .path-grid. */
+  min-inline-size: 0;
 }
 .os-card {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   align-items: center;
   gap: 2px 12px;
   padding: 14px 16px;
+  /* let the card follow its track below its own min-content instead of
+     pushing the grid (and the step stage) wider than the viewport */
+  min-width: 0;
   background: var(--inset-0);
   border: 1px solid var(--line);
   border-radius: var(--r-m);
@@ -1609,6 +1731,7 @@ code, pre, kbd {
   font-size: var(--t-md);
   font-weight: 600;
   color: var(--ink-0);
+  overflow-wrap: anywhere;
 }
 /* selection indicator: a dark dot that lights up green — the same green as the
    brand status dot, so "this is the active one" reads like the masthead does */
@@ -1718,7 +1841,7 @@ code, pre, kbd {
   margin-left: auto;
   margin-right: 2px;
   font-family: var(--font-mono);
-  font-size: 10.5px;
+  font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-2);
@@ -1778,7 +1901,11 @@ code, pre, kbd {
 /* stacked wizard shell on narrow screens */
 @media (max-width: 480px) {
   .os-grid {
-    grid-template-columns: 1fr;
+    /* minmax(0,…), not 1fr: a bare 1fr track takes its minimum from the card's
+       min-content (badge column + "Monterey" + the status dot ≈ 182px), which
+       at ≤ ~200px effective width overflowed the step stage horizontally and
+       cut the picker cards off at the right edge. */
+    grid-template-columns: minmax(0, 1fr);
   }
   .wiz-controls {
     flex-wrap: wrap;
@@ -1875,10 +2002,46 @@ code, pre, kbd {
  * guide1.js hands the claim back once it owns the board. */
 body.wiz-app,
 html.wiz-app body {
-  overflow: hidden;
+  /* clip, not hidden: `hidden` still creates a scroll container that JS, the
+     browser's scroll restoration and anchor jumps can drive. With the guide
+     217px taller than the viewport before the wizard opens (the site footer),
+     that let the page slide up behind the fixed shell — the footer's brand,
+     ©line and "Previous: …" link ended up drawn across the Back/Next controls.
+     `clip` makes the viewport genuinely unscrollable, so the masthead stays
+     pinned and no in-flow content can drift under the shell. */
+  overflow: clip;
   height: 100vh;
   height: 100dvh;
   padding-block-end: 0;
+}
+
+/* belt and braces: the wizard owns the viewport, so the page footer (the only
+   in-flow content below the shell) is never part of the app surface */
+body.wiz-app .site-foot,
+html.wiz-app .site-foot {
+  display: none;
+}
+
+/* The viewport itself must not scroll either. Clipping only the body still
+   leaves the masthead's 10px sticky top margin as scrollable overflow, so a
+   programmatic jump (scroll restoration) could still open a 10px seam between
+   the masthead and the fixed shell. :has() covers the app frame for the whole
+   session — guide1.js drops the html.wiz-app prepaint claim once it owns the
+   board, but body.wiz-app stays. */
+html.wiz-app,
+html:has(body.wiz-app) {
+  overflow: clip;
+}
+
+/* In app mode the shell is flush to the top of the viewport, so the masthead
+   gives up its 10px sticky resting margin (in-flow pages keep it). That margin
+   was also the document's only remaining scrollable overflow — with it gone
+   the wizard page cannot scroll at all, and masthead and shell stay aligned in
+   every state. site.js measures offsetHeight + marginTop, so --mast-h follows
+   down to the bare masthead height. */
+body.wiz-app .masthead,
+html.wiz-app .masthead {
+  margin-block-start: 0;
 }
 body.wiz-app .page-head,
 html.wiz-app .page-head {
@@ -2073,5 +2236,72 @@ html.wiz-app .wizard-step:not(.is-hidden) {
 
   .reveal {
     animation: none;
+  }
+}
+
+/* ----------------------------- print -----------------------------
+   Printing (and any "print to PDF" of the page) lays the whole document out
+   in one pass, so scroll-revealed blocks that were never observed would
+   otherwise print blank. Force every reveal system to its finished state and
+   flatten the sticky shell. The palette is flipped through the tokens — the
+   site is dark-only, and its light ink would otherwise print white on white. */
+@media print {
+  :root {
+    --bg-0: #fff;
+    --bg-1: #fff;
+    --surface-0: #fff;
+    --surface-1: #fff;
+    --surface-2: #fff;
+    --inset-0: #fff;
+    --sheet: #fff;
+    --sheet-hi: #fff;
+    --ink-0: #111;
+    --ink-1: #333;
+    --ink-2: #555;
+    --ink-3: #666;
+    --sheet-ink: #111;
+    --sheet-ink-soft: #333;
+    --sheet-ink-faint: #555;
+    --line: rgba(0, 0, 0, 0.25);
+    --line-strong: rgba(0, 0, 0, 0.4);
+    --edge-hi: transparent;
+    --edge-hi-strong: transparent;
+    --accent: #8a5a12;
+    --accent-hi: #8a5a12;
+    --blue: #1d4e86;
+    --blue-hi: #1d4e86;
+    --blue-ink: #fff;
+  }
+
+  .fade-io,
+  .reveal,
+  .tw-rest,
+  .tw-lead,
+  .wizard-step {
+    opacity: 1 !important;
+    transform: none !important;
+    animation: none !important;
+    transition: none !important;
+  }
+
+  .masthead {
+    position: static;
+    background: none;
+    box-shadow: none;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+  }
+
+  body {
+    background: none;
+    color: #111;
+  }
+
+  body::before,
+  .skip-link,
+  .lightbox,
+  .wiz-controls,
+  .site-foot {
+    display: none !important;
   }
 }

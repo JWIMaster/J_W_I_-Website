@@ -6,6 +6,16 @@
   <title>Swift on iOS 6</title>
   <meta name="description" content="How I got Swift running on iOS 6 — from early Swift 1.0 betas to a from-source Swift 3 toolchain.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://j-w-i.org/swiftios6.html">
+  <meta name="theme-color" content="#1e2024">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="J_W_I_">
+  <meta property="og:title" content="Swift on iOS 6 — J_W_I_">
+  <meta property="og:description" content="How I got Swift running on iOS 6 — from early Swift 1.0 betas to a from-source Swift 3 toolchain.">
+  <meta property="og:url" content="https://j-w-i.org/swiftios6.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Swift on iOS 6 — J_W_I_">
+  <meta name="twitter:description" content="From early Swift 1.0 betas to a from-source Swift 3 toolchain on iOS 6.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,6 +23,7 @@
   <script src="site.js" defer></script>
 </head>
 <body class="page-dark">
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
     <div class="mast-inner">
@@ -26,7 +37,7 @@
     </div>
   </header>
 
-  <main class="container">
+  <main class="container" id="main">
 
     <div class="page-head">
       <span class="kicker"><span class="tick" aria-hidden="true">/</span>Technical Note</span>
@@ -48,7 +59,7 @@
 
         <figure class="code fade-io">
           <figcaption class="code-bar">
-            <span class="code-title">Swift 1.0 Example</span>
+            <span class="code-title" title="Swift 1.0 Example">Swift 1.0 Example</span>
             <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#ex1">Copy</button>
           </figcaption>
           <div class="code-screen" id="ex1"><pre><span class="tok-com">// Swift 1.0 (iOS 6)</span>
@@ -63,7 +74,7 @@ self.view.addSubview(label)</pre></div>
 
         <figure class="code fade-io">
           <figcaption class="code-bar">
-            <span class="code-title">Swift 2.2 Example</span>
+            <span class="code-title" title="Swift 2.2 Example">Swift 2.2 Example</span>
             <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#ex2">Copy</button>
           </figcaption>
           <div class="code-screen" id="ex2"><pre><span class="tok-com">// Swift 2.2 (iOS 6)</span>
@@ -76,7 +87,7 @@ self.view.addSubview(label)</pre></div>
 
         <figure class="code fade-io">
           <figcaption class="code-bar">
-            <span class="code-title">Swift 3.0 Example</span>
+            <span class="code-title" title="Swift 3.0 Example">Swift 3.0 Example</span>
             <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#ex3">Copy</button>
           </figcaption>
           <div class="code-screen" id="ex3"><pre><span class="tok-com">// Swift 3.0 (attempted on iOS 6)</span>
@@ -93,7 +104,7 @@ self.view.addSubview(label)</pre></div>
 
         <figure class="code fade-io">
           <figcaption class="code-bar">
-            <span class="code-title">Building Swift 3 Preview 1 from source</span>
+            <span class="code-title" title="Building Swift 3 Preview 1 from source">Building Swift 3 Preview 1 from source</span>
             <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#ex4">Copy</button>
           </figcaption>
           <div class="code-screen" id="ex4"><pre>git init swift && cd swift
@@ -133,7 +144,7 @@ source ~/.zshrc
 
   <footer class="site-foot">
     <div class="container foot-inner">
-      <span class="foot-brand"><span class="dot" aria-hidden="true"></span>J_W_I_</span>
+      <a class="foot-brand" href="index.html"><span class="dot" aria-hidden="true"></span>J_W_I_</a>
       <span class="foot-links">
         <a href="support.html">Support</a>
       </span>

@@ -95,18 +95,63 @@
   /* Scroll reveals: .fade-io fades in the first time it enters the viewport
      and stays — the fade plays on the way in and never un-plays. */
   function wireScrollFades() {
-    if (!('IntersectionObserver' in window)) return;
-    var els = document.querySelectorAll('.fade-io');
+    var els = Array.prototype.slice.call(document.querySelectorAll('.fade-io'));
     if (!els.length) return;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) {
-          en.target.classList.add('is-in');
-          io.unobserve(en.target);
-        }
+    var pending = els;
+
+    function reveal(el) {
+      el.classList.add('is-in');
+    }
+
+    /* Safety net. An IntersectionObserver only ever reports the *latest*
+       state, so content the reader jumps past — scrollbar drag, the End key
+       with instant scrolling, browser scroll restoration, an anchor jump —
+       can cross the viewport between two observation frames and never be
+       reported as intersecting. It then kept opacity 0 forever: permanently
+       blank sections on an otherwise fine page. Anything whose top has reached
+       or passed the viewport top has been reached, so reveal it. */
+    function sweep() {
+      if (!pending.length) return;
+      var left = [];
+      for (var i = 0; i < pending.length; i++) {
+        if (pending[i].getBoundingClientRect().top < 1) reveal(pending[i]);
+        else left.push(pending[i]);
+      }
+      pending = left;
+    }
+
+    var queued = false;
+    function onScroll() {
+      if (queued) return;
+      queued = true;
+      requestAnimationFrame(function () {
+        queued = false;
+        sweep();
       });
-    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
-    Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+    }
+
+    if ('IntersectionObserver' in window) {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          if (en.isIntersecting) {
+            reveal(en.target);
+            io.unobserve(en.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -6% 0px', threshold: 0.05 });
+      Array.prototype.forEach.call(els, function (el) { io.observe(el); });
+    } else {
+      /* without an observer the opacity:0 rule would never be lifted at all */
+      Array.prototype.forEach.call(els, reveal);
+      pending = [];
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll, { passive: true });
+    window.addEventListener('pageshow', onScroll);
+    /* the browser can restore a scroll position before this script runs */
+    setTimeout(sweep, 300);
+    setTimeout(sweep, 1200);
   }
   wireScrollFades();
 

@@ -51,7 +51,15 @@ Rules of thumb:
 - **Masthead** — sticky, `z-index: 50`, rests 10px below the top edge and pins to
   `top: 0` on scroll. Brand mark = green dot + `J_W_I_`. Nav links get the amber
   active underline. (Never give the masthead a `position: relative` group rule —
-  that silently un-sticks it; specificity bit us once.)
+  that silently un-sticks it; specificity bit us once.) In wizard app mode the
+  resting margin is dropped, so the masthead is flush to the viewport top and
+  `--mast-h` measures the bare height (61px desktop / 84px mobile); in-flow pages
+  keep the 10px rest (71 / 94px). `--mast-h` is always `offsetHeight + computed
+  top margin`, never `rect().bottom` — a sticky element's bottom edge is
+  scroll-dependent.
+- **Skip link** — every page opens with `<a class="skip-link" href="#main">`: the
+  first Tab stop, invisible until focused, then a blue pill above the masthead
+  (WCAG 2.4.1 bypass block). `main` carries `id="main"`.
 - **Buttons** — pills (`border-radius: 999px`), press = `scale(0.96)`.
   Primary: blue gradient fill, `--blue-ink` text, soft glow. Ghost: blue outline,
   blue text. Small variant for code-bar copy buttons.
@@ -80,6 +88,11 @@ Rules of thumb:
   no-JS visitors get the whole guide stacked. Back/Next pill buttons in
   `.wiz-controls`; on the final step Next hides and a "Start over" ghost
   button resets the confirms and path choice (keeping the OS).
+  In app mode the page itself must never scroll: `body.wiz-app` and the html
+  element are `overflow: clip` (`hidden` still allows programmatic scrolling,
+  which slid the footer up behind the shell), the footer is hidden, and
+  `guide1.js` resets any pre-open scroll offset to 0 on entry. Anything that
+  has to grow scrolls `.wiz-viewport`, never the page.
 
 ## Motion
 
@@ -105,6 +118,15 @@ Everything animates only under `prefers-reduced-motion: no-preference`
   state machine; skipped entirely under reduced motion. Steps deliberately carry no
   `.fade-io` — the section's first reveal already covers the initial paint.
 
+## Print
+
+`@media print` flips the palette through the tokens (the site is dark-only, so
+light ink would otherwise print white on white), forces every reveal system to
+its finished state — printing lays the document out in one pass, so an
+unobserved `.fade-io` block would otherwise come out blank — and drops the
+sticky/overlay chrome (masthead sticks statically, `.skip-link`, `.lightbox`,
+`.wiz-controls` and the footer are hidden).
+
 ## Verification
 
 `.qa/` holds the Playwright audits run against a local
@@ -115,3 +137,15 @@ Everything animates only under `prefers-reduced-motion: no-preference`
 - `node wizard.js` — all three OSes end-to-end (templates path ×3, manual path ×1),
   confirm-box gating, restart, copy round-trip, no-JS stack, reduced motion
 - `node contrast.js` — WCAG pairs for every token combination
+- `node .qa/audit2.js <sweep|zoom|resize|scroll|motion|interact>` — independent
+  responsive matrix (25 widths × 4 pages plus the open wizard, zoom 50–200% via
+  emulated effective viewport, live resize sequences, scroll states,
+  reduced-motion and no-JS passes) writing `.qa/a2/*.json`;
+  `node .qa/a2/report.js [modes…]` digs out the actionable rows
+- `node .qa/verify14.js` — regression checks for the wizard scroll lock, the
+  reveal safety net, the extreme-width step stage, the skip link and the
+  mobile tap targets
+
+Captures for visual review must be viewport screenshots taken after an instant
+scroll pass; `fullPage: true` rasterises not-yet-revealed layers as blank fills
+and reads as content loss that is not there.

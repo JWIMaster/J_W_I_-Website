@@ -19,6 +19,13 @@
 
   /* JS mode: the wizard takes over the whole viewport (see body.wiz-app CSS). */
   document.body.classList.add('wiz-app');
+  /* The reader scrolls the in-flow page to reach the OS picker (before the
+     wizard opens the document is ~217px taller than the viewport — that
+     overflow is the site footer). That offset must not survive into app mode:
+     it would slide the footer up behind the fixed shell, whose brand and
+     "Previous: …" link then drew across the Back/Next controls. */
+  try { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+  catch (e) { window.scrollTo(0, 0); }
 
   const steps = Array.from(shell.querySelectorAll('.wizard-step'));
 

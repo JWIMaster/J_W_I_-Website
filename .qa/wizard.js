@@ -60,7 +60,22 @@ async function walkSetup(browser, os, versionCheck, rpathCheck) {
   const { ctx, page, errs } = await newPage(browser);
 
   check(os + ': app frame active (body.wiz-app)', await page.$eval('body', b => b.classList.contains('wiz-app')));
-  check(os + ': page does not scroll (overflow hidden)', await page.$eval('body', b => getComputedStyle(b).overflow === 'hidden'));
+  /* The requirement is that the wizard page cannot scroll — not that it uses a
+     particular keyword. `overflow: hidden` still creates a scroll container
+     that JS and scroll restoration can drive (that let the footer slide up
+     behind the shell), so the app frame uses `clip`. Assert the behaviour: a
+     non-scrolling overflow value *and* a programmatic jump that does not move. */
+  check(os + ': page does not scroll', await page.$eval('body', () => {
+    const blocked = (v) => v === 'hidden' || v === 'clip';
+    const body = getComputedStyle(document.body).overflow;
+    const html = getComputedStyle(document.documentElement).overflow;
+    if (!blocked(body) && !blocked(html)) return false;
+    const before = window.scrollY;
+    window.scrollTo({ top: 99999, left: 0, behavior: 'instant' });
+    const moved = window.scrollY !== before;
+    window.scrollTo({ top: before, left: 0, behavior: 'instant' });
+    return !moved;
+  }));
   const visConfirms = await page.$$eval('.wiz-confirm', els => els.filter(e => getComputedStyle(e).display !== 'none').length);
   check(os + ': standalone confirm rows hidden in app mode', visConfirms === 0, 'visible=' + visConfirms);
 

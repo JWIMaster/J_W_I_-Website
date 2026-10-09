@@ -6,6 +6,16 @@
   <title>iOS 6 Setup Guide</title>
   <meta name="description" content="Install the Swift toolchain, set up an Xcode project, and build your first app for iOS 6 — one step at a time.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="canonical" href="https://j-w-i.org/swiftonios6guidepart1.html">
+  <meta name="theme-color" content="#1e2024">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="J_W_I_">
+  <meta property="og:title" content="The iOS 6 Setup Guide — J_W_I_">
+  <meta property="og:description" content="Install the Swift toolchain, set up an Xcode project, and build your first app for iOS 6 — one step at a time.">
+  <meta property="og:url" content="https://j-w-i.org/swiftonios6guidepart1.html">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="The iOS 6 Setup Guide — J_W_I_">
+  <meta name="twitter:description" content="Install the Swift toolchain, set up an Xcode project, and build your first app for iOS 6.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600;700;800&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Spline+Sans+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,6 +31,7 @@
   <script src="guide1.js" defer></script>
 </head>
 <body class="page-dark">
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
     <div class="mast-inner">
@@ -34,7 +45,7 @@
     </div>
   </header>
 
-  <main class="container wiz-main">
+  <main class="container wiz-main" id="main">
 
     <div class="page-head">
       <span class="kicker"><span class="tick" aria-hidden="true">/</span>Guide</span>
@@ -166,7 +177,7 @@
               <p>Swift 5.1.5:</p>
               <figure class="code">
                 <figcaption class="code-bar">
-                  <span class="code-title">Terminal · Swift 5.1.5</span>
+                  <span class="code-title" title="Terminal · Swift 5.1.5">Terminal · Swift 5.1.5</span>
                   <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#rpath515">Copy</button>
                 </figcaption>
                 <div class="code-screen" id="rpath515"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.1.5-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.1.5-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
@@ -176,7 +187,7 @@
               <p>Swift 5.6.3:</p>
               <figure class="code">
                 <figcaption class="code-bar">
-                  <span class="code-title">Terminal · Swift 5.6.3</span>
+                  <span class="code-title" title="Terminal · Swift 5.6.3">Terminal · Swift 5.6.3</span>
                   <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#rpath563">Copy</button>
                 </figcaption>
                 <div class="code-screen" id="rpath563"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.6.3-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
@@ -186,7 +197,7 @@
               <p>Swift 5.10.1:</p>
               <figure class="code">
                 <figcaption class="code-bar">
-                  <span class="code-title">Terminal · Swift 5.10.1</span>
+                  <span class="code-title" title="Terminal · Swift 5.10.1">Terminal · Swift 5.10.1</span>
                   <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#rpath510">Copy</button>
                 </figcaption>
                 <div class="code-screen" id="rpath510"><pre>sudo install_name_tool -add_rpath /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/lib/swift/macosx /Library/Developer/Toolchains/swift-5.10.1-RELEASE.xctoolchain/usr/bin/swift-driver</pre></div>
@@ -230,7 +241,7 @@
             <h3>Install Xcode Templates</h3>
             <figure class="code">
               <figcaption class="code-bar">
-                <span class="code-title">Terminal · Templates</span>
+                <span class="code-title" title="Terminal · Templates">Terminal · Templates</span>
                 <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#templates">Copy</button>
               </figcaption>
               <div class="code-screen" id="templates"><pre>mkdir -p ~/Library/Developer/Xcode/Templates/Project\ Templates/Application
@@ -269,7 +280,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
             <h3>Open the Project in Terminal</h3>
             <figure class="code">
               <figcaption class="code-bar">
-                <span class="code-title">Terminal</span>
+                <span class="code-title" title="Terminal">Terminal</span>
               </figcaption>
               <div class="code-screen"><pre>cd /path/to/your/project</pre></div>
             </figure>
@@ -289,7 +300,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
             <h3>Make the Script Runnable</h3>
             <figure class="code">
               <figcaption class="code-bar">
-                <span class="code-title">Terminal</span>
+                <span class="code-title" title="Terminal">Terminal</span>
               </figcaption>
               <div class="code-screen"><pre>chmod +x ./buildScript.command</pre></div>
             </figure>
@@ -532,7 +543,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
             <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
             <figure class="code">
               <figcaption class="code-bar">
-                <span class="code-title">AppDelegate.swift</span>
+                <span class="code-title" title="AppDelegate.swift">AppDelegate.swift</span>
                 <button class="btn btn-sm btn-ghost" type="button" data-copy-target="#appdelegate">Copy Code</button>
               </figcaption>
               <div class="code-screen" id="appdelegate"><pre><span class="tok-com">// AppDelegate.swift</span>
@@ -606,7 +617,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
 
   <footer class="site-foot">
     <div class="container foot-inner">
-      <span class="foot-brand"><span class="dot" aria-hidden="true"></span>J_W_I_</span>
+      <a class="foot-brand" href="index.html"><span class="dot" aria-hidden="true"></span>J_W_I_</a>
       <span class="foot-links">
         <a href="swiftios6.html">Previous: Swift on iOS 6</a>
       </span>
