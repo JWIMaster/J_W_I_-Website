@@ -222,10 +222,23 @@ body {
     radial-gradient(140% 560px at 50% 100%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 70%),
     linear-gradient(180deg, #222429 0%, var(--bg-1) 34%, #1b1c20 100%);
   background-color: var(--bg-1);
+  /* a column that fills the viewport so the footer ends at the bottom edge on
+     short pages instead of floating above a band of empty background */
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   caret-color: var(--accent);
+}
+
+.masthead,
+footer.site-foot {
+  flex: none;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 /* fine brushed grain — barely there, fixed with the body */
@@ -433,6 +446,7 @@ code, pre, kbd {
   display: grid;
   gap: var(--s-3);
   margin-block: var(--s-5) var(--s-6);
+  margin-inline: auto;
   max-width: 52rem;   /* shares the sheet's measure so the two align */
 }
 
@@ -483,7 +497,11 @@ code, pre, kbd {
   height: 60px;
   max-width: var(--w-max);
   margin-inline: auto;
-  padding-inline: var(--pad);
+  /* No inline padding: the masthead is a body child, so its content box is
+     already the page's gutter box. Padding here would inset the brand and nav
+     by --pad relative to every other element on the page (it did, by 44px).
+     The mobile layout re-adds it for the full-bleed nav scroller. */
+  padding-inline: 0;
 }
 
 .brand {
@@ -567,6 +585,8 @@ code, pre, kbd {
     gap: 0;
     height: auto;
     padding-block: 10px 0;
+    /* the nav below pulls out by the same amount to run edge to edge */
+    padding-inline: var(--pad);
   }
 
   .brand {
@@ -624,9 +644,10 @@ code, pre, kbd {
 }
 
 .sheet {
-  /* sized to its measure rather than stretched to the container: a reading
-     page, not a panel with dead space down the right-hand side */
+  /* sized to its measure rather than stretched to the container, and centred
+     in it: a reading page, not a panel pinned to the left with dead space */
   max-width: 52rem;
+  margin-inline: auto;
   background: linear-gradient(180deg, var(--sheet-hi), var(--sheet) 140px);
   color: var(--sheet-ink);
   border-radius: var(--r-xl);
@@ -651,7 +672,6 @@ code, pre, kbd {
   font-family: var(--font-display);
   font-size: 13.5px;
   font-weight: 600;
-  letter-spacing: 0.002em;
   color: var(--ink-0);
   border-radius: var(--r-control);
   background: linear-gradient(180deg, var(--surface-2), var(--surface-0));
@@ -753,7 +773,9 @@ code, pre, kbd {
   min-height: var(--h-control-sm);
   padding: 0 10px;
   font-size: 12px;
-  border-radius: var(--r-s);
+  /* the small variant differs in height and label size, never in geometry:
+     every button on the site shares the control radius */
+  border-radius: var(--r-control);
   gap: 6px;
 }
 
@@ -1442,13 +1464,16 @@ code, pre, kbd {
 }
 
 /* ----------------------------- support ----------------------------- */
-/* No card: the contact block is a divided plate — the same device as every
-   other list on the site. Label, the thing itself, then its action. */
+/* No card: the contact block is a divided row in the same ledger language as
+   the home index — the address reads on the left, its action sits at the end
+   of the rule, and the row is centred on the page's reading measure. */
 .contact-panel {
   display: grid;
-  gap: var(--s-5);
-  justify-items: start;
-  max-width: 640px;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-5) var(--s-6);
+  max-width: 52rem;
+  margin-inline: auto;
   padding-block: clamp(24px, 4vw, 40px);
   border-block: 1px solid var(--line);
   background: none;
@@ -1456,9 +1481,15 @@ code, pre, kbd {
   border-radius: 0;
 }
 
+.contact-panel .kicker {
+  grid-column: 1 / -1;
+}
+
 .contact-block {
   display: grid;
   gap: var(--s-2);
+  justify-items: start;
+  min-width: 0;
 }
 
 /* the "Email" label reads as a quiet mono caption above the address instead of
@@ -1600,6 +1631,12 @@ code, pre, kbd {
 
   .toc a:first-child {
     border-block-start: 0;
+  }
+
+  /* the contact row stacks: legend, address, action */
+  .contact-panel {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: start;
   }
 }
 
