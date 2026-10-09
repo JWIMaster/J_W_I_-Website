@@ -218,7 +218,7 @@
          * and an absent class toggled on stays on */
         el.classList.toggle('is-hidden', !!(k !== i || osBlocked || pathBlocked));
       });
-      if (motion) {
+      if (motion && !target.classList.contains('wiz-arrive')) {
         /* reflow *after* the start state is committed — a frame callback
          * here would be coalesced into the same style pass and the
          * transition would never fire, so the step would pop in flat */
@@ -228,6 +228,7 @@
         target.classList.add('wiz-shown');
       }
       visibleEl = target;
+      shell.scrollTop = 0;
       refreshControls();
       if (announce) {
         const h3 = target.querySelector('h3');
@@ -302,6 +303,11 @@
   const lbImg = document.createElement('img');
   lbImg.alt = '';
   lb.appendChild(lbImg);
+  const lbClose = document.createElement('button');
+  lbClose.className = 'btn btn-ghost lightbox-close';
+  lbClose.type = 'button';
+  lbClose.textContent = 'Close preview ×';
+  lb.appendChild(lbClose);
   document.body.appendChild(lb);
 
   let lbFocus = null;
@@ -312,10 +318,14 @@
   }
   lb.addEventListener('click', closeLb);
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !lb.hidden) closeLb();
+    if (lb.hidden) return;
+    if (e.key === 'Escape') closeLb();
+    if (e.key === 'Tab') { e.preventDefault(); lbClose.focus(); }
   });
   shell.addEventListener('click', (e) => {
-    const img = e.target.closest('.shot img');
+    const shot = e.target.closest('.shot');
+    if (!shot) return;
+    const img = shot.querySelector('img');
     if (!img) return;
     lbFocus = document.activeElement;
     lbImg.src = img.currentSrc || img.src;
@@ -323,7 +333,7 @@
     lb.hidden = false;
     void lb.offsetWidth;   /* commit the hidden state before the fade-in */
     lb.classList.add('is-open');
-    lb.focus();
+    lbClose.focus();
   });
 
   /* ── scroll affordance ──────────────────────────────────────── */
@@ -332,6 +342,7 @@
    * (the fades in styles.css) — the cut reads as "there is more below",
    * never as content colliding with the controls. */
   function syncHints() {
+    shell.style.setProperty('--wiz-space', shell.clientHeight + 'px');
     const ov = shell.scrollHeight > shell.clientHeight + 8;
     shell.classList.toggle('is-overflow', ov);
     shell.classList.toggle(
@@ -342,9 +353,15 @@
   shell.addEventListener('scroll', syncHints, { passive: true });
   window.addEventListener('resize', syncHints);
   window.addEventListener('load', syncHints);
+  if ('ResizeObserver' in window) new ResizeObserver(syncHints).observe(shell);
 
   /* ── first paint ────────────────────────────────────────────── */
 
+  const arrival = steps[0];
+  const finishArrival = () => arrival.classList.remove('wiz-arrive');
+  arrival.addEventListener('animationend', finishArrival, { once: true });
+  /* The first-paint animation may have finished before this script arrives. */
+  setTimeout(finishArrival, 500);
   show(0, false);
   syncHints();
   /* the board is ours now — release the pre-paint claim the inline head

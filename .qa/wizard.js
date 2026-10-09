@@ -5,7 +5,7 @@
    reduced motion. */
 const { chromium } = require('playwright');
 
-const URL = 'http://127.0.0.1:8123/swiftonios6guidepart1.html';
+const URL = (process.env.JWI_PREVIEW_BASE || 'http://127.0.0.1:8123/') + 'swiftonios6guidepart1.html';
 let pass = 0, fail = 0;
 function check(name, ok, extra) {
   if (ok) { pass++; console.log('PASS  ' + name); }
@@ -109,7 +109,7 @@ async function walkSetup(browser, os, versionCheck, rpathCheck) {
     const cs = getComputedStyle(document.querySelector('#wizard'));
     return { headCx: h.left + h.width / 2, winCx: window.innerWidth / 2, padTop: parseFloat(cs.paddingTop), padBottom: parseFloat(cs.paddingBottom) };
   });
-  check(os + ': content centered in the viewport', Math.abs(frame.headCx - frame.winCx) <= 12, 'offset=' + Math.round(frame.headCx - frame.winCx) + 'px');
+  check(os + ': guide frame centered in the viewport', Math.abs(frame.headCx - frame.winCx) <= 12, 'offset=' + Math.round(frame.headCx - frame.winCx) + 'px');
   check(os + ': frame padding top/bottom', frame.padTop >= 24 && frame.padBottom >= 24, 'top=' + frame.padTop + ' bottom=' + frame.padBottom);
   check(os + ': progress = Setup · 2 of 4', (await progress(page)) === 'Setup · 2 of 4', await progress(page));
   await tickConfirm(page, true);
@@ -129,7 +129,7 @@ async function walkSetup(browser, os, versionCheck, rpathCheck) {
   check(os + ': rpath command', rpathCmd.includes(rpathCheck), rpathCmd.slice(0, 80));
 
   /* copy button round-trip */
-  await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], { origin: 'http://127.0.0.1:8123' });
+  await ctx.grantPermissions(['clipboard-read', 'clipboard-write'], URL.startsWith('file:') ? {} : { origin: new global.URL(URL).origin });
   await page.$$eval('.wizard-step:not(.is-hidden) [data-copy-target]', els =>
     els.find(e => e.offsetParent !== null).click());
   await page.waitForTimeout(300);
@@ -205,10 +205,10 @@ async function walkManual(browser, os, versionCheck, rpathCheck) {
 
   const first = (await visibleSteps(page)).join('|');
   check('manual: first manual step', first === 'Open the Project Settings', first);
-  check('manual: shot below the text', await page.$eval('.wizard-step:not(.is-hidden)', step => {
+  check('manual: screenshot follows the instructions in the reading column', await page.$eval('.wizard-step:not(.is-hidden)', step => {
     const body = step.querySelector('.step-body').getBoundingClientRect();
     const shot = step.querySelector('.shot').getBoundingClientRect();
-    return shot.top >= body.bottom - 2 && shot.left <= body.left + 60;
+    return shot.top >= body.bottom && Math.abs(shot.left - body.left) < 1;
   }));
   /* the entrance must actually animate — sampled mid-fade right after the
    * swap settles, then confirmed to reach full opacity */

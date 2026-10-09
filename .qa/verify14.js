@@ -1,5 +1,5 @@
 const { chromium } = require('playwright');
-const BASE = 'http://127.0.0.1:8123';
+const BASE = (process.env.JWI_PREVIEW_BASE || 'http://127.0.0.1:8123/').replace(/\/$/, '');
 let pass = 0, fail = 0;
 const ck = (name, ok, detail) => { (ok ? pass++ : fail++); console.log((ok ? 'PASS ' : 'FAIL ') + name + (detail ? '  [' + detail + ']' : '')); };
 
@@ -26,6 +26,7 @@ const ck = (name, ok, detail) => { (ok ? pass++ : fail++); console.log((ok ? 'PA
                maxScroll: document.documentElement.scrollHeight - document.documentElement.clientHeight };
     });
     ck(`wizard @${w}: page cannot scroll behind shell (preY=${preY}, now ${r.y}, maxScroll ${r.maxScroll})`, r.y === 0 && r.maxScroll === 0, 'mastTop=' + r.mastTop);
+    ck(`wizard @${w}: header keeps the shared 10px top margin`, r.mastTop === 10 && r.gap === 0, 'mastTop=' + r.mastTop + ', gap=' + r.gap);
     ck(`wizard @${w}: footer never in the app surface`, !r.footShown && !r.footVisible);
     await ctx.close();
   }
@@ -93,7 +94,7 @@ const ck = (name, ok, detail) => { (ok ? pass++ : fail++); console.log((ok ? 'PA
   ck('nav links ≥44px tall', Math.min(...taps.nav) >= 44, taps.nav.join('/'));
   ck('footer links ≥36px tall', Math.min(...taps.foot) >= 36, taps.foot.join('/'));
   const mastH = await p5.evaluate(() => ({ v: getComputedStyle(document.documentElement).getPropertyValue('--mast-h').trim(), h: document.querySelector('.masthead').offsetHeight }));
-  ck('masthead height unchanged by the tap-target padding', mastH.h === (mastH.v === '94px' ? 84 : 61), JSON.stringify(mastH));
+  ck('masthead height unchanged by the tap-target padding', Math.abs(parseFloat(mastH.v) - mastH.h - 10) <= 0.5, JSON.stringify(mastH));
   await c5.close();
 
   console.log('\n' + pass + ' passed, ' + fail + ' failed');

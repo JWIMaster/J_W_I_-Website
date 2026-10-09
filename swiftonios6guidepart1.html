@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iOS 6 Setup Guide</title>
+  <title>Toolchain Guide — J_W_I_</title>
   <meta name="description" content="Install the Swift toolchain, set up an Xcode project, and build your first app for iOS 6 — one step at a time.">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="canonical" href="https://j-w-i.org/swiftonios6guidepart1.html">
@@ -44,6 +44,15 @@
       </nav>
     </div>
   </header>
+  <script>
+    /* Size the app frame before it can paint, including the stacked header.
+       site.js maintains this measurement on resize and after fonts load. */
+    (function () {
+      var mast = document.querySelector('.masthead');
+      var margin = parseFloat(getComputedStyle(mast).marginTop) || 0;
+      document.documentElement.style.setProperty('--mast-h', mast.getBoundingClientRect().height + margin + 'px');
+    })();
+  </script>
 
   <main class="container wiz-main" id="main">
 
@@ -62,7 +71,7 @@
       <div class="wiz-viewport">
 
         <!-- 0 · Choose macOS -->
-        <div class="step wizard-step" data-step="0">
+        <div class="step wizard-step wiz-arrive" data-step="0">
           <span class="step-badge" aria-hidden="true">0</span>
           <div class="step-body">
             <h3>Choose your macOS</h3>
@@ -359,7 +368,7 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
         </div>
 
         <!-- 12 · Manual · 1 -->
-        <div class="step wizard-step" data-step="12" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="12" data-path="manual">
           <span class="step-badge" aria-hidden="true">1</span>
           <div class="step-body">
             <h3>Open the Project Settings</h3>
@@ -372,11 +381,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup1.webp" width="3060" height="906" loading="lazy" alt="Step 1"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Xcode project Info tab and deployment settings"><img src="GuideImages/ProjPicSetup1.webp" width="3060" height="906" loading="lazy" alt="Xcode project Info tab and deployment settings"></button>
         </div>
 
         <!-- 13 · Manual · 2 -->
-        <div class="step wizard-step" data-step="13" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="13" data-path="manual">
           <span class="step-badge" aria-hidden="true">2</span>
           <div class="step-body">
             <h3>Remove the Frameworks</h3>
@@ -388,11 +397,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup2.webp" width="1616" height="686" loading="lazy" alt="Step 2"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Framework entries to remove from project settings"><img src="GuideImages/ProjPicSetup2.webp" width="1616" height="686" loading="lazy" alt="Framework entries to remove from project settings"></button>
         </div>
 
         <!-- 14 · Manual · 3 -->
-        <div class="step wizard-step" data-step="14" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="14" data-path="manual">
           <span class="step-badge" aria-hidden="true">3</span>
           <div class="step-body">
             <h3>Open Build Settings</h3>
@@ -404,11 +413,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup3.webp" width="260" height="96" loading="lazy" alt="Step 3"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Xcode Build Settings tab"><img src="GuideImages/ProjPicSetup3.webp" width="260" height="96" loading="lazy" alt="Xcode Build Settings tab"></button>
         </div>
 
         <!-- 15 · Manual · 4 -->
-        <div class="step wizard-step" data-step="15" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="15" data-path="manual">
           <span class="step-badge" aria-hidden="true">4</span>
           <div class="step-body">
             <h3>Lower the Deployment Target</h3>
@@ -420,11 +429,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup4.webp" width="2670" height="1604" loading="lazy" alt="Step 4"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: iOS Deployment Target setting in Xcode"><img src="GuideImages/ProjPicSetup4.webp" width="2670" height="1604" loading="lazy" alt="iOS Deployment Target setting in Xcode"></button>
         </div>
 
         <!-- 16 · Manual · 5 -->
-        <div class="step wizard-step" data-step="16" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="16" data-path="manual">
           <span class="step-badge" aria-hidden="true">5</span>
           <div class="step-body">
             <h3>Set it to 7.0</h3>
@@ -436,11 +445,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup5.webp" width="2582" height="390" loading="lazy" alt="Step 5"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Deployment target set to 7.0"><img src="GuideImages/ProjPicSetup5.webp" width="2582" height="390" loading="lazy" alt="Deployment target set to 7.0"></button>
         </div>
 
         <!-- 17 · Manual · 6 -->
-        <div class="step wizard-step" data-step="17" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="17" data-path="manual">
           <span class="step-badge" aria-hidden="true">6</span>
           <div class="step-body">
             <h3>Delete the Unused Files</h3>
@@ -452,11 +461,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup6.webp" width="518" height="436" loading="lazy" alt="Step 6"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Unused files selected in the project navigator"><img src="GuideImages/ProjPicSetup6.webp" width="518" height="436" loading="lazy" alt="Unused files selected in the project navigator"></button>
         </div>
 
         <!-- 18 · Manual · 7 -->
-        <div class="step wizard-step" data-step="18" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="18" data-path="manual">
           <span class="step-badge" aria-hidden="true">7</span>
           <div class="step-body">
             <h3>Open LaunchScreen</h3>
@@ -468,11 +477,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup7.webp" width="532" height="418" loading="lazy" alt="Step 7"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: LaunchScreen storyboard in the project navigator"><img src="GuideImages/ProjPicSetup7.webp" width="532" height="418" loading="lazy" alt="LaunchScreen storyboard in the project navigator"></button>
         </div>
 
         <!-- 19 · Manual · 8 -->
-        <div class="step wizard-step" data-step="19" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="19" data-path="manual">
           <span class="step-badge" aria-hidden="true">8</span>
           <div class="step-body">
             <h3>Add a View Controller</h3>
@@ -484,11 +493,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup8.webp" width="1386" height="1114" loading="lazy" alt="Step 8"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: View Controller Scene in the storyboard"><img src="GuideImages/ProjPicSetup8.webp" width="1386" height="1114" loading="lazy" alt="View Controller Scene in the storyboard"></button>
         </div>
 
         <!-- 20 · Manual · 9 -->
-        <div class="step wizard-step" data-step="20" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="20" data-path="manual">
           <span class="step-badge" aria-hidden="true">9</span>
           <div class="step-body">
             <h3>Switch to Page Layout</h3>
@@ -500,11 +509,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup9.webp" width="516" height="1336" loading="lazy" alt="Step 9"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Page layout option in the storyboard inspector"><img src="GuideImages/ProjPicSetup9.webp" width="516" height="1336" loading="lazy" alt="Page layout option in the storyboard inspector"></button>
         </div>
 
         <!-- 21 · Manual · 10 -->
-        <div class="step wizard-step" data-step="21" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="21" data-path="manual">
           <span class="step-badge" aria-hidden="true">10</span>
           <div class="step-body">
             <h3>Disable Safe Area Guides</h3>
@@ -516,11 +525,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup10.webp" width="510" height="260" loading="lazy" alt="Step 10"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: Use Safe Area Layout Guides checkbox"><img src="GuideImages/ProjPicSetup10.webp" width="510" height="260" loading="lazy" alt="Use Safe Area Layout Guides checkbox"></button>
         </div>
 
         <!-- 22 · Manual · 11 -->
-        <div class="step wizard-step" data-step="22" data-path="manual">
+        <div class="step wizard-step has-shot" data-step="22" data-path="manual">
           <span class="step-badge" aria-hidden="true">11</span>
           <div class="step-body">
             <h3>Open the AppDelegate</h3>
@@ -532,15 +541,15 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup11.webp" width="508" height="340" loading="lazy" alt="Step 11"></div>
+          <button class="shot" type="button" aria-label="Enlarge screenshot: AppDelegate file in the project navigator"><img src="GuideImages/ProjPicSetup11.webp" width="508" height="340" loading="lazy" alt="AppDelegate file in the project navigator"></button>
         </div>
 
         <!-- 23 · Manual · 12 -->
-        <div class="step wizard-step" data-step="23" data-path="manual">
+        <div class="step wizard-step code-step" data-step="23" data-path="manual">
           <span class="step-badge" aria-hidden="true">12</span>
           <div class="step-body">
             <h3>Paste the New Code</h3>
-            <p>Copy the code below by pressing the copy button, then in your AppDelegate file, press Cmd+A to select all, and Cmd+V to paste the code.</p>
+            <p>Copy the code, select everything in AppDelegate.swift with Cmd+A, then paste with Cmd+V.</p>
             <figure class="code">
               <figcaption class="code-bar">
                 <span class="code-title" title="AppDelegate.swift">AppDelegate.swift</span>
@@ -554,8 +563,11 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
 
     <span class="tok-kw">var</span> window: <span class="tok-type">UIWindow</span>?  <span class="tok-com">// Needed for apps not using SceneDelegate</span>
 
-    <span class="tok-kw">func</span> application(_ application: <span class="tok-type">UIApplication</span>,
-                     didFinishLaunchingWithOptions launchOptions: [<span class="tok-type">UIApplication.LaunchOptionsKey</span>: <span class="tok-type">Any</span>]?) -&gt; <span class="tok-type">Bool</span> {
+    <span class="tok-kw">func</span> application(
+        _ application: <span class="tok-type">UIApplication</span>,
+        didFinishLaunchingWithOptions launchOptions:
+            [<span class="tok-type">UIApplication.LaunchOptionsKey</span>: <span class="tok-type">Any</span>]?
+    ) -&gt; <span class="tok-type">Bool</span> {
 
         <span class="tok-com">// Create a UIWindow manually</span>
         window = <span class="tok-type">UIWindow</span>(frame: <span class="tok-type">UIScreen</span>.main.bounds)
@@ -566,6 +578,10 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
     }
 }</pre></div>
             </figure>
+            <details class="wiz-reference">
+              <summary>View Xcode reference</summary>
+              <button class="shot reference-shot" type="button" aria-label="Enlarge screenshot: AppDelegate code in Xcode"><img src="GuideImages/ProjPicSetup12.webp" width="3054" height="1034" loading="lazy" alt="AppDelegate code in Xcode"></button>
+            </details>
             <div class="wiz-confirm">
               <label class="confirm">
                 <input class="confirm-box" type="checkbox">
@@ -573,7 +589,6 @@ rm -rf /tmp/iOS6SwiftTemplates</pre></div>
               </label>
             </div>
           </div>
-          <div class="shot"><img src="GuideImages/ProjPicSetup12.webp" width="3054" height="1034" loading="lazy" alt="Step 12"></div>
         </div>
 
         <!-- 24 · Manual · 13 -->

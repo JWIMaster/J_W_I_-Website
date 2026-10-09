@@ -1,8 +1,8 @@
 # J_W_I_ — Design System
 
 Softly-lit graphite. Every page is dark; the warm dark reading
-sheet carries long-form text. Amber is the identity accent; pastel blue is the
-control accent.
+sheet carries long-form text. Amber is the identity accent; warm silver carries primary actions and
+muted steel blue identifies links and focus.
 
 ## Pages
 
@@ -29,8 +29,10 @@ only.
 | `--sheet-ink` / `-soft` / `-faint` | `#e9e6de` / `#aaa49a` / `#948e84` | sheet text: body / secondary / meta |
 | `--ink-0..3` | `#edeeef` → `#989faa` | page text: body → tertiary |
 | `--accent` / `-hi` / `-lo` | `#e5a13d` / `#f0b45c` / `#c9862a` | **identity only**: kickers, ticks, active-nav underscore, hero underscore, step badges |
-| `--blue` / `-hi` / `-lo` | `#8fb5dd` / `#a9c9ea` / `#6f99c6` | **controls only**: buttons, typing cursor |
-| `--blue-ink` | `#132338` | text on blue fills (7.4:1 on `--blue`) |
+| `--blue` / `-hi` / `-lo` | `#9aaec3` / `#bbc8d6` / `#8198b0` | links, focus and small control details |
+| `--action` / `-hi` / `-lo` | `#c7c3b9` / `#dedbd4` / `#b1aca2` | warm silver primary buttons |
+| `--action-ink` | `#242322` | dark primary-button labels |
+| `--blue-ink` | `#132338` | text on blue fills |
 
 Rules of thumb:
 - Amber never appears on a control; blue never appears on identity marks.
@@ -78,17 +80,15 @@ Rules of thumb:
 
 ## Components
 
-- **Masthead** — sticky, `z-index: 50`, rests 10px below the top edge and pins to
-  `top: 0` on scroll. A near-opaque graphite toolbar over a hairline base — **no
+- **Masthead** — full-width on desktop, with content aligned to the page gutters; sticky, `z-index: 50`, keeps `top: 10px` both at rest and while scrolling. A near-opaque graphite toolbar over a hairline base — **no
   backdrop blur** (blur used as a mood is the most reliable "generated interface"
   signal and it costs contrast); it gains a deeper shadow once pinned
   (`is-stuck`). Brand mark = green dot + `J_W_I_`. Nav links get the amber
   active underline and a growing hover underline. (Never give the masthead a
   `position: relative` group rule — that silently un-sticks it; specificity bit
-  us once.) In wizard app mode the resting margin is dropped, so the masthead is
-  flush to the viewport top and `--mast-h` measures the bare height (61px desktop
-  / 84px mobile); in-flow pages keep the 10px rest (71 / 94px). `--mast-h` is
-  always `offsetHeight + computed top margin`, never `rect().bottom` — a sticky
+  us once.) All pages, including the wizard, keep the same 10px resting margin
+  (71px desktop / 94px mobile including the header). `--mast-h` is
+  always `rect.height + computed top margin`, never `rect().bottom` — a sticky
   element's bottom edge is scroll-dependent.
 - **Skip link** — every page opens with `<a class="skip-link" href="#main">`: the
   first Tab stop, invisible until focused, then a blue control above the masthead
@@ -96,8 +96,8 @@ Rules of thumb:
 - **Buttons** — one geometry: 38px tall (44px on touch devices), `--r-control` (6px), 1px border, an
   inner top highlight over a shallow surface gradient. Press is *grounded*:
   the control sinks (`translateY(0.5px)`) and its fill darkens under an inset
-  shadow — no scale pop. Primary: blue fill, `--blue-ink` text. Ghost: blue
-  outline, blue text. Small variant (28px) for code-bar copy buttons.
+  shadow — no scale pop. Primary: warm silver fill, `--action-ink` text. Ghost: neutral graphite
+  fill and outline, light text. Small variant (28px) for code-bar copy buttons.
 - **Index strip** (home) — the hero's table of contents: four divided columns
   (number, name, one line of what it is) under a full-width legend, sitting on
   the section rule. Two columns ≤860px, one hairline-separated column ≤560px.
@@ -119,14 +119,16 @@ Rules of thumb:
 - **Wizard** (setup guide) — a full-screen stage, not a panel: `main.wiz-main`
   fills the viewport below the masthead and the single visible `.wizard-step`
   floats centred on the page background (`align-content: safe center`, so the
-  no-JS stack falls back to top alignment instead of clipping). Steps with a
-  screenshot earn a third grid column beside the text; ≤ 860px the shot drops
-  under the text. `guide1.js` shows exactly one logical step at a time and
+  no-JS stack falls back to top alignment instead of clipping). Screenshots
+  follow the instructions in one reading column, centred without surrounding
+  boxes. Images retain their natural proportions under a shared height limit.
+  Code steps use the full reading width and put their Xcode screenshot in a
+  collapsed “View Xcode reference” disclosure. Long code lines wrap, and short
+  windows use a smaller image height limit. `guide1.js` shows exactly one logical step at a time and
   switches the section head (tick `a`–`e` + phase name + title + "phase · n of
   m" progress) with the step group. Every actionable step carries a
   `.confirm-box` — an 18 px macOS-style checkbox (inset well, blue gradient
-  fill + `--blue-ink` tick when checked) — that gates the Next button until
-  ticked. The step-4 branch is a two-card radio group (`.path-card`, green dot
+  fill + `--blue-ink` tick when checked) — that is ticked by the first Next click; the second click advances. The step-4 branch is a two-card radio group (`.path-card`, green dot
   exactly like the OS picker) choosing the templates path or the manual path;
   `data-path` steps are hidden from the other branch. Per-OS variants
   (`[data-os]`) carry the OS name in their headings so each reads standalone;
@@ -134,10 +136,14 @@ Rules of thumb:
   `.wiz-controls`; on the final step Next hides and a "Start over" ghost
   button resets the confirms and path choice (keeping the OS).
   In app mode the page itself must never scroll: `body.wiz-app` and the html
-  element are `overflow: clip` (`hidden` still allows programmatic scrolling,
-  which slid the footer up behind the shell), the footer is hidden, and
+  element cannot scroll: the body clips, while the root uses `overflow: hidden`
+  with a fixed height to preserve `scrollbar-gutter: stable`. The footer is hidden, and
   `guide1.js` resets any pre-open scroll offset to 0 on entry. Anything that
-  has to grow scrolls `.wiz-viewport`, never the page.
+  has to grow scrolls `.wiz-viewport`, never the page. The stage can shrink
+  below its content height, and each navigation resets its scroll offset.
+  The phase heading aligns left; desktop controls and progress share one row.
+  On narrow screens progress moves underneath. Screenshot buttons open a
+  keyboard-accessible preview with an explicit close button and Escape support.
 
 ## Motion
 
@@ -158,11 +164,18 @@ layers, `--t-slow` 460ms for entrances.
   guarantees nothing stays hidden when content is jumped past.
 - **Masthead** — gains a deeper shadow once pinned (`is-stuck`), so it reads as
   a layer above the page rather than a band that happens to sit there.
-- **Intro fades** — on load, the lead (the `[data-typewrite]` element) and the
-  blocks named in `data-typewrite-then` fade in together (900 ms, no typing, no
-  pauses, no stagger). Classes are stripped ~1.1 s later so the elements hand back
-  to the scroll-reveal system. The blocks are hidden *instantly* (no transition on
-  the way out) so the first paint never flashes visible → hidden → visible.
+- **Article intro** — the opening sentence streams over 300ms, then the rest
+  of the prose fades in over 450ms with a small stagger capped at 160ms.
+  The full sentence reserves its layout and
+  remains available to screen readers without swapping its layout. User wheel,
+  touch or keyboard navigation and enabling reduced motion complete it immediately;
+  browser scroll restoration and visibility changes do not cancel typing.
+  No-JS shows the full text. `node .qa/article-intro.js` checks the sequence,
+  repeated refreshes and layout stability.
+- **Article refresh stability** — the heading uses Home’s rise entrance with `overflow-anchor: none`; its
+  layout stays fixed. The sheet and paragraphs fade using opacity only. Refresh restoration can otherwise preserve an
+  animated offset and accumulate scroll drift. `node .qa/article-refresh.js`
+  checks eight rapid reloads without resetting scroll against the local HTTP preview.
 - **Every load** — the fade plays on every page load (no session memory). The
   home wordmark (`.hero-name`) rides the standard `.reveal` rise, and the index
   strip assembles itself once (staggered 60–210ms) — the hero is the page's one
@@ -170,7 +183,7 @@ layers, `--t-slow` 460ms for entrances.
 - **Code scrollbars** — `.code-screen` uses a thin custom scrollbar
   (`scrollbar-width: thin` + WebKit rules, `--surface-2` thumb).
 - **Wizard steps** — each step revealed with `.wiz-enter` → `.wiz-shown`
-  (340 ms opacity + 8 px rise, same language as `.fade-io`), driven by the wizard's
+  (340 ms opacity + 14px rise, same language as `.fade-io`), driven by the wizard's
   state machine; skipped entirely under reduced motion. Steps deliberately carry no
   `.fade-io` — the section's first reveal already covers the initial paint. The
   phase's step ticks and the progress hairline update on the same beat.
@@ -199,9 +212,20 @@ sticky/overlay chrome (masthead sticks statically, `.skip-link`, `.lightbox`,
   emulated effective viewport, live resize sequences, scroll states,
   reduced-motion and no-JS passes) writing `.qa/a2/*.json`;
   `node .qa/a2/report.js [modes…]` digs out the actionable rows
+- `node .qa/guide-layout.js` — every template and manual step at 320, 390,
+  768, 1024 and 1440px; header alignment across all pages, image proportions,
+  stage overflow, scroll reset and keyboard screenshot preview. Set
+  `JWI_PREVIEW_BASE=file:///absolute/path/to/repo/` to test directly from files,
+  or `JWI_PREVIEW_HEIGHT=568` to check short windows.
 - `node .qa/verify14.js` — regression checks for the wizard scroll lock, the
   reveal safety net, the extreme-width step stage, the skip link and the
   mobile tap targets
+- `node .qa/header-consistency.js` — verifies header, brand and navigation
+  geometry when opening the guide from a scrolled article.
+- `node .qa/design-review.js` — all pages at five widths, button fit and palette contrast.
+- `node .qa/guide-entry.js` — click from the scrolled Swift article into the
+  guide with delayed scripts; checks first-frame step visibility, header
+  alignment and absence of an article fade on the app shell.
 
 Captures for visual review must be viewport screenshots taken after an instant
 scroll pass; `fullPage: true` rasterises not-yet-revealed layers as blank fills
@@ -212,7 +236,31 @@ and reads as content loss that is not there.
 The home hero opens with a mono “Code · Colour · Camera” legend. Colour Snap
 earns a six-colour strip; it is decorative and hidden from assistive technology.
 Home actions use trailing arrows (diagonal for external destinations). Keyboard
-focus raises ledger rows like pointer hover, and control focus uses pastel blue.
+focus raises ledger rows like pointer hover, and control focus uses muted steel blue.
 Primary link buttons keep dark text on hover; disabled buttons do not pick up
 hover styling. Confirmed wizard actions use the same grounded press and neutral
 shadow as the other controls. Arrow movement honours reduced motion.
+
+## Playful motion
+
+Page headings and their rules enter together. The home wordmark underscores
+settle into place; brand dots ping on hover; project numbers nudge and Colour
+Snap swatches alternate gently. Buttons have a short landing beat, nav underlines
+grow on hover, and screenshot previews zoom slightly on hover. These effects
+run on entry or interaction rather than looping, and all new motion is gated
+by `prefers-reduced-motion`. `node .qa/motion-polish.js` verifies both preferences
+on all four pages.
+
+Article, support and guide titles share Home’s 500ms fade-and-rise entrance.
+Animated title containers are excluded from scroll anchoring to prevent reload drift.
+`node .qa/title-fades.js` checks each page and reduced motion.
+
+Guide choices have 24px of space after their description. Step numbers pop in,
+choices and downloads arrive in a short stagger, and images and code enter
+with their step. Selection dots, confirmations and the current progress tick
+give a brief acknowledgement. All effects respect reduced motion; verify them
+and picker spacing with `node .qa/guide-motion.js`.
+
+The home wordmark has a slow highlight that passes over its amber underscores
+once every nine seconds. It adds no elements or controls and does not move the
+letters. Reduced motion keeps the underscores solid amber.

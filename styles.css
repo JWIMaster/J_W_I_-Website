@@ -2,7 +2,7 @@
    J_W_I_ — "Softly-lit graphite" design system
    A physical-but-contemporary interface language: matte
    machined surfaces under a single soft top light, one warm
-   accent, a pastel-blue secondary, and a dark warm "sheet" material for long reading.
+   accent, quiet steel links, and a dark warm "sheet" material for long reading.
    Depth comes from light logic, not texture cosplay.
    ============================================================ */
 
@@ -47,13 +47,18 @@
   --accent-ink: #221503;
   --accent-dim: rgba(229, 161, 61, 0.14);
 
-  /* secondary accent — pastel blue (controls) */
-  --blue: #8fb5dd;
-  --blue-hi: #a9c9ea;
-  --blue-lo: #6f99c6;
+  /* Cool steel for links and focus; warm silver for the main action. */
+  --blue: #9aaec3;
+  --blue-hi: #bbc8d6;
+  --blue-lo: #8198b0;
   --blue-ink: #132338;
-  --blue-dim: rgba(143, 181, 221, 0.13);
-  --blue-line: rgba(143, 181, 221, 0.32);
+  --blue-dim: rgba(154, 174, 195, 0.13);
+  --blue-line: rgba(154, 174, 195, 0.32);
+  --action: #c7c3b9;
+  --action-hi: #dedbd4;
+  --action-hover: #eeeae3;
+  --action-lo: #b1aca2;
+  --action-ink: #242322;
 
   --green: #4fc47c;
   --green-dim: rgba(79, 196, 124, 0.16);
@@ -156,11 +161,8 @@
   --w-prose: 68ch;
   --w-prose-narrow: 60ch;
   --pad: clamp(20px, 5vw, 44px);
-  --mast-h: 70px; /* stable at-rest masthead bottom: 60px masthead + 10px sticky top margin.
-                      syncMast in site.js keeps it in sync as offsetHeight + computed top margin —
-                      deliberately scroll-independent (a sticky masthead's rect().bottom is not:
-                      it absorbs the 10px margin once stuck). The wizard's fixed shell and the
-                      .wiz-main stage must clear the *at-rest* masthead in every scroll state. Do not hand-tune. */
+  --mast-h: 71px; /* site.js measures the fractional header height + resting
+                    top margin, so the fixed guide meets the header exactly. */
 
   /* motion — expo-out: quick to leave, long soft settle. One authored curve,
      plus a fast duration for anything that answers a pointer. */
@@ -181,6 +183,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* A scrollable article and a locked guide use the same viewport width. */
+  scrollbar-gutter: stable;
   -webkit-text-size-adjust: 100%;
   /* The page's own scrollbar is part of the surface too — same graphite thumb
      as the code screens, inset so it reads as a groove rather than a slab.
@@ -248,6 +252,7 @@ body::before {
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  opacity: 0.45;
   background: repeating-linear-gradient(90deg,
     rgba(255, 255, 255, 0.008) 0,
     rgba(255, 255, 255, 0.008) 1px,
@@ -468,7 +473,7 @@ code, pre, kbd {
 /* ----------------------------- masthead ----------------------------- */
 .masthead {
   position: sticky;
-  top: 0;
+  top: 10px;
   margin-block-start: 10px;
   z-index: 50;
   /* A toolbar, not a sheet of glass: near-opaque graphite over a hairline base.
@@ -497,10 +502,8 @@ code, pre, kbd {
   height: 60px;
   max-width: var(--w-max);
   margin-inline: auto;
-  /* No inline padding: the masthead is a body child, so its content box is
-     already the page's gutter box. Padding here would inset the brand and nav
-     by --pad relative to every other element on the page (it did, by 44px).
-     The mobile layout re-adds it for the full-bleed nav scroller. */
+  /* Desktop gutters belong to .masthead; mobile gutters belong to the
+     stacked inner layout and its navigation scroller. */
   padding-inline: 0;
 }
 
@@ -575,6 +578,14 @@ code, pre, kbd {
 .nav a[aria-current="page"]::after {
   transform: none;
   background: var(--accent);
+}
+
+/* Desktop toolbar spans the viewport; its content shares the page gutters. */
+@media (min-width: 720px) {
+  .masthead {
+    margin-inline: calc(-1 * var(--pad));
+    padding-inline: var(--pad);
+  }
 }
 
 /* mobile: second row, scrolls horizontally */
@@ -723,13 +734,13 @@ a.btn:hover {
     0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
-/* primary action — pastel blue, the site's secondary accent. Filled, one step
+/* primary action — warm silver. Filled, one step
    brighter than the chassis, and lifted by 1px of contact shadow rather than a
    coloured glow. */
 .btn-primary {
-  color: var(--blue-ink);
-  background: linear-gradient(180deg, var(--blue-hi), var(--blue));
-  border-color: rgba(19, 35, 56, 0.35);
+  color: var(--action-ink);
+  background: linear-gradient(180deg, var(--action-hi), var(--action));
+  border-color: rgba(36, 35, 34, 0.35);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.5),
     0 1px 2px rgba(0, 0, 0, 0.45);
@@ -737,40 +748,40 @@ a.btn:hover {
 
 .btn-primary:enabled:hover,
 a.btn-primary:hover {
-  color: var(--blue-ink);
-  background: linear-gradient(180deg, #b8d3ef, var(--blue-hi));
-  border-color: rgba(19, 35, 56, 0.32);
+  color: var(--action-ink);
+  background: linear-gradient(180deg, var(--action-hover), var(--action-hi));
+  border-color: rgba(36, 35, 34, 0.32);
   box-shadow:
     inset 0 1px 0 rgba(255, 255, 255, 0.55),
     0 2px 4px rgba(0, 0, 0, 0.45);
 }
 
 .btn-primary:active {
-  background: linear-gradient(180deg, var(--blue), var(--blue-lo));
+  background: linear-gradient(180deg, var(--action), var(--action-lo));
   box-shadow:
-    inset 0 2px 6px rgba(19, 35, 56, 0.4),
+    inset 0 2px 6px rgba(36, 35, 34, 0.4),
     inset 0 -1px 0 rgba(255, 255, 255, 0.15);
 }
 
-/* secondary action — blue-tinted glass over the chassis */
+/* Secondary actions stay neutral so colour belongs to content and state. */
 .btn-ghost {
-  background: rgba(143, 181, 221, 0.07);
-  border-color: var(--blue-line);
+  background: rgba(255, 255, 255, 0.025);
+  border-color: var(--line-strong);
   box-shadow: none;
-  color: #c4d8ef;
+  color: var(--ink-0);
 }
 
 .btn-ghost:enabled:hover,
 a.btn-ghost:hover {
-  background: var(--blue-dim);
-  border-color: rgba(143, 181, 221, 0.55);
-  color: #dbe8f7;
+  background: var(--surface-1);
+  border-color: rgba(255, 255, 255, 0.22);
+  color: var(--ink-0);
   box-shadow: none;
 }
 
 .btn-ghost:active {
   transform: translateY(0.5px);
-  background: var(--blue-dim);
+  background: var(--surface-0);
   box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
@@ -1303,6 +1314,8 @@ a.btn-ghost:hover {
 .toc a:hover {
   background: rgba(255, 255, 255, 0.022);
 }
+.toc a:focus-within .t,
+.toc a:hover .t { color: var(--ink-0); }
 
 /* the section the reader is actually in: an amber mark on the strip's own rule */
 .toc a.is-current::before {
@@ -1722,28 +1735,26 @@ a.btn-ghost:hover {
   }
 }
 
-/* intro fade — the lead + the blocks named in data-typewrite-then fade in
-   together on load (no typing, no pauses) */
+/* The opening sentence keeps its complete layout and accessible text while
+   the visual copy streams. The rest fades in after the sentence finishes. */
+[data-typewrite] { position: relative; }
+.intro-stream { display: none; }
+.tw-typing .intro-copy { color: transparent; }
+.tw-typing .intro-stream { display: block; position: absolute; inset: 0; }
+.intro-stream::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: .85em;
+  margin-inline-start: 3px;
+  background: var(--accent);
+  vertical-align: baseline;
+}
 @media (prefers-reduced-motion: no-preference) {
-  /* the hide is instant (no transition here) so the first paint never
-     flashes visible → hidden; the fade plays only on the way in */
-  .tw-rest {
-    opacity: 0;
-  }
-
-  .tw-rest.tw-in {
+  .prose > .tw-rest { opacity: 0; transform: none; transition: none; }
+  .prose > .tw-rest.tw-in {
     opacity: 1;
-    transition: opacity 900ms var(--ease);
-  }
-
-  /* the lead fades in as the blocks below it do — together, no typing */
-  .tw-lead {
-    opacity: 0;
-  }
-
-  .tw-lead.tw-lead-in {
-    opacity: 1;
-    transition: opacity 900ms var(--ease);
+    transition: opacity 450ms ease-out var(--intro-delay, 0ms);
   }
 }
 
@@ -1815,41 +1826,70 @@ a.btn-ghost:hover {
   display: none;
 }
 
-/* One step at a time: the screenshot is a figure — it sits below the text,
- * and clicking it opens the full-screen preview */
+/* A single reading column: instructions, then an unframed image.
+   Code is the primary visual on code steps; its screenshot is a reference. */
 .wizard-step {
-  grid-template-columns: 40px minmax(0, 1fr);
-  column-gap: var(--s-3);
+  grid-template-columns: 36px minmax(0, 1fr);
+  gap: var(--s-4) var(--s-3);
   min-width: 0;
 }
-.wizard-step > .shot {
-  grid-column: 1 / -1;
-  margin-block-start: 0;   /* the step grid gap owns the spacing */
+.wizard-step > .shot,
+.wizard-step .reference-shot {
+  grid-column: 2;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: var(--r-s);
+  background: transparent;
+  box-shadow: none;
+  cursor: zoom-in;
 }
-/* one step visible: the stacked-timeline rule would dangle off the bottom */
-.wizard-step::before {
-  display: none;
-}
+.wizard-step::before { display: none; }
 .wizard-step .step-body h3 {
   font-size: clamp(1.15rem, 1.9vw, 1.4rem);
   font-weight: 700;
   letter-spacing: var(--track-title);
 }
-.wizard-step .step-body p {
-  max-width: 56ch;
-}
+.wizard-step .step-body p { max-width: 70ch; }
 .wizard-step .shot img {
+  width: auto;
+  height: auto;
+  min-height: 0;
   max-width: 100%;
-  max-height: min(58vh, 500px);   /* letterboxed inside the frame */
+  max-height: clamp(180px, 38dvh, 320px);
+  margin: 0;
   object-fit: contain;
-  margin-inline: auto;
   display: block;
-  cursor: zoom-in;
+  outline: 0;
 }
-@media (max-width: 860px) {
-  .wizard-step .shot img {
-    max-height: min(62vh, 420px);
-  }
+.wiz-reference { margin-block-start: var(--s-4); }
+.wiz-reference summary {
+  width: fit-content;
+  color: var(--blue-hi);
+  font-size: var(--t-sm);
+  cursor: pointer;
+  padding-block: var(--s-2);
+}
+.wiz-reference[open] summary { margin-block-end: var(--s-2); }
+@media (max-width: 560px) {
+  .wizard-step > .shot { grid-column: 1 / -1; }
+}
+@media (max-height: 600px) {
+  .wizard-step .shot img { max-height: clamp(140px, 30dvh, 220px); }
+}
+body.wiz-app .wizard-step .code-screen {
+  max-height: min(48dvh, 420px);
+  overflow-y: auto;
+}
+.wizard-step .code-screen pre {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
 }
 
 /* Confirmation — a quiet macOS-style checkbox that gates the Next button.
@@ -1931,10 +1971,10 @@ a.btn-ghost:hover {
   gap: 2px 12px;
   padding: 14px 16px;
   min-width: 0;
-  background: var(--inset-0);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-0));
   border: 1px solid var(--line);
   border-radius: var(--r-m);
-  box-shadow: var(--inset-1);
+  box-shadow: var(--elev-1);
   cursor: pointer;
   transition:
     transform var(--t-fast) var(--ease),
@@ -1980,22 +2020,22 @@ a.btn-ghost:hover {
 /* keyboard parity with .os-card — the card is the control, so it takes the
    ring, not just the inner dot */
 .path-card:focus-within {
-  border-color: var(--green);
-  box-shadow: var(--inset-1), 0 0 0 2px var(--green-dim);
+  border-color: var(--blue-line);
+  box-shadow: var(--inset-1), 0 0 0 2px var(--blue-dim);
 }
 .path-card.is-selected {
   background: var(--surface-0);
   border-color: rgba(79, 196, 124, 0.55);
-  box-shadow: var(--inset-1), 0 0 14px rgba(79, 196, 124, 0.12);
+  box-shadow: var(--elev-1);
 }
 .path-card .path-dot:checked {
   background: var(--green);
   border-color: var(--green);
-  box-shadow: 0 0 6px rgba(79, 196, 124, 0.9), 0 0 16px rgba(79, 196, 124, 0.45);
+  box-shadow: 0 0 0 3px var(--green-dim);
   transform: scale(1.2);
 }
 .path-card .path-dot:focus-visible {
-  outline: 2px solid var(--green);
+  outline: 2px solid var(--blue);
   outline-offset: 2px;
 }
 @media (max-width: 560px) {
@@ -2013,7 +2053,7 @@ a.btn-ghost:hover {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--s-3);
-  margin: 0 0 var(--s-3);
+  margin: var(--s-5) 0 var(--s-3);
   padding: 0;
   border: 0;
   /* A <fieldset> carries the UA's `min-inline-size: min-content`, so the picker
@@ -2033,10 +2073,10 @@ a.btn-ghost:hover {
   /* let the card follow its track below its own min-content instead of
      pushing the grid (and the step stage) wider than the viewport */
   min-width: 0;
-  background: var(--inset-0);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-0));
   border: 1px solid var(--line);
   border-radius: var(--r-m);
-  box-shadow: var(--inset-1);
+  box-shadow: var(--elev-1);
   cursor: pointer;
   transition:
     transform var(--t-fast) var(--ease),
@@ -2054,7 +2094,8 @@ a.btn-ghost:hover {
 }
 .os-card.is-selected {
   border-color: rgba(79, 196, 124, 0.55);
-  box-shadow: var(--inset-1), 0 0 14px rgba(79, 196, 124, 0.12);
+  background: var(--surface-0);
+  box-shadow: var(--elev-1);
 }
 .os-name {
   font-size: var(--t-md);
@@ -2088,7 +2129,7 @@ a.btn-ghost:hover {
 .os-dot:checked {
   background: var(--green);
   border-color: var(--green);
-  box-shadow: 0 0 6px rgba(79, 196, 124, 0.9), 0 0 16px rgba(79, 196, 124, 0.45);
+  box-shadow: 0 0 0 3px var(--green-dim);
   transform: scale(1.2);
 }
 .os-ver {
@@ -2120,10 +2161,10 @@ a.btn-ghost:hover {
   align-items: center;
   gap: var(--s-2) var(--s-3);
   padding: 10px 14px;
-  background: var(--inset-0);
+  background: linear-gradient(180deg, var(--surface-1), var(--surface-0));
   border: 1px solid var(--line);
   border-radius: var(--r-m);
-  box-shadow: var(--inset-1);
+  box-shadow: var(--elev-1);
   text-decoration: none;
   cursor: pointer;
   transition:
@@ -2268,6 +2309,16 @@ html.wiz-app .read-progress {
  * the incoming one rises into place — the same 340ms language as .fade-io,
  * with the exit deliberately quieter than the enter */
 @media (prefers-reduced-motion: no-preference) {
+  /* Start at first paint, rather than hiding an already visible app shell
+     after deferred scripts run. The frame and controls remain stationary. */
+  html.wiz-app .wizard-step.wiz-arrive,
+  body.wiz-app .wizard-step.wiz-arrive {
+    animation: guide-arrive 440ms var(--ease) both;
+  }
+  @keyframes guide-arrive {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: none; }
+  }
   .wizard-step.wiz-enter {
     opacity: 0;
     transform: translateY(14px);
@@ -2417,27 +2468,19 @@ html.wiz-app .site-foot {
   display: none;
 }
 
-/* The viewport itself must not scroll either. Clipping only the body still
-   leaves the masthead's 10px sticky top margin as scrollable overflow, so a
-   programmatic jump (scroll restoration) could still open a 10px seam between
-   the masthead and the fixed shell. :has() covers the app frame for the whole
+/* A fixed-height root locks the viewport as well as the clipped body while
+   preserving the shared scrollbar gutter. :has() covers the app frame for the whole
    session — guide1.js drops the html.wiz-app prepaint claim once it owns the
    board, but body.wiz-app stays. */
 html.wiz-app,
 html:has(body.wiz-app) {
-  overflow: clip;
+  /* Hidden preserves the stable scrollbar gutter; clip discards it. */
+  overflow: hidden;
+  height: 100%;
 }
 
-/* In app mode the shell is flush to the top of the viewport, so the masthead
-   gives up its 10px sticky resting margin (in-flow pages keep it). That margin
-   was also the document's only remaining scrollable overflow — with it gone
-   the wizard page cannot scroll at all, and masthead and shell stay aligned in
-   every state. site.js measures offsetHeight + marginTop, so --mast-h follows
-   down to the bare masthead height. */
-body.wiz-app .masthead,
-html.wiz-app .masthead {
-  margin-block-start: 0;
-}
+/* Keep the same 10px masthead rest as every other page. The clipped document
+   and fixed wizard shell prevent scrolling without changing header geometry. */
 body.wiz-app .page-head,
 html.wiz-app .page-head {
   display: none;   /* in the app the wizard's own head carries the title —
@@ -2454,7 +2497,7 @@ html.wiz-app #wizard {
   margin-block: 0;
   /* breathing room above the head and below the controls — the content
    * floats inside the frame, never touching the screen edges */
-  padding: var(--s-5) var(--pad) var(--s-6);
+  padding: var(--s-5) var(--pad);
 }
 body.wiz-app .section-head,
 body.wiz-app .wiz-viewport,
@@ -2463,23 +2506,28 @@ html.wiz-app .section-head,
 html.wiz-app .wiz-viewport,
 html.wiz-app .wiz-controls {
   width: 100%;
-  max-width: 860px;
+  max-width: 840px;
   margin-inline: auto;
 }
 body.wiz-app .section-head,
 html.wiz-app .section-head {
-  margin-block-end: 0;
-  justify-content: center;
-  text-align: center;
+  margin-block-end: var(--s-5);
+  justify-content: start;
+  text-align: left;
 }
 body.wiz-app .wiz-viewport,
 html.wiz-app .wiz-viewport {
   position: relative;
+  min-height: 0;
   overflow-y: auto;
+  overflow-x: hidden;
   overscroll-behavior: contain;
   scrollbar-width: thin;
   scrollbar-color: var(--surface-2) transparent;
-  gap: var(--s-6);   /* head → step: a tighter beat than the no-JS stack */
+  align-content: start;
+  align-content: safe center;
+  padding-block: var(--s-3);
+  gap: var(--s-6);
 }
 body.wiz-app .wiz-viewport::-webkit-scrollbar {
   width: 8px;
@@ -2530,26 +2578,43 @@ html.wiz-app .wiz-controls {
   margin-block-start: 0;
   padding-block: var(--s-4) 0;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
 }
 body.wiz-app .wiz-progress,
 html.wiz-app .wiz-progress {
-  order: 3;
-  width: 100%;
+  order: 0;
+  width: auto;
   justify-content: center;
-  margin-block-start: var(--s-1);
+  margin: 0 auto;
+}
+@media (max-width: 640px) {
+  body.wiz-app #wizard,
+  html.wiz-app #wizard { padding-block: var(--s-4); }
+  body.wiz-app .section-head,
+  html.wiz-app .section-head { margin-block-end: var(--s-4); }
+  body.wiz-app .wiz-progress,
+  html.wiz-app .wiz-progress { order: 3; width: 100%; }
+  body.wiz-app .wiz-controls,
+  html.wiz-app .wiz-controls { gap: var(--s-3); }
 }
 body.wiz-app .wiz-confirm,
 html.wiz-app .wiz-confirm {
   display: none;   /* the tick now lives inside the Next button */
 }
-/* the pre-paint claim hides every step until guide1.js marks the current
- * one — so the first paint is the app, never the full no-JS stack */
-html.wiz-app .wizard-step {
+/* Before initialization, paint only the initial selection step. The no-JS
+ * document still shows the full guide because it never takes this claim. */
+html.wiz-app .wizard-step:not([data-step="0"]) {
   display: none;
 }
-html.wiz-app .wizard-step:not(.is-hidden) {
+html.wiz-app .wizard-step[data-step="0"] {
   display: grid;
+}
+
+@media (max-height: 600px) and (min-width: 641px) {
+  body.wiz-app #wizard,
+  html.wiz-app #wizard { padding-block: var(--s-3); }
+  body.wiz-app .section-head,
+  html.wiz-app .section-head { gap: var(--s-2); margin-block-end: var(--s-3); }
 }
 
 /* Screenshot preview — the shot is the click target, the whole overlay is
@@ -2573,6 +2638,11 @@ html.wiz-app .wizard-step:not(.is-hidden) {
 }
 .lightbox[hidden] {
   display: none;
+}
+.lightbox-close {
+  position: absolute;
+  top: var(--s-4);
+  right: var(--s-4);
 }
 .lightbox img {
   max-width: 100%;
@@ -2632,6 +2702,97 @@ html.wiz-app .wizard-step:not(.is-hidden) {
   .btn:not(.btn-sm) { min-height: 44px; }
 }
 
+/* A playful accent without constant movement or layout shifts. */
+@media (prefers-reduced-motion: no-preference) {
+  /* Little arrivals and acknowledgements throughout the guide. Transform
+     and opacity keep the reading column and app frame in place. */
+  .wiz-app .wizard-step:is(.wiz-arrive, .wiz-enter.wiz-shown) > .step-badge {
+    animation: guide-badge-pop 420ms var(--ease) both;
+  }
+  .wiz-app .wizard-step:is(.wiz-arrive, .wiz-enter.wiz-shown) :is(.os-card, .path-card, .dl-list > li) {
+    animation: guide-item-arrive 300ms var(--ease) backwards;
+  }
+  .wiz-app .wizard-step:is(.wiz-arrive, .wiz-enter.wiz-shown) :is(.os-card, .path-card, .dl-list > li):nth-of-type(2) {
+    animation-delay: 50ms;
+  }
+  .wiz-app .wizard-step:is(.wiz-arrive, .wiz-enter.wiz-shown) :is(.os-card, .path-card, .dl-list > li):nth-of-type(3) {
+    animation-delay: 100ms;
+  }
+  .wiz-app .wizard-step.wiz-enter.wiz-shown > .shot,
+  .wiz-app .wizard-step.wiz-enter.wiz-shown .code,
+  .wiz-app .wiz-reference[open] .reference-shot {
+    animation: guide-item-arrive 380ms var(--ease) both;
+  }
+  .wiz-app :is(.os-dot, .path-dot):checked { animation: guide-choice-pop 360ms var(--ease); }
+  .wiz-app #wiz-next.is-armed .btn-ic { animation: guide-choice-pop 360ms var(--ease); }
+  .wiz-app .wiz-ticks .is-current { animation: guide-tick-pop 380ms var(--ease); }
+  @media (hover: hover) {
+    .wiz-app :is(.os-card, .path-card):hover { transform: translateY(-3px); }
+    .wiz-app .dl-row:hover .dl-ic { transform: translateY(3px); }
+  }
+  .wiz-app .dl-ic { transition: transform 220ms var(--ease); }
+  @keyframes guide-item-arrive {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: none; }
+  }
+  @keyframes guide-badge-pop {
+    0% { opacity: 0; transform: scale(.8) rotate(-7deg); }
+    65% { opacity: 1; transform: scale(1.06) rotate(2deg); }
+    100% { opacity: 1; transform: none; }
+  }
+  @keyframes guide-choice-pop {
+    45% { transform: scale(1.5); }
+  }
+  @keyframes guide-tick-pop {
+    45% { transform: scaleY(1.8); }
+  }
+  /* Match Home's entrance. Exclude animated headings from scroll anchoring
+     so their temporary visual offset cannot become a restored reading offset. */
+  .page-head,
+  #wizard > .section-head {
+    animation: rise 500ms var(--ease) both;
+    overflow-anchor: none;
+  }
+  .page-article .sheet { animation: article-arrive 200ms var(--ease) both; }
+  .page-article .fade-io { transform: none; }
+  .page-head .kicker::after { transform-origin: left; animation: rule-draw 850ms var(--ease) both; }
+  .hero-name .u {
+    display: inline-block;
+    background: linear-gradient(100deg, var(--accent) 40%, #ffe2a9 50%, var(--accent) 60%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: underscore-arrive 750ms var(--ease) both, underscore-shimmer 9s ease-in-out infinite;
+  }
+  .hero-name .u:nth-child(2) { animation-delay: 70ms, 250ms; }
+  .hero-name .u:nth-child(3) { animation-delay: 140ms, 500ms; }
+  .brand:hover .dot, .foot-brand:hover .dot { animation: dot-ping 550ms var(--ease); }
+  .index-row:hover .index-num, .index-row:focus-within .index-num { animation: number-nod 450ms var(--ease); }
+  .colour-study span { transition: transform 350ms var(--ease); }
+  #snap:hover .colour-study span:nth-child(odd) { transform: translateY(-3px); }
+  #snap:hover .colour-study span:nth-child(even) { transform: translateY(3px); }
+  .wizard-step .shot img { transition: transform 350ms var(--ease); }
+  .wizard-step .shot:hover img { transform: scale(1.025); }
+  .wizard-step .shot { overflow: hidden; }
+  .contact-panel .btn:hover .action-arrow { animation: mail-send 550ms var(--ease); }
+  .btn.fun-tap { animation: tap-settle 320ms var(--ease); }
+  .nav a { transition: color var(--t-fast) var(--ease), transform 240ms var(--ease); }
+  .nav a:hover { transform: none; }
+  @keyframes article-arrive { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes rule-draw { from { transform: scaleX(0); } }
+  @keyframes underscore-shimmer {
+    0%, 72% { background-position: 100% 0; }
+    100% { background-position: 0% 0; }
+  }
+  @keyframes underscore-arrive { from { opacity: 0; transform: translateY(12px) rotate(-8deg); } }
+  @keyframes dot-ping { 50% { transform: scale(1.6); } }
+  @keyframes number-nod { 40% { transform: translateX(3px); } }
+  @keyframes mail-send { 40% { transform: translate(4px, -3px); } }
+  @keyframes tap-settle { 40% { transform: translateY(1px); } 70% { transform: translateY(-1px); } }
+}
+
 /* ----------------------------- reduced motion ----------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -2640,6 +2801,10 @@ html.wiz-app .wizard-step:not(.is-hidden) {
 
   .btn,
   .action-arrow,
+  .page-head,
+  .hero-name .u,
+  .colour-study span,
+  .wizard-step .shot img,
   .index-row,
   .index-num,
   .toc .n,
@@ -2725,6 +2890,9 @@ html.wiz-app .wizard-step:not(.is-hidden) {
     --blue: #1d4e86;
     --blue-hi: #1d4e86;
     --blue-ink: #fff;
+    --action: #eee;
+    --action-hi: #fff;
+    --action-ink: #111;
   }
 
   .fade-io,

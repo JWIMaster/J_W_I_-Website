@@ -8,22 +8,12 @@
   var nav = document.querySelector('.nav');
   function syncMast() {
     if (!mast) return;
-    /* The masthead is sticky (top: 0) with a 10px top margin, so its rendered
-       bottom edge is scroll-dependent: at rest (scrollY 0) it sits 10px below
-       its own height, but once the page scrolls the element sticks and the
-       margin is absorbed, pulling the bottom edge up by the same 10px.
-       getBoundingClientRect() therefore returns two different values for the
-       same masthead. --mast-h must be the *stable* at-rest bottom —
-       offsetHeight + the computed top margin — never rect.bottom: the wizard's
-       fixed shell (top: var(--mast-h)) and the .wiz-main stage height need one
-       constant that clears the at-rest masthead in every scroll state.
-       Measuring rect.bottom made the shell jump 10px whenever the last resize
-       event fired while the page was scrolled, re-introducing a 10px overlap
-       under the at-rest masthead. (offsetHeight alone was the original bug:
-       it omitted the 10px margin, so the shell started under the masthead.) */
+    /* Measure the scroll-independent height, including subpixels, plus the
+       resting margin. offsetHeight rounds and left a small seam on phones;
+       rect.bottom changes when the sticky header pins during scrolling. */
     var cs = getComputedStyle(mast);
     var topMargin = parseFloat(cs.marginTop) || 0;
-    document.documentElement.style.setProperty('--mast-h', mast.offsetHeight + topMargin + 'px');
+    document.documentElement.style.setProperty('--mast-h', mast.getBoundingClientRect().height + topMargin + 'px');
   }
   /* On the stacked mobile masthead, keep the current page's link in view so the
      active underline never parks behind the clipped edge. */
@@ -246,33 +236,70 @@
   }
   window.motionOK = motionOK;
 
-  /* Intro fade: on every load the lead and the blocks named in
-     data-typewrite-then fade in together — no typing, no pauses. */
+  /* Stream the opening sentence, then reveal the article in one quick fade. */
   function fadeIntro() {
+    if (document.documentElement.classList.contains('wiz-app') || document.body.classList.contains('wiz-app')) return;
     var lead = document.querySelector('[data-typewrite]');
-    if (!lead) return;
-    if (!motionOK()) return;
-
-    var thenSel = lead.getAttribute('data-typewrite-then');
-    var restEls = thenSel
-      ? Array.prototype.slice.call(document.querySelectorAll(thenSel))
-      : [];
-
-    lead.classList.add('tw-lead');
-    restEls.forEach(function (el) { el.classList.add('tw-rest'); });
-
-    requestAnimationFrame(function () {
-      requestAnimationFrame(function () {
-        lead.classList.add('tw-lead-in');
-        restEls.forEach(function (el) { el.classList.add('tw-in'); });
-      });
+    if (!lead || !motionOK()) return;
+    var copy = lead.querySelector('.intro-copy');
+    var typed = lead.querySelector('.intro-stream');
+    if (!copy || !typed) return;
+    var text = copy.textContent;
+    var restEls = Array.prototype.slice.call(document.querySelectorAll(lead.getAttribute('data-typewrite-then') || '[data-intro-rest]'));
+    lead.classList.add('tw-typing');
+    restEls.forEach(function (el, index) {
+      el.style.setProperty('--intro-delay', Math.min(index * 40, 160) + 'ms');
+      el.classList.add('tw-rest');
     });
-
-    /* hand the elements back to the scroll-fade system once the intro settles */
-    setTimeout(function () {
-      lead.classList.remove('tw-lead', 'tw-lead-in');
-      restEls.forEach(function (el) { el.classList.remove('tw-rest', 'tw-in'); });
-    }, 1100);
+    var frame = 0;
+    var started = null;
+    var finished = false;
+    var preference = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function finish() {
+      if (finished) return;
+      finished = true;
+      cancelAnimationFrame(frame);
+      lead.classList.remove('tw-typing');
+      typed.textContent = '';
+      restEls.forEach(function (el) { el.classList.add('is-in', 'tw-in'); });
+      window.removeEventListener('wheel', finish);
+      window.removeEventListener('touchmove', finish);
+      window.removeEventListener('keydown', onKey);
+      preference.removeEventListener('change', finish);
+      setTimeout(function () {
+        restEls.forEach(function (el) {
+          el.classList.remove('tw-rest', 'tw-in');
+          el.style.removeProperty('--intro-delay');
+        });
+      }, 660);
+    }
+    function onKey(event) {
+      if (['PageDown', 'PageUp', 'Home', 'End', 'ArrowDown', 'ArrowUp', 'Tab'].includes(event.key)) finish();
+    }
+    function type(now) {
+      if (started === null) started = now;
+      var progress = Math.min(1, (now - started) / 300);
+      typed.textContent = text.slice(0, Math.floor(progress * text.length));
+      if (progress === 1) finish();
+      else frame = requestAnimationFrame(type);
+    }
+    /* Only user navigation skips typing. Browser scroll/focus restoration on
+       refresh and tab visibility changes must not silently cancel it. */
+    window.addEventListener('wheel', finish, { passive: true });
+    window.addEventListener('touchmove', finish, { passive: true });
+    window.addEventListener('keydown', onKey);
+    preference.addEventListener('change', finish);
+    frame = requestAnimationFrame(type);
   }
   fadeIntro();
+
+  /* A tiny landing beat on button presses across all pages. */
+  document.addEventListener('click', function (event) {
+    var button = event.target.closest('.btn');
+    if (!button || !motionOK()) return;
+    button.classList.remove('fun-tap');
+    void button.offsetWidth;
+    button.classList.add('fun-tap');
+    setTimeout(function () { button.classList.remove('fun-tap'); }, 350);
+  });
 })();
