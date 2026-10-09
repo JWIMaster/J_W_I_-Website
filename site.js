@@ -97,6 +97,73 @@
   }
   wireCopyButtons();
 
+  /* Keep album links usable if the image host is temporarily unavailable. */
+  Array.prototype.forEach.call(document.querySelectorAll('.photo-cover img'), function (img) {
+    function unavailable() { img.parentElement.classList.add('is-unavailable'); }
+    img.addEventListener('error', unavailable);
+    if (img.complete && !img.naturalWidth) unavailable();
+  });
+
+  /* Keep native details semantics, but let the panel settle in both directions.
+     Each new click reverses from the current frame rather than queuing a toggle. */
+  var albumMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  Array.prototype.forEach.call(document.querySelectorAll('.photo-details'), function (details) {
+    var summary = details.querySelector('summary');
+    var body = details.querySelector('.photo-detail-body');
+    var heightMotion = null;
+    var contentMotion = null;
+    var wanted = details.open;
+    if (!summary || !body || !details.animate) return;
+
+    function cancelMotion() {
+      if (heightMotion) { heightMotion.onfinish = null; heightMotion.cancel(); }
+      if (contentMotion) contentMotion.cancel();
+      heightMotion = contentMotion = null;
+    }
+    function settle() {
+      cancelMotion();
+      details.open = wanted;
+      details.style.removeProperty('height');
+      details.style.removeProperty('overflow');
+      body.inert = !wanted;
+      summary.setAttribute('aria-expanded', String(wanted));
+    }
+    summary.addEventListener('click', function (event) {
+      if (albumMotion.matches) return; // Native immediate toggle, including keyboard.
+      event.preventDefault();
+      var startHeight = details.getBoundingClientRect().height;
+      var startOpacity = details.open ? getComputedStyle(body).opacity : '0';
+      var startTransform = details.open ? getComputedStyle(body).transform : 'translateY(-4px)';
+      wanted = !(heightMotion ? wanted : details.open);
+      cancelMotion();
+      details.open = true; // Keep the content rendered until closing has finished.
+      details.style.height = 'auto';
+      var cs = getComputedStyle(details);
+      var endHeight = wanted ? details.getBoundingClientRect().height :
+        summary.getBoundingClientRect().height + parseFloat(cs.borderTopWidth) + parseFloat(cs.borderBottomWidth);
+      details.style.height = startHeight + 'px';
+      details.style.overflow = 'hidden';
+      body.inert = !wanted;
+      summary.setAttribute('aria-expanded', String(wanted));
+      var timing = { duration: wanted ? 360 : 280, easing: 'cubic-bezier(.22, 1, .36, 1)', fill: 'both' };
+      heightMotion = details.animate([{ height: startHeight + 'px' }, { height: endHeight + 'px' }], timing);
+      contentMotion = body.animate([
+        { opacity: startOpacity, transform: startTransform },
+        { opacity: wanted ? 1 : 0, transform: wanted ? 'none' : 'translateY(-4px)' }
+      ], timing);
+      heightMotion.onfinish = settle;
+    });
+    details.addEventListener('toggle', function () {
+      if (heightMotion) return;
+      wanted = details.open;
+      body.inert = !wanted;
+      summary.setAttribute('aria-expanded', String(wanted));
+    });
+    function stopForPreference() { if (albumMotion.matches && heightMotion) settle(); }
+    if (albumMotion.addEventListener) albumMotion.addEventListener('change', stopForPreference);
+    window.addEventListener('resize', function () { if (heightMotion) settle(); });
+  });
+
   /* Scroll reveals: .fade-io fades in the first time it enters the viewport
      and stays — the fade plays on the way in and never un-plays. */
   function wireScrollFades() {

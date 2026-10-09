@@ -1,0 +1,43 @@
+{
+  "source": "https://jwi.pixieset.com/",
+  "ordering": "pixieset-homepage",
+  "checkedAt": "2026-10-09T22:50:28.633126+00:00",
+  "albums": [
+    {
+      "title": "Portraits",
+      "url": "https://jwi.pixieset.com/portraits/",
+      "thumbnail": "https://images.pixieset.com/565517021/a3c0ba0fc92968efaf14fc4178eccdcf-large.jpg",
+      "cover": "https://images.pixieset.com/565517021/a3c0ba0fc92968efaf14fc4178eccdcf-cover.jpg",
+      "date": null,
+      "photoCount": 4,
+      "description": "Photo collection by JWI Photography",
+      "photographer": "JWI Photography",
+      "coverWidth": 1600,
+      "coverHeight": 2400
+    },
+    {
+      "title": "2026 Blue Mountains",
+      "url": "https://jwi.pixieset.com/2026bluemountains/",
+      "thumbnail": "https://images.pixieset.com/115517021/54cc0207512b5facc23b2ed65508f7b8-large.jpg",
+      "cover": "https://images.pixieset.com/115517021/54cc0207512b5facc23b2ed65508f7b8-cover.jpg",
+      "date": "July 10th, 2026",
+      "photoCount": 39,
+      "description": "Photo collection by JWI Photography",
+      "photographer": "JWI Photography",
+      "coverWidth": 1600,
+      "coverHeight": 1067
+    },
+    {
+      "title": "Canberra",
+      "url": "https://jwi.pixieset.com/canberra/",
+      "thumbnail": "https://images.pixieset.com/210533811/647cd50a21373bd931e0050aabc72323-large.jpg",
+      "cover": "https://images.pixieset.com/210533811/647cd50a21373bd931e0050aabc72323-cover.jpg",
+      "date": null,
+      "photoCount": 7,
+      "description": "Photo collection by JWI Photography",
+      "photographer": "JWI Photography",
+      "coverWidth": 1600,
+      "coverHeight": 1067
+    }
+  ]
+}

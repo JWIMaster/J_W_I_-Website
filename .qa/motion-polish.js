@@ -20,11 +20,27 @@ const BASE = process.env.JWI_PREVIEW_BASE || 'http://127.0.0.1:8123/';
         await page.locator('.brand').hover();
         const dotAnimations = await page.locator('.brand .dot').evaluate(el => el.getAnimations().length);
         if (reducedMotion === 'reduce' && dotAnimations) throw new Error(`${name}: reduced-motion dot still animates`);
+        const arrow = page.locator('.action-arrow:visible').first();
+        if (await arrow.count()) {
+          await arrow.locator('..').hover();
+          const moving = await arrow.evaluate(el => el.getAnimations().some(a => ['arrow-hop', 'mail-send'].includes(a.animationName)));
+          if (moving !== (reducedMotion === 'no-preference')) throw new Error(`${name}: incorrect arrow hover motion`);
+        }
+        if (name === 'index.html') {
+          await page.locator('.toc a').first().hover();
+          const hopping = await page.locator('.toc .n').first().evaluate(el => el.getAnimations().some(a => a.animationName === 'number-hop'));
+          if (hopping !== (reducedMotion === 'no-preference')) throw new Error('Incorrect section hover motion');
+          const title = page.locator('.index-title').first();
+          await title.hover();
+          await page.waitForTimeout(400);
+          const nudged = await title.evaluate(el => getComputedStyle(el).transform !== 'none');
+          if (nudged !== (reducedMotion === 'no-preference')) throw new Error('Incorrect project title hover motion');
+        }
         if (errors.length) throw new Error(errors.join('\n'));
         await page.close();
       }
       await ctx.close();
     }
-    console.log('PASS: button motion works on all four pages and respects reduced motion; no runtime errors');
+    console.log('PASS: button and arrow feedback across pages, section and project hover effects, reduced motion and no runtime errors');
   } finally { await browser.close(); }
 })().catch(error => { console.error(error.message); process.exit(1); });

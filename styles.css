@@ -476,30 +476,27 @@ code, pre, kbd {
   top: 10px;
   margin-block-start: 10px;
   z-index: 50;
-  /* A toolbar, not a sheet of glass: near-opaque graphite over a hairline base.
-     Blur used as a mood is the single most reliable "generated interface"
-     signal, and it costs contrast on every page it sits above. */
-  background: #1c1e22;
-  border-block-end: 1px solid var(--line-strong);
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 1px 0 rgba(0, 0, 0, 0.5);
+  width: calc(100% + 24px);
+  max-width: calc(var(--w-max) + 24px);
+  align-self: center;
+  padding-inline: 12px;
+  border: 1px solid var(--line);
+  border-radius: 7px;
+  background: linear-gradient(180deg, #24262a, #202226);
+  box-shadow: 0 5px 14px -10px rgba(0, 0, 0, 0.7);
   transition: box-shadow var(--t-med) var(--ease);
 }
 
 /* once it is pinned it sits above the page and should say so */
 .masthead.is-stuck {
-  box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 1px 0 rgba(0, 0, 0, 0.5),
-    0 14px 26px -20px rgba(0, 0, 0, 0.95);
+  box-shadow: 0 7px 18px -10px rgba(0, 0, 0, 0.75);
 }
 
 .mast-inner {
   display: flex;
   align-items: center;
   gap: var(--s-6);
-  height: 60px;
+  height: 54px;
   max-width: var(--w-max);
   margin-inline: auto;
   /* Desktop gutters belong to .masthead; mobile gutters belong to the
@@ -534,16 +531,18 @@ code, pre, kbd {
 .nav {
   display: flex;
   align-items: center;
-  gap: var(--s-5);
+  gap: 12px;
   margin-inline-start: auto;
 }
+.nav-short { display: none; }
 
 .nav a {
   position: relative;
   font-size: 13.5px;
   font-weight: 500;
   color: var(--ink-1);
-  padding: 10px 2px;
+  padding: 8px 10px;
+  transition: color var(--t-fast) var(--ease);
   white-space: nowrap;
 }
 
@@ -552,8 +551,9 @@ code, pre, kbd {
 .nav a::after {
   content: "";
   position: absolute;
-  inset-inline: 0;
-  bottom: 2px;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
   height: 2px;
   border-radius: 1px;
   background: var(--line-strong);
@@ -563,8 +563,8 @@ code, pre, kbd {
     background var(--t-fast) var(--ease);
 }
 
-.nav a:hover::after {
-  transform: scaleX(0.5);
+.nav a:is(:hover, :focus-visible)::after {
+  transform: scaleX(1);
 }
 
 .nav a:hover {
@@ -580,24 +580,19 @@ code, pre, kbd {
   background: var(--accent);
 }
 
-/* Desktop toolbar spans the viewport; its content shares the page gutters. */
-@media (min-width: 720px) {
-  .masthead {
-    margin-inline: calc(-1 * var(--pad));
-    padding-inline: var(--pad);
-  }
-}
-
 /* mobile: second row, scrolls horizontally */
 @media (max-width: 719px) {
+  .nav-full { display: none; }
+  .nav-short { display: inline; }
+  .masthead { padding-inline: 0; }
   .mast-inner {
     flex-direction: column;
     align-items: stretch;
     gap: 0;
     height: auto;
-    padding-block: 10px 0;
+    padding-block: 8px 6px;
     /* the nav below pulls out by the same amount to run edge to edge */
-    padding-inline: var(--pad);
+    padding-inline: 12px;
   }
 
   .brand {
@@ -605,15 +600,14 @@ code, pre, kbd {
   }
 
   .nav {
-    margin-inline: calc(-1 * var(--pad));
-    margin-block-start: 8px;
+    margin-inline: -12px;
+    margin-block-start: 6px;
     justify-content: safe center;
     overflow-x: auto;
     /* tightened so the row fits phones from ~375px up; below that it
      * scrolls with the edge fades as the cue */
-    gap: var(--s-2);
-    padding-inline: 12px;
-    padding-block-end: 4px;
+    gap: 4px;
+    padding-inline: 8px;
     scrollbar-width: none;
     -webkit-overflow-scrolling: touch;
     /* clipped links visibly dissolve at the edges, hinting the row scrolls */
@@ -626,12 +620,146 @@ code, pre, kbd {
   }
 
   .nav a {
-    /* A 44px touch target without moving anything: the padding grows the hit
-       box to ~49px and the matching negative margin keeps the layout box (and
-       therefore the masthead height) exactly as it was. */
-    padding: 14px 2px;
-    margin-block: -6px;
-    font-size: 13px;
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 4px;
+    font-size: 12px;
+  }
+  .nav a::after { left: 4px; right: 4px; bottom: 4px; }
+}
+
+/* ----------------------------- photography ----------------------------- */
+.page-photography .page-head { max-width: none; }
+.photo-collection { margin-block-end: 0; }
+.page-photography .site-foot { margin-block-start: 32px; }
+.photo-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-block: 16px;
+  border-block-start: 1px solid var(--line);
+}
+.photo-hint { font-size: 12px; color: var(--ink-2); }
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: start;
+  gap: clamp(20px, 3vw, 32px);
+}
+.photo-album { min-width: 0; }
+.photo-link { display: block; color: var(--ink-0); }
+.photo-link:hover { color: var(--ink-0); }
+.photo-cover {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border-radius: 3px;
+  background: var(--bg-0);
+}
+.photo-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 35%;
+}
+.photo-unavailable { display: none; }
+.photo-cover.is-unavailable img { display: none; }
+.photo-cover.is-unavailable .photo-unavailable {
+  display: grid;
+  place-items: center;
+  position: absolute;
+  inset: 0;
+  color: var(--ink-2);
+  font-size: 13px;
+}
+.photo-caption {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: start;
+  gap: 12px;
+  padding-block: 20px 16px;
+  min-height: 88px;
+}
+.photo-caption h2 {
+  font-size: clamp(17px, 1.6vw, 21px);
+  line-height: 1.35;
+  letter-spacing: var(--track-title);
+  overflow-wrap: anywhere;
+}
+.photo-number { font: 11px/1.9 var(--font-mono); color: var(--ink-3); }
+.photo-caption .action-arrow { margin-block-start: 3px; color: var(--ink-2); }
+.photo-details { border-block: 1px solid var(--line); }
+.photo-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 44px;
+  padding-block: 10px;
+  font-size: 12.5px;
+  color: var(--ink-1);
+  cursor: pointer;
+  list-style: none;
+}
+.photo-details summary::-webkit-details-marker { display: none; }
+.photo-details summary:hover { color: var(--ink-0); }
+.photo-details[open] summary svg { transform: rotate(180deg); }
+.photo-details summary[aria-expanded="false"] svg { transform: none; }
+.photo-detail-body { padding-block: 4px 16px; }
+.photo-detail-body dl { margin: 0; }
+.photo-detail-body dl > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.5fr);
+  gap: 12px;
+  padding-block: 7px;
+  font-size: 12px;
+  line-height: 1.5;
+}
+.photo-detail-body dt { color: var(--ink-2); }
+.photo-detail-body dd { margin: 0; color: var(--ink-0); overflow-wrap: anywhere; }
+.photo-source { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-size: 12.5px; color: var(--blue); }
+.photo-endnote {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding-block: 24px;
+  margin-block-start: 32px;
+  border-block-start: 1px solid var(--line);
+}
+.photo-endnote p { color: var(--ink-2); font-size: 14px; }
+@media (min-width: 600px) and (max-width: 899px) {
+  .photo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 599px) {
+  .photo-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+  .photo-hint { display: none; }
+  .photo-cover { aspect-ratio: 1; }
+  .photo-caption h2 { font-size: 20px; }
+  .photo-caption { min-height: 0; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .photo-cover img { transition: transform 550ms var(--ease); }
+  .photo-link:is(:hover, :focus-visible) img { transform: scale(1.025); }
+  .photo-link:is(:hover, :focus-visible) .action-arrow,
+  .photo-source:is(:hover, :focus-visible) .action-arrow { --arrow-y: -3px; animation: arrow-hop 460ms var(--ease); }
+  .photo-details summary svg { transition: transform 200ms var(--ease); }
+  /* A quick change of focus, like bringing the scene into a camera lens.
+     Only opacity and blur animate: text keeps its final size and position. */
+  .page-photography .page-head { animation: none; overflow-anchor: none; }
+  .page-photography .page-head > .kicker { animation: article-arrive 400ms var(--ease) both; }
+  .page-photography .page-head > .lede { animation: article-arrive 500ms var(--ease) 140ms both; }
+  .photo-title-word { display: inline-block; animation: photo-focus 560ms var(--ease) both; }
+  .photo-title-word:nth-child(2) { animation-delay: 70ms; }
+  .photo-title-word:nth-child(3) { animation-delay: 140ms; }
+  @keyframes photo-focus {
+    from { opacity: 0; filter: blur(7px); }
+    55% { opacity: 1; }
+    to { opacity: 1; filter: blur(0); }
   }
 }
 
@@ -1245,7 +1373,18 @@ a.btn-ghost:hover {
 
 .hero-name .u {
   color: var(--accent);
+  text-shadow: none;
 }
+.hero-name { overflow-anchor: none; }
+.hero-glyph { display: inline-block; transform-origin: 50% 90%; }
+.hero-glyph:nth-child(1) { --glyph-delay: 0ms; }
+.hero-glyph:nth-child(2) { --glyph-delay: 45ms; }
+.hero-glyph:nth-child(3) { --glyph-delay: 90ms; }
+.hero-glyph:nth-child(4) { --glyph-delay: 135ms; }
+.hero-glyph:nth-child(5) { --glyph-delay: 180ms; }
+.hero-glyph:nth-child(6) { --glyph-delay: 225ms; }
+.hero-glyph:nth-child(odd) { --glyph-tilt: -7deg; }
+.hero-glyph:nth-child(even) { --glyph-tilt: 5deg; }
 
 .hero-tagline {
   grid-column: 2;
@@ -2696,6 +2835,11 @@ html.wiz-app .wizard-step[data-step="0"] {
   line-height: 1;
   transition: transform var(--t-fast) var(--ease);
 }
+svg.action-arrow {
+  display: block;
+  width: 16px;
+  height: 16px;
+}
 .btn:hover .action-arrow { transform: translateX(2px); }
 .btn[target="_blank"]:hover .action-arrow { transform: translate(2px, -2px); }
 @media (pointer: coarse) {
@@ -2756,6 +2900,9 @@ html.wiz-app .wizard-step[data-step="0"] {
   .page-article .sheet { animation: article-arrive 200ms var(--ease) both; }
   .page-article .fade-io { transform: none; }
   .page-head .kicker::after { transform-origin: left; animation: rule-draw 850ms var(--ease) both; }
+  .hero-name .hero-glyph {
+    animation: wordmark-land 720ms linear var(--glyph-delay) both;
+  }
   .hero-name .u {
     display: inline-block;
     background: linear-gradient(100deg, var(--accent) 40%, #ffe2a9 50%, var(--accent) 60%);
@@ -2764,10 +2911,8 @@ html.wiz-app .wizard-step[data-step="0"] {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: underscore-arrive 750ms var(--ease) both, underscore-shimmer 9s ease-in-out infinite;
+    animation: wordmark-land 720ms linear var(--glyph-delay) both, underscore-shimmer 9s ease-in-out var(--glyph-delay) infinite;
   }
-  .hero-name .u:nth-child(2) { animation-delay: 70ms, 250ms; }
-  .hero-name .u:nth-child(3) { animation-delay: 140ms, 500ms; }
   .brand:hover .dot, .foot-brand:hover .dot { animation: dot-ping 550ms var(--ease); }
   .index-row:hover .index-num, .index-row:focus-within .index-num { animation: number-nod 450ms var(--ease); }
   .colour-study span { transition: transform 350ms var(--ease); }
@@ -2776,19 +2921,57 @@ html.wiz-app .wizard-step[data-step="0"] {
   .wizard-step .shot img { transition: transform 350ms var(--ease); }
   .wizard-step .shot:hover img { transform: scale(1.025); }
   .wizard-step .shot { overflow: hidden; }
-  .contact-panel .btn:hover .action-arrow { animation: mail-send 550ms var(--ease); }
+  .index-title { transition: transform 320ms var(--ease); }
+  .index-row:is(:hover, :focus-within) .index-title { transform: translateX(3px); }
+  .toc a:is(:hover, :focus-visible) .n { animation: number-hop 420ms var(--ease); }
+  .btn:is(:hover, :focus-visible) .action-arrow {
+    --arrow-y: 0px;
+    animation: arrow-hop 460ms var(--ease);
+  }
+  .btn[target="_blank"]:is(:hover, :focus-visible) .action-arrow { --arrow-y: -3px; }
+  .contact-panel .btn:is(:hover, :focus-visible) .action-arrow { animation: mail-send 550ms var(--ease); }
+  .link-arrow:is(:hover, :focus-visible) .arr { animation: arrow-hop 460ms var(--ease); }
+  .dl-row:is(:hover, :focus-within) .dl-ic { animation: download-hop 460ms var(--ease); }
+  .colour-study span:nth-child(2) { transition-delay: 30ms; }
+  .colour-study span:nth-child(3) { transition-delay: 60ms; }
+  .colour-study span:nth-child(4) { transition-delay: 90ms; }
+  .colour-study span:nth-child(5) { transition-delay: 120ms; }
+  .colour-study span:nth-child(6) { transition-delay: 150ms; }
   .btn.fun-tap { animation: tap-settle 320ms var(--ease); }
-  .nav a { transition: color var(--t-fast) var(--ease), transform 240ms var(--ease); }
-  .nav a:hover { transform: none; }
   @keyframes article-arrive { from { opacity: 0; } to { opacity: 1; } }
   @keyframes rule-draw { from { transform: scaleX(0); } }
   @keyframes underscore-shimmer {
     0%, 72% { background-position: 100% 0; }
     100% { background-position: 0% 0; }
   }
-  @keyframes underscore-arrive { from { opacity: 0; transform: translateY(12px) rotate(-8deg); } }
+  @keyframes wordmark-land {
+    0% {
+      opacity: 0;
+      transform: translateY(-38px) rotate(var(--glyph-tilt));
+      animation-timing-function: cubic-bezier(.55, 0, 1, .45);
+    }
+    38% {
+      opacity: 1;
+      transform: translateY(2px) scale(1.06, .86);
+      animation-timing-function: cubic-bezier(.16, 1, .3, 1);
+    }
+    62% {
+      opacity: 1;
+      transform: translateY(-6px) rotate(calc(var(--glyph-tilt) * -.2));
+      animation-timing-function: ease-in;
+    }
+    82% {
+      opacity: 1;
+      transform: translateY(1px) scale(1.02, .97);
+      animation-timing-function: ease-out;
+    }
+    100% { opacity: 1; transform: none; }
+  }
   @keyframes dot-ping { 50% { transform: scale(1.6); } }
   @keyframes number-nod { 40% { transform: translateX(3px); } }
+  @keyframes number-hop { 40% { transform: translateY(-3px) rotate(-5deg); } 70% { transform: translateY(1px); } }
+  @keyframes arrow-hop { 45% { transform: translate(5px, var(--arrow-y, 0px)); } 75% { transform: translateX(1px); } }
+  @keyframes download-hop { 40% { transform: translateY(-3px); } 70% { transform: translateY(4px); } }
   @keyframes mail-send { 40% { transform: translate(4px, -3px); } }
   @keyframes tap-settle { 40% { transform: translateY(1px); } 70% { transform: translateY(-1px); } }
 }
@@ -2807,6 +2990,7 @@ html.wiz-app .wizard-step[data-step="0"] {
   .wizard-step .shot img,
   .index-row,
   .index-num,
+  .index-title,
   .toc .n,
   .nav a,
   .nav a::after,

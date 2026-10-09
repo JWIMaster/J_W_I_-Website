@@ -1,7 +1,7 @@
 const { chromium } = require('playwright');
 const { pathToFileURL } = require('url');
 const path = require('path');
-const BASE = pathToFileURL(path.resolve(__dirname, '..') + path.sep).href;
+const BASE = process.env.JWI_PREVIEW_BASE || 'http://127.0.0.1:8123/';
 (async () => {
  const browser = await chromium.launch({ args: ['--disable-features=OverlayScrollbar'] });
  try {

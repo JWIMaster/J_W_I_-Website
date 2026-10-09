@@ -12,6 +12,8 @@ muted steel blue identifies links and focus.
   wizard, `guide1.js`): toolchain install, then a branch into the templates path
   or the manual project setup, then the finale
 - `support.html` — contact
+- `photography.html` — three public Pixieset collections, image-led layout and
+  collapsed native album details; generated from `data/photography.json`
 
 All links are relative (GitHub Pages, CNAME `j-w-i.org`). No build step; `styles.css`
 and `site.js` are shared by every page; `guide1.js` is the toolchain guide's wizard
@@ -80,16 +82,15 @@ Rules of thumb:
 
 ## Components
 
-- **Masthead** — full-width on desktop, with content aligned to the page gutters; sticky, `z-index: 50`, keeps `top: 10px` both at rest and while scrolling. A near-opaque graphite toolbar over a hairline base — **no
-  backdrop blur** (blur used as a mood is the most reliable "generated interface"
-  signal and it costs contrast); it gains a deeper shadow once pinned
-  (`is-stuck`). Brand mark = green dot + `J_W_I_`. Nav links get the amber
-  active underline and a growing hover underline. (Never give the masthead a
-  `position: relative` group rule — that silently un-sticks it; specificity bit
-  us once.) All pages, including the wizard, keep the same 10px resting margin
-  (71px desktop / 94px mobile including the header). `--mast-h` is
-  always `rect.height + computed top margin`, never `rect().bottom` — a sticky
-  element's bottom edge is scroll-dependent.
+- **Masthead** — a graphite navigation strip extending 12px beyond the content on
+  each side, with 7px corners, a fine border and a light shadow. No filled tabs.
+  Sticky, `z-index: 50`, with the same 10px top margin and resting position on
+  every page. Desktop uses one compact row; mobile stacks the brand above 44px
+  navigation targets. A thin amber underline identifies the current link;
+  hover and keyboard focus draw a quiet underline. The toolbar never translates
+  or animates on entry. The shadow deepens gently while pinned, with no backdrop
+  blur. `--mast-h` is measured as `rect.height + computed top margin`, never
+  `rect().bottom`, since a sticky element's bottom is scroll-dependent.
 - **Skip link** — every page opens with `<a class="skip-link" href="#main">`: the
   first Tab stop, invisible until focused, then a blue control above the masthead
   (WCAG 2.4.1 bypass block). `main` carries `id="main"`.
@@ -261,6 +262,32 @@ with their step. Selection dots, confirmations and the current progress tick
 give a brief acknowledgement. All effects respect reduced motion; verify them
 and picker spacing with `node .qa/guide-motion.js`.
 
-The home wordmark has a slow highlight that passes over its amber underscores
+The home wordmark letters drop in with a 45ms stagger, squash lightly on
+landing, then rebound and settle within a second. The title's layout stays
+fixed, and reduced motion shows the completed wordmark immediately.
+The wordmark also has a slow highlight that passes over its amber underscores
 once every nine seconds. It adds no elements or controls and does not move the
 letters. Reduced motion keeps the underscores solid amber.
+
+Project titles ease forward slightly on hover or keyboard focus. Section numbers,
+button arrows and download icons make a short spring movement on interaction;
+the Colour Snap strip responds in a small stagger. These effects are decorative,
+keep the layout fixed, and are disabled with reduced motion. Navigation uses
+colour and a fine underline rather than moving the toolbar or its labels.
+
+## Photography
+
+Three equal album columns on wide screens, two on tablets and one on phones.
+Covers reserve their space before loading, with a restrained hover zoom and SVG
+arrows. Title and gallery link remain available if the image host fails. Native
+`details` holds the public metadata and a link to the uncropped cover; it starts
+closed and remains usable without JavaScript. Follow the Pixieset homepage order
+unless explicitly changed. Do not invent dates or EXIF. See
+`scripts/PHOTOGRAPHY.md` for generation and the current refresh limitation.
+
+Photography’s title comes into focus word by word in 700ms, using opacity and
+blur without moving the heading. Album details animate their actual height and
+fade the contents on both opening and closing. Rapid toggles reverse from the
+current frame; resize or reduced-motion changes settle immediately. Native
+keyboard and no-JavaScript disclosure behavior stays available. Other pages
+retain their existing title entrances; the navigation bar remains stationary.

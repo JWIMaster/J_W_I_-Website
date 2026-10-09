@@ -2,7 +2,7 @@ const { chromium } = require('playwright');
 const fs = require('fs');
 const path = require('path');
 const { pathToFileURL } = require('url');
-const BASE = pathToFileURL(path.resolve(__dirname, '..') + path.sep).href;
+const BASE = process.env.JWI_PREVIEW_BASE || 'http://127.0.0.1:8123/';
 const OUT = path.join(__dirname, 'design-review');
 const luminance = rgb => rgb.map(x => {x /= 255;return x <= .04045 ? x / 12.92 : ((x + .055) / 1.055) ** 2.4;}).reduce((n,x,i)=>n+x*[.2126,.7152,.0722][i],0);
 const ratio = (a,b) => {a=luminance(a);b=luminance(b);return (Math.max(a,b)+.05)/(Math.min(a,b)+.05);};

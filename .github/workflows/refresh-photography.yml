@@ -1,0 +1,50 @@
+name: Refresh photography
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */12 * * *'
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: photography-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    if: github.event_name == 'workflow_dispatch' || vars.PIXIESET_AUTO_REFRESH == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Refresh public collections
+        run: python scripts/sync-photography.py
+      # A blocked Pixieset request fails above, leaving the published data alone.
+      - name: Save the verified snapshot
+        id: snapshot
+        run: |
+          if git diff --quiet -- data/photography.json photography.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/photography.json photography.html
+          git commit -m 'Refresh public photography collections'
+          git push origin HEAD:main
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      # GITHUB_TOKEN pushes do not trigger Pages automatically. This repository
+      # is a static branch-published site, so explicitly request the Pages build.
+      - name: Request a Pages build
+        if: steps.snapshot.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/${{ github.repository }}/pages/builds"
