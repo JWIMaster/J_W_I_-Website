@@ -106,11 +106,13 @@ async function walkSetup(browser, os, versionCheck, rpathCheck) {
   /* centered frame with breathing room: the head sits mid-viewport, padding above + below */
   const frame = await page.evaluate(() => {
     const h = document.querySelector('#wizard .section-head').getBoundingClientRect();
-    const cs = getComputedStyle(document.querySelector('#wizard'));
-    return { headCx: h.left + h.width / 2, winCx: window.innerWidth / 2, padTop: parseFloat(cs.paddingTop), padBottom: parseFloat(cs.paddingBottom) };
+    const w = document.querySelector('#wizard').getBoundingClientRect();
+    const c = document.querySelector('.wiz-controls').getBoundingClientRect();
+    const cs = getComputedStyle(document.querySelector('#wizard .wiz-viewport'));
+    return { headCx: h.left + h.width / 2, winCx: window.innerWidth / 2, padTop: parseFloat(cs.paddingTop), padBottom: parseFloat(cs.paddingBottom), frameBottom: w.bottom, controlsBottom: c.bottom, viewportHeight: innerHeight };
   });
   check(os + ': guide frame centered in the viewport', Math.abs(frame.headCx - frame.winCx) <= 12, 'offset=' + Math.round(frame.headCx - frame.winCx) + 'px');
-  check(os + ': frame padding top/bottom', frame.padTop >= 24 && frame.padBottom >= 24, 'top=' + frame.padTop + ' bottom=' + frame.padBottom);
+  check(os + ': installer content has breathing room and controls fit', frame.padTop >= 20 && frame.padBottom >= 20 && frame.controlsBottom <= frame.frameBottom && frame.frameBottom <= frame.viewportHeight, JSON.stringify(frame));
   check(os + ': progress = Setup · 2 of 4', (await progress(page)) === 'Setup · 2 of 4', await progress(page));
   await tickConfirm(page, true);
 

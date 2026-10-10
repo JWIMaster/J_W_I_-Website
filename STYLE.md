@@ -297,3 +297,12 @@ as they enter the viewport. Text and complete buttons fade from transparent
 into their existing colours, including button backgrounds and borders. Reduced
 motion skips these fades. The wordmark keeps its playful landing animation,
 and other pages retain their entrances.
+
+The toolchain guide uses a bounded graphite installer window, up to 980px wide
+and 620px high, with a stage overview and selected setup on desktop. The title,
+scrollable step area and persistent controls share one frame. Phones hide the
+sidebar and use the available height. Screenshots follow instructions without
+extra boxes; code scrolls within a bounded editor. Step motion uses small fades
+and vertical movement; confirmations retain the original green button and check. Secondary buttons
+have a subtle bevel and contact shadow, and choices retain their original
+selection controls. The shared site masthead retains its geometry.

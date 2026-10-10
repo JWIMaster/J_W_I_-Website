@@ -157,6 +157,17 @@
       }
     }
 
+    const stage = pos < 4 ? 0 : pos === 11 || pos >= 24 ? 2 : 1;
+    document.querySelectorAll('.installer-phases li').forEach((item, index) => {
+      item.classList.toggle('is-done', index < stage);
+      if (index === stage) item.setAttribute('aria-current', 'step');
+      else item.removeAttribute('aria-current');
+    });
+    const context = document.getElementById('installer-context');
+    if (context) {
+      const osNames = { mojave: 'macOS Mojave', bigsur: 'macOS Big Sur', monterey: 'macOS Monterey' };
+      context.textContent = state.os ? osNames[state.os] + (state.path ? ' · ' + (state.path === 'manual' ? 'Manual setup' : 'Templates') : '') : 'Choose a macOS version to get started.';
+    }
     const p = phaseFor(pos);
     if (kickerTick) kickerTick.textContent = PHASES[p].tick;
     kicker.textContent = PHASES[p].name;
@@ -171,6 +182,8 @@
     } else {
       const start = p === 0 ? 0 : p === 2 ? 5 : 12;
       const index = pos - start + 1;
+      const badge = steps[domFor(pos, state.os)].querySelector('.step-badge');
+      if (badge) badge.textContent = String(index);
       progressLabel.textContent = PHASES[p].name + ' · ' + index + ' of ' + PHASES[p].span;
       renderTicks(index, PHASES[p].span, false);
     }

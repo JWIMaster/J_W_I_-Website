@@ -30,7 +30,7 @@
   <script src="site.js" defer></script>
   <script src="guide1.js" defer></script>
 </head>
-<body class="page-dark">
+<body class="page-dark page-guide">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="masthead">
@@ -65,9 +65,20 @@
 
     <section class="section wizard" id="wizard">
       <div class="section-head">
+        <span class="installer-name">Swift on iOS 6 <span>Toolchain installer</span></span>
         <span class="kicker"><span class="tick" aria-hidden="true">a</span><span id="wiz-kicker">Setup</span></span>
         <h2 class="section-title" id="wiz-title">Preparing the Toolchain</h2>
       </div>
+
+      <aside class="installer-sidebar" aria-label="Installation overview">
+        <p class="kicker">Installation</p>
+        <ol class="installer-phases">
+          <li data-stage="0" aria-current="step"><span class="installer-stage-num">1</span><span>Prepare<span class="installer-stage-note">Xcode &amp; toolchains</span></span></li>
+          <li data-stage="1"><span class="installer-stage-num">2</span><span>Project<span class="installer-stage-note">Choose your setup</span></span></li>
+          <li data-stage="2"><span class="installer-stage-num">3</span><span>Build<span class="installer-stage-note">Your first iOS 6 app</span></span></li>
+        </ol>
+        <div class="installer-context"><span class="kicker">Your setup</span><p id="installer-context">Choose a macOS version to get started.</p></div>
+      </aside>
 
       <div class="wiz-viewport">
 

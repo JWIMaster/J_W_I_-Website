@@ -1918,9 +1918,7 @@ a.btn-ghost:hover {
   border: 0;
 }
 
-/* Full-screen stage: the wizard owns the whole page below the header.
- * No panel, no card — the step grid floats on the page background, so the
- * wizard reads as one continuous space with the rest of the site. */
+/* The no-JS document stays a readable stack; JS uses the installer frame. */
 .wiz-main {
   min-height: calc(100vh - var(--mast-h));
   display: flex;
@@ -2561,16 +2559,9 @@ html.wiz-app .read-progress {
     0 1px 1px rgba(0, 0, 0, 0.3);
 }
 
-/* App mode — with JS on the wizard owns the whole viewport below the header:
- * the page itself never scrolls, and only the step stage scrolls, and only
- * when a step outgrows the screen. The stage is full-bleed; the head and
- * controls sit inside the usual page margins.
- *
- * The frame is keyed off body.wiz-app (added by guide1.js) *and*
- * html.wiz-app (added by an inline script in <head>, before first paint) —
- * the second claim is what stops the whole no-JS step stack from flashing
- * for a moment on reload before the wizard collapses it to step 0.
- * guide1.js hands the claim back once it owns the board. */
+/* App mode locks document scrolling and keeps the installer controls fixed.
+ * Only the step viewport scrolls. The prepaint html claim prevents the no-JS
+ * stack flashing before guide1.js takes ownership on body.wiz-app. */
 body.wiz-app,
 html.wiz-app body {
   /* clip, not hidden: `hidden` still creates a scroll container that JS, the
@@ -2614,15 +2605,24 @@ html.wiz-app .page-head {
 body.wiz-app #wizard,
 html.wiz-app #wizard {
   position: fixed;
-  top: var(--mast-h);
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 5;
   margin-block: 0;
-  /* breathing room above the head and below the controls — the content
-   * floats inside the frame, never touching the screen edges */
-  padding: var(--s-5) var(--pad);
+  padding: 0;
+  top: calc(var(--mast-h) + 24px);
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translateX(-50%);
+  width: min(980px, calc(100% - var(--pad) * 2));
+  height: min(620px, calc(100dvh - var(--mast-h) - 48px));
+  display: grid;
+  grid-template-columns: 184px minmax(0, 1fr);
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 12px;
+  background: linear-gradient(135deg, #282a2e, #222428);
+  box-shadow: 0 18px 60px -24px rgba(0, 0, 0, .65), inset 0 1px rgba(255, 255, 255, .035);
 }
 body.wiz-app .section-head,
 body.wiz-app .wiz-viewport,
@@ -2740,6 +2740,119 @@ html.wiz-app .wizard-step[data-step="0"] {
   html.wiz-app #wizard { padding-block: var(--s-3); }
   body.wiz-app .section-head,
   html.wiz-app .section-head { gap: var(--s-2); margin-block-end: var(--s-3); }
+}
+
+/* Installer surfaces share one frame instead of floating on the wallpaper. */
+.installer-sidebar, .installer-name { display: none; }
+:is(body, html).wiz-app #wizard > .section-head {
+  grid-column: 1 / -1;
+  width: 100%; max-width: none;
+  margin: 0;
+  padding: 20px 26px 18px;
+  gap: 5px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 255, 255, .015);
+}
+:is(body, html).wiz-app .installer-name {
+  display: flex; align-items: baseline; gap: 10px;
+  color: var(--ink-1); font-size: 12px; font-weight: 600;
+  margin-bottom: 7px;
+}
+.installer-name > span { color: var(--ink-2); font-weight: 400; }
+:is(body, html).wiz-app #wizard > .section-head .section-title { font-size: clamp(19px, 2vw, 24px); }
+:is(body, html).wiz-app #wizard > .section-head .kicker { font-size: 10px; }
+:is(body, html).wiz-app .installer-sidebar {
+  display: flex; flex-direction: column; gap: 20px;
+  grid-column: 1; grid-row: 2;
+  padding: 26px 18px;
+  border-right: 1px solid var(--line);
+  background: rgba(0, 0, 0, .12);
+}
+.installer-phases { list-style: none; padding: 0; margin: 0; display: grid; gap: 25px; }
+.installer-phases li { display: flex; gap: 10px; align-items: start; font-size: 13px; color: var(--ink-2); }
+.installer-stage-num { display: grid; place-items: center; flex: none; width: 23px; height: 23px; border: 1px solid var(--line-strong); border-radius: 50%; font-size: 11px; }
+.installer-stage-note { display: block; margin-top: 5px; font-size: 10px; line-height: 1.5; color: var(--ink-2); }
+.installer-phases [aria-current] { color: var(--ink-0); }
+.installer-phases [aria-current] .installer-stage-num { background: var(--accent-dim); color: var(--accent-hi); border-color: var(--accent-lo); }
+.installer-phases .is-done .installer-stage-num { color: var(--green); border-color: var(--green); }
+.installer-context { margin-top: auto; padding-top: 16px; border-top: 1px solid var(--line); }
+.installer-context p { margin: 8px 0 0; font-size: 11px; line-height: 1.7; color: var(--ink-2); }
+:is(body, html).wiz-app #wizard > .wiz-viewport {
+  grid-column: 2; grid-row: 2;
+  max-width: none; width: 100%; margin: 0;
+  padding: 24px 26px;
+  align-content: safe center;
+}
+:is(body, html).wiz-app #wizard > .wiz-controls {
+  grid-column: 1 / -1;
+  max-width: none; width: 100%; margin: 0;
+  padding: 14px 22px;
+  background: rgba(0, 0, 0, .14);
+  gap: 12px;
+}
+:is(body, html).wiz-app .wizard-step { grid-template-columns: 28px minmax(0, 1fr); gap: 16px 12px; }
+:is(body, html).wiz-app .step-badge { width: 28px; height: 28px; font-size: 11px; border-radius: 7px; background: rgba(255,255,255,.025); box-shadow: none; }
+:is(body, html).wiz-app .step-body h3 { font-size: 19px; line-height: 1.4; }
+:is(body, html).wiz-app .step-body p { font-size: 14px; line-height: 1.65; }
+:is(body, html).wiz-app .os-grid { margin-top: 24px; gap: 10px; }
+:is(body, html).wiz-app .os-card { padding: 16px; }
+:is(body, html).wiz-app .os-name { font-size: 16px; }
+:is(body, html).wiz-app .os-ver { font-size: 12px; }
+
+:is(body, html).wiz-app .path-grid { gap: 12px; margin-top: 24px; }
+
+:is(body, html).wiz-app .dl-list { gap: 8px; margin-block: 18px 12px; }
+:is(body, html).wiz-app .dl-row { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 3px 12px; padding: 12px 14px; box-shadow: var(--elev-1); }
+:is(body, html).wiz-app .dl-ic { grid-row: 1 / 3; align-self: center; }
+:is(body, html).wiz-app .dl-name { grid-column: 2; font-size: 14px; line-height: 1.4; }
+:is(body, html).wiz-app .dl-src { grid-column: 2; margin: 0; padding: 0; border: 0; background: none; font-size: 10px; line-height: 1.4; letter-spacing: 0; text-transform: none; }
+/* Give secondary controls the same tactile finish as the site buttons. */
+.page-guide .btn-ghost {
+  background: linear-gradient(180deg, var(--surface-2), var(--surface-0));
+  border-color: var(--line-strong);
+  box-shadow: inset 0 1px 0 var(--edge-hi), 0 1px 2px rgba(0,0,0,.3);
+}
+.page-guide .btn-ghost:enabled:hover {
+  background: linear-gradient(180deg, var(--surface-2), var(--surface-1));
+  border-color: rgba(255,255,255,.22);
+}
+.page-guide .btn-ghost:active { box-shadow: var(--inset-1); }
+@media (min-width: 761px) {
+  :is(body, html).wiz-app .dl-row { grid-template-columns: 30px minmax(0, 1fr) auto; align-items: center; }
+  :is(body, html).wiz-app .dl-ic { grid-row: 1; }
+  :is(body, html).wiz-app .dl-src { grid-column: 3; padding: 4px 8px; border: 1px solid var(--line); border-radius: var(--r-s); background: var(--bg-0); }
+}
+:is(body, html).wiz-app .wizard-step > .shot { justify-self: start; }
+:is(body, html).wiz-app .wizard-step .shot img { max-height: min(30dvh, 260px); }
+:is(body, html).wiz-app .wizard-step .code { margin-block: 16px; }
+:is(body, html).wiz-app .wizard-step .code-screen { max-height: min(32dvh, 280px); }
+:is(body, html).wiz-app .wiz-ticks span.is-current { background: var(--accent); box-shadow: none; }
+@media (prefers-reduced-motion: no-preference) {
+  :is(body, html).wiz-app :is(.os-card, .path-card):hover { transform: translateY(-1px); }
+  .wizard-step.wiz-enter { transform: translateY(6px); }
+  .wizard-step.wiz-exit { transform: translateY(-3px); }
+}
+@media (max-width: 760px) {
+  :is(body, html).wiz-app #wizard { grid-template-columns: minmax(0, 1fr); top: calc(var(--mast-h) + 14px); height: calc(100dvh - var(--mast-h) - 28px); }
+  :is(body, html).wiz-app .installer-sidebar { display: none; }
+  :is(body, html).wiz-app #wizard > .wiz-viewport { grid-column: 1; padding: 20px; }
+  :is(body, html).wiz-app #wizard > .section-head { padding: 18px 20px; }
+  :is(body, html).wiz-app #wizard > .wiz-controls { padding: 12px 16px; }
+}
+@media (max-width: 480px) {
+  :is(body, html).wiz-app #wizard { width: calc(100% - 20px); border-radius: 9px; }
+  :is(body, html).wiz-app #wizard > .section-head { padding: 14px 16px; }
+  :is(body, html).wiz-app #wizard > .wiz-viewport { padding: 18px 16px; }
+  :is(body, html).wiz-app .installer-name { margin-bottom: 4px; font-size: 11px; }
+  :is(body, html).wiz-app .step-body h3 { font-size: 17px; }
+  :is(body, html).wiz-app .step-body p { font-size: 13px; }
+  :is(body, html).wiz-app #wiz-next { margin-left: auto; font-size: 12px; padding-inline: 10px; flex: 1; min-width: 0; white-space: normal; line-height: 1.4; }
+  :is(body, html).wiz-app .wiz-progress { font-size: 10px; gap: 7px; }
+}
+@media (max-height: 600px) and (min-width: 761px) {
+  :is(body, html).wiz-app #wizard { top: calc(var(--mast-h) + 12px); height: calc(100dvh - var(--mast-h) - 24px); }
+  :is(body, html).wiz-app #wizard > .section-head { padding-block: 12px; }
+  :is(body, html).wiz-app .installer-sidebar { padding-block: 18px; }
 }
 
 /* Screenshot preview — the shot is the click target, the whole overlay is
@@ -2866,12 +2979,12 @@ svg.action-arrow {
     to { opacity: 1; transform: none; }
   }
   @keyframes guide-badge-pop {
-    0% { opacity: 0; transform: scale(.8) rotate(-7deg); }
-    65% { opacity: 1; transform: scale(1.06) rotate(2deg); }
+    0% { opacity: 0; transform: scale(.96); }
+    65% { opacity: 1; transform: scale(1.02); }
     100% { opacity: 1; transform: none; }
   }
   @keyframes guide-choice-pop {
-    45% { transform: scale(1.5); }
+    45% { transform: scale(1.15); }
   }
   @keyframes guide-tick-pop {
     45% { transform: scaleY(1.8); }
