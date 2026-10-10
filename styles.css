@@ -1350,10 +1350,6 @@ a.btn-ghost:hover {
   letter-spacing: var(--track-display);
   line-height: 0.92;
   margin-block-end: 0;
-  /* Letterpress, not chrome: a solid weight of ink with a 1px shadow under it,
-     the way type sits on machined stock. Gradient-filled lettering was the
-     single most "generated" detail on the page, and it banded badly at large
-     sizes. The amber underscores carry the identity instead. */
   color: var(--ink-0);
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
@@ -3010,7 +3006,7 @@ svg.action-arrow {
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: wordmark-land 720ms linear var(--glyph-delay) both, underscore-shimmer 9s ease-in-out var(--glyph-delay) infinite;
+    animation: wordmark-land 720ms linear var(--glyph-delay) both, underscore-shimmer 9s ease-in-out calc(1200ms + var(--glyph-delay) * 4) infinite;
   }
   .brand:hover .dot, .foot-brand:hover .dot { animation: dot-ping 550ms var(--ease); }
   .index-row:hover .index-num, .index-row:focus-within .index-num { animation: number-nod 450ms var(--ease); }
@@ -3040,7 +3036,7 @@ svg.action-arrow {
   @keyframes article-arrive { from { opacity: 0; } to { opacity: 1; } }
   @keyframes rule-draw { from { transform: scaleX(0); } }
   @keyframes underscore-shimmer {
-    0%, 72% { background-position: 100% 0; }
+    0%, 90% { background-position: 100% 0; }
     100% { background-position: 0% 0; }
   }
   @keyframes wordmark-land {

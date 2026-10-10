@@ -265,9 +265,8 @@ and picker spacing with `node .qa/guide-motion.js`.
 The home wordmark letters drop in with a 45ms stagger, squash lightly on
 landing, then rebound and settle within a second. The title's layout stays
 fixed, and reduced motion shows the completed wordmark immediately.
-The wordmark also has a slow highlight that passes over its amber underscores
-once every nine seconds. It adds no elements or controls and does not move the
-letters. Reduced motion keeps the underscores solid amber.
+The amber underscores catch a brief soft highlight in sequence once every nine
+seconds. It does not move the lettering. Reduced motion keeps them solid amber.
 
 Project titles ease forward slightly on hover or keyboard focus. Section numbers,
 button arrows and download icons make a short spring movement on interaction;
