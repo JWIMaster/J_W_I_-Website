@@ -297,6 +297,43 @@
   }
   wireReadProgress();
 
+  /* The wordmark is a simulated metal surface, and its reflection follows the
+     pointer the way a real one moves when you tilt the object in the light.
+     Only the highlight's position is driven from here — the room it reflects,
+     the brushed grain, the glint and the drift are all CSS. It stays static
+     under reduced motion, and with no JS at all it is simply a lit surface. */
+  function wireMetal() {
+    var mark = document.querySelector('.hero-name');
+    if (!mark || !motionOK()) return;
+    var queued = false;
+    var next = null;
+
+    function apply() {
+      queued = false;
+      if (next === null) return;
+      mark.style.setProperty('--metal-hl', next + '%');
+    }
+
+    mark.addEventListener('pointermove', function (e) {
+      var r = mark.getBoundingClientRect();
+      if (!r.width || !r.height) return;
+      var x = (e.clientX - r.left) / r.width;   /* 0 at the left edge, 1 at the right */
+      x = Math.min(1, Math.max(0, x));
+      next = Math.round((10 + x * 46) * 10) / 10;
+      if (!queued) {
+        queued = true;
+        requestAnimationFrame(apply);
+      }
+    }, { passive: true });
+
+    /* let the reflection settle back to its resting angle */
+    mark.addEventListener('pointerleave', function () {
+      next = null;
+      mark.style.removeProperty('--metal-hl');
+    });
+  }
+  wireMetal();
+
   /* Motion gate for the intro fade (also used by the wizard — exposed on
      window so other scripts can share the same preference check). */
   function motionOK() {
