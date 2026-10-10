@@ -1341,14 +1341,6 @@ a.btn-ghost:hover {
   display: contents;
 }
 
-/* Registered so the pointer's effect on the reflection eases instead of
-   snapping. Where @property is unsupported the value still applies, instantly. */
-@property --metal-hl {
-  syntax: "<percentage>";
-  inherits: true;
-  initial-value: 26%;
-}
-
 .hero-name {
   grid-column: 1;
   grid-row: 2;
@@ -1366,72 +1358,10 @@ a.btn-ghost:hover {
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
 }
 
-/* One material for the whole mark: the letters and the underscores are the
-   same gold face. It is a reflection, so it is composed like one — a hot
-   specular along the top edge, the reflected sky, a dark treeline across the
-   middle where the room goes dark, then the floor throwing light back up into
-   the face — with the anisotropic streaks of a polished surface running with
-   the stems and a cylindrical wrap so each glyph reads as a turned form. The
-   scene drifts, a glint passes, and the wrap follows the pointer (metal-life,
-   below). Nothing here is an image or a texture: it is the site's own amber
-   family, lit. */
-.hero-name .hero-glyph {
-  /* Five layers, each doing one job that survives a 16px stroke:
-       1. a machined micro-pattern — visible surface, not a wash
-       2. one tight specular hotspot, tracking the pointer
-       3. the glint the light drags across the face
-       4. the scene it reflects: high-contrast gold with a reflected sky, a
-          shadowed treeline and a floor bounce, and hard light/dark rims at the
-          very top and bottom so the letter has a lit bevel rather than an edge
-       5. the cylindrical wrap, so each glyph reads as a turned form
-     Nothing here is an image of anything: the pattern and the scene are built
-     from the site's own amber family, and the light is CSS. */
-  background-image:
-    repeating-conic-gradient(from 0deg at 50% 50%,
-      rgba(255, 244, 214, 0.075) 0deg 90deg,
-      rgba(74, 44, 4, 0.085) 90deg 180deg),
-    radial-gradient(34% 46% at calc(30% + var(--metal-hl, 26%) * 0.5) 13%,
-      rgba(255, 255, 255, 0.95) 0%,
-      rgba(255, 246, 214, 0.4) 40%,
-      rgba(255, 244, 214, 0) 72%),
-    linear-gradient(180deg,
-      rgba(255, 250, 235, 0) 0%,
-      rgba(255, 253, 244, 0.9) 50%,
-      rgba(255, 250, 235, 0) 100%),
-    linear-gradient(180deg,
-      #fffdf6 0%,
-      #fff8e2 3%,
-      #ffe9ae 7%,
-      #f7cd68 16%,
-      #e0a834 27%,
-      #b87f1c 38%,
-      #8a5c11 46%,
-      #5d3c08 52%,
-      #8a5c11 58%,
-      #c08f24 67%,
-      #eec25c 76%,
-      #fff3c8 84%,
-      #e5b849 90%,
-      #a8761c 96%,
-      #4a3006 100%),
-    linear-gradient(90deg,
-      rgba(70, 38, 2, 0.34) 0%,
-      rgba(255, 240, 200, 0.3) var(--metal-hl, 26%),
-      rgba(255, 226, 160, 0.05) 58%,
-      rgba(70, 38, 2, 0.38) 100%);
-  background-size: 5px 5px, 100% 100%, 100% 26%, 100% 118%, 100% 100%;
-  background-position: 0 0, 0 0, 0 -45%, 0 0%, 0 0;
-  background-repeat: repeat, no-repeat, no-repeat, no-repeat, no-repeat;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.hero-name .u {
+  color: var(--accent);
   text-shadow: none;
-  /* a tight warm bloom: enough to read as a hot edge, not enough to haze it */
-  filter:
-    drop-shadow(0 0 3px rgba(255, 198, 104, 0.5))
-    drop-shadow(0 2px 5px rgba(0, 0, 0, 0.5));
 }
-
 .hero-name { overflow-anchor: none; }
 .hero-glyph { display: inline-block; transform-origin: 50% 90%; }
 .hero-glyph:nth-child(1) { --glyph-delay: 0ms; }
@@ -3069,26 +2999,18 @@ svg.action-arrow {
   .page-article .sheet { animation: article-arrive 200ms var(--ease) both; }
   .page-article .fade-io { transform: none; }
   .page-head .kicker::after { transform-origin: left; animation: rule-draw 850ms var(--ease) both; }
-  /* the whole mark carries the material's life: a glint passing across the
-     face while the reflected scene drifts, on one long loop */
   .hero-name .hero-glyph {
-    animation: wordmark-land 720ms linear var(--glyph-delay) both,
-               metal-life 18s linear 1.2s infinite;
+    animation: wordmark-land 720ms linear var(--glyph-delay) both;
   }
-  /* following the pointer with an eased lag is what makes the highlight read
-     as a reflection in a material rather than a cursor effect */
-  .hero-name {
-    transition: --metal-hl 320ms var(--ease);
-  }
-  /* one timeline for all four layers: the glint passes early in the loop, the
-     reflected scene keeps drifting, and both return to their resting position
-     so the cycle joins seamlessly */
-  @keyframes metal-life {
-    0% { background-position: 0 0, 0 0, 0 -45%, 0 0%, 0 0; }
-    16% { background-position: 0 0, 0 0, 0 145%, 0 22%, 0 0; }
-    40% { background-position: 0 0, 0 0, 0 145%, 0 100%, 0 0; }
-    64% { background-position: 0 0, 0 0, 0 145%, 0 46%, 0 0; }
-    100% { background-position: 0 0, 0 0, 0 -45%, 0 0%, 0 0; }
+  .hero-name .u {
+    display: inline-block;
+    background: linear-gradient(100deg, var(--accent) 40%, #ffe2a9 50%, var(--accent) 60%);
+    background-size: 300% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: wordmark-land 720ms linear var(--glyph-delay) both, underscore-shimmer 9s ease-in-out var(--glyph-delay) infinite;
   }
   .brand:hover .dot, .foot-brand:hover .dot { animation: dot-ping 550ms var(--ease); }
   .index-row:hover .index-num, .index-row:focus-within .index-num { animation: number-nod 450ms var(--ease); }
@@ -3117,6 +3039,10 @@ svg.action-arrow {
   .btn.fun-tap { animation: tap-settle 320ms var(--ease); }
   @keyframes article-arrive { from { opacity: 0; } to { opacity: 1; } }
   @keyframes rule-draw { from { transform: scaleX(0); } }
+  @keyframes underscore-shimmer {
+    0%, 72% { background-position: 100% 0; }
+    100% { background-position: 0% 0; }
+  }
   @keyframes wordmark-land {
     0% {
       opacity: 0;
