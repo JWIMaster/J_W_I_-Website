@@ -167,7 +167,7 @@
   /* Scroll reveals: .fade-io fades in the first time it enters the viewport
      and stays — the fade plays on the way in and never un-plays. */
   function wireScrollFades() {
-    var els = Array.prototype.slice.call(document.querySelectorAll('.fade-io'));
+    var els = Array.prototype.slice.call(document.querySelectorAll('.fade-io, .page-home .home-arrival'));
     if (!els.length) return;
     var pending = els;
 
@@ -225,6 +225,7 @@
     setTimeout(sweep, 300);
     setTimeout(sweep, 1200);
   }
+  if (document.body.classList.contains('page-home')) document.documentElement.classList.add('home-motion-ready');
   wireScrollFades();
 
   /* Table of contents: mark the section the reader is actually in, so the hero

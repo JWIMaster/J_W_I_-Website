@@ -748,19 +748,6 @@ code, pre, kbd {
   .photo-link:is(:hover, :focus-visible) .action-arrow,
   .photo-source:is(:hover, :focus-visible) .action-arrow { --arrow-y: -3px; animation: arrow-hop 460ms var(--ease); }
   .photo-details summary svg { transition: transform 200ms var(--ease); }
-  /* A quick change of focus, like bringing the scene into a camera lens.
-     Only opacity and blur animate: text keeps its final size and position. */
-  .page-photography .page-head { animation: none; overflow-anchor: none; }
-  .page-photography .page-head > .kicker { animation: article-arrive 400ms var(--ease) both; }
-  .page-photography .page-head > .lede { animation: article-arrive 500ms var(--ease) 140ms both; }
-  .photo-title-word { display: inline-block; animation: photo-focus 560ms var(--ease) both; }
-  .photo-title-word:nth-child(2) { animation-delay: 70ms; }
-  .photo-title-word:nth-child(3) { animation-delay: 140ms; }
-  @keyframes photo-focus {
-    from { opacity: 0; filter: blur(7px); }
-    55% { opacity: 1; }
-    to { opacity: 1; filter: blur(0); }
-  }
 }
 
 /* ----------------------------- surfaces ----------------------------- */
@@ -1506,8 +1493,7 @@ a.btn-ghost:hover {
   line-height: 1.45;
 }
 
-/* The strip assembles itself, once — the hero's authored moment. Everything
-   else on the page fades in quietly as it is reached. */
+/* The table of contents assembles once on entry. */
 @media (prefers-reduced-motion: no-preference) {
   .toc a {
     animation: toc-row-in 420ms var(--ease) both;
@@ -2976,6 +2962,32 @@ svg.action-arrow {
   @keyframes tap-settle { 40% { transform: translateY(1px); } 70% { transform: translateY(-1px); } }
 }
 
+/* Home content and complete buttons fade in without tilting or bouncing. */
+@media (prefers-reduced-motion: no-preference) {
+  .page-home .hero-caption,
+  .page-home .hero-tagline,
+  .page-home .toc-title,
+  .page-home .toc a { animation: home-fade 540ms linear both; }
+  .page-home .hero-caption { animation-delay: 50ms; }
+  .page-home .hero-tagline { animation-delay: 180ms; }
+  .page-home .toc-title { animation-delay: 170ms; }
+  .page-home .toc a:nth-child(1) { animation-delay: 210ms; }
+  .page-home .toc a:nth-child(2) { animation-delay: 255ms; }
+  .page-home .toc a:nth-child(3) { animation-delay: 300ms; }
+  .page-home .toc a:nth-child(4) { animation-delay: 345ms; }
+  .page-home .fade-io { opacity: 1; transform: none; transition: none; }
+  .page-home :is(.index-row, .home-arrival).is-in > * {
+    animation: home-fade 510ms linear backwards;
+  }
+  .page-home :is(.index-row, .home-arrival) > :nth-child(2) { animation-delay: 45ms; }
+  .page-home :is(.index-row, .home-arrival) > :nth-child(3) { animation-delay: 90ms; }
+  .home-motion-ready .page-home :is(.index-row, .home-arrival):not(.is-in) > * { opacity: 0; }
+  @keyframes home-fade {
+    0% { opacity: 0; animation-timing-function: cubic-bezier(.4, 0, .8, .5); }
+    42%, 100% { opacity: 1; }
+  }
+}
+
 /* ----------------------------- reduced motion ----------------------------- */
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -3079,6 +3091,11 @@ svg.action-arrow {
     --action-ink: #111;
   }
 
+  .page-home .home-arrival > *,
+  .page-home .index-row > *,
+  .page-home .index-row .btn-label,
+  .page-home .index-row .action-arrow,
+  .page-home .toc a,
   .fade-io,
   .reveal,
   .tw-rest,

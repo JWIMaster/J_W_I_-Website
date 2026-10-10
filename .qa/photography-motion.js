@@ -10,8 +10,7 @@ const BASE='http://127.0.0.1:8123/';
    await page.locator('.nav a[href="photography.html"]').click();
    const title=page.locator('.page-head h1');
    const top=await title.evaluate(el=>el.offsetTop);
-   const words=await page.locator('.photo-title-word').evaluateAll(els=>els.map(el=>({name:getComputedStyle(el).animationName,delay:getComputedStyle(el).animationDelay})));
-   check(words.length===3&&words.every(w=>w.name==='photo-focus')&&words[0].delay!==words[2].delay,'Missing staggered focus entrance');
+   check(await page.locator('.page-head').evaluate(el=>getComputedStyle(el).animationName)==='rise','Missing shared title entrance');
    await page.waitForTimeout(800);
    check(await title.evaluate(el=>el.offsetTop)===top,'Title moved during entry');
    const panel=page.locator('.photo-details').first(), summary=panel.locator('summary');
@@ -52,7 +51,7 @@ const BASE='http://127.0.0.1:8123/';
   }
   // Every page retains an authored title entrance.
   const p=await browser.newPage({viewport:{width:1024,height:900}});
-  for(const [name,selector,animation] of [['index.html','.hero-glyph','wordmark-land'],['swiftios6.html','.page-head','rise'],['support.html','.page-head','rise'],['swiftonios6guidepart1.html','#wizard > .section-head','rise'],['photography.html','.photo-title-word','photo-focus']]) {
+  for(const [name,selector,animation] of [['index.html','.hero-glyph','wordmark-land'],['swiftios6.html','.page-head','rise'],['support.html','.page-head','rise'],['swiftonios6guidepart1.html','#wizard > .section-head','rise'],['photography.html','.page-head','rise']]) {
    await p.goto(BASE+name);
    check((await p.locator(selector).first().evaluate(el=>getComputedStyle(el).animationName)).includes(animation),'Missing title animation: '+name);
   }

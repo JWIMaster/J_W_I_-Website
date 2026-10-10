@@ -285,9 +285,15 @@ closed and remains usable without JavaScript. Follow the Pixieset homepage order
 unless explicitly changed. Do not invent dates or EXIF. See
 `scripts/PHOTOGRAPHY.md` for generation and the current refresh limitation.
 
-Photography’s title comes into focus word by word in 700ms, using opacity and
-blur without moving the heading. Album details animate their actual height and
+Photography uses the shared page-title entrance. Album details animate their actual height and
 fade the contents on both opening and closing. Rapid toggles reverse from the
 current frame; resize or reduced-motion changes settle immediately. Native
 keyboard and no-JavaScript disclosure behavior stays available. Other pages
 retain their existing title entrances; the navigation bar remains stationary.
+
+Home content fades in without rotation or bounce. Captions and index links
+arrive in a short stagger; section headings, row contents and footer fade once
+as they enter the viewport. Text and complete buttons fade from transparent
+into their existing colours, including button backgrounds and borders. Reduced
+motion skips these fades. The wordmark keeps its playful landing animation,
+and other pages retain their entrances.
