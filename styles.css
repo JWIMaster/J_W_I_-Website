@@ -748,47 +748,18 @@ code, pre, kbd {
   .photo-link:is(:hover, :focus-visible) .action-arrow,
   .photo-source:is(:hover, :focus-visible) .action-arrow { --arrow-y: -3px; animation: arrow-hop 460ms var(--ease); }
   .photo-details summary svg { transition: transform 200ms var(--ease); }
-  /* The title arrives the way a lens finds focus. Each word starts as an
-     out-of-focus point of light on a dark frame — blurred wide, blown out,
-     desaturated and dim — and racks into crisp type, the words resolving in
-     sequence the way a plane of focus travels through them. Only filter,
-     opacity and transform animate, so the line is laid out at its final
-     metrics from the first frame and never reflows. */
+  /* A quick change of focus, like bringing the scene into a camera lens.
+     Only opacity and blur animate: text keeps its final size and position. */
   .page-photography .page-head { animation: none; overflow-anchor: none; }
   .page-photography .page-head > .kicker { animation: article-arrive 400ms var(--ease) both; }
   .page-photography .page-head > .lede { animation: article-arrive 500ms var(--ease) 140ms both; }
-  .photo-title-word {
-    display: inline-block;
-    transform-origin: 50% 58%;
-    animation: photo-focus 900ms var(--ease) both;
-  }
-  .photo-title-word:nth-child(2) { animation-delay: 150ms; }
-  .photo-title-word:nth-child(3) { animation-delay: 300ms; }
-
+  .photo-title-word { display: inline-block; animation: photo-focus 560ms var(--ease) both; }
+  .photo-title-word:nth-child(2) { animation-delay: 70ms; }
+  .photo-title-word:nth-child(3) { animation-delay: 140ms; }
   @keyframes photo-focus {
-    from {
-      opacity: 0.34;
-      filter: blur(18px) brightness(2.1) saturate(0.5) contrast(0.82);
-      transform: scale(1.055);
-      /* a wide neutral bloom with a faint warm/cool fringe either side — the
-         chromatic spread a defocused lens puts around a point of light */
-      text-shadow:
-        -2px 0 20px rgba(255, 206, 150, 0.34),
-        2px 0 20px rgba(150, 200, 255, 0.3),
-        0 0 36px rgba(242, 246, 250, 0.8),
-        0 0 12px rgba(242, 246, 250, 0.5);
-    }
-    40% {
-      opacity: 0.94;
-      filter: blur(7px) brightness(1.35) saturate(0.8) contrast(0.94);
-      text-shadow: 0 0 20px rgba(242, 246, 250, 0.36);
-    }
-    100% {
-      opacity: 1;
-      filter: blur(0) brightness(1) saturate(1) contrast(1);
-      transform: none;
-      text-shadow: 0 0 0 rgba(242, 246, 250, 0);
-    }
+    from { opacity: 0; filter: blur(7px); }
+    55% { opacity: 1; }
+    to { opacity: 1; filter: blur(0); }
   }
 }
 
